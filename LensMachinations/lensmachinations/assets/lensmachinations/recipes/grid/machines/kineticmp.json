@@ -1,0 +1,28 @@
+﻿{
+    "ingredientPattern": "GSG,CMC,GSG",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+        "M": {
+            "type": "block",
+            "code": "sturdycasing"
+        },
+        "G": {
+            "type": "item",
+            "code": "gear-*",
+            "allowedVariants": [ "bismuthbronze", "tinbronze" ]
+        },
+        "S": {
+            "type": "block",
+            "code": "game:woodenaxle-ud"
+        },
+        "C": {
+            "type": "block",
+            "code": "game:angledgears-s"
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "kineticmpgen"
+    }
+}

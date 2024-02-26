@@ -1,0 +1,23 @@
+﻿{
+    "ingredientPattern": "_L_,T_C",
+    "width": 3,
+    "height": 2,
+    "ingredients": {
+        "L": {
+            "type": "block",
+            "code": "redlever-off-north-down"
+        },
+        "T": {
+            "type": "block",    
+            "code": "game:transmission-ns"
+        },
+        "C": {
+            "type": "block",
+            "code": "game:clutch-north"
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "redtransmission-ud"
+    }
+}

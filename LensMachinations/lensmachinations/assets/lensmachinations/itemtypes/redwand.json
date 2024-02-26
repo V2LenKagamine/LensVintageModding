@@ -1,0 +1,11 @@
+﻿{
+    "code": "redwand",
+    "class": "redclass",
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "texture": {
+        "base": "item/astick"
+    }
+}

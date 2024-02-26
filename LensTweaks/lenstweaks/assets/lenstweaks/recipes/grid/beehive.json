@@ -1,0 +1,20 @@
+﻿{
+    "ingredientPattern": "PPP,PCP,PPP",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+        "P": {
+            "type": "item",
+            "code": "game:plank-*",
+            "quantity": "4"
+        },
+        "C": {
+            "type": "block",
+            "code": "game:skep-empty-east"
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "woodenhive-north"
+    }
+}

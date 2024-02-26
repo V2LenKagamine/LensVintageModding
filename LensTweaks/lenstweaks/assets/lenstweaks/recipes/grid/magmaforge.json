@@ -1,0 +1,24 @@
+﻿{
+    "ingredientPattern": "BPB,PFP,BPB",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+        "B": {
+            "type": "item",
+            "code": "game:burnedbrick-fire",
+            "quantity": 4
+        },
+        "F": {
+            "type": "block",
+            "code": "game:forge"
+        },
+        "P": {
+            "type": "item",
+            "code": "game:metalplate-meteoriciron"
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "magmaforge"
+    }
+}

@@ -1,0 +1,74 @@
+{
+  "item-attunementwand": "Mechanical Attunement Wand",
+  "itemdesc-attunementwand": "Shift R-click to select a number, then R-click machines to attune them.",
+
+  "block-sturdycasing": "Sturdy Metal Casing",
+
+  "block-concretefull": "Concrete Block",
+  "block-concretepath-*": "Concrete Path",
+  "block-concretestair-*": "Concrete Stair",
+  "block-liquidconcrete-*": "Liquid Concrete",
+  "item-concreteportion": "Liquid Concrete",
+  "item-concretemix": "Concrete Mix",
+  "block-frame": "Empty Wooden Frame",
+  "incontainer-item-concreteportion": "Liquid Concrete",
+
+  "block-burnerator": "Heat Fuled Potentia-Accumulator",
+  "block-creativemana": "Endless Potentia-Maker",
+  "block-autopanner": "Mechanical Panner",
+  "block-manarepair": "Mechanical Entropy Siphoner",
+  "block-rockmaker": "Geoformic Accelerator",
+  "block-magmanator": "Magmanator",
+  "block-kineticmpgen": "Kinetic Potentia-Accumulator",
+  "block-icebox-*": "Thermal Energy Reducer",
+
+  "item-redwand": "Red Attuner",
+  "itemdesc-redwand": "Shift R-click in air to select a name, then R-click things to attune their input, and Shift R-click to attune their output.",
+  "block-redlever-*": "Lever",
+  "blockdesc-redlever-*": "A simple lever, for toggling things. Input Currently Unused.",
+  "block-blockswapper-*": "Block Transposer",
+  "block-blockrotator-*-*": "Diagonal Block Transposer",
+  "blockdesc-blockswapper-*": "Swaps the two blocks of the indicated faces. Can be camoflaged by clicking with a block, or removed with Shift + empty hand.",
+  "blockdesc-blockrotator-*-*": "Swaps the two blocks of the indicated faces. Can be camoflaged by clicking with a block, or removed with Shift + empty hand.",
+  "block-redlamp-*": "Redlamp",
+  "block-redlamppipe-*": "Redlamp",
+  "blockdesc-redlamp-*": "A lamp that can be turned off and on.",
+  "blockdesc-redlamppipe-*": "A lamp that can be turned off and on.",
+  "block-redtransmission-*": "Red-Transmission",
+  "blockdesc-redtransmission-*": "Works like a normal Transmission, but controlled with RedNet.",
+
+  "rednet-title": "RedNetworks: Bootleg Redstone 101",
+  "rednet-text": "The mod Len's Story adds a few things, One notable feature is Red-Networks. Objects that are capable of interfacing with a Red-Network will show so on your HUD. Two things will be displayed. An input network ID, and an ouptut network ID. Attune the object as you desire. For a simple door using a Transposer and a Lever, Do the following: Step one: Using a Red Attuner, Shift click the air to set a frequency, this can be any combination of letters and numbers, make it yours! Then click 'confirm'. Step two: Shift click on the LEVER to set its OUTPUT frequency, then NORMALLY CLICK the TRANSPOSER to set its INPUT frequency. Step three: Pull the lever Kronk! For a more detailed explanation on what each part does, check its handbook page. Do note that while all parts technically have an input and output, doesn't mean they'll use it. There is no 'strength' for signals, only on or off. A channel does not care how many are on, if one is on, the signal is sent to all of that channels outputs. You can chain multiple channels to create simple logic networks.",
+
+  "game:handbook-block-swapper-title": "Usage:",
+  "game:handbook-block-swapper-text": "When given linked to a Red Network,will swap blocks on the indicated faces when powered, and swap them back when de-powered. Won't do anything if it tries to swap something complex, like a chest. Has no Output.",
+
+  "game:handbook-block-icebox-title": "Usage:",
+  "game:handbook-block-icebox-text": "Causes perishable items to not perish while inside and powered.",
+
+  "game:handbook-item-sandwich-title": "Creation:",
+  "game:handbook-item-sandwich-text": "Place a Perfect bread,as well as any combination of 3 meat, vegetable, cheese, or fruit onto a Tinkering Table, then sneak right click with a knife.",
+
+  "game:handbook-block-sturdybucket-title": "Notable Properties:",
+  "game:handbook-block-sturdybucket-text": "It's a bucket,but metal. Sturdy enough to contain lava.",
+
+  "game:handbook-block-concrete-title": "How to obtain:",
+  "game:handbook-block-concrete-text": "Use a fluid container [like a bucket] filled with atleast 100ml of Liquid Concrete on an Empty Concrete Frame to form a concrete block.",
+
+  "game:handbook-block-kineticmpgen-title": "Usage:",
+  "game:handbook-block-kineticmpgen-text": "Connect to a vanilla Wooden Axle or other Mechanical Power source via the top or bottom, and supply power, rotational speed determines output.",
+
+  "game:handbook-block-reinforcedbloomery-title": "Usage:",
+  "game:handbook-block-reinforcedbloomery-text": "Works just like the regular bloomery, but doesnt break,has a max temperature of 2000, and finished products can be removed by shift clicking. Is a little smaller, so it only holds 2/3rds the normal bloomery.",
+
+  "game:handbook-block-rockmaker-title": "Geformic Accelerator Usage:",
+  "game:handbook-block-rockmaker-text": "To use the machine, insert a sample of geologic material, such as sand, dirt, gravel, or rock. Given enough MP, it will produce a sample in the space above it, if there is no obstructions. Sand and Rock are cheap, but dirt may require more MP depending on fertility. You can shift+interact to retreive the sample. If placed above mantle, it's function changes drastically, using obscene MP and a sample of host rock, will begin to generate ores based on the readings of the chunk it is located in! If a propick can't find it, however, it won't generate. It can be sped up in 'Ore Gen Mode' by placing up to a 3 block tower of any metal block in each of its diagonal corners.[NE,NW,SE,SW].",
+  "game:handbook-block-manarepair-title": "Mechanical Entropy Siphoner Usage:",
+  "game:handbook-block-manarepair-text": "To use the machine, insert a damaged tool or object. Given time and MP, it will be repaired. When it's done, you can retreive it with shift+interact.'",
+  "game:handbook-block-burnerator-title": "Heat Fuled Potentia Accumulator Usage:",
+  "game:handbook-block-burnerator-text": "To use the machine, simply insert a burnable item.You must be holding shift to insert, as there is no way to retreive an item inserted. As the item burns, it produces a steady flow of MP",
+  "game:handbook-block-autopanner-title": "Mechanical Panner Usage:",
+  "game:handbook-block-autopanner-text": "To use the machine,simply insert anything you could manually pan. Given a steady supply of MP and time, your reward will be spit out the bottom. You may only insert said material while holding shift, however, as anything inserted can not be retreived.",
+  "game:handbook-block-magmanator-title": "Magmanator Usage:",
+  "game:handbook-block-magmanator-text": "To use the machine, hook up to a Mechanical Potentia network and place a solid rock above. Given a decent amount of time at a high MP level, will turn the rock block into lava!"
+}

@@ -1,0 +1,18 @@
+﻿{
+    "ingredientPattern": "L",
+    "ingredients": {
+        "L": {
+            "type": "block",
+            "code": "concretepath-free",
+            "quantity": 3
+        }
+    },
+    "shapeless": true,
+    "width": 1,
+    "height": 1,
+    "output": {
+        "type": "block",
+        "code": "concretestair-up-north-free",
+        "quantity": 6
+    }
+}

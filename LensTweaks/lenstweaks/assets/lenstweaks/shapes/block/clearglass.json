@@ -1,0 +1,29 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"material": "game:block/glass/plain"
+	},
+	"elements": [
+		{
+			"name": "Clear quartz",
+			"from": [ 0.0025, 0.0025, 0.0025 ],
+			"to": [ 15.9995, 15.9995, 15.9995 ],
+			"zOffset": 2,
+			"renderPass": 3,
+			"faces": {
+				"north": { "texture": "#material", "uv": [ 0.0, 0.0, 16, 16 ] },
+				"east": { "texture": "#material", "uv": [ 0.0, 0.0, 16, 16 ] },
+				"south": { "texture": "#material", "uv": [ 0.0, 0.0, 16, 16 ] },
+				"west": { "texture": "#material", "uv": [ 0.0, 0.0, 16, 16 ] },
+				"up": { "texture": "#material", "uv": [ 0.0, 0.0, 16, 16 ] },
+				"down": { "texture": "#material", "uv": [ 0.0, 0.0, 16, 16 ] }
+			}
+		}
+	]}

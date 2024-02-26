@@ -1,0 +1,44 @@
+{
+    "code": "creativemana",
+    "shape": { "base": "game:block/basic/cube" },
+    "attributes": {
+        "handbook": {
+            "exclude": true
+        }
+    },
+    "drawtype": "cube",
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "class": "lenscreativemanablock",
+    "entityClass": "lenscreativemana",
+    "entityBehaviors": [
+        { "name": "lenscreativemanabehavior" },
+        { "name": "Mana" }
+    ],
+    "blockmaterial": "Metal",
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "maxStackSize": 32,
+    "materialDensity": 700,
+    "resistance": 4,
+    "textures": {
+        "verticals": { "base": "game:block/metal/lantern/bismuth" },
+        "horizontals": {
+            "base": "game:block/metal/lantern/gold",
+            "blendedoverlays": [
+                {
+                    "base": "game:block/metal/lantern/meteoriciron",
+                    "blendMode": "Overlay"
+                }
+            ]
+        }
+    },
+    "sideopaque": {
+        "all": true
+    },
+    "sidesolid": {
+        "all": true
+    }
+}

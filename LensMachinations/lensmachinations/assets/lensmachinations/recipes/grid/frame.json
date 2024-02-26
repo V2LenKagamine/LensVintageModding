@@ -1,0 +1,20 @@
+﻿{
+    "ingredientPattern": "PSP,_S_,PSP",
+    "ingredients": {
+        "P": {
+            "type": "item",
+            "code": "game:plank-*"
+        },
+        "S": {
+            "type": "item",
+            "code": "game:stick"
+        }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+        "type": "block",
+        "code": "frame",
+        "quantity": 16
+    }
+}

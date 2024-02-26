@@ -1,0 +1,27 @@
+﻿{
+    "ingredientPattern": "H_,_C,_S",
+    "width": 2,
+    "height": 3,
+    "ingredients": {
+        "H": {
+            "type": "item",
+            "code": "game:hammer-*",
+            "isTool": true
+        },
+        "C": {
+            "type": "item",
+            "code": "game:chisel-*",
+            "isTool": true
+        },
+        "S": {
+            "type": "block",
+            "code": "game:cobblestone-*",
+            "name": "stonetype"
+        }
+    },
+    "output": {
+        "type": "item",
+        "code": "game:stone-{stonetype}",
+        "quantity": 4
+    }
+}

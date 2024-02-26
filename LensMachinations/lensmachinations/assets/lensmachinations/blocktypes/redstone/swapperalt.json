@@ -1,0 +1,568 @@
+﻿{
+    "code": "blockrotator",
+    "class": "lensswapperblock",
+    "entityclass": "lensswapper",
+    "drawtype": "json",
+    "behaviors": [
+        {
+            "name": "LenBlockCoverWithDirection"
+        }
+    ],
+    "entityBehaviors": [
+        { "name": "lensswapperbehavior" },
+        { "name": "Redstone" }
+    ],
+    "variantgroups": [
+        {
+            "code": "orientation",
+            "states": [ "north", "east", "south", "west", "up", "down" ]
+        },
+        {
+            "code": "side",
+            "states": [ "north", "east", "south", "west", "up", "down" ]
+        }
+    ],
+    "skipVariants": [ "*-north-north", "*-south-north", "*-north-south", "*-south-south", "*-east-east", "*-east-west", "*-west-east", "*-west-west" ],
+    "attributes": {
+        "handbook": {
+            "groupBy": [ "blockrotator-*" ],
+            "extraSections": [
+                {
+                    "title": "handbook-block-swapper-title",
+                    "text": "handbook-block-swapper-text"
+                }
+            ]
+        }
+    },
+    "creativeinventory": {
+        "general": [ "*-north-down" ],
+        "lensstorytab": [ "*-north-down" ]
+    },
+    "shape": { "base": "game:block/basic/cube" },
+    "blockmaterial": "Metal",
+    "replaceable": 900,
+    "resistance": 4,
+    "drops": [
+        {
+            "type": "block",
+            "code": "blockrotator-north-down",
+            "quantity": { "avg": 1 }
+        }
+    ],
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "texturesByType": {
+        "*-north-up": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "north": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "up": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-north-down": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "north": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "down": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-north-east": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "north": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "east": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-north-west": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "north": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "west": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+
+        "*-east-up": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "east": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "up": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-east-down": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "east": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "down": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+
+        "*-east-south": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "east": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "south": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-east-north": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "east": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "north": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+
+        "*-south-up": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "south": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "up": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-south-down": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "south": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "down": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+
+        "*-south-east": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "south": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "east": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-south-west": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "south": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "west": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+
+        "*-west-up": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "west": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "up": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-west-down": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "west": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "down": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+
+        "*-west-north": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "west": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "north": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-west-south": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "west": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "south": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-up-north": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "north": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "up": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-up-east": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "north": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "east": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-up-south": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "north": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "south": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-up-west": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "up": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "west": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+
+        "*-down-north": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "down": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "north": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-down-east": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "east": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "down": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+
+        "*-down-west": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "west": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "down": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-down-south": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "down": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "south": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        }
+    }
+}

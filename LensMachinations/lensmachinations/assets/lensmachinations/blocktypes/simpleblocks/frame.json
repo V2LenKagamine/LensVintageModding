@@ -1,0 +1,21 @@
+﻿{
+    "code": "frame",
+    "class": "frameblock",
+    "shape": { "base": "block/frame" },
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "blockmaterial": "Wood",
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "maxStackSize": 64,
+    "materialDensity": 700,
+    "resistance": 0.5,
+    "sideopaque": {
+        "all": false
+    },
+    "sidesolid": {
+        "all": false
+    }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "op": "add",
+    "path": "/dropsByType/*-11/1/dropModbyStat",
+    "value": "produceDropRate",
+    "file": "blocktypes/plant/crop/cabbage.json"
+  },
+  {
+    "op": "add",
+    "path": "/dropsByType/*-12/1/dropModbyStat",
+    "value": "produceDropRate",
+    "file": "blocktypes/plant/crop/cabbage.json"
+  }
+]

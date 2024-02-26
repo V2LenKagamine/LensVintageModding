@@ -1,0 +1,227 @@
+﻿[
+    {
+        "ingredientPattern": "__S,MSK,S__",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:stick"
+            },
+            "K": {
+                "type": "item",
+                "code": "game:knife-generic-*",
+                "isTool": true,
+                "toolDurabilityCost": 10
+            },
+            "M": {
+                "type": "block",
+                "code": "game:mushroom-deathcap-normal"
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "blowdart-tube"
+        }
+    },
+    {
+        "ingredientPattern": "__S,MSK,S__",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:stick"
+            },
+            "K": {
+                "type": "item",
+                "code": "game:knife-generic-*",
+                "isTool": true,
+                "toolDurabilityCost": 10
+            },
+            "M": {
+                "type": "block",
+                "code": "game:mushroom-earthball-normal"
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "blowdart-tube"
+        }
+    },
+    {
+        "ingredientPattern": "__S,MSK,S__",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:stick"
+            },
+            "K": {
+                "type": "item",
+                "code": "game:knife-generic-*",
+                "isTool": true,
+                "toolDurabilityCost": 10
+            },
+            "M": {
+                "type": "block",
+                "code": "game:mushroom-flyagaric-normal"
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "blowdart-tube"
+        }
+    },
+    {
+        "ingredientPattern": "__S,MSK,S__",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:stick"
+            },
+            "K": {
+                "type": "item",
+                "code": "game:knife-generic-*",
+                "isTool": true,
+                "toolDurabilityCost": 10
+            },
+            "M": {
+                "type": "block",
+                "code": "game:mushroom-elfinsaddle-normal"
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "blowdart-tube"
+        }
+    },
+    {
+        "ingredientPattern": "__S,MSK,S__",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:stick"
+            },
+            "K": {
+                "type": "item",
+                "code": "game:knife-generic-*",
+                "isTool": true,
+                "toolDurabilityCost": 10
+            },
+            "M": {
+                "type": "block",
+                "code": "game:mushroom-jackolantern-normal"
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "blowdart-tube"
+        }
+    },
+    {
+        "ingredientPattern": "__S,MSK,S__",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:stick"
+            },
+            "K": {
+                "type": "item",
+                "code": "game:knife-generic-*",
+                "isTool": true,
+                "toolDurabilityCost": 10
+            },
+            "M": {
+                "type": "block",
+                "code": "game:mushroom-devilbolete-normal"
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "blowdart-tube"
+        }
+    },
+    {
+        "ingredientPattern": "__S,MSK,S__",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:stick"
+            },
+            "K": {
+                "type": "item",
+                "code": "game:knife-generic-*",
+                "isTool": true,
+                "toolDurabilityCost": 10
+            },
+            "M": {
+                "type": "block",
+                "code": "game:mushroom-bitterbolete-normal"
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "blowdart-tube"
+        }
+    },
+    {
+        "ingredientPattern": "__S,MSK,S__",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:stick"
+            },
+            "K": {
+                "type": "item",
+                "code": "game:knife-generic-*",
+                "isTool": true,
+                "toolDurabilityCost": 10
+            },
+            "M": {
+                "type": "block",
+                "code": "game:mushroom-devilstooth-normal"
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "blowdart-tube"
+        }
+    },
+    {
+        "ingredientPattern": "__S,MSK,S__",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:stick"
+            },
+            "K": {
+                "type": "item",
+                "code": "game:knife-generic-*",
+                "isTool": true,
+                "toolDurabilityCost": 10
+            },
+            "M": {
+                "type": "block",
+                "code": "game:mushroom-golddropmilkcap-normal"
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "blowdart-tube"
+        }
+    }
+]

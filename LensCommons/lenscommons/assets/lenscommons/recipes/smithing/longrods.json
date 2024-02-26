@@ -1,0 +1,27 @@
+﻿{
+    "ingredient": {
+        "type": "item",
+        "code": "game:ingot-*",
+        "name": "metal",
+        "allowedVariants": [ "copper", "silver", "gold", "platinum", "titanium", "uranium", "brass", "molybdochalkos", "iron", "steel", "stainlesssteel", "bismuthbronze", "blackbronze", "tinbronze" ]
+    },
+    "pattern": [
+        [
+            "_#_#_#_#_",
+            "_#_#_#_#_",
+            "_#_#_#_#_",
+            "_#_#_#_#_",
+            "_#_#_#_#_",
+            "_#_#_#_#_",
+            "_#_#_#_#_",
+            "_#_#_#_#_",
+            "_#_#_#_#_"
+        ]
+    ],
+    "name": "Long Rods",
+    "output": {
+        "type": "item",
+        "code": "longrod-{metal}",
+        "quantity": 4
+    }
+}

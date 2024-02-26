@@ -1,0 +1,19 @@
+﻿{
+    "ingredientPattern": "R,B",
+    "width": 1,
+    "height": 2,
+    "ingredients": {
+        "R": {
+            "type": "item",
+            "code": "game:burnedbrick-fire"
+        },
+        "B": {
+            "type": "block",
+            "code": "game:bloomerybase-*"
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "heaterblock-north"
+    }
+}

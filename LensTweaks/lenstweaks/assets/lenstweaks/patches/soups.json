@@ -1,0 +1,39 @@
+﻿[
+    {
+        "op": "addeach",
+        "path": "/ingredients/0/validStacks/-",
+        "value": [
+            {
+                "type": "item",
+                "code": "ciderportion-*",
+                "shapeElement": "bowl/water"
+            }
+        ],
+        "side": "server",
+        "file": "game:recipes/cooking/soup.json"
+    },
+    {
+        "op": "add",
+        "path": "/attributes/nutritionPropsWhenInMeal",
+        "value": {
+            "saturation": 160,
+            "foodcategoryByType": {
+                "*-spelt": "grain",
+                "*-rice": "grain",
+                "*-rye": "grain",
+                "*-amaranth": "grain",
+                "*-cassava": "grain",
+                "*-breadfruit": "grain",
+                "*": "fruit"
+            }
+        },
+        "side": "server",
+        "file": "game:itemtypes/liquid/cider.json",
+        "dependsOn": [
+            {
+                "modid": "expandedfoods",
+                "invert": true
+            }
+        ]
+    }
+]

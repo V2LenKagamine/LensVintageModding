@@ -1,0 +1,14 @@
+[
+  {
+    "op": "add",
+    "path": "/dropsByType/*-6/1/dropModbyStat",
+    "value": "produceDropRate",
+    "file": "blocktypes/plant/crop/onion.json"
+  },
+  {
+    "op": "add",
+    "path": "/dropsByType/*-7/1/dropModbyStat",
+    "value": "produceDropRate",
+    "file": "blocktypes/plant/crop/onion.json"
+  }
+]

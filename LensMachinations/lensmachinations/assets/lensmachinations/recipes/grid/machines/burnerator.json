@@ -1,0 +1,24 @@
+﻿{
+    "ingredientPattern": "_C_,_C_,GQG",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+        "Q": {
+            "type": "block",
+            "code": "sturdycasing"
+        },
+        "C": {
+            "type": "item",
+            "code": "game:chutesection-copper"
+        },
+        "G": {
+            "type": "item",
+            "code": "game:metalnailsandstrips-*",
+            "quantity": 2
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "burnerator"
+    }
+}

@@ -1,0 +1,83 @@
+﻿{
+    "code": "woodenhive",
+    "class": "lensbeehiveblock",
+    "entityClass": "lensbeehive",
+    "behaviors": [ { "name": "HorizontalOrientable" } ],
+    "variantgroups": [
+        {
+            "code": "side",
+            "loadFromProperties": "abstract/horizontalorientation"
+        }
+    ],
+    "creativeinventory": {
+        "general": [ "*-north" ],
+        "construction": [ "*-north" ],
+        "lensstorytab": [ "*-north" ]
+    },
+    "shapeByType": {
+        "*-north": {
+            "base": "block/beehut",
+            "rotateY": 0
+        },
+        "*-east": {
+            "base": "block/beehut",
+            "rotateY": 270
+        },
+        "*-south": {
+            "base": "block/beehut",
+            "rotateY": 180
+        },
+        "*-west": {
+            "base": "block/beehut",
+            "rotateY": 90
+        }
+    },
+    "attributes": {
+        "handbook": {
+            "groupBy": [ "woodenhive-*" ],
+            "extraSections": [
+                {
+                    "title": "handbook-block-woodbeehive-title",
+                    "text": "handbook-block-woodbeehive-text"
+                }
+            ]
+        }
+    },
+    "guiTransform": {
+        "rotation": {
+            "x": -22.6,
+            "y": 135,
+            "z": 0
+        }
+    },
+    "blockmaterial": "Wood",
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "maxStackSize": 1,
+    "resistance": 2,
+    "sideopaque": {
+        "all": false
+    },
+    "sidesolid": {
+        "all": false,
+        "down": true
+    },
+    "collisionboxes": [
+        {
+            "x1": 0.1,
+            "y1": 0,
+            "z1": 0.1,
+            "x2": 0.9,
+            "y2": 1,
+            "z2": 0.9
+        }
+    ],
+    "selectionbox": {
+        "x1": 0.1,
+        "y1": 0,
+        "z1": 0.1,
+        "x2": 0.9,
+        "y2": 1,
+        "z2": 0.9
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "type": "code",
+    "modid": "lensmachinations",
+    "name": "LensMachinations",
+    "authors": [
+        "LenKagamine"
+    ],
+    "description": "Contains Machines for various tasks, a 'redstone'-esc power network, and other oddities not very fitting to the vanilla game",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "1.19.3",
+        "lenscommons": "1.0.0"
+    }
+}

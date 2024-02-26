@@ -1,0 +1,59 @@
+﻿{
+    "code": "clearglass",
+    "shape": { "base": "block/clearglass" },
+    "drawtype": "json",
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "variantgroups": [
+        {
+            "code": "color",
+            "states": [ "green", "blue", "violet", "red", "yellow", "brown", "vintage", "smoky", "pink","plain","quartz" ]
+        }
+    ],
+    "blockmaterial": "Stone",
+    "replaceable": 900,
+    "faceCullMode": "MergeMaterial",
+    "renderPass": "Transparent",
+    "lightAbsorption": 0,
+    "maxStackSize": 64,
+    "materialDensity": 700,
+    "resistance": 0.25,
+    "textures": {
+        "material": { "base": "game:block/glass/{color}" }
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "sidesolid": {
+        "all": true
+    },
+    "sounds": {
+        "place": "game:player/buildhigh",
+        "break": "game:block/glass",
+        "hit": "game:block/glass"
+    },
+    "groundTransform": {
+        "origin": {
+            "x": 0.5,
+            "y": -0.01,
+            "z": 0.5
+        }
+    },
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "tpHandTransform": {
+        "translation": {
+            "x": -1.23,
+            "y": -0.91,
+            "z": -0.8
+        },
+        "rotation": {
+            "x": -2,
+            "y": 25,
+            "z": -78
+        },
+        "scale": 0.4
+    }
+}

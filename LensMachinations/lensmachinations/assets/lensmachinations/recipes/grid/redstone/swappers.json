@@ -1,0 +1,57 @@
+﻿[
+    {
+        "ingredientPattern": "G,R,L",
+        "width": 1,
+        "height": 3,
+        "ingredients": {
+            "R": {
+                "type": "block",
+                "code": "game:rock-*"
+            },
+            "G": {
+                "type": "item",
+                "code": "lenscommons:gear-*"
+            },
+            "L": {
+                "type": "block",
+                "code": "redlever-off-north-down"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "blockswapper-ud"
+        }
+    },
+    {
+        "ingredientPattern": "I",
+        "width": 1,
+        "height": 1,
+        "shapeless": true,
+        "ingredients": {
+            "I": {
+                "type": "block",
+                "code": "blockswapper-ud"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "blockrotator-north-down"
+        }
+    },
+    {
+        "ingredientPattern": "I",
+        "width": 1,
+        "height": 1,
+        "shapeless": true,
+        "ingredients": {
+            "I": {
+                "type": "block",
+                "code": "blockrotator-north-down"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "blockswapper-ud"
+        }
+    }
+]

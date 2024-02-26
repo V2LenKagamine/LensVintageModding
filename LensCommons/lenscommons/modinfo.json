@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "lenscommons",
+    "name": "Lens-Commons",
+    "authors": [
+        "LenKagamine"
+    ],
+    "description": "Core Mod for Lens-Series mods. Contains content that doesn't do anything on its own;But is used elsewhere",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "1.19.3"
+    }
+}

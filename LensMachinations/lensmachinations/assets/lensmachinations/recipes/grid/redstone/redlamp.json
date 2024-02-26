@@ -1,0 +1,54 @@
+﻿[
+    {
+        "ingredientPattern": "S,G",
+        "width": 1,
+        "height": 2,
+        "ingredients": {
+            "S": {
+                "type": "block",
+                "code": "game:oillamp-up"
+            },
+            "G": {
+                "type": "item",
+                "code": "lenscommons:gear-*"
+            }
+        },
+        "shapeless": true,
+        "output": {
+            "type": "block",
+            "code": "redlamp-off-north-down"
+        }
+    },
+    {
+        "ingredientPattern": "L",
+        "ingredients": {
+            "L": {
+                "type": "block",
+                "code": "redlamp-off-north-down"
+            }
+        },
+        "shapeless": true,
+        "width": 1,
+        "height": 1,
+        "output": {
+            "type": "block",
+            "code": "redlamppipe-off-north-down"
+        }
+    },
+    {
+        "ingredientPattern": "L",
+        "ingredients": {
+            "L": {
+                "type": "block",
+                "code": "redlamppipe-off-north-down"
+            }
+        },
+        "shapeless": true,
+        "width": 1,
+        "height": 1,
+        "output": {
+            "type": "block",
+            "code": "redlamp-off-north-down"
+        }
+    }
+]

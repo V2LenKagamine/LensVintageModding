@@ -1,0 +1,70 @@
+﻿[
+    {
+        "code": "glass-dye",
+        "sealHours": 72,
+        "ingredients": [
+            {
+                "type": "block",
+                "code": "game:glass-*",
+                "name": "glasscolor",
+                "quantity": "8"
+            },
+            {
+                "type": "item",
+                "code": "game:dye-*",
+                "name": "dyecolor",
+                "allowedVariants": [ "blue", "red", "yellow", "green" ],
+                "litres": 1
+            }
+        ],
+        "output": {
+            "type": "block",
+            "code": "game:glass-{dyecolor}",
+            "quantity": 8
+        }
+    },
+    {
+        "code": "glass-dye",
+        "sealHours": 72,
+        "ingredients": [
+            {
+                "type": "block",
+                "code": "game:glass-*",
+                "name": "glasscolor",
+                "quantity": "8"
+            },
+            {
+                "type": "item",
+                "code": "game:dye-purple",
+                "litres": 1
+            }
+        ],
+        "output": {
+            "type": "block",
+            "code": "game:glass-violet",
+            "quantity": 8
+        }
+    },
+    {
+        "code": "glass-dye",
+        "sealHours": 72,
+        "ingredients": [
+            {
+                "type": "block",
+                "code": "game:glass-green",
+                "name": "glasscolor",
+                "quantity": "8"
+            },
+            {
+                "type": "item",
+                "code": "game:dye-red",
+                "litres": 1
+            }
+        ],
+        "output": {
+            "type": "block",
+            "code": "game:glass-brown",
+            "quantity": 8
+        }
+    }
+]

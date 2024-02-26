@@ -1,0 +1,14 @@
+[
+  {
+    "op": "add",
+    "path": "/dropsByType/*-4/1/dropModbyStat",
+    "value": "produceDropRate",
+    "file": "blocktypes/plant/crop/turnip.json"
+  },
+  {
+    "op": "add",
+    "path": "/dropsByType/*-5/1/dropModbyStat",
+    "value": "produceDropRate",
+    "file": "blocktypes/plant/crop/turnip.json"
+  }
+]

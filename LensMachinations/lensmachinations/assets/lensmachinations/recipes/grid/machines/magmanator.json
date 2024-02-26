@@ -1,0 +1,24 @@
+﻿{
+    "ingredientPattern": "S_S,S_S,GQG",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+        "Q": {
+            "type": "block",
+            "code": "sturdycasing"
+        },
+        "S": {
+            "type": "item",
+            "code": "lenscommons:rod-copper"
+        },
+        "G": {
+            "type": "item",
+            "code": "game:metalnailsandstrips-*",
+            "quantity": 2
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "magmanator"
+    }
+}

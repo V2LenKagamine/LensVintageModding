@@ -1,0 +1,168 @@
+﻿[
+    {
+        "file": "game:config/characterclasses.json",
+        "op": "add",
+        "path": "/-",
+        "value": {
+            "code": "len-hoarder",
+            "traits": [ "len-fortunate", "len-hoarder", "farsighted", "ravenous" ],
+            "gear": [
+                {
+                    "type": "item",
+                    "code": "clothes-upperbody-commoner-shirt"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-upperbodyover-commoner-coat"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-lowerbody-commoner-trousers"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-foot-commoner-boots"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-hand-commoner-gloves"
+                },
+                {
+                    "type": "item",
+                    "code": "lensstory:hoardingsack"
+                }
+            ]
+        }
+    },
+    {
+        "file": "game:config/characterclasses.json",
+        "op": "add",
+        "path": "/-",
+        "value": {
+            "code": "len-scrollmaker",
+            "traits": [ "len-forbidden-knowledge", "len-cursed" ],
+            "gear": [
+                {
+                    "type": "item",
+                    "code": "clothes-upperbody-commoner-shirt"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-upperbodyover-commoner-coat"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-lowerbody-commoner-trousers"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-foot-commoner-boots"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-hand-commoner-gloves"
+                },
+                {
+                    "type": "item",
+                    "code": "paper-parchment",
+                    "quantity": 4
+                },
+                {
+                    "type": "item",
+                    "code": "charcoal",
+                    "quantity": 4
+                },
+                {
+                    "type": "item",
+                    "code": "feather",
+                    "quantity": 1
+                }
+            ]
+        }
+    },
+    {
+        "file": "game:config/characterclasses.json",
+        "op": "add",
+        "path": "/-",
+        "value": {
+            "code": "len-culinary-farmer",
+            "traits": [ "len-farmer", "len-cook", "nervous", "nearsighted" ],
+            "gear": [
+                {
+                    "type": "item",
+                    "code": "clothes-upperbody-commoner-shirt"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-upperbodyover-commoner-coat"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-lowerbody-commoner-trousers"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-foot-commoner-boots"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-hand-commoner-gloves"
+                },
+                {
+                    "type": "item",
+                    "code": "lenscommons:temporalgift-c",
+                    "quantity": 1,
+                    "attributes": {
+                        "gifts": {
+                            "itemlist": [
+                                {
+                                    "type": "Block",
+                                    "code": "aculinaryartillery:cauldron-meteoriciron",
+                                    "amount": 1
+                                },
+                                {
+                                    "type": "Block",
+                                    "code": "aculinaryartillery:bottle-plain-burned",
+                                    "amount": 32
+                                },
+                                {
+                                    "type": "Block",
+                                    "code": "aculinaryartillery:spile-titanium-north",
+                                    "amount": 8
+                                },
+                                {
+                                    "type": "Block",
+                                    "code": "game:bowl-fired",
+                                    "amount": 4
+                                },
+                                {
+                                    "type": "Block",
+                                    "code": "game:crock-burned-east",
+                                    "amount": 4
+                                },
+                                {
+                                    "type": "Block",
+                                    "code": "game:claypot-burned",
+                                    "amount": 1
+                                },
+                                {
+                                    "type": "Item",
+                                    "code": "game:stone-halite",
+                                    "amount": 64
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "dependsOn": [
+            {
+                "modid": "aculinaryartillery"
+            },
+            {
+                "modid": "lenscommons"
+            }
+        ]
+    }
+]

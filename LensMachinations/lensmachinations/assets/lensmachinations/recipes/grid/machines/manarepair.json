@@ -1,0 +1,24 @@
+﻿{
+    "ingredientPattern": "T_T,GQG",
+    "width": 3,
+    "height": 2,
+    "ingredients": {
+        "Q": {
+            "type": "block",
+            "code": "sturdycasing"
+        },
+        "T": {
+            "type": "item",
+            "code": "game:gear-temporal"
+        },
+        "G": {
+            "type": "item",
+            "code": "game:metalnailsandstrips-*",
+            "quantity": 2
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "manarepair"
+    }
+}

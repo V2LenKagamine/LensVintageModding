@@ -1,0 +1,214 @@
+﻿{
+    "code": "statsscroll",
+    "class": "scrollitem",
+    "variantgroups": [
+        {
+            "code": "scrolltype",
+            "states": [
+                "referenceall",
+                "rangedacc",
+                "animalloot",
+                "animalharvest",
+                "animalseek",
+                "foragedrops",
+                "healingeff",
+                "hungerrate",
+                "meleedmg",
+                "miningmulti",
+                "orerate",
+                "rangeddmg",
+                "rangedspeed",
+                "walkingspeed",
+                "wildcropdrop"
+            ]
+        }
+    ],
+    "attributesByType": {
+        "*-referenceall": {
+            "scrollinfo": {
+                "scrollID": "biglad"
+            },
+            "effects": {
+                "rangedWeaponsAcc": 0.05,
+                "animalLootDropRate": 0.05,
+                "animalHarvestingTime": 0.05,
+                "animalSeekingRange": -0.1,
+                "forageDropRate": 0.05,
+                "healingeffectivness": 0.5,
+                "hungerrate": -0.95,
+                "meleeWeaponsDamage": 2.0,
+                "miningSpeedMul": 0.05,
+                "oreDropRate": 1.0,
+                "rangedWeaponsDamage": 0.5,
+                "rangedWeaponsSpeed": -0.5,
+                "walkspeed": 0.01,
+                "wildCropDropRate": 0.01
+            },
+            "handbook": {
+                "include": false
+            }
+        },
+        "*-rangedacc": {
+            "scrollinfo": {
+                "scrollID": "rangedAcc"
+            },
+            "effects": {
+                "rangedWeaponsAcc": 0.25
+            },
+            "durations": {
+                "rangedWeaponsAcc": 15
+            }
+        },
+        "*-animalloot": {
+            "scrollinfo": {
+                "scrollID": "animalLoot"
+            },
+            "effects": {
+                "animalLootDropRate": 0.25
+            },
+            "durations": {
+                "animalLootDropRate": 15
+            }
+        },
+        "*-animalharvest": {
+            "scrollinfo": {
+                "scrollID": "animalHarvest"
+            },
+            "effects": {
+                "animalHarvestingTime": 0.25
+            },
+            "durations": {
+                "animalHarvestingTime": 15
+            }
+        },
+        "*-animalseek": {
+            "scrollinfo": {
+                "scrollID": "animalSeek"
+            },
+            "effects": {
+                "animalSeekingRange": -0.25
+            },
+            "durations": {
+                "animalSeekingRange": 15
+            }
+        },
+        "*-foragedrops": {
+            "scrollinfo": {
+                "scrollID": "forageDrops"
+            },
+            "effects": {
+                "forageDropRate": 0.25
+            },
+            "durations": {
+                "forageDropRate": 15
+            }
+        },
+        "*-healingeff": {
+            "scrollinfo": {
+                "scrollID": "healingEff"
+            },
+            "effects": {
+                "healingeffectivness": 0.25
+            },
+            "durations": {
+                "healingeffectivness": 15
+            }
+        },
+        "*-hungerrate": {
+            "scrollinfo": {
+                "scrollID": "hungerrate"
+            },
+            "effects": {
+                "hungerrate": -0.25
+            },
+            "durations": {
+                "hungerrate": 15
+            }
+        },
+        "*-meleedmg": {
+            "scrollinfo": {
+                "scrollID": "meleeDmg"
+            },
+            "effects": {
+                "meleeWeaponsDamage": 0.25
+            },
+            "durations": {
+                "meleeWeaponsDamage": 15
+            }
+        },
+        "*-miningmulti": {
+            "scrollinfo": {
+                "scrollID": "miningMulti"
+            },
+            "effects": {
+                "miningSpeedMul": 0.25
+            },
+            "durations": {
+                "miningSpeedMul": 15
+            }
+        },
+        "*-orerate": {
+            "scrollinfo": {
+                "scrollID": "oreRate"
+            },
+            "effects": {
+                "oreDropRate": 0.25
+            },
+            "durations": {
+                "oreDropRate": 15
+            }
+        },
+        "*-rangeddmg": {
+            "scrollinfo": {
+                "scrollID": "rangedDmg"
+            },
+            "effects": {
+                "rangedWeaponsDamage": 0.25
+            },
+            "durations": {
+                "rangedWeaponsDamage": 15
+            }
+
+        },
+        "*-rangedspeed": {
+            "scrollinfo": {
+                "scrollID": "rangedSpeed"
+            },
+            "effects": {
+                "rangedWeaponsSpeed": 0.25
+            },
+            "durations": {
+                "rangedWeaponsSpeed": 15
+            }
+        },
+        "*-walkingspeed": {
+            "scrollinfo": {
+                "scrollID": "walkingSpeed"
+            },
+            "effects": {
+                "walkspeed": 0.25
+            },
+            "durations": {
+                "walkspeed": 15
+            }
+        },
+        "*-wildcropdrop": {
+            "scrollinfo": {
+                "scrollID": "wildCropDrop"
+            },
+            "effects": {
+                "wildCropDropRate": 0.25
+            },
+            "durations": {
+                "wildCropDropRate": 15
+            }
+        }
+    },
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "texture": {
+        "base": "item/scroll"
+    }
+}

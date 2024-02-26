@@ -1,0 +1,71 @@
+﻿{
+    "code": "hoardingsack",
+    "maxstacksize": 1,
+    "attributes": {
+        "wearableAttachment": true,
+        "attachShape": { "base": "game:item/bag/backpack-attached" },
+        "backpack": {
+            "quantitySlots": 8
+        },
+        "statModifiers": {
+            "hungerrate": 0.03,
+            "walkspeed": -0.03
+        }
+    },
+    "shape": { "base": "game:item/bag/backpack" },
+    "textures": {
+        "straps": { "base": "game:item/bag/backpack/straps" },
+        "leather": { "base": "game:item/bag/backpack/leather" }
+    },
+    "storageFlags": 2,
+    "creativeinventory": {
+        "general": [ "*" ],
+        "items": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "guiTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": -20,
+            "y": 21,
+            "z": 180
+        },
+        "origin": {
+            "x": 0.53,
+            "y": 0.35,
+            "z": 0.5
+        },
+        "scale": 2.3,
+        "rotate": true
+    },
+    "fpHandTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.2
+        },
+        "rotation": {
+            "x": 20,
+            "y": -73,
+            "z": 10
+        },
+        "scale": 2.5
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -0.66,
+            "y": -0.5,
+            "z": -0.45
+        },
+        "rotation": {
+            "x": -89,
+            "y": 67,
+            "z": -91
+        },
+        "scale": 0.86
+    }
+}

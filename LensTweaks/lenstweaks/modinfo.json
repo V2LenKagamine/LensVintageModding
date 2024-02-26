@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "lenstweaks",
+    "name": "Lens-Tweaks",
+    "authors": [
+        "LenKagamine"
+    ],
+    "description": "Contains Vanilla-esc additions to the game, but with no central theme.",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "1.19.3"
+    }
+}

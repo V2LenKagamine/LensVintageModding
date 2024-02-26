@@ -1,0 +1,20 @@
+﻿{
+    "ingredientPattern": "H,S,S",
+    "ingredients": {
+        "H": {
+            "type": "item",
+            "code": "game:hammer-*",
+            "isTool": true
+        },
+        "S": {
+            "type": "block",
+            "code": "game:mushroom-deathcap-normal"
+        }
+    },
+    "width": 1,
+    "height": 3,
+    "output": {
+        "type": "item",
+        "code": "toxic-concoction"
+    }
+}

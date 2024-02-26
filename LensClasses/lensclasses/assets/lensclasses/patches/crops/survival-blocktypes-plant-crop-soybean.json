@@ -1,0 +1,14 @@
+[
+  {
+    "op": "add",
+    "path": "/dropsByType/*-10/1/dropModbyStat",
+    "value": "produceDropRate",
+    "file": "blocktypes/plant/crop/soybean.json"
+  },
+  {
+    "op": "add",
+    "path": "/dropsByType/*-11/1/dropModbyStat",
+    "value": "produceDropRate",
+    "file": "blocktypes/plant/crop/soybean.json"
+  }
+]

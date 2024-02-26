@@ -1,0 +1,14 @@
+[
+  {
+    "op": "add",
+    "path": "/dropsByType/*-9/1/dropModbyStat",
+    "value": "produceDropRate",
+    "file": "blocktypes/plant/crop/flax.json"
+  },
+  {
+    "op": "add",
+    "path": "/dropsByType/*-9/2/dropModbyStat",
+    "value": "produceDropRate",
+    "file": "blocktypes/plant/crop/flax.json"
+  }
+]

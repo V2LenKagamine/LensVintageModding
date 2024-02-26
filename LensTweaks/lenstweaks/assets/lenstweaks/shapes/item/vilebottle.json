@@ -1,0 +1,95 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+		"glass": [4,4],
+		"map": [8,8]
+	},
+	"textures": {
+		"frame": "game:block/glass/frame",
+		"luminescentliquid": "game:block/liquid/luminescentliquid",
+		"oak": "game:block/wood/oak"
+	},
+	"elements": [
+		{
+			"name": "content",
+			"from": [ 6.7, 0.21, 6.7 ],
+			"to": [ 9.3, 2.01, 9.3 ],
+			"renderPass": 3,
+			"rotationOrigin": [ 6.7, 0.2, 6.7 ],
+			"faces": {
+				"north": { "texture": "#luminescentliquid", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 180, "autoUv": false },
+				"east": { "texture": "#luminescentliquid", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 90, "autoUv": false },
+				"south": { "texture": "#luminescentliquid", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
+				"west": { "texture": "#luminescentliquid", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 270, "autoUv": false },
+				"up": { "texture": "#luminescentliquid", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
+				"down": { "texture": "#luminescentliquid", "uv": [ 0.0, 0.0, 16.0, 6.0 ], "autoUv": false }
+			}
+		},
+		{
+			"name": "glass",
+			"from": [ 6.5, 0.01, 6.5 ],
+			"to": [ 9.5, 4.01, 9.5 ],
+			"renderPass": 3,
+			"rotationOrigin": [ 12.5, 0.0, 12.5 ],
+			"faces": {
+				"north": { "texture": "#frame", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
+				"east": { "texture": "#frame", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
+				"south": { "texture": "#frame", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
+				"west": { "texture": "#frame", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
+				"up": { "texture": "#frame", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 90, "autoUv": false },
+				"down": { "texture": "#frame", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false }
+			},
+			"children": [
+				{
+					"name": "cork1",
+					"from": [ 1.0, 4.05, 1.0 ],
+					"to": [ 2.0, 5.05, 2.0 ],
+					"renderPass": 2,
+					"rotationOrigin": [ 7.0, 4.0, 7.0 ],
+					"faces": {
+						"north": { "texture": "#oak", "uv": [ 6.5, 1.5, 7.5, 2.5 ] },
+						"east": { "texture": "#oak", "uv": [ 6.5, 2.0, 7.5, 3.0 ] },
+						"south": { "texture": "#oak", "uv": [ 6.5, 3.0, 7.5, 4.0 ] },
+						"west": { "texture": "#oak", "uv": [ 6.5, 4.0, 7.5, 5.0 ] },
+						"down": { "texture": "#oak", "uv": [ 5.5, 4.5, 6.5, 5.5 ] }
+					},
+					"children": [
+						{
+							"name": "cork2",
+							"from": [ -0.25, 0.95, -0.25 ],
+							"to": [ 1.25, 1.7, 1.25 ],
+							"renderPass": 2,
+							"rotationOrigin": [ 0.0, 1.0, 0.0 ],
+							"faces": {
+								"north": { "texture": "#oak", "uv": [ 5.0, 1.0, 5.5, 2.5 ], "rotation": 90 },
+								"east": { "texture": "#oak", "uv": [ 6.5, 2.0, 7.0, 3.5 ], "rotation": 90 },
+								"south": { "texture": "#oak", "uv": [ 6.5, 2.0, 7.0, 3.5 ], "rotation": 270 },
+								"west": { "texture": "#oak", "uv": [ 6.0, 2.5, 6.5, 4.0 ], "rotation": 270 },
+								"up": { "texture": "#oak", "uv": [ 5.0, 2.5, 6.5, 4.0 ] },
+								"down": { "texture": "#oak", "uv": [ 5.25, 2.5, 6.75, 4.0 ] }
+							}
+						}
+					]
+				},
+				{
+					"name": "glass6",
+					"from": [ 0.5, 4.0, 0.5 ],
+					"to": [ 2.5, 4.75, 2.5 ],
+					"renderPass": 3,
+					"rotationOrigin": [ 6.54, 3.99, 6.5 ],
+					"faces": {
+						"north": { "texture": "#frame", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
+						"east": { "texture": "#frame", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
+						"south": { "texture": "#frame", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
+						"west": { "texture": "#frame", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false, "windMode": [-1,-1,-1,-1] },
+						"up": { "texture": "#frame", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 90, "autoUv": false }
+					}
+				}
+			]
+		}
+	]}

@@ -1,0 +1,31 @@
+﻿{
+    "code": "blowdartprojectile",
+    "class": "lenssimpleprojectile",
+    "hitboxSize": {
+        "x": 0.25,
+        "y": 0.25,
+        "z": 0.25
+    },
+    "client": {
+        "size": 0.75,
+        "renderer": "Shape",
+        "shapeByType": {
+            "*": { "base": "entity/blowdart" }
+        },
+        "behaviors": [
+            { "code": "passivephysics" },
+            { "code": "interpolateposition" }
+        ]
+    },
+    "server": {
+        "behaviors": [
+            { "code": "passivephysics" },
+            {
+                "code": "despawn",
+                "minSeconds": 10
+            }
+        ]
+    },
+    "sounds": {
+    }
+}

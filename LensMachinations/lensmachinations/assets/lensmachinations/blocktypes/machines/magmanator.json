@@ -1,0 +1,51 @@
+﻿{
+    "code": "magmanator",
+    "shape": { "base": "game:block/basic/cube" },
+    "drawtype": "cube",
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "entityClass": "lensmagmanator",
+    "entityBehaviors": [
+        { "name": "lensmagmanatorbehavior" },
+        { "name": "Mana" }
+    ],
+    "attributes": {
+        "handbook": {
+            "extraSections": [
+                {
+                    "title": "handbook-block-magmanator-title",
+                    "text": "handbook-block-magmanator-text"
+                }
+            ],
+            "include": true
+        }
+    },
+    "blockmaterial": "Metal",
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "maxStackSize": 32,
+    "materialDensity": 700,
+    "resistance": 4,
+    "textures": {
+        "verticals": {
+            "base": "game:block/metal/corroded/normal1",
+            "blendedoverlays": [
+                {
+                    "base": "game:block/machine/lattice",
+                    "blendMode": "Overlay"
+                }
+            ]
+        },
+        "horizontals": {
+            "base": "game:block/metal/plate/iron"
+        }
+    },
+    "sideopaque": {
+        "all": true
+    },
+    "sidesolid": {
+        "all": true
+    }
+}

@@ -1,0 +1,90 @@
+﻿{
+    "code": "heaterblock",
+    "creativeinventory": {
+        "general": [ "*-north" ],
+        "lensstorytab": [ "*-north" ]
+    },
+    "class": "lensheaterblock",
+    "entityClass": "lensheater",
+    "behaviors": [ { "name": "HorizontalOrientable" } ],
+    "blockmaterial": "Stone",
+    "variantgroups": [
+        {
+            "code": "side",
+            "loadFromProperties": "abstract/horizontalorientation"
+        }
+    ],
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "maxStackSize": 64,
+    "materialDensity": 700,
+    "resistance": 4,
+    "attributes": {
+        "handbook": {
+            "groupBy": [ "heaterblock-*" ],
+            "extraSections": [
+                {
+                    "title": "handbook-block-heater-title",
+                    "text": "handbook-block-heater-text"
+                }
+            ]
+        }
+    },
+    "shapeByType": {
+        "*-north": {
+            "base": "block/heater",
+            "rotateY": 0
+        },
+        "*-east": {
+            "base": "block/heater",
+            "rotateY": 270
+        },
+        "*-south": {
+            "base": "block/heater",
+            "rotateY": 180
+        },
+        "*-west": {
+            "base": "block/heater",
+            "rotateY": 90
+        }
+    },
+    "sideopaqueByType": {
+        "*-north": {
+            "down": true,
+            "up": true,
+            "horizontals": true,
+            "north": false
+        },
+        "*-east": {
+            "down": true,
+            "up": true,
+            "horizontals": true,
+            "east": false
+        },
+        "*-south": {
+            "down": true,
+            "up": true,
+            "horizontals": true,
+            "south": false
+        },
+        "*-west": {
+            "down": true,
+            "up": true,
+            "horizontals": true,
+            "west": false
+        }
+    },
+    "sidesolidByType": {
+        "*": {
+            "all": true
+        }
+    },
+    "selectionbox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 1,
+        "z2": 1
+    }
+}

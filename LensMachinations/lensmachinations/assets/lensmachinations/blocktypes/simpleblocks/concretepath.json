@@ -1,0 +1,85 @@
+﻿{
+    "code": "concretepath",
+    "shape": { "base": "game:block/basic/cube-lowered-{cover}" },
+    "creativeinventory": {
+        "general": [ "*-free" ],
+        "decorative": [ "*-free" ],
+        "lensstorytab": [ "*-free" ]
+    },
+    "blockmaterial": "Stone",
+    "variantgroups": [
+        {
+            "code": "cover",
+            "states": [ "free", "snow" ]
+        }
+    ],
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "behaviorsByType": {
+        "*-snow": [ { "name": "BreakSnowFirst" } ]
+    },
+    "resistanceByType": {
+        "*-snow": 0.2,
+        "*-free": 2.4
+    },
+    "walkspeedmultiplierByType": {
+        "*-free": 1.6,
+        "*-snow": 1.2
+    },
+    "textures": {
+        "sides": {
+            "base": "block/concrete",
+            "alternates": [
+                { "base": "block/concrete2" },
+                { "base": "block/concrete3" },
+                { "base": "block/concrete4" }
+            ]
+        }
+    },
+    "drops": [
+        {
+            "type": "block",
+            "code": "concretepath-free"
+        }
+    ],
+    "faceCullMode": "FlushExceptTop",
+    "sideopaque": {
+        "all": false,
+        "down": true
+    },
+    "sidesolid": {
+        "all": false,
+        "down": true
+    },
+    "selectionbox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 1,
+        "z2": 1
+    },
+    "collisionbox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 1,
+        "z2": 1
+    },
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "tpHandTransform": {
+        "translation": {
+            "x": -1.2,
+            "y": -1.1,
+            "z": -0.8
+        },
+        "rotation": {
+            "x": -2,
+            "y": 25,
+            "z": -78
+        },
+        "scale": 0.37
+    }
+}

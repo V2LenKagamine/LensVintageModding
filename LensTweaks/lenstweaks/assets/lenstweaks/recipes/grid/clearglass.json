@@ -1,0 +1,36 @@
+﻿[
+    {
+        "ingredientPattern": "L",
+        "ingredients": {
+            "L": {
+                "type": "block",
+                "code": "game:glass-*",
+                "name": "color"
+            }
+        },
+        "shapeless": true,
+        "width": 1,
+        "height": 1,
+        "output": {
+            "type": "block",
+            "code": "clearglass-{color}"
+        }
+    },
+    {
+        "ingredientPattern": "L",
+        "ingredients": {
+            "L": {
+                "type": "block",
+                "code": "clearglass-*",
+                "name": "color"
+            }
+        },
+        "shapeless": true,
+        "width": 1,
+        "height": 1,
+        "output": {
+            "type": "block",
+            "code": "game:glass-{color}"
+        }
+    }
+]

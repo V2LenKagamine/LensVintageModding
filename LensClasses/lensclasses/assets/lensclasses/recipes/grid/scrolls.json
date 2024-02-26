@@ -1,0 +1,422 @@
+﻿[
+    {
+        "ingredientPattern": "_F_,P_C,_U_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-rangedacc"
+        }
+    },
+    {
+        "ingredientPattern": "_F_,P_C,_U_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "item",
+                "code": "game:knife-generic-*",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-animalloot"
+        }
+    },
+    {
+        "ingredientPattern": "_U_,P_C,_F_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "item",
+                "code": "game:knife-generic-*",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-animalharvest"
+        }
+    },
+    {
+        "ingredientPattern": "_F_,P_C,_U_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "block",
+                "code": "game:mushroom-*",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-animalseek"
+        }
+    },
+    {
+        "ingredientPattern": "_U_,P_C,_F_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "block",
+                "code": "game:mushroom-*",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-foragedrops"
+        }
+    },
+    {
+        "ingredientPattern": "_F_,P_C,_U_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "item",
+                "code": "game:cattailtops",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-healingeff"
+        }
+    },
+    {
+        "ingredientPattern": "_F_,P_C,_U_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "item",
+                "code": "game:clay-blue",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-hungerrate"
+        }
+    },
+    {
+        "ingredientPattern": "_F_,P_C,_U_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "item",
+                "code": "game:axe-*",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-meleedmg"
+        }
+    },
+    {
+        "ingredientPattern": "_F_,P_C,_U_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "item",
+                "code": "game:pickaxe-*",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-miningmulti"
+        }
+    },
+    {
+        "ingredientPattern": "_F_,P_C,_U_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "item",
+                "code": "game:prospectingpick-*",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-orerate"
+        }
+    },
+    {
+        "ingredientPattern": "_F_,P_C,_U_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "item",
+                "code": "game:arrowhead-*",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-rangeddmg"
+        }
+    },
+    {
+        "ingredientPattern": "_F_,P_C,_U_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "item",
+                "code": "game:bow-*",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-rangedspeed"
+        }
+    },
+    {
+        "ingredientPattern": "_F_,P_C,_U_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "item",
+                "code": "game:stonepath-*",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-walkingspeed"
+        }
+    },
+    {
+        "ingredientPattern": "_F_,P_C,_U_",
+        "ingredients": {
+            "P": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:charcoal"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:feather",
+                "isTool": true
+            },
+            "U": {
+                "type": "item",
+                "code": "game:seeds-*",
+                "isTool": true
+            }
+        },
+        "requiresTrait": "len-forbidden-knowledge",
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "statsscroll-wildcropdrop"
+        }
+    }
+]

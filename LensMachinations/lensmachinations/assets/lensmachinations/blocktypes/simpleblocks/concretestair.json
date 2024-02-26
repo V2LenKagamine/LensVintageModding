@@ -1,0 +1,172 @@
+﻿{
+    "code": "concretestair",
+    "class": "BlockStairs",
+    "attributes": {
+        "noDownVariant": true
+    },
+    "variantgroups": [
+        {
+            "code": "updown",
+            "states": [ "up" ]
+        },
+        { "loadFromProperties": "abstract/horizontalorientation" },
+        {
+            "code": "cover",
+            "states": [ "free", "snow" ]
+        }
+    ],
+    "shapebytype": {
+        "*-up-north-free": {
+            "base": "game:block/basic/stairs/normal",
+            "rotateY": 0
+        },
+        "*-up-west-free": {
+            "base": "game:block/basic/stairs/normal",
+            "rotateY": 90
+        },
+        "*-up-south-free": {
+            "base": "game:block/basic/stairs/normal",
+            "rotateY": 180
+        },
+        "*-up-east-free": {
+            "base": "game:block/basic/stairs/normal",
+            "rotateY": 270
+        },
+        "*-up-north-snow": {
+            "base": "game:block/basic/stairs/snow-normal",
+            "rotateY": 0
+        },
+        "*-up-west-snow": {
+            "base": "game:block/basic/stairs/snow-normal",
+            "rotateY": 90
+        },
+        "*-up-south-snow": {
+            "base": "game:block/basic/stairs/snow-normal",
+            "rotateY": 180
+        },
+        "*-up-east-snow": {
+            "base": "game:block/basic/stairs/snow-normal",
+            "rotateY": 270
+        }
+    },
+    "creativeinventory": {
+        "general": [ "*-up-north-free" ],
+        "construction": [ "*-up-north-free" ],
+        "lensstorytab": [ "*-up-north-free" ]
+    },
+    "blockmaterial": "Stone",
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "behaviorsByType": {
+        "*-snow": [ { "name": "BreakSnowFirst" } ]
+    },
+    "resistanceByType": {
+        "*-*-snow": 0.2,
+        "*-*-free": 2.4
+    },
+    "walkspeedmultiplierByType": {
+        "*-*-free": 1.6,
+        "*-*-snow": 1.2
+    },
+    "textures": {
+        "sides": {
+            "base": "block/concrete",
+            "alternates": [
+                { "base": "block/concrete2" },
+                { "base": "block/concrete3" },
+                { "base": "block/concrete4" }
+            ]
+        }
+    },
+    "emitSideAo": { "all": true },
+    "drops": [
+        {
+            "type": "block",
+            "code": "concretestair-up-north-free"
+        }
+    ],
+    "faceCullMode": "NeverCull",
+    "sideopaque": {
+        "all": false,
+        "down": true
+    },
+    "sidesolidByType": {
+        "*-up-north": {
+            "all": false,
+            "down": true,
+            "north": true
+        },
+        "*-up-west": {
+            "all": false,
+            "down": true,
+            "west": true
+        },
+        "*-up-south": {
+            "all": false,
+            "down": true,
+            "south": true
+        },
+        "*-up-east": {
+            "all": false,
+            "down": true,
+            "east": true
+        }
+    },
+    "selectionbox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 1,
+        "z2": 1
+    },
+    "collisionbox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 1,
+        "z2": 1
+    },
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "tpHandTransform": {
+        "translation": {
+            "x": -1.2,
+            "y": -1.1,
+            "z": -0.8
+        },
+        "rotation": {
+            "x": -2,
+            "y": 25,
+            "z": -78
+        },
+        "scale": 0.37
+    },
+    "collisionSelectionBoxesByType": {
+        "*-up-*": [
+            {
+                "x1": 0,
+                "y1": 0,
+                "z1": 0,
+                "x2": 1,
+                "y2": 0.5,
+                "z2": 1
+            },
+            {
+                "x1": 0,
+                "y1": 0.5,
+                "z1": 0.5,
+                "x2": 1,
+                "y2": 1,
+                "z2": 1,
+                "rotateYByType": {
+                    "*-north-*": 180,
+                    "*-east-*": 90,
+                    "*-south-*": 0,
+                    "*-west-*": 270
+                }
+            }
+        ]
+    }
+}

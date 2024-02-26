@@ -1,0 +1,96 @@
+﻿{
+    "code": "arrow-bone",
+    "class": "ItemArrow",
+    "variantgroups": [
+        {
+            "code": "material",
+            "states": [ "flint" ]
+        }
+    ],
+    "maxstacksize": 64,
+    "storageFlags": 513,
+    "shapeByType": {
+        "*": { "base": "game:item/tool/arrow-copper" }
+    },
+    "texturesByType": {
+        "*": {
+            "material": { "base": "game:block/creature/bone" },
+            "feather2": { "base": "item/parts/feather2" },
+            "handle": { "base": "game:block/creature/bone" }
+        }
+    },
+    "creativeinventory": {
+        "general": [ "*" ],
+        "items": [ "*" ],
+        "tools": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "guiTransform": {
+        "rotation": {
+            "x": -23,
+            "y": -45,
+            "z": -145
+        },
+        "origin": {
+            "x": 0.7,
+            "y": -0.45,
+            "z": 0
+        },
+        "scale": 1.44
+    },
+    "fpHandTransform": {
+        "translation": {
+            "x": 0.35,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 87,
+            "y": 90,
+            "z": -30
+        },
+        "scale": 1.14
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -1.05,
+            "y": -0.59,
+            "z": -0.96
+        },
+        "rotation": {
+            "x": 0,
+            "y": 2,
+            "z": 3
+        },
+        "scale": 0.48
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": -0.03,
+            "z": 0.5
+        },
+        "scale": 2.64
+    },
+    "attributes": {
+        "damageByType": {
+            "*": -0.75
+        },
+        "breakChanceOnImpactByType": {
+            "*": 0.65
+        },
+        "handbook": {
+            "groupBy": [ "arrow-*" ]
+        }
+    }
+}

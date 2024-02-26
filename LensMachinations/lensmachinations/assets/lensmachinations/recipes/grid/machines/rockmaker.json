@@ -1,0 +1,101 @@
+﻿[
+    {
+        "ingredientPattern": "_C_,PTP,GQG",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "Q": {
+                "type": "block",
+                "code": "sturdycasing"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:chutesection-copper"
+            },
+            "P": {
+                "type": "item",
+                "code": "game:ingot-electrum"
+            },
+            "T": {
+                "type": "item",
+                "code": "game:gear-temporal"
+            },
+            "G": {
+                "type": "item",
+                "code": "game:metalnailsandstrips-*",
+                "quantity": 2
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "rockmaker"
+        }
+    },
+    {
+        "ingredientPattern": "_C_,PTP,GQG",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "Q": {
+                "type": "block",
+                "code": "sturdycasing"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:chutesection-copper"
+            },
+            "P": {
+                "type": "item",
+                "code": "game:ingot-cupronickel",
+                "quantity": 2
+            },
+            "T": {
+                "type": "item",
+                "code": "game:gear-temporal"
+            },
+            "G": {
+                "type": "item",
+                "code": "game:metalnailsandstrips-*",
+                "quantity": 2
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "rockmaker"
+        }
+    },
+    {
+        "ingredientPattern": "_C_,PTP,GQG",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "Q": {
+                "type": "block",
+                "code": "sturdycasing"
+            },
+            "C": {
+                "type": "item",
+                "code": "game:chutesection-copper"
+            },
+            "P": {
+                "type": "item",
+                "code": "game:ingot-meteoriciron",
+                "quantity": 4
+            },
+            "T": {
+                "type": "item",
+                "code": "game:gear-temporal"
+            },
+            "G": {
+                "type": "item",
+                "code": "game:metalnailsandstrips-*",
+                "quantity": 2
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "rockmaker"
+        }
+    }
+
+]

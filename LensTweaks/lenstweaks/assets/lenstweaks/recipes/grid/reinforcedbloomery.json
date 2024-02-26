@@ -1,0 +1,19 @@
+﻿{
+    "ingredientPattern": "P_P,PBP",
+    "width": 3,
+    "height": 2,
+    "ingredients": {
+        "P": {
+            "type": "item",
+            "code": "game:metalplate-iron"
+        },
+        "B": {
+            "type": "block",
+            "code": "game:bloomerybase-*"
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "reinforcedbloomery-north"
+    }
+}

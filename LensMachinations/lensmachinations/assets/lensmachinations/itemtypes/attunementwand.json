@@ -1,0 +1,11 @@
+﻿{
+    "code": "attunementwand",
+    "class": "attunementclass",
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "texture": {
+        "base": "item/astick"
+    }
+}

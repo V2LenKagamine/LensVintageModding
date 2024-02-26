@@ -1,0 +1,16 @@
+﻿{
+    "code": "liquidconcrete",
+    "ingredients": [
+        {
+            "type": "item",
+            "code": "game:waterportion",
+            "litres": 1
+        },
+        {
+            "type": "item",
+            "code": "concretemix",
+            "quantity": 1 
+        }
+    ],
+    "output": {"type": "item","code": "concreteportion","litres": 1}
+}

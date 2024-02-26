@@ -1,0 +1,51 @@
+﻿{
+    "code": "magmaforge",
+    "shape": { "base": "block/magmaforge" },
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "class": "lensmagmaforgeblock",
+    "entityClass": "lensmagmaforge",
+    "attributes": {
+        "handbook": {
+            "extraSections": [
+                {
+                    "title": "handbook-block-magmaforge-title",
+                    "text": "handbook-block-magmaforge-text"
+                }
+            ],
+            "include": true
+        }
+    },
+    "blockmaterial": "Metal",
+    "replaceable": 500,
+    "lightAbsorption": 99,
+    "maxStackSize": 32,
+    "materialDensity": 700,
+    "resistance": 3,
+    "sideopaque": {
+        "all": false
+    },
+    "sidesolid": {
+        "all": false
+    },
+    "collisionboxes": [
+        {
+            "x1": 0.15,
+            "y1": 0,
+            "z1": 0.15,
+            "x2": 0.85,
+            "y2": 1,
+            "z2": 0.85
+        }
+    ],
+    "selectionbox": {
+        "x1": 0.15,
+        "y1": 0,
+        "z1": 0.15,
+        "x2": 0.85,
+        "y2": 1.08,
+        "z2": 0.85
+    }
+}

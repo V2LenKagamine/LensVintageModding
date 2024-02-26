@@ -1,0 +1,43 @@
+﻿[
+    {
+        "ingredientPattern": "I,S",
+        "width": 1,
+        "height": 2,
+        "ingredients": {
+            "I": {
+                "type": "item",
+                "code": "game:stick"
+            },
+            "S": {
+                "type": "block",
+                "code": "game:rock-*"
+            }
+        },
+        "shapeless": true,
+        "output": {
+            "type": "block",
+            "code": "redlever-off-north-down",
+            "quantity": 2
+        }
+    },
+    {
+        "ingredientPattern": "I,S",
+        "width": 1,
+        "height": 2,
+        "ingredients": {
+            "I": {
+                "type": "item",
+                "code": "game:stick"
+            },
+            "S": {
+                "type": "block",
+                "code": "game:cobblestone-*"
+            }
+        },
+        "shapeless": true,
+        "output": {
+            "type": "block",
+            "code": "redlever-off-north-down"
+        }
+    }
+]

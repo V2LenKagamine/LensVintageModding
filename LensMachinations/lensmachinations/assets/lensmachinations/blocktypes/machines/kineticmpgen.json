@@ -1,0 +1,42 @@
+﻿{
+    "code": "kineticmpgen",
+    "shape": { "base": "block/machines/kineticmpgen" },
+    "drawtype": "JSON",
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "class": "lenskineticmpgenblock",
+    "entityClass": "lenskineticmpgen",
+    "entityBehaviors": [
+        { "name": "lenskineticmpgenbehavior" },
+        { "name": "Mana" }
+    ],
+    "attributes": {
+        "handbook": {
+            "extraSections": [
+                {
+                    "title": "handbook-block-kineticmpgen-title",
+                    "text": "handbook-block-kineticmpgen-text"
+                }
+            ]
+        }
+    },
+    "textures": {
+        "brown": { "base": "game:block/glass/brown" },
+        "device-blank": { "base": "game:block/machine/device-blank" }
+    },
+    "blockmaterial": "Metal",
+    "replaceable": 900,
+    "lightAbsorption": 1,
+    "maxStackSize": 32,
+    "materialDensity": 700,
+    "resistance": 4,
+    "sideopaque": {
+        "all": false
+    },
+    "sidesolid": {
+        "all": true,
+        "horizontals": false
+    }
+}

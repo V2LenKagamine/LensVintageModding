@@ -1,0 +1,16 @@
+﻿{
+    "ingredientPattern": "I",
+    "width": 1,
+    "height": 1,
+    "ingredients": {
+        "I": {
+            "type": "item",
+            "code": "attunementwand"
+        }
+    },
+    "shapeless": true,
+    "output": {
+        "type": "item",
+        "code": "redwand"
+    }
+}

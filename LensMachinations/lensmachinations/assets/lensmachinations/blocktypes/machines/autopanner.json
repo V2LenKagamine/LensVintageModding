@@ -1,0 +1,35 @@
+{
+    "code": "autopanner",
+    "shape": { "base": "block/machines/autopanner" },
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "class": "lensautopannerblock",
+    "entityClass": "lensautopanner",
+    "entityBehaviors": [ { "name": "lensautopannerbehavior" },{"name": "Mana"} ],
+    "blockmaterial": "Metal",
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "maxStackSize": 32,
+    "materialDensity": 700,
+    "resistance": 4,
+    "attributes": {
+        "handbook": {
+            "extraSections": [
+                {
+                    "title": "handbook-block-autopanner-title",
+                    "text": "handbook-block-autopanner-text"
+                }
+            ],
+            "include": true
+        }
+    },
+    "sideopaque": {
+        "all": false,
+        "up": true
+    },
+    "sidesolid": {
+        "all": false
+    }
+}

@@ -1,0 +1,103 @@
+﻿{
+    "code": "redtransmission",
+    "class": "lensredtransmission",
+    "behaviors": [ { "name": "Pillar" } ],
+    "drawtype": "json",
+    "entityBehaviors": [
+        { "name": "lensredtransmissionbehavior" },
+        { "name": "Redstone" }
+    ],
+    "variantgroups": [
+        {
+            "code": "orientation",
+            "states": [ "ud", "we", "ns" ]
+        }
+    ],
+    "creativeinventory": {
+        "general": [ "*-ud" ],
+        "lensstorytab": [ "*-ud" ]
+    },
+    "shape": { "base": "game:block/basic/cube" },
+    "blockmaterial": "Metal",
+    "replaceable": 900,
+    "resistance": 2,
+    "attributes": {
+        "handbook": {
+            "groupBy": [ "redtransmission-*" ]
+        }
+    },
+    "drops": [
+        {
+            "type": "block",
+            "code": "redtransmission-ud",
+            "quantity": { "avg": 1 }
+        }
+    ],
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "texturesByType": {
+        "*-ud": {
+            "all": { "base": "game:block/machine/device-blank" },
+            "up": {
+                "base": "game:block/machine/device-blank",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/meteoriciron-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "down": {
+                "base": "game:block/machine/device-blank",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/meteoriciron-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-we": {
+            "all": { "base": "game:block/machine/device-blank" },
+            "east": {
+                "base": "game:block/machine/device-blank",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/meteoriciron-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "west": {
+                "base": "game:block/machine/device-blank",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/meteoriciron-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-ns": {
+            "all": { "base": "game:block/machine/device-blank" },
+            "north": {
+                "base": "game:block/machine/device-blank",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/meteoriciron-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            },
+            "south": {
+                "base": "game:block/machine/device-blank",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/meteoriciron-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        }
+    }
+}
