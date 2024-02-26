@@ -71,7 +71,7 @@ namespace LensstoryMod
                 }
             }
             damage *= byEntity.Stats.GetBlended("rangedWeaponsDamage");
-            EntityProperties type = byEntity.World.GetEntityType(new AssetLocation("lensstory:blowdartprojectile"));
+            EntityProperties type = byEntity.World.GetEntityType(new AssetLocation("lenstweaks:blowdartprojectile"));
             var projectile = byEntity.World.ClassRegistry.CreateEntity(type) as EntitySimpleProjectile;
             projectile.FiredBy = byEntity;
             projectile.Damage = damage;

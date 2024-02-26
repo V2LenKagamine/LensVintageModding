@@ -123,7 +123,7 @@ namespace LensstoryMod
 
         private void OnManaMessageS(IPlayer from, ManaWandMessage packet)
         {
-            if (from.InventoryManager.ActiveHotbarSlot.Itemstack?.Item?.Code == AssetLocation.Create("lensstory:attunementwand"))
+            if (from.InventoryManager.ActiveHotbarSlot.Itemstack?.Item?.Code == AssetLocation.Create("lensmachinations:attunementwand"))
             {
                 from.InventoryManager.ActiveHotbarSlot.Itemstack.Attributes.SetInt("channel", packet.message);
                 from.InventoryManager.ActiveHotbarSlot.MarkDirty();
@@ -136,7 +136,7 @@ namespace LensstoryMod
         }
         private void OnRedMessageRec(IPlayer from, RedWandMessage up)
         {
-            if (from.InventoryManager.ActiveHotbarSlot.Itemstack.Item.Code == AssetLocation.Create("lensstory:redwand"))
+            if (from.InventoryManager.ActiveHotbarSlot.Itemstack.Item.Code == AssetLocation.Create("lensmachinations:redwand"))
             {
                 from.InventoryManager.ActiveHotbarSlot.Itemstack.Attributes.SetString("channel", up.Channel);
                 from.InventoryManager.ActiveHotbarSlot.MarkDirty();
