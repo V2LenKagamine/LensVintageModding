@@ -1,0 +1,28 @@
+﻿{
+    "ingredientPattern": "PCP,ZMZ",
+    "width": 3,
+    "height": 2,
+    "ingredients": {
+        "P": {
+            "type": "item",
+            "code": "game:metalplate-meteoriciron"
+        },
+        "Z": {
+            "type": "item",
+            "code": "game:metalplate-copper"
+        },
+        "C": {
+            "type": "block",
+            "code": "game:chest-*",
+            "attributes": { "type": "normal-generic" }
+        },
+        "M": {
+            "type": "item",
+            "code": "game:gear-temporal"
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "icebox-north"
+    }
+}

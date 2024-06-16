@@ -15,7 +15,7 @@
     "texturesByType": {
         "*": {
             "material": { "base": "game:block/creature/bone" },
-            "feather2": { "base": "item/parts/feather2" },
+            "feather2": { "base": "game:item/parts/feather2" },
             "handle": { "base": "game:block/creature/bone" }
         }
     },

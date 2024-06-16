@@ -1,0 +1,19 @@
+﻿{
+    "ingredientPattern": "G_G,GTG",
+    "width": 3,
+    "height": 2,
+    "ingredients": {
+        "T": {
+            "type": "item",
+            "code": "game:gear-temporal"
+        },
+        "G": {
+            "type": "item",
+            "code": "game:metalnailsandstrips-*"
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "manarepair"
+    }
+}

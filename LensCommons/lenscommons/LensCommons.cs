@@ -12,7 +12,7 @@ namespace LensstoryMod {
         }
         internal static void LogError(string message)
         {
-            logger?.Error("(LensStory):{0}",message);
+            logger?.Error("(LensCommons):{0}",message);
         }
     }
 }

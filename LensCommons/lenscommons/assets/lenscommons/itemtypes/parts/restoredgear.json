@@ -32,18 +32,23 @@
         "base": "item/gear-restored"
     },
     "heldRightTpIdleAnimation": "holdinglanternrighthand",
-    "fpHandTransform": {
+    "tpHandTransform": {
         "translation": {
-            "x": 0.25,
-            "y": -0.1,
-            "z": 0
+            "x": 0.54,
+            "y": -0.12,
+            "z": -0.06
         },
         "rotation": {
-            "x": 20,
-            "y": -120,
-            "z": -17
+            "x": -45,
+            "y": -90,
+            "z": 45
         },
-        "scale": 2.5
+        "origin": {
+            "x": -0.3,
+            "y": 0.4,
+            "z": 0.7
+        },
+        "scale": 0.99
     },
     "guiTransform": {
         "translation": {
@@ -52,8 +57,8 @@
             "z": 0
         },
         "rotation": {
-            "x": -50,
-            "y": -45,
+            "x": -54,
+            "y": -35,
             "z": 0
         },
         "origin": {
@@ -61,24 +66,12 @@
             "y": 0.8,
             "z": 0
         },
-        "scale": 1.75
-    },
-    "tpHandTransform": {
-        "translation": {
-            "x": -1.4,
-            "y": -1.1,
-            "z": -1.3
-        },
-        "rotation": {
-            "x": 0,
-            "y": -163,
-            "z": 12
-        }
+        "scale": 3
     },
     "groundTransform": {
         "translation": {
             "x": 0,
-            "y": 0.3,
+            "y": 0.36,
             "z": 0
         },
         "rotation": {
@@ -86,11 +79,6 @@
             "y": 0,
             "z": 0
         },
-        "origin": {
-            "x": 0.5,
-            "y": 0.5,
-            "z": 0.5
-        },
-        "scale": 2.5
+        "scale": 3.51
     }
 }

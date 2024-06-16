@@ -6,8 +6,8 @@
         "LenKagamine"
     ],
     "description": "Contains Vanilla-esc additions to the game, but with no central theme.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "dependencies": {
-        "game": "1.19.3"
+        "game": "1.19.8"
     }
 }

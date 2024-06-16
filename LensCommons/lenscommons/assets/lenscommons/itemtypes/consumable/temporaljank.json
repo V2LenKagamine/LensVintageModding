@@ -25,12 +25,35 @@
         },
         "scale": 0.76
     },
-    "guiTransform": {
+    "groundTransform": {
         "translation": {
-            "x": 8,
-            "y": 33,
+            "x": 0,
+            "y": 0.15,
             "z": 0
         },
-        "scale": 2.92
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 90
+        },
+        "scale": 5
+    },
+    "guiTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": -30,
+            "y": 30,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.75,
+            "y": 0.45,
+            "z": 0
+        },
+        "scale": 2.5
     }
 }

@@ -61,16 +61,21 @@
     },
     "guiTransform": {
         "translation": {
-            "x": -20,
-            "y": 10,
+            "x": 0,
+            "y": 0,
             "z": 0
         },
         "rotation": {
-            "x": -47,
-            "y": 53,
+            "x": 45,
+            "y": -60,
             "z": 0
         },
-        "scale": 2.54
+        "origin": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0.5
+        },
+        "scale": 2.26
     },
     "groundTransform": {
         "translation": {

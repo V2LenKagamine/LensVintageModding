@@ -1,0 +1,75 @@
+﻿{
+    "code": "icebox",
+    "shapeByType": {
+        "*-north": {
+            "base": "block/icebox",
+            "rotateY": 0
+        },
+        "*-east": {
+            "base": "block/icebox",
+            "rotateY": 270
+        },
+        "*-south": {
+            "base": "block/icebox",
+            "rotateY": 180
+        },
+        "*-west": {
+            "base": "block/icebox",
+            "rotateY": 90
+        }
+    },
+    "attributes": {
+        "dialogTitleLangCode": "Icebox Contents",
+        "handbook": {
+            "extraSections": [
+                {
+                    "title": "handbook-block-icebox-title",
+                    "text": "handbook-block-icebox-text"
+                }
+            ],
+            "include": true
+        }
+    },
+    "behaviors": [ { "name": "HorizontalOrientable" } ],
+    "variantgroups": [
+        {
+            "code": "side",
+            "loadFromProperties": "abstract/horizontalorientation"
+        }
+    ],
+    "drawtype": "json",
+    "creativeinventory": {
+        "general": [ "*-north" ],
+        "lensstorytab": [ "*-north" ]
+    },
+    "class": "lensiceboxblock",
+    "entityClass": "lensicebox",
+    "blockmaterial": "Metal",
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "maxStackSize": 32,
+    "materialDensity": 700,
+    "resistance": 2,
+    "sideopaque": {
+        "all": false
+    },
+    "sidesolid": {
+        "all": false
+    },
+    "collisionbox": {
+        "x1": 0.0625,
+        "y1": 0,
+        "z1": 0.0625,
+        "x2": 0.9375,
+        "y2": 0.8125,
+        "z2": 0.9375
+    },
+    "selectionbox": {
+        "x1": 0.0625,
+        "y1": 0,
+        "z1": 0.0625,
+        "x2": 0.9375,
+        "y2": 0.8125,
+        "z2": 0.9375
+    }
+}

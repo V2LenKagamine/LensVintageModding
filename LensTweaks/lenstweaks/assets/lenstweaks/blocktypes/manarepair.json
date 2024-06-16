@@ -1,0 +1,35 @@
+{
+    "code": "manarepair",
+    "shape": { "base": "block/entropysiphoner" },
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "class": "lensmanarepairblock",
+    "entityClass": "lensmanarepair",
+    "attributes": {
+        "handbook": {
+            "extraSections": [
+                {
+                    "title": "handbook-block-manarepair-title",
+                    "text": "handbook-block-manarepair-text"
+                }
+            ],
+            "include": true
+        }
+    },
+    "blockmaterial": "Metal",
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "maxStackSize": 32,
+    "materialDensity": 700,
+    "resistance": 4,
+    "sideopaque": {
+        "all": false,
+        "down": true
+    },
+    "sidesolid": {
+        "all": false,
+        "down": true
+    }
+}

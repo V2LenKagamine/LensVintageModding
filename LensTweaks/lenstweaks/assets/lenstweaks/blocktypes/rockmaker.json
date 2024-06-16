@@ -1,0 +1,34 @@
+{
+    "code": "rockmaker",
+    "shape": { "base": "block/rockmaker" },
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "class": "lensrockmakerblock",
+    "entityClass": "lensrockmaker",
+    "attributes": {
+        "handbook": {
+            "extraSections": [
+                {
+                    "title": "handbook-block-rockmaker-title",
+                    "text": "handbook-block-rockmaker-text"
+                }
+            ],
+            "include": true
+        }
+    },
+    "blockmaterial": "Metal",
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "maxStackSize": 32,
+    "materialDensity": 700,
+    "resistance": 5,
+    "sideopaque": {
+        "all": true,
+        "horizontals": false
+    },
+    "sidesolid": {
+        "all": true
+    }
+}

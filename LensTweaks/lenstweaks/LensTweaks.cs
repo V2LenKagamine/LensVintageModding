@@ -15,17 +15,27 @@ namespace LensstoryMod {
             api.RegisterBlockClass("lensheaterblock", typeof(HeaterBlock));
             api.RegisterBlockEntityClass("lensheater",typeof(HeaterBE));
 
+            api.RegisterBlockClass("lensiceboxblock",typeof(RefridgerationUnitBlock));
+            api.RegisterBlockEntityClass("lensicebox", typeof(RefridgerationUnitBE));
+
+            api.RegisterBlockClass("lensrockmakerblock", typeof(RockmakerBlock));
+            api.RegisterBlockEntityClass("lensrockmaker",typeof(RockmakerBE));
+
+            api.RegisterBlockClass("lensmanarepairblock", typeof(ManaRepairBlock));
+            api.RegisterBlockEntityClass("lensmanarepair",typeof(ManaRepairBE));
+
             api.RegisterBlockClass("lensmagmaforgeblock", typeof(MagmaForgeBlock));
             api.RegisterBlockEntityClass("lensmagmaforge",typeof (MagmaForgeBe));
             api.RegisterBlockClass("lensbeehiveblock", typeof(WoodenHiveBlock));
             api.RegisterBlockEntityClass("lensbeehive", typeof(WoodenHiveBE));
             api.RegisterItemClass("lensblowdartgun", typeof(Blowdartgun));
             api.RegisterEntity("lenssimpleprojectile", typeof(EntitySimpleProjectile));
+
             logger = api.Logger;
         }
         internal static void LogError(string message)
         {
-            logger?.Error("(LensStory):{0}",message);
+            logger?.Error("(LensTweaks):{0}",message);
         }
     }
 }

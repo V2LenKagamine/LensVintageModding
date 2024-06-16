@@ -1,4 +1,6 @@
 {
+    "game:tabname-lensstorytab": "Lens-Tweaks",
+
     "item-arrow-bone-flint": "Bone Arrow",
     "itemdesc-arrow-bone-flint": "Won't last more than a shot or two.",
     "block-woodenhive-*": "Wooden Bee Hive",
@@ -31,8 +33,12 @@
     "game:recipeingredient-item-ciderportion-*": "mulled cider",
     "block-heaterblock-*": "Oven Heater",
 
+    "block-icebox-*": "Iced-Box",
+    "block-rockmaker": "Rock-Transmuter",
+    "block-manarepair": "Temporal Reverser",
+
     "item-blowdart-tube": "Blow-Dart Tube",
-    "itemdesc-blowdart-tube": "Can be reloaded by sneaking with anything poisonous, or auto-reloads with them when out of ammo.",
+    "itemdesc-blowdart-tube": "Can be reloaded by sneaking with anything poisonous, or auto-reloads with such when out of ammo.",
     "item-toxic-concoction": "Toxic Concoction",
     "itemdesc-toxic-concoction": "Makes great blowdart ammo, or a method of Easy-Peasy-Euthanasia!",
 
@@ -43,6 +49,15 @@
     "game:handbook-block-magmaforge-text": "Place in lava to fuel, otherwise, works just like a vanilla forge!",
 
     "game:handbook-block-heater-title": "Usage:",
-    "game:handbook-block-heater-text": "Place an oven above, then, add fuel and light the Heater, the oven will heat up as well! Can use anything with a burn time, not just logs. Can make ovens much hotter than normally allowed."
+    "game:handbook-block-heater-text": "Place an oven above, then, add fuel and light the Heater, the oven will heat up as well! Can use anything with a burn time, not just logs. Can make ovens much hotter than normally allowed.",
+
+    "game:handbook-block-icebox-title": "Usage:",
+    "game:handbook-block-icebox-text": "Put Cold things adjacent, like Ice or Water, and optionally place deep underground, and anything inside will decay much slower! Stacks with Cellars!",
+
+    "game:handbook-block-rockmaker-title": "Geformic Accelerator Usage:",
+    "game:handbook-block-rockmaker-text": "Place a Rock sample inside by clicking on it with one, then generate [or place] some basalt below. Viola! The basalt is consumed to create the rock inside it! You can retreive the contents by Shift + Right Clicking",
+
+    "game:handbook-block-manarepair-title": "Temporal Reverser Usage:",
+    "game:handbook-block-manarepair-text": "To use, put in a tool and Shift Rightclick with a Temporal Gear. The gear will slowly decay, and repair the tool. The tool can be removed with Shift + Right-Click. Rusty Gears will also work as fuel, but not very well..."
 
 }
