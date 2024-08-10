@@ -3,6 +3,11 @@
 
     "item-arrow-bone-flint": "Bone Arrow",
     "itemdesc-arrow-bone-flint": "Won't last more than a shot or two.",
+    "item-arrow-sturdy-iron": "Iron Sturdy Arrow",
+    "item-arrow-sturdy-meteoriciron": "Meteoric Iron Sturdy Arrow",
+    "item-arrow-sturdy-steel": "Steel Sturdy Arrow",
+    "itemdesc-arrow-sturdy-*": "Won't break, but hard to fire.",
+
     "block-woodenhive-*": "Wooden Bee Hive",
 
     "item-pruningscissors-copper": "Copper Pruning Scissors",

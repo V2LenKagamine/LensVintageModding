@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\LensCommons\\CakeBuild",
+    "\\LensCommons\\lenscommons\\assets\\lenscommons\\itemtypes",
+    "\\LensTweaks"
   ],
-  "SelectedNode": "\\LensTweaks",
   "PreviewInSolutionExplorer": false
 }

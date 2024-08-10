@@ -47,6 +47,8 @@
   <None Remove="assets\lenstweaks\blocktypes\magmaforge.json" />
   <None Remove="assets\lenstweaks\blocktypes\reinforcedbloomery.json" />
   <None Remove="assets\lenstweaks\blocktypes\woodenhive.json" />
+  <None Remove="assets\lenstweaks\itemtypes\tools\sturdyarrow.json" />
+  <None Remove="assets\lenstweaks\recipes\grid\sturdyarrow.json" />
   <Content Include="LensTweaks.cs" />
   <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
