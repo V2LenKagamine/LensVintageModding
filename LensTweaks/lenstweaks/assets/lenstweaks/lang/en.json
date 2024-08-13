@@ -2,7 +2,7 @@
     "game:tabname-lensstorytab": "Lens-Tweaks",
 
     "item-arrow-bone-flint": "Bone Arrow",
-    "itemdesc-arrow-bone-flint": "Won't last more than a shot or two.",
+    "itemdesc-arrow-bone-flint": "Won't last more than a shot or two, but sharper than flint.",
     "item-arrow-sturdy-iron": "Iron Sturdy Arrow",
     "item-arrow-sturdy-meteoriciron": "Meteoric Iron Sturdy Arrow",
     "item-arrow-sturdy-steel": "Steel Sturdy Arrow",
@@ -59,7 +59,7 @@
     "game:handbook-block-icebox-title": "Usage:",
     "game:handbook-block-icebox-text": "Put Cold things adjacent, like Ice or Water, and optionally place deep underground, and anything inside will decay much slower! Stacks with Cellars!",
 
-    "game:handbook-block-rockmaker-title": "Geformic Accelerator Usage:",
+    "game:handbook-block-rockmaker-title": "Rock-Transmuter Usage:",
     "game:handbook-block-rockmaker-text": "Place a Rock sample inside by clicking on it with one, then generate [or place] some basalt below. Viola! The basalt is consumed to create the rock inside it! You can retreive the contents by Shift + Right Clicking",
 
     "game:handbook-block-manarepair-title": "Temporal Reverser Usage:",

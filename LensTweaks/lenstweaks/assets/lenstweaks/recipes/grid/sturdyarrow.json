@@ -6,7 +6,8 @@
                 "type": "item",
                 "code": "game:arrowhead-*",
                 "name": "metal",
-                "allowedVariants": [ "iron", "meteoriciron", "steel" ]
+                "allowedVariants": [ "iron", "meteoriciron", "steel" ],
+                "quantity": 4
             },
             "S": {
                 "type": "item",
@@ -18,7 +19,8 @@
                 "type": "item",
                 "code": "game:metalnailsandstrips-*",
                 "name": "buh",
-                "allowedVariants": [ "iron", "meteoriciron", "steel" ]
+                "allowedVariants": [ "iron", "meteoriciron", "steel" ],
+                "quantity": 2
             }
         },
         "width": 1,

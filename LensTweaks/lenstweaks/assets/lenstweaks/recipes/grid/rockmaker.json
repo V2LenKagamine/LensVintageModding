@@ -22,8 +22,7 @@
             },
             "G": {
                 "type": "item",
-                "code": "game:metalnailsandstrips-*",
-                "quantity": 2
+                "code": "game:metalnailsandstrips-*"
             }
         },
         "output": {
@@ -46,8 +45,7 @@
             },
             "P": {
                 "type": "item",
-                "code": "game:ingot-cupronickel",
-                "quantity": 2
+                "code": "game:ingot-cupronickel"
             },
             "T": {
                 "type": "item",
@@ -55,8 +53,7 @@
             },
             "G": {
                 "type": "item",
-                "code": "game:metalnailsandstrips-*",
-                "quantity": 2
+                "code": "game:metalnailsandstrips-*"
             }
         },
         "output": {
@@ -79,8 +76,7 @@
             },
             "P": {
                 "type": "item",
-                "code": "game:ingot-meteoriciron",
-                "quantity": 4
+                "code": "game:ingot-meteoriciron"
             },
             "T": {
                 "type": "item",
@@ -88,8 +84,7 @@
             },
             "G": {
                 "type": "item",
-                "code": "game:metalnailsandstrips-*",
-                "quantity": 2
+                "code": "game:metalnailsandstrips-*"
             }
         },
         "output": {

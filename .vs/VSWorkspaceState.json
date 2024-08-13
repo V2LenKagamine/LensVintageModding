@@ -1,9 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\LensCommons\\CakeBuild",
-    "\\LensCommons\\lenscommons\\assets\\lenscommons\\itemtypes",
-    "\\LensTweaks"
+    "\\LensTweaks",
+    "\\LensTweaks\\lenstweaks",
+    "\\LensTweaks\\lenstweaks\\assets",
+    "\\LensTweaks\\lenstweaks\\assets\\lenstweaks",
+    "\\LensTweaks\\lenstweaks\\assets\\lenstweaks\\itemtypes\\tools",
+    "\\LensTweaks\\lenstweaks\\assets\\lenstweaks\\recipes",
+    "\\LensTweaks\\lenstweaks\\assets\\lenstweaks\\recipes\\grid",
+    "\\LensTweaks\\lenstweaks\\src",
+    "\\LensTweaks\\lenstweaks\\src\\blocks"
   ],
+  "SelectedNode": "\\LensTweaks",
   "PreviewInSolutionExplorer": false
 }

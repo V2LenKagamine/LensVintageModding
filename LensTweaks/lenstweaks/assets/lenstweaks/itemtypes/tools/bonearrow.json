@@ -84,7 +84,7 @@
     },
     "attributes": {
         "damageByType": {
-            "*": -0.75
+            "*": 0.25
         },
         "breakChanceOnImpactByType": {
             "*": 0.65
