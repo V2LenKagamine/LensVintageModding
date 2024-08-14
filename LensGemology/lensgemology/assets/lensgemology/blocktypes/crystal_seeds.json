@@ -1,0 +1,408 @@
+﻿{
+	"code": "seed_crystals",
+	"class": "OreCrystalsCrystal",
+	"entityclass": "OreCrystalsCrystalBE",
+	"behaviors": [],
+	"creativeinventory": {
+		"general": [ "*-ore_down" ],
+		"decorative": [ "*-ore_down" ],
+		"crystals": [ "*-ore_down" ]
+	},
+	"attributes": {
+		"handbook": {
+			"groupBy": [ "seed_crystals-*-ore_down" ]
+		}
+	},
+	"variantgroups": [
+		{
+			"code": "crystal",
+			"states": [
+				"alum",
+				"anthracite",
+				"bismuthinite",
+				"bituminouscoal",
+				"borax",
+				"cassiterite",
+				"chromite",
+				"cinnabar",
+				"corundum",
+				"flint",
+				"fluorite",
+				"galena",
+				"galena_nativesilver",
+				"graphite",
+				"hematite",
+				"ilmenite",
+				"kernite",
+				"lapislazuli",
+				"lignite",
+				"limonite",
+				"magnetite",
+				"malachite",
+				"nativecopper",
+				"olivine",
+				"olivine_peridot",
+				"diamond",
+				"emerald",
+				"pentlandite",
+				"phosphorite",
+				"quartz",
+				"quartz_nativegold",
+				"quartz_nativesilver",
+				"rhodochrosite",
+				"sphalerite",
+				"sulfur",
+				"sylvite",
+				"uranium",
+				"wolframite"
+			]
+		},
+		{
+			"code": "type",
+			"states": [ "ore_up", "ore_down", "ore_north", "ore_south", "ore_east", "ore_west" ]
+		}
+	],
+	"shapebytype": {
+		"*-ore_up": {
+			"base": "block/seed_crystals",
+			"rotateX": 180,
+			"alternates": [
+				{
+					"base": "block/seed_crystals",
+					"rotateX": 180,
+					"rotateY": 45
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": 180,
+					"rotateY": 90
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": 180,
+					"rotateY": 135
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": 180,
+					"rotateY": 180
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": 180,
+					"rotateY": 225
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": 180,
+					"rotateY": 270
+				}
+			]
+		},
+		"*-ore_down": {
+			"base": "block/seed_crystals",
+			"alternates": [
+				{
+					"base": "block/seed_crystals",
+					"rotateY": 45
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateY": 90
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateY": 135
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateY": 180
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateY": 225
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateY": 270
+				}
+			]
+		},
+		"*-ore_north": {
+			"base": "block/seed_crystals",
+			"rotateX": 90,
+			"alternates": [
+				{
+					"base": "block/seed_crystals",
+					"rotateX": 90,
+					"rotateY": 45
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": 90,
+					"rotateY": 90
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": 90,
+					"rotateY": 135
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": 90,
+					"rotateY": 180
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": 90,
+					"rotateY": 225
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": 90,
+					"rotateY": 270
+				}
+			]
+		},
+		"*-ore_south": {
+			"base": "block/seed_crystals",
+			"rotateX": -90,
+			"alternates": [
+				{
+					"base": "block/seed_crystals",
+					"rotateX": -90,
+					"rotateY": 45
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": -90,
+					"rotateY": 90
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": -90,
+					"rotateY": 135
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": -90,
+					"rotateY": 180
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": -90,
+					"rotateY": 225
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateX": -90,
+					"rotateY": 270
+				}
+			]
+		},
+		"*-ore_east": {
+			"base": "block/seed_crystals",
+			"rotateZ": 90,
+			"alternates": [
+				{
+					"base": "block/seed_crystals",
+					"rotateZ": 90,
+					"rotateX": 45
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateZ": 90,
+					"rotateX": 90
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateZ": 90,
+					"rotateX": 135
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateZ": 90,
+					"rotateX": 180
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateZ": 90,
+					"rotateX": 225
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateZ": 90,
+					"rotateX": 270
+				}
+			]
+		},
+		"*-ore_west": {
+			"base": "block/seed_crystals",
+			"rotateZ": -90,
+			"alternates": [
+				{
+					"base": "block/seed_crystals",
+					"rotateZ": -90,
+					"rotateX": 45
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateZ": -90,
+					"rotateX": 90
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateZ": -90,
+					"rotateX": 135
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateZ": -90,
+					"rotateX": 180
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateZ": -90,
+					"rotateX": 225
+				},
+				{
+					"base": "block/seed_crystals",
+					"rotateZ": -90,
+					"rotateX": 270
+				}
+			]
+		}
+	},
+	"blockmaterial": "Other",
+	"drawtype": "json",
+	"sidesolid": { "all": false },
+	"sideopaque": { "all": false },
+	"textures": {
+		"crystal": { "base": "block/{crystal}" }
+	},
+	"renderPass": "Transparent",
+	"collisionbox": null,
+	"selectionbox": {
+		"x1": 0.3,
+		"y1": 0.0,
+		"z1": 0.3,
+		"x2": 0.7,
+		"y2": 0.2,
+		"z2": 0.7,
+
+		"rotateXByType": {
+			"*-ore_down": 0,
+			"*-ore_up": 180,
+			"*-ore_south": -90,
+			"*-ore_north": 90
+		},
+		"rotateZByType": {
+			"*-ore_east": 90,
+			"*-ore_west": -90
+		}
+	},
+	"guiTransform": {
+		"translation": {
+			"x": 0,
+			"y": -30,
+			"z": 0
+		},
+		"scale": 2.46
+	},
+	"fpHandTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0.4,
+			"z": 0.5
+		},
+		"rotation": {
+			"x": 0,
+			"y": 64,
+			"z": 0
+		},
+		"scale": 1.5
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -2.3,
+			"y": -1.6,
+			"z": -1.5
+		},
+		"rotation": {
+			"x": 1,
+			"y": 1,
+			"z": -90
+		}
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0.05,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": -45,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 2.5
+	},
+	"materialDensity": 3000,
+	"replaceable": 5000,
+	"lightAbsorption": 0,
+	"lightHsvByType": {
+		"*-alum-*": [ 10, 3, 1 ],
+		"*-anthracite-*": [ 47, 1, 1 ],
+		"*-bismuthinite-*": [ 14, 3, 1 ],
+		"*-bituminouscoal-*": [ 0, 1, 1 ],
+		"*-borax-*": [ 11, 1, 1 ],
+		"*-cassiterite-*": [ 6, 3, 1 ],
+		"*-chromite-*": [ 52, 1, 1 ],
+		"*-cinnabar-*": [ 62, 3, 1 ],
+		"*-corundum-*": [ 59, 3, 1 ],
+		"*-flint-*": [ 8, 5, 1 ],
+		"*-fluorite-*": [ 9, 3, 1 ],
+		"*-galena-*": [ 35, 3, 1 ],
+		"*-galena_nativesilver-*": [ 35, 1, 1 ],
+		"*-graphite-*": [ 3, 5, 1 ],
+		"*-hematite-*": [ 1, 3, 1 ],
+		"*-ilmenite-*": [ 2, 5, 1 ],
+		"*-kernite-*": [ 6, 3, 1 ],
+		"*-lapislazuli-*": [ 38, 3, 1 ],
+		"*-lignite-*": [ 3, 5, 1 ],
+		"*-limonite-*": [ 5, 3, 1 ],
+		"*-magnetite-*": [ 40, 1, 1 ],
+		"*-malachite-*": [ 27, 3, 1 ],
+		"*-nativecopper-*": [ 3, 3, 1 ],
+		"*-olivine-*": [ 12, 3, 1 ],
+		"*-olivine_peridot-*": [ 15, 3, 1 ],
+		"*-diamond-*": [ 33, 3, 1 ],
+		"*-emerald-*": [ 26, 3, 1 ],
+		"*-pentlandite-*": [ 7, 5, 1 ],
+		"*-phosphorite-*": [ 4, 3, 1 ],
+		"*-quartz-*": [ 0, 0, 1 ],
+		"*-quartz_nativegold-*": [ 8, 3, 1 ],
+		"*-quartz_nativesilver-*": [ 34, 1, 1 ],
+		"*-rhodochrosite-*": [ 1, 3, 1 ],
+		"*-sphalerite-*": [ 6, 5, 1 ],
+		"*-sulfur-*": [ 8, 3, 1 ],
+		"*-sylvite-*": [ 3, 3, 1 ],
+		"*-uranium-*": [ 11, 3, 1 ],
+		"*-wolframite-*": [ 40, 3, 1 ]
+	},
+	"resistance": 0.1,
+	"sounds": {
+		"place": "game:player/buildhigh",
+		"break": "block/glass",
+		"hit": "game:block/glass"
+	},
+	"vertexFlags": {
+		"zOffset": 3,
+		"reflective": true
+	}
+}

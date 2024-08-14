@@ -1,0 +1,14 @@
+{
+    "type": "code",
+    "modid": "lensgemology",
+    "name": "Lens-Gemology",
+    "authors": [
+        "Len Kagamine"
+    ],
+    "contributors": ["Taska Raine","Kagranack"],
+    "description": "Shiny ore gems that grow more ores!",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "1.19.8"
+    }
+}

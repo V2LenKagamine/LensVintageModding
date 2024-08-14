@@ -1,0 +1,2271 @@
+[
+
+	{
+		"ingredientPattern": "H,C,S",
+		"width": 1,
+		"height": 3,
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"S": {
+				"type": "item",
+				"code": "game:crystalizedore-*-*-*"
+
+			},
+			"C": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true
+			}
+		},
+		"output": {
+			"type": "item",
+			"code": "lensgemology:orecrystals_crystalshard",
+			"quantity": 4
+		}
+	},
+	{
+		//-- Lead Silver is not a possible craft, since the materials required to craft it would be the same as quartz silver --//
+		//-- Poor Native Gold in Quartz --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "nativegold" ],
+				"quantity": 2
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-quartz_nativegold-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Native Gold in Quartz --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "nativegold" ],
+				"quantity": 4
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-quartz_nativegold-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Native Gold in Quartz --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "nativegold" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-quartz_nativegold-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Native Gold in Quartz --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "nativegold" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-quartz_nativegold-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Native Silver in Quartz --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "claystone", "sandstone", "shale", "chalk", "limestone", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "nativesilver" ],
+				"quantity": 4
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-quartz_nativesilver-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Native Silver in Quartz --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "claystone", "sandstone", "shale", "chalk", "limestone", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "nativesilver" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-quartz_nativesilver-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Native Silver in Quartz --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "claystone", "sandstone", "shale", "chalk", "limestone", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "nativesilver" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-quartz_nativesilver-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Native Silver in Quartz --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "claystone", "sandstone", "shale", "chalk", "limestone", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "nativesilver" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-quartz_nativesilver-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Cassiterite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "cassiterite" ],
+				"quantity": 2
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Cassiterite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "cassiterite" ],
+				"quantity": 4
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Cassiterite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "granite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "cassiterite" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Cassiterite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "granite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "cassiterite" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Hematite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "granite", "peridotite", "sandstone", "limestone", "phyllite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "hematite" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Hematite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "granite", "peridotite", "sandstone", "limestone", "phyllite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "hematite" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Hematite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "granite", "peridotite", "sandstone", "limestone" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "hematite" ],
+				"quantity": 12
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Hematite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "granite", "peridotite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "hematite" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Bismuthinite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "bismuthinite" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Bismuthinite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "bismuthinite" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Bismuthinite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "bismuthinite" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Bismuthinite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "basalt" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "bismuthinite" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Sphalerite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "sphalerite" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Sphalerite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "sphalerite" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Sphalerite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "sphalerite" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Sphalerite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "sphalerite" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Nativecopper --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "claystone", "sandstone", "shale", "chalk", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "nativecopper" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Nativecopper --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "claystone", "sandstone", "shale", "chalk", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "nativecopper" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Nativecopper --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "nativecopper" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Nativecopper --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "basalt" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "nativecopper" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Malachite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "limestone", "whitemarble", "redmarble", "greenmarble" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "malachite" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Malachite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "limestone", "whitemarble", "redmarble", "greenmarble" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "malachite" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Malachite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "limestone", "whitemarble", "redmarble", "greenmarble" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "malachite" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Malachite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "limestone" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "malachite" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Galena --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "galena" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Galena --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "galena" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Galena --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "claystone", "sandstone", "shale", "chert" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "galena" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Galena --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "shale", "chert" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "galena" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Limonite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "basalt", "shale", "chert" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "limonite" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Limonite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "basalt", "shale", "chert" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "limonite" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Limonite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "shale", "chert" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "limonite" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Limonite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "shale", "chert" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "limonite" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Magnetite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "claystone", "chalk", "conglomerate", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "magnetite" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Magnetite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "claystone", "chalk", "conglomerate", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "magnetite" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Magnetite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "magnetite" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Magnetite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "magnetite" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Chromite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "kimberlite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "chromite" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Chromite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "kimberlite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "chromite" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Chromite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "basalt", "peridotite", "kimberlite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "chromite" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Chromite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "kimberlite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "chromite" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Rhodochrosite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "rhodochrosite" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Rhodochrosite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "rhodochrosite" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Rhodochrosite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "claystone", "sandstone", "shale", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "rhodochrosite" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Rhodochrosite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "rhodochrosite" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Ilmenite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "kimberlite", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "ilmenite" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Ilmenite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "kimberlite", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "ilmenite" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Ilmenite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "basalt", "peridotite", "kimberlite", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "ilmenite" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Ilmenite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "kimberlite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "ilmenite" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Stibnite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "stibnite" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Stibnite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "stibnite" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Stibnite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "granite", "basalt" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "stibnite" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Stibnite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "basalt" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "stibnite" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Uranium --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "kimberlite", "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "uranium" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Uranium --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite", "kimberlite", "claystone", "sandstone", "shale", "chalk", "limestone", "chert", "conglomerate", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "uranium" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Uranium --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "kimberlite", "chalk", "limestone", "chert", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "uranium" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Uranium --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "kimberlite", "phyllite", "slate" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "uranium" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Poor Pentlandite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "pentlandite" ],
+				"quantity": 6
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-poor-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Medium Pentlandite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "andesite", "granite", "basalt", "peridotite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "pentlandite" ],
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-medium-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Rich Pentlandite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "peridotite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "pentlandite" ],
+				"quantity": 10
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-rich-{mineral}-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Bountiful Pentlandite --//
+		"ingredientPattern": "SCS,COC,SCS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"name": "rock",
+				"code": "game:stone-*",
+				"allowedVariants": [ "peridotite" ],
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 4
+			},
+			"O": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:nugget-*",
+				"allowedVariants": [ "pentlandite" ],
+				"quantity": 14
+			}
+		},
+		"output": {
+			"type": "item",
+			"name": "ore",
+			"code": "game:crystalizedore-bountiful-{mineral}-{rock}",
+			"quantity": 1
+		}
+	}
+]

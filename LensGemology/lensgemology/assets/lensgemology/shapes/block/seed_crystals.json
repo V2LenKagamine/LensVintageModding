@@ -1,0 +1,86 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 32,
+	"textureHeight": 32,
+	"textureSizes": {
+	},
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Crystal_2_TopCore",
+			"from": [ 9.4567, -1.1911, 7.5815 ], 
+			"to": [ 9.9567, 0.8089, 8.0815 ], 
+			"shade": false,
+			"renderPass": 3,
+			"rotationOrigin": [ 9.7071, -0.405, 8.0223 ],
+			"rotationX": -22.50000097636263,
+			"rotationY": 22.50000022689532,
+			"rotationZ": -22.50000097636263,
+			"faces": {
+				"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 }
+			}
+		},
+		{
+			"name": "Crystal_3_TopCore",
+			"from": [ 7.0, -1.5, 7.0 ], 
+			"to": [ 7.5, 0.5, 7.5 ], 
+			"shade": false,
+			"renderPass": 3,
+			"rotationOrigin": [ 7.0, -3.0, 7.0 ],
+			"rotationX": -22.5,
+			"rotationZ": 22.5,
+			"faces": {
+				"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 }
+			}
+		},
+		{
+			"name": "Crystal_1_BaseCore",
+			"from": [ 7.0, -2.0, 9.0 ], 
+			"to": [ 8.0, 0.5, 10.0 ], 
+			"shade": false,
+			"renderPass": 3,
+			"rotationOrigin": [ 7.0, -2.0, 10.0 ],
+			"rotationY": 67.5,
+			"rotationZ": 22.5,
+			"faces": {
+				"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 }
+			}
+		},
+		{
+			"name": "Crystal_4_TopCore",
+			"from": [ 9.0, -0.5, 7.0 ], 
+			"to": [ 9.5, 1.5, 7.5 ], 
+			"shade": false,
+			"renderPass": 3,
+			"rotationOrigin": [ 9.0, -2.0, 7.0 ],
+			"rotationX": -45.0,
+			"rotationZ": 4.0,
+			"faces": {
+				"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+				"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 }
+			}
+		}
+	]}
