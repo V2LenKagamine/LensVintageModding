@@ -1,0 +1,76 @@
+﻿[
+    {
+        "op": "addmerge",
+        "path": "/attributesbytype",
+        "value": {
+            "blade-falx-tinbronze": { "lengemmax": 1 },
+            "blade-falx-bismuthbronze": { "lengemmax": 1 },
+            "blade-falx-blackbronze": { "lengemmax": 1 },
+            "blade-falx-iron": { "lengemmax": 1 },
+            "blade-falx-meteoriciron": { "lengemmax": 1 },
+            "blade-falx-steel": { "lengemmax": 1 },
+            "blade-blackguard-iron": { "lengemmax": 1 }
+
+        },
+        "file": "itemtypes/tool/blade.json"
+    },
+    {
+        "op": "addmerge",
+        "path": "/attributesbytype",
+        "value": {
+            "knife-generic-tinbronze": { "lengemmax": 1 },
+            "knife-generic-bismuthbronze": { "lengemmax": 1 },
+            "knife-generic-blackbronze": { "lengemmax": 1 },
+            "knife-generic-iron": { "lengemmax": 1 },
+            "knife-generic-meteoriciron": { "lengemmax": 1 },
+            "knife-generic-steel": { "lengemmax": 1 }
+        },
+        "file": "itemtypes/tool/knife.json"
+    },
+    {
+        "op": "addmerge",
+        "path": "/attributesbytype",
+        "value": {
+            "pickaxe-tinbronze": { "lengemmax": 1 },
+            "pickaxe-bismuthbronze": { "lengemmax": 1 },
+            "pickaxe-blackbronze": { "lengemmax": 1 },
+            "pickaxe-iron": { "lengemmax": 1 },
+            "pickaxe-meteoriciron": { "lengemmax": 1 },
+            "pickaxe-steel": { "lengemmax": 1 }
+        },
+        "file": "itemtypes/tool/pickaxe.json"
+    },
+    {
+        "op": "addmerge",
+        "path": "/attributesbytype",
+        "value": {
+            "spear-generic-tinbronze": { "lengemmax": 1 },
+            "spear-generic-bismuthbronze": { "lengemmax": 1 },
+            "spear-generic-blackbronze": { "lengemmax": 1 },
+            "spear-generic-iron": { "lengemmax": 1 },
+            "spear-generic-meteoriciron": { "lengemmax": 1 },
+            "spear-generic-steel": { "lengemmax": 1 }
+        },
+        "file": "itemtypes/tool/spear.json"
+    },
+    {
+        "op": "addmerge",
+        "path": "/attributesbytype",
+        "value": {
+            "armor-*-*-tinbronze": { "lengemmax": 1 },
+            "armor-*-*-bismuthbronze": { "lengemmax": 1 },
+            "armor-*-*-blackbronze": { "lengemmax": 1 },
+            "armor-*-*-iron": { "lengemmax": 1 },
+            "armor-*-*-meteoriciron": { "lengemmax": 1 },
+            "armor-*-*-steel": { "lengemmax": 1 },
+            "armor-*-antique-blackguard-damaged": { "lengemmax": 1 },
+            "armor-*-antique-blackguard-broken": { "lengemmax": 1 },
+            "armor-*-antique-blackguard-pristine": { "lengemmax": 1 },
+            "armor-*-antique-forlorn-damaged": { "lengemmax": 1 },
+            "armor-*-antique-forlorn-broken": { "lengemmax": 1 },
+            "armor-*-antique-forlorn-pristine": { "lengemmax": 1 }
+
+        },
+        "file": "itemtypes/wearable/armor.json"
+    }
+]

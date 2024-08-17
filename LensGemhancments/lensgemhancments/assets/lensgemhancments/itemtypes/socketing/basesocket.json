@@ -1,0 +1,600 @@
+﻿{
+    "code": "gempowercore",
+    "class": "gemcore",
+    "maxstacksize": 4,
+    "shape": { "base": "socket" },
+    "variantgroups": [
+        {
+            "code": "metal",
+            "states": [ "copper", "tinbronze", "bismuthbronze", "iron", "meteoriciron", "steel", "brass", "blackbronze", "silver", "gold", "electrum" ]
+        },
+        {
+            "code": "gem",
+            "states": ["diamond","emerald","peridot","quartz","clearquartz","smokyquartz","rosequartz","olivine","lapis","cinnabar","fluorite"]
+        }
+    ],
+    "attributes": {
+        "handbook": {
+            "groupBy": [ "gempowercore-*" ]
+        }
+    },
+    "attributesbytype": {
+
+        "gempowercore-copper-diamond": {
+            "armor": {
+                "lengemstat": "armorDurabilityLoss",
+                "lengemvalue": 1
+            },
+            "tool": {
+                "lengemstat": "armorDurabilityLoss",
+                "lengemvalue": 1
+            }
+        },
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-diamond": {
+            "armor": {
+                "lengemstat": "armorDurabilityLoss",
+                "lengemvalue": 2
+            },
+            "tool": {
+                "lengemstat": "armorDurabilityLoss",
+                "lengemvalue": 2
+            }
+        },
+        "@gempowercore-(brass|blackbronze|silver|gold)-diamond": {
+            "armor": {
+                "lengemstat": "armorDurabilityLoss",
+                "lengemvalue": 3
+            },
+            "tool": {
+                "lengemstat": "armorDurabilityLoss",
+                "lengemvalue": 3
+            }
+        },
+        "gempowercore-electrum-diamond": {
+            "armor": {
+                "lengemstat": "armorDurabilityLoss",
+                "lengemvalue": 4
+            },
+            "tool": {
+                "lengemstat": "armorDurabilityLoss",
+                "lengemvalue": 4
+            }
+        },
+
+        "gempowercore-copper-emerald": {
+            "armor": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 0.5
+            },
+            "tool": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 1.5
+            }
+        },
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-emerald": {
+            "armor": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 1
+            },
+            "tool": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 3
+            }
+        },
+        "@gempowercore-(brass|blackbronze|silver|gold)-emerald": {
+            "armor": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 1.5
+            },
+            "tool": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 4.5
+            }
+        },
+        "gempowercore-electrum-emerald": {
+            "armor": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 2
+            },
+            "tool": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 6
+            }
+        },
+
+        "gempowercore-copper-peridot": {
+            "armor": {
+                "lengemstat": "animalHarvestingTime",
+                "lengemvalue": 0.5
+            },
+            "tool": {
+                "lengemstat": "animalLootDropRate",
+                "lengemvalue": 1
+            }
+        },
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-peridot": {
+            "armor": {
+                "lengemstat": "animalHarvestingTime",
+                "lengemvalue": 1
+            },
+            "tool": {
+                "lengemstat": "animalLootDropRate",
+                "lengemvalue": 2
+            }
+        },
+        "@gempowercore-(brass|blackbronze|silver|gold)-peridot": {
+            "armor": {
+                "lengemstat": "animalHarvestingTime",
+                "lengemvalue": 1.5
+            },
+            "tool": {
+                "lengemstat": "animalLootDropRate",
+                "lengemvalue": 3
+            }
+        },
+        "gempowercore-electrum-peridot": {
+            "armor": {
+                "lengemstat": "animalHarvestingTime",
+                "lengemvalue": 2
+            },
+            "tool": {
+                "lengemstat": "animalLootDropRate",
+                "lengemvalue": 4
+            }
+        },
+
+        "gempowercore-copper-quartz": {
+            "armor": {
+                "lengemstat": "meleeWeaponsDamage",
+                "lengemvalue": 0.5
+            },
+            "tool": {
+                "lengemstat": "meleeWeaponsDamage",
+                "lengemvalue": 1
+            }
+        },
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-quartz": {
+            "armor": {
+                "lengemstat": "meleeWeaponsDamage",
+                "lengemvalue": 1
+            },
+            "tool": {
+                "lengemstat": "meleeWeaponsDamage",
+                "lengemvalue": 2
+            }
+        },
+        "@gempowercore-(brass|blackbronze|silver|gold)-quartz": {
+            "armor": {
+                "lengemstat": "meleeWeaponsDamage",
+                "lengemvalue": 1.5
+            },
+            "tool": {
+                "lengemstat": "meleeWeaponsDamage",
+                "lengemvalue": 3
+            }
+        },
+        "gempowercore-electrum-quartz": {
+            "armor": {
+                "lengemstat": "meleeWeaponsDamage",
+                "lengemvalue": 2
+            },
+            "tool": {
+                "lengemstat": "meleeWeaponsDamage",
+                "lengemvalue": 4
+            }
+        },
+
+        "gempowercore-copper-clearquartz": {
+            "armor": {
+                "lengemstat": "rangedWeaponsDamage",
+                "lengemvalue": 0.5
+            },
+            "tool": {
+                "lengemstat": "rangedWeaponsDamage",
+                "lengemvalue": 1
+            }
+        },
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-clearquartz": {
+            "armor": {
+                "lengemstat": "rangedWeaponsDamage",
+                "lengemvalue": 1
+            },
+            "tool": {
+                "lengemstat": "rangedWeaponsDamage",
+                "lengemvalue": 2
+            }
+        },
+        "@gempowercore-(brass|blackbronze|silver|gold)-clearquartz": {
+            "armor": {
+                "lengemstat": "rangedWeaponsDamage",
+                "lengemvalue": 1.5
+            },
+            "tool": {
+                "lengemstat": "rangedWeaponsDamage",
+                "lengemvalue": 3
+            }
+        },
+        "gempowercore-electrum-clearquartz": {
+            "armor": {
+                "lengemstat": "rangedWeaponsDamage",
+                "lengemvalue": 2
+            },
+            "tool": {
+                "lengemstat": "rangedWeaponsDamage",
+                "lengemvalue": 4
+            }
+        },
+
+        "gempowercore-copper-smokyquartz": {
+            "armor": {
+                "lengemstat": "animalSeekingRange",
+                "lengemvalue": -0.5
+            },
+            "tool": {
+                "lengemstat": "animalSeekingRange",
+                "lengemvalue": -1
+            }
+        },
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-smokyquartz": {
+            "armor": {
+                "lengemstat": "animalSeekingRange",
+                "lengemvalue": -1
+            },
+            "tool": {
+                "lengemstat": "animalSeekingRange",
+                "lengemvalue": -2
+            }
+        },
+        "@gempowercore-(brass|blackbronze|silver|gold)-smokyquartz": {
+            "armor": {
+                "lengemstat": "animalSeekingRange",
+                "lengemvalue": -1.5
+            },
+            "tool": {
+                "lengemstat": "animalSeekingRange",
+                "lengemvalue": -3
+            }
+        },
+        "gempowercore-electrum-smokyquartz": {
+            "armor": {
+                "lengemstat": "animalSeekingRange",
+                "lengemvalue": -2
+            },
+            "tool": {
+                "lengemstat": "animalSeekingRange",
+                "lengemvalue": -4
+            }
+        },
+
+        "gempowercore-copper-rosequartz": {
+            "armor": {
+                "lengemstat": "bowDrawingStrength",
+                "lengemvalue": 0.5
+            },
+            "tool": {
+                "lengemstat": "bowDrawingStrength",
+                "lengemvalue": 1
+            }
+        },
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-rosequartz": {
+            "armor": {
+                "lengemstat": "bowDrawingStrength",
+                "lengemvalue": 1
+            },
+            "tool": {
+                "lengemstat": "bowDrawingStrength",
+                "lengemvalue": 2
+            }
+        },
+        "@gempowercore-(brass|blackbronze|silver|gold)-rosequartz": {
+            "armor": {
+                "lengemstat": "bowDrawingStrength",
+                "lengemvalue": 1.5
+            },
+            "tool": {
+                "lengemstat": "bowDrawingStrength",
+                "lengemvalue": 3
+            }
+        },
+        "gempowercore-electrum-rosequartz": {
+            "armor": {
+                "lengemstat": "bowDrawingStrength",
+                "lengemvalue": 2
+            },
+            "tool": {
+                "lengemstat": "bowDrawingStrength",
+                "lengemvalue": 4
+            }
+        },
+
+        "gempowercore-copper-olivine": {
+            "armor": {
+                "lengemstat": "wildCropDropRate",
+                "lengemvalue": 0.5
+            },
+            "tool": {
+                "lengemstat": "forageDropRate",
+                "lengemvalue": 1
+            }
+        },
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-olivine": {
+            "armor": {
+                "lengemstat": "wildCropDropRate",
+                "lengemvalue": 1
+            },
+            "tool": {
+                "lengemstat": "forageDropRate",
+                "lengemvalue": 2
+            }
+        },
+        "@gempowercore-(brass|blackbronze|silver|gold)-olivine": {
+            "armor": {
+                "lengemstat": "wildCropDropRate",
+                "lengemvalue": 1.5
+            },
+            "tool": {
+                "lengemstat": "forageDropRate",
+                "lengemvalue": 3
+            }
+        },
+        "gempowercore-electrum-olivine": {
+            "armor": {
+                "lengemstat": "wildCropDropRate",
+                "lengemvalue": 2
+            },
+            "tool": {
+                "lengemstat": "forageDropRate",
+                "lengemvalue": 4
+            }
+        },
+
+        "gempowercore-copper-lapis": {
+            "armor": {
+                "lengemstat": "oreDropRate",
+                "lengemvalue": 0.5
+            },
+            "tool": {
+                "lengemstat": "oreDropRate",
+                "lengemvalue": 1
+            }
+        },
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-lapis": {
+            "armor": {
+                "lengemstat": "oreDropRate",
+                "lengemvalue": 1
+            },
+            "tool": {
+                "lengemstat": "oreDropRate",
+                "lengemvalue": 2
+            }
+        },
+        "@gempowercore-(brass|blackbronze|silver|gold)-lapis": {
+            "armor": {
+                "lengemstat": "oreDropRate",
+                "lengemvalue": 1.5
+            },
+            "tool": {
+                "lengemstat": "oreDropRate",
+                "lengemvalue": 3
+            }
+        },
+        "gempowercore-electrum-lapis": {
+            "armor": {
+                "lengemstat": "oreDropRate",
+                "lengemvalue": 2
+            },
+            "tool": {
+                "lengemstat": "oreDropRate",
+                "lengemvalue": 4
+            }
+        },
+
+
+        "gempowercore-copper-cinnabar": {
+            "armor": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 0.5
+            },
+            "tool": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 1
+            }
+        },
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-cinnabar": {
+            "armor": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 1
+            },
+            "tool": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 2
+            }
+        },
+        "@gempowercore-(brass|blackbronze|silver|gold)-cinnabar": {
+            "armor": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 1.5
+            },
+            "tool": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 3
+            }
+        },
+        "gempowercore-electrum-cinnabar": {
+            "armor": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 2
+            },
+            "tool": {
+                "lengemstat": "miningSpeedMul",
+                "lengemvalue": 4
+            }
+        },
+
+
+        "gempowercore-copper-fluorite": {
+            "armor": {
+                "lengemstat": "walkspeed",
+                "lengemvalue": 0.5
+            },
+            "tool": {
+                "lengemstat": "walkspeed",
+                "lengemvalue": 1
+            }
+        },
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-fluorite": {
+            "armor": {
+                "lengemstat": "walkspeed",
+                "lengemvalue": 1
+            },
+            "tool": {
+                "lengemstat": "walkspeed",
+                "lengemvalue": 2
+            }
+        },
+        "@gempowercore-(brass|blackbronze|silver|gold)-fluorite": {
+            "armor": {
+                "lengemstat": "walkspeed",
+                "lengemvalue": 1.5
+            },
+            "tool": {
+                "lengemstat": "walkSpeed",
+                "lengemvalue": 3
+            }
+        },
+        "gempowercore-electrum-fluorite": {
+            "armor": {
+                "lengemstat": "walkspeed",
+                "lengemvalue": 2
+            },
+            "tool": {
+                "lengemstat": "walkspeed",
+                "lengemvalue": 4
+            }
+        }
+    },
+    "texturesbytype": {
+        "gempowercore-*-diamond": {
+            "metal": { "base": "game:block/metal/ingot/{metal}" },
+            "gem": { "base": "game:block/glass/blue" }
+        },
+        "gempowercore-*-emerald": {
+            "metal": { "base": "game:block/metal/ingot/{metal}" },
+            "gem": { "base": "game:block/glass/green" }
+        },
+        "gempowercore-*-peridot": {
+            "metal": { "base": "game:block/metal/ingot/{metal}" },
+            "gem": { "base": "game:block/glass/green" }
+        },
+        "gempowercore-*-quartz": {
+            "metal": { "base": "game:block/metal/ingot/{metal}" },
+            "gem": { "base": "game:item/resource/ungraded/quartz" }
+        },
+        "gempowercore-*-clearquartz": {
+            "metal": { "base": "game:block/metal/ingot/{metal}" },
+            "gem": { "base": "game:item/resource/ungraded/clearquartz" }
+        },
+        "gempowercore-*-smokyquartz": {
+            "metal": { "base": "game:block/metal/ingot/{metal}" },
+            "gem": { "base": "game:item/resource/ungraded/smokyquartz" }
+        },
+        "gempowercore-*-rosequartz": {
+            "metal": { "base": "game:block/metal/ingot/{metal}" },
+            "gem": { "base": "game:item/resource/ungraded/rosyquartz" }
+        },
+        "gempowercore-*-olivine": {
+            "metal": { "base": "game:block/metal/ingot/{metal}" },
+            "gem": { "base": "game:item/resource/ungraded/olivine" }
+        },
+        "gempowercore-*-lapis": {
+            "metal": { "base": "game:block/metal/ingot/{metal}" },
+            "gem": { "base": "game:item/resource/ungraded/lapislazuli" }
+        },
+        "gempowercore-*-cinnabar": {
+            "metal": { "base": "game:block/metal/ingot/{metal}" },
+            "gem": { "base": "game:item/resource/ungraded/cinnabar" }
+        },
+        "gempowercore-*-fluorite": {
+            "metal": { "base": "game:block/metal/ingot/{metal}" },
+            "gem": { "base": "game:item/resource/ungraded/fluorite" }
+        }
+
+    },
+    "creativeinventory": {
+        "general": [ "*" ],
+        "items": [ "*" ],
+        "lensgemhancements": [ "*" ]
+    },
+    "guiTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": -30,
+            "y": 26,
+            "z": 180
+        },
+        "origin": {
+            "x": 0.52,
+            "y": 0.07,
+            "z": 0.5
+        },
+        "scale": 2.9
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0.5
+        },
+        "scale": 2.5
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -0.54,
+            "y": -0.16,
+            "z": -0.4
+        },
+        "rotation": {
+            "x": 44,
+            "y": -69,
+            "z": 2
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.13,
+            "z": 0.5
+        },
+        "scale": 1
+    },
+    "fpHandTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0.3,
+            "z": 0.3
+        },
+        "rotation": {
+            "x": 66,
+            "y": -80,
+            "z": 64
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.1,
+            "z": 0.5
+        },
+        "scale": 1.04
+    }
+}

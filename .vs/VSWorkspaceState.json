@@ -1,19 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\LensCommons\\lenscommons",
-    "\\LensCommons\\lenscommons\\assets",
-    "\\LensCommons\\lenscommons\\assets\\lenscommons",
-    "\\LensCommons\\lenscommons\\src\\items",
-    "\\LensMachinations\\lensmachinations\\src\\blocks\\machines",
-    "\\LensTweaks\\lenstweaks",
-    "\\LensTweaks\\lenstweaks\\assets",
-    "\\LensTweaks\\lenstweaks\\assets\\lenstweaks",
-    "\\LensTweaks\\lenstweaks\\assets\\lenstweaks\\recipes",
-    "\\LensTweaks\\lenstweaks\\assets\\lenstweaks\\recipes\\grid",
-    "\\LensTweaks\\lenstweaks\\src",
-    "\\LensTweaks\\lenstweaks\\src\\blocks"
+    "\\LensClasses",
+    "\\LensClasses\\lensclasses",
+    "\\LensClasses\\lensclasses\\src",
+    "\\LensGemology",
+    "\\LensGemology\\lensgemology",
+    "\\LensGemology\\lensgemology\\assets",
+    "\\LensGemology\\lensgemology\\assets\\lensgemology",
+    "\\LensGemology\\lensgemology\\assets\\lensgemology\\itemtypes"
   ],
-  "SelectedNode": "\\LensMachinations",
+  "SelectedNode": "\\LensClasses\\lensclasses\\src\\ScrollStuffBhv.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "lensgemhancments",
+    "name": "Lens-Gem-Enhancements",
+    "authors": [
+        "Len Kagamine"
+    ],
+    "description": "Its basically legally-distinct CANJewelry.",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "1.19.8"
+    }
+}

@@ -1,0 +1,32 @@
+﻿[
+    {
+        "op": "add",
+        "path": "/behaviors/-",
+        "value": { "name": "lengemslotable" },
+        "file": "itemtypes/tool/blade.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/-",
+        "value": { "name": "lengemslotable" },
+        "file": "itemtypes/tool/knife.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/-",
+        "value": { "name": "lengemslotable" },
+        "file": "itemtypes/tool/pickaxe.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/-",
+        "value": { "name": "lengemslotable" },
+        "file": "itemtypes/tool/spear.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [ { "name": "lengemslotable" } ],
+        "file": "itemtypes/wearable/armor.json"
+    }
+]
