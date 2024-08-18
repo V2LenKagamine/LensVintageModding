@@ -18,6 +18,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
   <None Remove="assets\lensgemology\blocktypes\orecrystals_glass.json" />
+  <None Remove="assets\lensgemology\config\handbook\30-lengemologytut.json" />
   <None Remove="assets\lensgemology\recipes\grid\block\orecrystals_glassblock_recipes.json" />
   <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

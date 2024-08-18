@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\LensClasses",
-    "\\LensClasses\\lensclasses",
-    "\\LensClasses\\lensclasses\\src",
+    "\\LensCommons\\lenscommons\\assets",
+    "\\LensCommons\\lenscommons\\assets\\lenscommons",
     "\\LensGemology",
     "\\LensGemology\\lensgemology",
     "\\LensGemology\\lensgemology\\assets",
     "\\LensGemology\\lensgemology\\assets\\lensgemology",
-    "\\LensGemology\\lensgemology\\assets\\lensgemology\\itemtypes"
+    "\\LensGemology\\lensgemology\\assets\\lensgemology\\recipes",
+    "\\LensGemology\\lensgemology\\assets\\lensgemology\\recipes\\grid",
+    "\\LensGemology\\lensgemology\\assets\\lensgemology\\recipes\\grid\\item"
   ],
-  "SelectedNode": "\\LensClasses\\lensclasses\\src\\ScrollStuffBhv.cs",
+  "SelectedNode": "\\LensGemology\\lensgemology\\assets\\lensgemology\\recipes\\grid\\item\\crystalizedores_graded_recipes.json",
   "PreviewInSolutionExplorer": false
 }

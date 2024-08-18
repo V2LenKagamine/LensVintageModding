@@ -149,5 +149,8 @@
     "lengemhancements:walkspeed": "Move Speed",
     "lengemhancements:socketable": "Gem Slots: ",
     "lengemhancements:emptyslot": "An Empty Socket.",
-    "lengemhancements:contains": "Sockets Contain: "
+    "lengemhancements:contains": "Sockets Contain: ",
+
+    "lengemhancmenttut:tut-text": "Gem Socketing 101",
+    "lengemhancmenttut:tut-title": "To make a Gem Core, simply surround an applicable gem with 4 ingots of the correct metal. Each metal has a teir, and will increase the effectiveness of the gem core. Most tool metals are unfit for this purpose, but more 'Fancy' metals will work excellently. Then, to apply the core to a tool, simply place it in the slot of something with an empty socket. There is no way to remove a socketed gem, so be careful with your choices!"
 }

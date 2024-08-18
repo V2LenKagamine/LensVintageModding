@@ -65,10 +65,10 @@
             "armor-*-*-steel": { "lengemmax": 1 },
             "armor-*-antique-blackguard-damaged": { "lengemmax": 1 },
             "armor-*-antique-blackguard-broken": { "lengemmax": 1 },
-            "armor-*-antique-blackguard-pristine": { "lengemmax": 1 },
+            "armor-*-antique-blackguard-pristine": { "lengemmax": 2 },
             "armor-*-antique-forlorn-damaged": { "lengemmax": 1 },
             "armor-*-antique-forlorn-broken": { "lengemmax": 1 },
-            "armor-*-antique-forlorn-pristine": { "lengemmax": 1 }
+            "armor-*-antique-forlorn-pristine": { "lengemmax": 2 }
 
         },
         "file": "itemtypes/wearable/armor.json"

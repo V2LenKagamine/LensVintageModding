@@ -427,7 +427,7 @@ namespace LensGemology
         private bool AttemptGrow(double currentHours)
         {
             if (Block == null) { return false; }
-            if(Block.Id == 0) {  }
+            if(Block.Id == 0) { return false; }
             int newBlockID = 0;
             switch (Block.FirstCodePart())
             {

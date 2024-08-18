@@ -1,0 +1,118 @@
+﻿[
+    {
+        "ingredientPattern": " M ,MGM, M ",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "M": {
+                "type": "item",
+                "code": "game:ingot-*",
+                "name": "metal",
+                "allowedVariants": [ "copper", "tinbronze", "bismuthbronze", "iron", "meteoriciron", "steel", "brass", "blackbronze", "silver", "gold", "electrum" ]
+            },
+            "G": {
+                "type": "item",
+                "code": "game:gem-*-rough",
+                "name": "gem",
+                "allowedVariants": [ "diamond", "emerald" ]
+
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "lensgemhancments:gempowercore-{metal}-{gem}"
+        }
+    },
+    {
+        "ingredientPattern": " M ,MGM, M ",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "M": {
+                "type": "item",
+                "code": "game:ingot-*",
+                "name": "metal",
+                "allowedVariants": [ "copper", "tinbronze", "bismuthbronze", "iron", "meteoriciron", "steel", "brass", "blackbronze", "silver", "gold", "electrum" ]
+            },
+            "G": {
+                "type": "item",
+                "code": "game:gem-olivine_peridot-rough"
+
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "lensgemhancments:gempowercore-{metal}-peridot"
+        }
+    },
+    {
+        "ingredientPattern": " M ,MGM, M ",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "M": {
+                "type": "item",
+                "code": "game:ingot-*",
+                "name": "metal",
+                "allowedVariants": [ "copper", "tinbronze", "bismuthbronze", "iron", "meteoriciron", "steel", "brass", "blackbronze", "silver", "gold", "electrum" ]
+            },
+            "G": {
+                "type": "item",
+                "code": "game:*",
+                "name": "gem",
+                "allowedVariants": [ "clearquartz", "rosequartz", "smokyquartz" ]
+
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "lensgemhancments:gempowercore-{metal}-{gem}"
+        }
+    },
+    {
+        "ingredientPattern": " M ,MGM, M ",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "M": {
+                "type": "item",
+                "code": "game:ingot-*",
+                "name": "metal",
+                "allowedVariants": [ "copper", "tinbronze", "bismuthbronze", "iron", "meteoriciron", "steel", "brass", "blackbronze", "silver", "gold", "electrum" ]
+            },
+            "G": {
+                "type": "item",
+                "code": "game:ore-*",
+                "name": "gem",
+                "allowedVariants": [ "quartz", "olivine", "cinnabar", "fluorite" ]
+
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "lensgemhancments:gempowercore-{metal}-{gem}"
+        }
+    },
+    {
+        "ingredientPattern": " M ,MGM, M ",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "M": {
+                "type": "item",
+                "code": "game:ingot-*",
+                "name": "metal",
+                "allowedVariants": [ "copper", "tinbronze", "bismuthbronze", "iron", "meteoriciron", "steel", "brass", "blackbronze", "silver", "gold", "electrum" ]
+            },
+            "G": {
+                "type": "item",
+                "code": "game:ore-lapislazuli"
+
+            }
+        },
+        "output": {
+            "type": "item",
+            "code": "lensgemhancments:gempowercore-{metal}-lapis"
+        }
+    }
+]

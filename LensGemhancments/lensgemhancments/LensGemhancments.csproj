@@ -50,12 +50,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
   <Compile Remove="assets\LensGemhancments\game\**" />
+  <Compile Remove="assets\lensgemhancments\NewFolder1\**" />
   <Content Remove="assets\LensGemhancments\game\**" />
+  <Content Remove="assets\lensgemhancments\NewFolder1\**" />
   <EmbeddedResource Remove="assets\LensGemhancments\game\**" />
+  <EmbeddedResource Remove="assets\lensgemhancments\NewFolder1\**" />
   <None Remove="assets\LensGemhancments\game\**" />
+  <None Remove="assets\lensgemhancments\NewFolder1\**" />
   <None Remove="assets\game\patches\slottable-add.json" />
   <None Remove="assets\game\patches\sockets.json" />
+  <None Remove="assets\lensgemhancments\config\handbook\30-lengemhancementtut.json" />
   <None Remove="assets\lensgemhancments\itemtypes\socketing\basesocket.json" />
+  <None Remove="assets\lensgemhancments\recipes\sockets.json" />
   <None Remove="assets\lensgemhancments\patches\addbuff.json" />
   <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -277,5 +277,8 @@
 	"block-orecrystals_crystal_medium-wolframite-*": "Small Wolframite Crystal",
 	"block-orecrystals_crystal_rich-wolframite-*": "Large Wolframite Crystal",
 	"block-orecrystals_crystal_bountiful-wolframite-*": "Giant Wolframite Crystal",
-	"block-orecrystals_glass-wolframite": "Crystalline Wolframite Glass"
+	"block-orecrystals_glass-wolframite": "Crystalline Wolframite Glass",
+
+	"tut-title": "Growing Ore 101",
+	"tut-text": "Ore Crystals can be created by using the shattered remains of Crystalized Ores, extracted with a hammer and chisel, and then planted anywhere. The lower in the world they are, however, the faster they will grow. When ready to harvest, simply break them with a chisel and a hammer in off-hand. This will yeild more shards for more crystals and some of the ore they were growing."
 }

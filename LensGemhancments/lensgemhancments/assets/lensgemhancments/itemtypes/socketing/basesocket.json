@@ -1,7 +1,7 @@
 ﻿{
     "code": "gempowercore",
     "class": "gemcore",
-    "maxstacksize": 4,
+    "maxstacksize": 1,
     "shape": { "base": "socket" },
     "variantgroups": [
         {
@@ -23,123 +23,123 @@
         "gempowercore-copper-diamond": {
             "armor": {
                 "lengemstat": "armorDurabilityLoss",
-                "lengemvalue": 1
+                "lengemvalue": 3
             },
             "tool": {
                 "lengemstat": "armorDurabilityLoss",
-                "lengemvalue": 1
+                "lengemvalue": 3
             }
         },
         "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-diamond": {
             "armor": {
                 "lengemstat": "armorDurabilityLoss",
-                "lengemvalue": 2
+                "lengemvalue": 6
             },
             "tool": {
                 "lengemstat": "armorDurabilityLoss",
-                "lengemvalue": 2
+                "lengemvalue": 6
             }
         },
         "@gempowercore-(brass|blackbronze|silver|gold)-diamond": {
             "armor": {
                 "lengemstat": "armorDurabilityLoss",
-                "lengemvalue": 3
+                "lengemvalue": 9
             },
             "tool": {
                 "lengemstat": "armorDurabilityLoss",
-                "lengemvalue": 3
+                "lengemvalue": 9
             }
         },
         "gempowercore-electrum-diamond": {
             "armor": {
                 "lengemstat": "armorDurabilityLoss",
-                "lengemvalue": 4
+                "lengemvalue": 12
             },
             "tool": {
                 "lengemstat": "armorDurabilityLoss",
-                "lengemvalue": 4
+                "lengemvalue": 12
             }
         },
 
         "gempowercore-copper-emerald": {
             "armor": {
-                "lengemstat": "miningSpeedMul",
-                "lengemvalue": 0.5
+                "lengemstat": "hungerrate",
+                "lengemvalue": 2
             },
             "tool": {
-                "lengemstat": "miningSpeedMul",
-                "lengemvalue": 1.5
+                "lengemstat": "hungerrate",
+                "lengemvalue": 2
             }
         },
         "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-emerald": {
             "armor": {
-                "lengemstat": "miningSpeedMul",
-                "lengemvalue": 1
+                "lengemstat": "hungerrate",
+                "lengemvalue": 3
             },
             "tool": {
-                "lengemstat": "miningSpeedMul",
+                "lengemstat": "hungerrate",
                 "lengemvalue": 3
             }
         },
         "@gempowercore-(brass|blackbronze|silver|gold)-emerald": {
             "armor": {
-                "lengemstat": "miningSpeedMul",
-                "lengemvalue": 1.5
+                "lengemstat": "hungerrate",
+                "lengemvalue": 4
             },
             "tool": {
-                "lengemstat": "miningSpeedMul",
-                "lengemvalue": 4.5
+                "lengemstat": "hungerrate",
+                "lengemvalue": 4
             }
         },
         "gempowercore-electrum-emerald": {
             "armor": {
-                "lengemstat": "miningSpeedMul",
-                "lengemvalue": 2
+                "lengemstat": "hungerrate",
+                "lengemvalue": 5
             },
             "tool": {
-                "lengemstat": "miningSpeedMul",
-                "lengemvalue": 6
+                "lengemstat": "hungerrate",
+                "lengemvalue": 5
             }
         },
 
         "gempowercore-copper-peridot": {
             "armor": {
                 "lengemstat": "animalHarvestingTime",
-                "lengemvalue": 0.5
-            },
-            "tool": {
-                "lengemstat": "animalLootDropRate",
-                "lengemvalue": 1
-            }
-        },
-        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-peridot": {
-            "armor": {
-                "lengemstat": "animalHarvestingTime",
-                "lengemvalue": 1
+                "lengemvalue": 2
             },
             "tool": {
                 "lengemstat": "animalLootDropRate",
                 "lengemvalue": 2
             }
         },
-        "@gempowercore-(brass|blackbronze|silver|gold)-peridot": {
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-peridot": {
             "armor": {
                 "lengemstat": "animalHarvestingTime",
-                "lengemvalue": 1.5
+                "lengemvalue": 3
             },
             "tool": {
                 "lengemstat": "animalLootDropRate",
                 "lengemvalue": 3
             }
         },
-        "gempowercore-electrum-peridot": {
+        "@gempowercore-(brass|blackbronze|silver|gold)-peridot": {
             "armor": {
                 "lengemstat": "animalHarvestingTime",
-                "lengemvalue": 2
+                "lengemvalue": 4
             },
             "tool": {
                 "lengemstat": "animalLootDropRate",
                 "lengemvalue": 4
+            }
+        },
+        "gempowercore-electrum-peridot": {
+            "armor": {
+                "lengemstat": "animalHarvestingTime",
+                "lengemvalue": 5
+            },
+            "tool": {
+                "lengemstat": "animalLootDropRate",
+                "lengemvalue": 5
             }
         },
 
@@ -310,16 +310,6 @@
         "gempowercore-copper-olivine": {
             "armor": {
                 "lengemstat": "wildCropDropRate",
-                "lengemvalue": 0.5
-            },
-            "tool": {
-                "lengemstat": "forageDropRate",
-                "lengemvalue": 1
-            }
-        },
-        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-olivine": {
-            "armor": {
-                "lengemstat": "wildCropDropRate",
                 "lengemvalue": 1
             },
             "tool": {
@@ -327,17 +317,7 @@
                 "lengemvalue": 2
             }
         },
-        "@gempowercore-(brass|blackbronze|silver|gold)-olivine": {
-            "armor": {
-                "lengemstat": "wildCropDropRate",
-                "lengemvalue": 1.5
-            },
-            "tool": {
-                "lengemstat": "forageDropRate",
-                "lengemvalue": 3
-            }
-        },
-        "gempowercore-electrum-olivine": {
+        "@gempowercore-(tinbronze|bismuthbronze|iron|meteoriciron|steel)-olivine": {
             "armor": {
                 "lengemstat": "wildCropDropRate",
                 "lengemvalue": 2
@@ -345,6 +325,26 @@
             "tool": {
                 "lengemstat": "forageDropRate",
                 "lengemvalue": 4
+            }
+        },
+        "@gempowercore-(brass|blackbronze|silver|gold)-olivine": {
+            "armor": {
+                "lengemstat": "wildCropDropRate",
+                "lengemvalue": 3
+            },
+            "tool": {
+                "lengemstat": "forageDropRate",
+                "lengemvalue": 6
+            }
+        },
+        "gempowercore-electrum-olivine": {
+            "armor": {
+                "lengemstat": "wildCropDropRate",
+                "lengemvalue": 4
+            },
+            "tool": {
+                "lengemstat": "forageDropRate",
+                "lengemvalue": 8
             }
         },
 
@@ -476,11 +476,11 @@
     "texturesbytype": {
         "gempowercore-*-diamond": {
             "metal": { "base": "game:block/metal/ingot/{metal}" },
-            "gem": { "base": "game:block/glass/blue" }
+            "gem": { "base": "game:block/stone/gem/diamond" }
         },
         "gempowercore-*-emerald": {
             "metal": { "base": "game:block/metal/ingot/{metal}" },
-            "gem": { "base": "game:block/glass/green" }
+            "gem": { "base": "game:block/stone/gem/emerald" }
         },
         "gempowercore-*-peridot": {
             "metal": { "base": "game:block/metal/ingot/{metal}" },
