@@ -27,7 +27,8 @@
         "height": 3,
         "output": {
             "type": "item",
-            "code": "arrow-sturdy-{metal}"
+            "code": "arrow-sturdy-{metal}",
+            "quantity": 4
         }
     }
 ]
