@@ -370,7 +370,7 @@ namespace LensGemology
             crymtal = Block as OreCrystalsCrystal;
             if(crymtal == null) { return; }
             totalHoursLastUpdate = Api.World.Calendar.TotalHours;
-            nextGrowTime = Api.World.Calendar.TotalHours + 72;
+            nextGrowTime = Api.World.Calendar.TotalHours + Math.Max(120 * ((float)Pos.Y / Api.World.BlockAccessor.MapSizeY),12);
             if (Api is ICoreServerAPI)
             {
                 RegisterGameTickListener(CommonTick, 12000 + rand.Next(500));
@@ -394,34 +394,33 @@ namespace LensGemology
 
         private void CommonTick(float dt)
         {
-           if (!(Api is ICoreServerAPI api && api.World.IsFullyLoadedChunk(Pos))) { return; }
+            if (!(Api as ICoreServerAPI).World.IsFullyLoadedChunk(Pos)) { return; }
 
             double currentTotal = Api.World.Calendar.TotalHours;
-            double hourInter = 6 * ((float)Pos.Y/Api.World.BlockAccessor.MapSizeY);
+            double hourInter = 6 * (Pos.Y / (float)Api.World.BlockAccessor.MapSizeY);
 
             if((currentTotal - totalHoursLastUpdate) < hourInter) {
-            if(totalHoursLastUpdate > currentTotal)
-                {
+                if(totalHoursLastUpdate > currentTotal) {
                     double rollbacc = totalHoursLastUpdate - currentTotal;
                     nextGrowTime -= rollbacc;
                 }
                 else
                 {
                     //Maybe check lava?
-                    return;
                 }
             }
             if(Block.FirstCodePart() == "orecrystals_crystal_bountiful") { return; }
             while((currentTotal - totalHoursLastUpdate)>hourInter)
             {
                 totalHoursLastUpdate += hourInter;
-                hourInter = 6 * ((float)Pos.Y / Api.World.BlockAccessor.MapSizeY);
+                hourInter = 6 * (Pos.Y / (float)Api.World.BlockAccessor.MapSizeY);
                 if (Block.FirstCodePart() == "orecrystals_crystal_bountiful") { break; }
                 if (nextGrowTime <= totalHoursLastUpdate)
                 {
                     AttemptGrow(totalHoursLastUpdate);
                 }
             }
+            Api.World.BlockAccessor.MarkBlockEntityDirty(Pos);
         }
 
         private bool AttemptGrow(double currentHours)
@@ -452,7 +451,7 @@ namespace LensGemology
                         break;
                     }
             }
-            nextGrowTime = Api.World.Calendar.TotalHours + (60* ((float)Pos.Y / Api.World.BlockAccessor.MapSizeY));
+            nextGrowTime = Api.World.Calendar.TotalHours + Math.Max(120 * ((float)Pos.Y / Api.World.BlockAccessor.MapSizeY), 12);
             Api.World.BlockAccessor.ExchangeBlock(newBlockID, Pos);
             MarkDirty();
             return true;

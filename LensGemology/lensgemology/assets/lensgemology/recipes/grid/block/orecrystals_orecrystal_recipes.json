@@ -16,7 +16,7 @@
 				name: "mineral",
 				code: "game:ore-*",
 				allowedVariants: ["lapislazuli", "corundum", "anthracite", "borax", "cinnabar", "lignite", "bituminouscoal", "sylvite", "sulfur",
-				"fluorite", "graphite", "kernite", "phosphorite"],
+				"fluorite", "graphite", "kernite", "phosphorite", "alum", "olivine"],
 				quantity: 1
 			}
 		},
@@ -129,8 +129,8 @@
 	{
 		//-- Crystal Seeds Quartz --//
 		ingredientPattern: "CMCMCMCMC",
-		width:3,
-		height:3,
+		width: 3,
+		height: 3,
 		ingredients: {
 			"C": {
 				type: "item",
@@ -141,7 +141,7 @@
 				type: "item",
 				name: "mineral",
 				code: "game:*",
-				allowedVariants: ["clearquartz", "ore-quartz"],
+				allowedVariants: [ "clearquartz", "ore-quartz" ],
 				quantity: 1
 			}
 		},
