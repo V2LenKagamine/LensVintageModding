@@ -40,25 +40,12 @@ namespace LensstoryMod
         }
         public override string InventoryClassName => inventoryClassName;
 
-        public override float GetPerishRate()
+        public RefridgerationUnitBE()
         {
-            switch(Powered)
+            container = new FrozenContainer(() => Inventory, "inventory")
             {
-                case float x when x <= 0:
-                    {
-                        return base.GetPerishRate();
-                    }
-                case float x when x > 0 && x < 1:
-                    {
-                        float perish = base.GetPerishRate();
-                        return perish - (perish * Powered);
-                    }
-                case float x when x >= 1:
-                    {
-                        return 0f;
-                    }
-            }
-            return base.GetPerishRate();
+                owner = this
+            };
         }
 
         public override void Initialize(ICoreAPI api)
@@ -73,8 +60,6 @@ namespace LensstoryMod
 
         public void RecalulateNearby(float _)
         {
-            List<BlockPos> ToCheck = new() { Pos.UpCopy(), Pos.DownCopy(), Pos.EastCopy(), Pos.WestCopy(), Pos.NorthCopy(), Pos.SouthCopy() };
-
             IBlockAccessor ba = Api.World.BlockAccessor;
 
             Powered = 0;
@@ -170,23 +155,11 @@ namespace LensstoryMod
         {
             if (Api.World is IServerWorldAccessor)
             {
-                byte[] data;
-
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    BinaryWriter writer = new BinaryWriter(ms);
-                    writer.Write("BlockEntityInventory");
-                    writer.Write(Lang.Get(dialogTitleLangCode));
-                    writer.Write((byte)4);
-                    TreeAttribute tree = new TreeAttribute();
-                    inventory.ToTreeAttributes(tree);
-                    tree.ToBytes(writer);
-                    data = ms.ToArray();
-                }
+                var data = BlockEntityContainerOpen.ToBytes("BlockEntityInventory", Lang.Get(dialogTitleLangCode), 4, inventory);
 
                 ((ICoreServerAPI)Api).Network.SendBlockEntityPacket(
                     (IServerPlayer)byPlayer,
-                    Pos.X, Pos.Y, Pos.Z,
+                    Pos,
                     (int)EnumBlockContainerPacketId.OpenInventory,
                     data
                 );
@@ -205,4 +178,33 @@ namespace LensstoryMod
         }
 
     }
+
+    public class FrozenContainer : InWorldContainer
+    {
+        public RefridgerationUnitBE owner;
+        public FrozenContainer(InventorySupplierDelegate inventorySupplier, string treeAttrKey) : base(inventorySupplier,treeAttrKey)
+        {
+        }
+        public override float GetPerishRate()
+        {
+            switch (owner.Powered)
+            {
+                case float x when x <= 0:
+                    {
+                        return base.GetPerishRate();
+                    }
+                case float x when x > 0 && x < 1:
+                    {
+                        float perish = base.GetPerishRate();
+                        return perish - (perish * owner.Powered);
+                    }
+                case float x when x >= 1:
+                    {
+                        return 0f;
+                    }
+            }
+            return base.GetPerishRate();
+        }
+    }
+
 }
