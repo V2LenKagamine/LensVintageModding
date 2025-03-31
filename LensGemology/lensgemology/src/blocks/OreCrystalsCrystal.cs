@@ -412,8 +412,7 @@ namespace LensGemology
             if(Block.FirstCodePart() == "orecrystals_crystal_bountiful") { return; }
             while((currentTotal - totalHoursLastUpdate)>hourInter)
             {
-                totalHoursLastUpdate += hourInter;
-                hourInter = 6 * (Pos.Y / (float)Api.World.BlockAccessor.MapSizeY);
+                totalHoursLastUpdate += hourInter; 
                 if (Block.FirstCodePart() == "orecrystals_crystal_bountiful") { break; }
                 if (nextGrowTime <= totalHoursLastUpdate)
                 {
@@ -423,10 +422,10 @@ namespace LensGemology
             Api.World.BlockAccessor.MarkBlockEntityDirty(Pos);
         }
 
-        private bool AttemptGrow(double currentHours)
+        private void AttemptGrow(double currentHours)
         {
-            if (Block == null) { return false; }
-            if(Block.Id == 0) { return false; }
+            if (Block == null) { return; }
+            if (Block.Id == 0) { return; }
             int newBlockID = 0;
             switch (Block.FirstCodePart())
             {
@@ -454,7 +453,7 @@ namespace LensGemology
             nextGrowTime = Api.World.Calendar.TotalHours + Math.Max(120 * ((float)Pos.Y / Api.World.BlockAccessor.MapSizeY), 12);
             Api.World.BlockAccessor.ExchangeBlock(newBlockID, Pos);
             MarkDirty();
-            return true;
+            return;
         }
     }
 }

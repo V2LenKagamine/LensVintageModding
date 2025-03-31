@@ -60,7 +60,7 @@ namespace LensstoryMod
             if (pos.Motion.Z < 0) projectileBox.Z1 += pos.Motion.Z * dtFac;
             else projectileBox.Z2 += pos.Motion.Z * dtFac;
 
-            ep.WalkInteractableEntities(pos.XYZ, 5f, (e) => {
+            ep.WalkEntityPartitions(pos.XYZ, 5f, (e) => {
                 if (e.EntityId == this.EntityId || (FiredBy != null && e.EntityId == FiredBy.EntityId && World.ElapsedMilliseconds - msLaunch < 250)) return true;
 
                 Cuboidd eBox = e.SelectionBox.ToDouble().Translate(e.ServerPos.X, e.ServerPos.Y, e.ServerPos.Z);
