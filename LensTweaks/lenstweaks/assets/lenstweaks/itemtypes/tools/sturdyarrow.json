@@ -15,7 +15,7 @@
     "texturesByType": {
         "*": {
             "material": { "base": "game:block/metal/ingot/{material}" },
-            "feather2": { "base": "item/parts/feather2" },
+            "feather2": { "base": "game:item/tool/material/feather1" },
             "handle": {"base": "game:block/metal/ingot/{material}"}
         }
     },

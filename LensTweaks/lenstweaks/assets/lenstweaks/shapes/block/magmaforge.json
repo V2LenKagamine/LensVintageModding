@@ -8,7 +8,7 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"fire2": "game:block/clay/brick/fire2",
+		"fire2": "game:block/clay/brick/fire3",
 		"meteoriciron": "game:block/metal/ingot/meteoriciron"
 	},
 	"elements": [

@@ -1,0 +1,161 @@
+﻿[
+    {
+        "file": "lenstweaks:itemtypes/tools/bonearrow",
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "GroundStorable",
+                "properties": {
+                    "layout": "Stacking",
+                    "placeRemoveSound": "game:sounds/block/ceramicplace",
+                    "stackingModelByType": {
+                        "*": "combatoverhaul:ammo/pile-arrows-fletched"
+                    },
+                    "modelItemsToStackSizeRatio": 4.2,
+                    "stackingCapacity": 160,
+                    "upSolid": true,
+                    "transferQuantity": 5,
+                    "bulkTransferQuantity": 25,
+                    "collisionBox": {
+                        "x1": 0,
+                        "y1": 0,
+                        "z1": 0,
+                        "x2": 1,
+                        "y2": 0.03125,
+                        "z2": 1
+                    },
+                    "cbScaleYByLayer": 0.2
+                }
+            },
+            {
+                "name": "CombatOverhaul:Projectile",
+                "properties": {
+                    "stats": {
+                        "AdditionalDurabilityCost": 0,
+                        "CollisionRadius": 0.05,
+                        "PenetrationDistance": 0.1,
+                        "DamageStatsByType": {
+                            "*": {
+                                "DamageType": "SlashingAttack",
+                                "Damage": 4.5
+                            }
+                        },
+                        "DamageTierBonusByType": {
+                            "*": 0
+                        },
+                        "SpeedThreshold": 0.3,
+                        "Knockback": 0.5,
+                        "EntityCode": "combatoverhaul:arrow-{material}",
+                        "HitSound": "game:sounds/player/projectilehit",
+                        "DurabilityDamage": 0,
+                        "DropChanceByType": {
+                            "*": 0.45
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "file": "lenstweaks:itemtypes/tools/bonearrow",
+        "op": "replace",
+        "path": "/class",
+        "value": "Item"
+    },
+    {
+        "file": "lenstweaks:itemtypes/tools/bonearrow",
+        "op": "replace",
+        "path": "/attributes",
+        "value": {
+            "handbook": {
+                "groupBy": [ "arrow-sturdy-*" ]
+            }
+        }
+    },
+
+    {
+        "file": "lenstweaks:itemtypes/tools/sturdyarrow",
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "GroundStorable",
+                "properties": {
+                    "layout": "Stacking",
+                    "placeRemoveSound": "game:sounds/block/ceramicplace",
+                    "stackingModelByType": {
+                        "*": "combatoverhaul:ammo/pile-arrows-fletched"
+                    },
+                    "modelItemsToStackSizeRatio": 4.2,
+                    "stackingCapacity": 160,
+                    "upSolid": true,
+                    "transferQuantity": 5,
+                    "bulkTransferQuantity": 25,
+                    "collisionBox": {
+                        "x1": 0,
+                        "y1": 0,
+                        "z1": 0,
+                        "x2": 1,
+                        "y2": 0.03125,
+                        "z2": 1
+                    },
+                    "cbScaleYByLayer": 0.2
+                }
+            },
+            {
+                "name": "CombatOverhaul:Projectile",
+                "properties": {
+                    "stats": {
+                        "AdditionalDurabilityCost": 0,
+                        "CollisionRadius": 0.05,
+                        "PenetrationDistance": 0.1,
+                        "DamageStatsByType": {
+                            "*-iron": {
+                                "DamageType": "SlashingAttack",
+                                "Damage": 5.3
+                            },
+                            "*-meteoriciron": {
+                                "DamageType": "SlashingAttack",
+                                "Damage": 5.5
+                            },
+                            "*-steel": {
+                                "DamageType": "SlashingAttack",
+                                "Damage": 5.7
+                            }
+                        },
+                        "DamageTierBonusByType": {
+                            "*-iron": 1,
+                            "*-meteoriciron": 2,
+                            "*-steel": 3
+                        },
+                        "SpeedThreshold": 0.3,
+                        "Knockback": 0.5,
+                        "EntityCode": "combatoverhaul:arrow-{material}",
+                        "HitSound": "game:sounds/player/projectilehit",
+                        "DurabilityDamage": 0,
+                        "DropChanceByType": {
+                            "*": 100
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "file": "lenstweaks:itemtypes/tools/sturdyarrow",
+        "op": "replace",
+        "path": "/class",
+        "value": "Item"
+    },
+    {
+        "file": "lenstweaks:itemtypes/tools/sturdyarrow",
+        "op": "replace",
+        "path": "/attributes",
+        "value": {
+            "handbook": {
+                "groupBy": [ "arrow-sturdy-*" ]
+            }
+        }
+    }
+]
