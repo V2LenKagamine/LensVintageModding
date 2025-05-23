@@ -2,21 +2,21 @@
     {
         "ingredientPattern": "SS_,LLS,LLS",
         "ingredients": {
-            "L": {
-                "type": "item",
-                "code": "game:leather-plain",
-                "quantity": 2
-            },
             "S": {
                 "type": "item",
-                "code": "game:leather-plain"
+                "code": "game:leather-normal-plain"
+            },
+            "L": {
+                "type": "item",
+                "code": "game:leather-sturdy-plain"
             }
         },
         "width": 3,
         "height": 3,
         "output": {
             "type": "item",
-            "code": "hoardingsack"
+            "code": "game:backpack-sturdy"
         },
         "requiresTrait": "len-hoarder"
     }
+        

@@ -22,44 +22,7 @@
         "op": "add",
         "path": "/-",
         "value": {
-            "code": "len-burdened",
-            "type": "negative",
-            "attributes": {
-                "walkspeed": -0.2
-            }
-        }
-    },
-    {
-        "file": "game:config/traits.json",
-        "op": "add",
-        "path": "/-",
-        "value": {
-            "code": "len-cursed",
-            "type": "negative",
-            "attributes": {
-                "walkspeed": -0.05,
-                "healingeffectiveness": -0.05,
-                "maxhealthExtraPoints": -1,
-                "animalSeekingRange": 0.1
-            }
-        }
-    },
-    {
-        "file": "game:config/traits.json",
-        "op": "add",
-        "path": "/-",
-        "value": {
             "code": "len-hoarder",
-            "type": "positive",
-            "attributes": {}
-        }
-    },
-    {
-        "file": "game:config/traits.json",
-        "op": "add",
-        "path": "/-",
-        "value": {
-            "code": "len-forbidden-knowledge",
             "type": "positive",
             "attributes": {}
         }

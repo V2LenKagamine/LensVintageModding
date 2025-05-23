@@ -3,10 +3,9 @@
   "modid": "lensclasses",
   "name": "LensClasses",
   "authors": ["LenKagamine"],
-  "description": "To be added",
+  "description": "A malady of custom classes for other mods.",
   "version": "1.0.0",
   "dependencies": {
-    "game": "1.19.3",
-    "lenscommons": "1.0.0"
+    "game": "1.20.*"
   }
 }

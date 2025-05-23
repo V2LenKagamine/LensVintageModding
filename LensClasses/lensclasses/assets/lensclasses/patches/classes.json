@@ -29,53 +29,7 @@
                 },
                 {
                     "type": "item",
-                    "code": "lensclasses:hoardingsack"
-                }
-            ]
-        }
-    },
-    {
-        "file": "game:config/characterclasses.json",
-        "op": "add",
-        "path": "/-",
-        "value": {
-            "code": "len-scrollmaker",
-            "traits": [ "len-forbidden-knowledge", "len-cursed" ],
-            "gear": [
-                {
-                    "type": "item",
-                    "code": "clothes-upperbody-commoner-shirt"
-                },
-                {
-                    "type": "item",
-                    "code": "clothes-upperbodyover-commoner-coat"
-                },
-                {
-                    "type": "item",
-                    "code": "clothes-lowerbody-commoner-trousers"
-                },
-                {
-                    "type": "item",
-                    "code": "clothes-foot-commoner-boots"
-                },
-                {
-                    "type": "item",
-                    "code": "clothes-hand-commoner-gloves"
-                },
-                {
-                    "type": "item",
-                    "code": "paper-parchment",
-                    "quantity": 4
-                },
-                {
-                    "type": "item",
-                    "code": "charcoal",
-                    "quantity": 4
-                },
-                {
-                    "type": "item",
-                    "code": "feather",
-                    "quantity": 1
+                    "code": "game:backpack-sturdy"
                 }
             ]
         }
@@ -110,7 +64,7 @@
                 },
                 {
                     "type": "item",
-                    "code": "lenscommons:temporalgift-c",
+                    "code": "lensclasses:temporalgift-c",
                     "quantity": 1,
                     "attributes": {
                         "gifts": {
@@ -159,9 +113,6 @@
         "dependsOn": [
             {
                 "modid": "aculinaryartillery"
-            },
-            {
-                "modid": "lenscommons"
             }
         ]
     }
