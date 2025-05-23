@@ -2,11 +2,11 @@
     {
         "ingredientPattern": "SS_,LLS,LLS",
         "ingredients": {
-            "S": {
+            "L": {
                 "type": "item",
                 "code": "game:leather-normal-plain"
             },
-            "L": {
+            "S": {
                 "type": "item",
                 "code": "game:leather-sturdy-plain"
             }
