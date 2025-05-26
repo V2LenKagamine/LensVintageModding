@@ -390,21 +390,11 @@
 		{
 			"type": "item",
 			"code": "orecrystals_crystalshard",
-			"tool": "pickaxe",
-			"quantity": {
-				"avg": ".25",
-				"var": 1,
-				"dist": "gaussian"
-			}
-		},
-		{
-			"type": "item",
-			"code": "orecrystals_crystalshard",
 			"tool": "chisel",
 			"quantity": {
-				"avg": ".5",
-				"var": 1,
-				"dist": "gaussian"
+				"avg": 0.04,
+				"var": 0,
+				"dist": "uniform"
 			}
 		}
 	]

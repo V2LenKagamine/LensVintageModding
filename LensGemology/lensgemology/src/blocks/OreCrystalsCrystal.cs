@@ -373,7 +373,7 @@ namespace LensGemology
             nextGrowTime = Api.World.Calendar.TotalHours + Math.Max(120 * ((float)Pos.Y / Api.World.BlockAccessor.MapSizeY),12);
             if (Api is ICoreServerAPI)
             {
-                RegisterGameTickListener(CommonTick, 12000 + rand.Next(500));
+                RegisterGameTickListener(CommonTick, 3000 + rand.Next(50));
             }
         }
 

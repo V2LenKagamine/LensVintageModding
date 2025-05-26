@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "lensminitweaks",
+    "name": "Lens-Mini-Tweaks",
+    "authors": [
+        "LenKagamine"
+    ],
+    "description": "Contains only VERY vanilla additions to the game from Len's-Tweaks. Dont use both.",
+    "version": "1.0.1",
+    "dependencies": {
+        "game": "1.20.*"
+    }
+}

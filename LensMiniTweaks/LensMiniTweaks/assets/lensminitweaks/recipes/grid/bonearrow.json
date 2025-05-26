@@ -1,0 +1,23 @@
+﻿[
+    {
+        "ingredientPattern": "H,S",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:knife-generic-*",
+                "isTool": true,
+                "toolDurabilityCost": 1
+            },
+            "S": {
+                "type": "item",
+                "code": "game:bone"
+            }
+        },
+        "width": 1,
+        "height": 2,
+        "output": {
+            "type": "item",
+            "code": "arrow-bone-flint"
+        }
+    }
+]

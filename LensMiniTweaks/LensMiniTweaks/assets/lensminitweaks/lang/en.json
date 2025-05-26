@@ -1,0 +1,29 @@
+{
+    "game:tabname-lensstorytab": "Lens-Tweaks",
+
+    "item-arrow-bone-flint": "Bone Arrow",
+    "itemdesc-arrow-bone-flint": "Won't last more than a shot or two, but sharper than flint.",
+    "item-arrow-sturdy-iron": "Iron Sturdy Arrow",
+    "item-arrow-sturdy-meteoriciron": "Meteoric Iron Sturdy Arrow",
+    "item-arrow-sturdy-steel": "Steel Sturdy Arrow",
+    "itemdesc-arrow-sturdy-*": "Won't break, but hard to fire.",
+
+    "block-shroomstrate": "Mushroom Growth Substrate",
+
+    "game:handbook-block-shroomstrate-title": "Usage:",
+    "game:handbook-block-shroomstrate-text": "Place in a nice dark place, like a cellar, and place a mushroom inside. For ground mushrooms,place in the floor, and mushrooms will grow on anything grass; can grow on up to 3 blocks away. For tree mushrooms, place up to 5 of any log above it. Grows a few mushrooms every 15 or so minutes.",
+
+    "block-clearglass-green": "Green Borderless Glass",
+    "block-clearglass-blue": "Blue Borderless Glass",
+    "block-clearglass-violet": "Violet Borderless Glass",
+    "block-clearglass-red": "Red Borderless Glass",
+    "block-clearglass-yellow": "Yellow Borderless Glass",
+    "block-clearglass-brown": "Brown Borderless Glass",
+    "block-clearglass-vintage": "Vintage Borderless Glass",
+    "block-clearglass-smoky": "Smoky Borderless Glass",
+    "block-clearglass-pink": "Pink Borderless Glass",
+    "block-clearglass-plain": "Borderless Glass",
+    "block-clearglass-quartz": "Quartz Borderless Glass",
+
+    "game:recipeingredient-item-ciderportion-*": "mulled cider"
+}

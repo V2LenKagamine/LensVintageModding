@@ -1,0 +1,26 @@
+﻿{
+    "ingredientPattern": "RSR,SDS,RSR",
+    "ingredients": {
+        "R": {
+            "type": "item",
+            "code": "game:rot",
+            "quantity": 4
+        },
+        "S": {
+            "type": "item",
+            "code": "game:drygrass",
+            "quantity": 4
+        },
+        "D": {
+            "type": "block",
+            "code": "game:soil-*-none",
+            "allowedVariants": ["medium","high","compost"]
+        }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+        "type": "block",
+        "code": "shroomstrate"
+    }
+}

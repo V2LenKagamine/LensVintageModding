@@ -1,0 +1,39 @@
+﻿{
+    "code": "shroomstrate",
+    "class": "lensshroomstrateblock",
+    "entityClass": "lensshroomstrate",
+    "shape": { "base": "game:block/basic/cube" },
+    "drawtype": "cube",
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "attributes": {
+        "handbook": {
+            "extraSections": [
+                {
+                    "title": "handbook-block-shroomstrate-title",
+                    "text": "handbook-block-shroomstrate-text"
+                }
+            ],
+            "include": true
+        }
+    },
+    "blockmaterial": "Soil",
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "maxStackSize": 64,
+    "materialDensity": 700,
+    "resistance": 2,
+    "textures": {
+        "all": {
+            "base": "game:block/soil/forest/forestsoil22"
+        }
+    },
+    "sideopaque": {
+        "all": true
+    },
+    "sidesolid": {
+        "all": true
+    }
+}

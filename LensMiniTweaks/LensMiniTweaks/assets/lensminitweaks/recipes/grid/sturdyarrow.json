@@ -1,0 +1,34 @@
+﻿[
+    {
+        "ingredientPattern": "H,S,F",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:arrowhead-*",
+                "name": "metal",
+                "allowedVariants": [ "iron", "meteoriciron", "steel" ],
+                "quantity": 4
+            },
+            "S": {
+                "type": "item",
+                "code": "game:chisel-*",
+                "name": "agh",
+                "allowedVariants": [ "iron", "meteoriciron", "steel" ]
+            },
+            "F": {
+                "type": "item",
+                "code": "game:metalnailsandstrips-*",
+                "name": "buh",
+                "allowedVariants": [ "iron", "meteoriciron", "steel" ],
+                "quantity": 2
+            }
+        },
+        "width": 1,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "arrow-sturdy-{metal}",
+            "quantity": 4
+        }
+    }
+]

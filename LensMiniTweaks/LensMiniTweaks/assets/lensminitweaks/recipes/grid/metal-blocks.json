@@ -1,0 +1,18 @@
+﻿{
+    "ingredientPattern": "HHH,HHH",
+    "ingredients": {
+        "H": {
+            "type": "item",
+            "code": "game:metalplate-*",
+            "name": "metal",
+            "allowedVariants": ["molybdochalkos","bismuth","brass","cupronickel","electrum","meteoriciron","tin"]
+        }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 2,
+    "output": {
+        "type": "block",
+        "code": "game:metalblock-new-riveted-{metal}"
+    }
+}
