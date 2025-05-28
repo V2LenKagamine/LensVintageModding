@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "EP_Expansion",
+    "name": "EP_Expansion",
+    "authors": [
+        "Unknown"
+    ],
+    "description": "To be added",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": ""
+    }
+}
