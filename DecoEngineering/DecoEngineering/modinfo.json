@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "DecoEngineering",
+    "name": "DecoEngineering",
+    "authors": [
+        "Len Kagamine"
+    ],
+    "description": "Removes troublesome recipes between DecorBazaar and Vintage Engineering.",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": ""
+    }
+}

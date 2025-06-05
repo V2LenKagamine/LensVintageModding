@@ -1,0 +1,536 @@
+[
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/breadfruit/cuttingGraftChance",
+        "value": 0.8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/breadfruit/cuttingRootingChance",
+        "value": 0.6,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/breadfruit/fruitingDays/avg",
+        "value": 10,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/breadfruit/fruitingDays/var",
+        "value": 4,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/breadfruit/growthStepDays/avg",
+        "value": 4,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/attributes/fruittreeProperties/cherry/vernalizationHours",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/attributes/fruittreeProperties/cherry/vernalizationTemp",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "add",
+        "path": "/attributes/fruittreeProperties/cherry/cycleType",
+        "value": "Evergreen",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/cherry/cuttingGraftChance",
+        "value": 0.8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/cherry/cuttingRootingChance",
+        "value": 0.6,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/cherry/fruitingDays/avg",
+        "value": 30,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/cherry/fruitingDays/var",
+        "value": 4,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/cherry/growthStepDays/avg",
+        "value": 2,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/lychee/cuttingGraftChance",
+        "value": 0.8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/lychee/cuttingRootingChance",
+        "value": 0.6,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/lychee/fruitingDays/avg",
+        "value": 9,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/lychee/fruitingDays/var",
+        "value": 3,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/lychee/growthStepDays/avg",
+        "value": 3,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/mango/cuttingGraftChance",
+        "value": 0.8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/mango/cuttingRootingChance",
+        "value": 0.6,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/mango/fruitingDays/avg",
+        "value": 10,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/mango/fruitingDays/var",
+        "value": 3,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/mango/growthStepDays/avg",
+        "value": 3,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/olive/cuttingGraftChance",
+        "value": 0.8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/olive/cuttingRootingChance",
+        "value": 0.6,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/olive/fruitingDays/avg",
+        "value": 9,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/olive/fruitingDays/var",
+        "value": 3,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/olive/growthStepDays/avg",
+        "value": 2,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/orange/cuttingGraftChance",
+        "value": 0.8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/orange/cuttingRootingChance",
+        "value": 0.6,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/orange/fruitingDays/avg",
+        "value": 8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/orange/fruitingDays/var",
+        "value": 2,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/orange/growthStepDays/avg",
+        "value": 2,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/attributes/fruittreeProperties/peach/vernalizationHours",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/attributes/fruittreeProperties/peach/vernalizationTemp",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "add",
+        "path": "/attributes/fruittreeProperties/peach/cycleType",
+        "value": "Evergreen",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/peach/cuttingGraftChance",
+        "value": 0.8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/peach/cuttingRootingChance",
+        "value": 0.6,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/peach/fruitingDays/avg",
+        "value": 3,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/peach/fruitingDays/var",
+        "value": 1,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/peach/growthStepDays/avg",
+        "value": 1,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/attributes/fruittreeProperties/pear/vernalizationHours",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/attributes/fruittreeProperties/pear/vernalizationTemp",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "add",
+        "path": "/attributes/fruittreeProperties/pear/cycleType",
+        "value": "Evergreen",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pear/cuttingGraftChance",
+        "value": 0.8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pear/cuttingRootingChance",
+        "value": 0.6,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pear/fruitingDays/avg",
+        "value": 4,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pear/fruitingDays/var",
+        "value": 1,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pear/growthStepDays/avg",
+        "value": 2,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/attributes/fruittreeProperties/pinkapple/vernalizationHours",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/attributes/fruittreeProperties/pinkapple/vernalizationTemp",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "add",
+        "path": "/attributes/fruittreeProperties/pinkapple/cycleType",
+        "value": "Evergreen",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pinkapple/cuttingGraftChance",
+        "value": 0.8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pinkapple/cuttingRootingChance",
+        "value": 0.6,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pinkapple/fruitingDays/avg",
+        "value": 7,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pinkapple/fruitingDays/var",
+        "value": 1,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pinkapple/growthStepDays/avg",
+        "value": 2,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pomegranate/cuttingGraftChance",
+        "value": 0.8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pomegranate/cuttingRootingChance",
+        "value": 0.6,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pomegranate/fruitingDays/avg",
+        "value": 12,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pomegranate/fruitingDays/var",
+        "value": 4,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/pomegranate/growthStepDays/avg",
+        "value": 2,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/attributes/fruittreeProperties/redapple/vernalizationHours",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/attributes/fruittreeProperties/redapple/vernalizationTemp",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "add",
+        "path": "/attributes/fruittreeProperties/redapple/cycleType",
+        "value": "Evergreen",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/redapple/cuttingGraftChance",
+        "value": 0.8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/redapple/cuttingRootingChance",
+        "value": 0.6,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/redapple/fruitingDays/avg",
+        "value": 5,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/redapple/fruitingDays/var",
+        "value": 2,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/redapple/growthStepDays/avg",
+        "value": 2,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/attributes/fruittreeProperties/yellowapple/vernalizationHours",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "remove",
+        "path": "/attributes/fruittreeProperties/yellowapple/vernalizationTemp",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "add",
+        "path": "/attributes/fruittreeProperties/yellowapple/cycleType",
+        "value": "Evergreen",
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/yellowapple/cuttingGraftChance",
+        "value": 0.8,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/yellowapple/cuttingRootingChance",
+        "value": 0.6,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/yellowapple/fruitingDays/avg",
+        "value": 5,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/yellowapple/fruitingDays/var",
+        "value": 1,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    },
+    {
+        "op": "replace",
+        "path": "/attributes/fruittreeProperties/yellowapple/growthStepDays/avg",
+        "value": 2,
+        "file": "game:blocktypes/plant/fruittreebranch.json",
+        "side": "Server"
+    }
+]

@@ -1,0 +1,7 @@
+﻿[
+    {
+        "op": "remove",
+        "file": "decor:recipes/grid/stoves/ironoven.json",
+        "path": "/1"
+    }
+]

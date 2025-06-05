@@ -1,0 +1,64 @@
+﻿{
+    "file": "swordz:itemtypes/swords/zweihander",
+    "op": "addeach",
+    "path": "/attributes/-",
+    "value": [
+        {
+            "OneHandedStance": {
+                "CanAttack": false,
+                "CanParry": false,
+                "CanBlock": false,
+                "CanSprint": true,
+                "SpeedPenalty": 0,
+                "ReadyAnimation": "armory:sword-great-ready-1h",
+                "IdleAnimation": "armory:sword-great-idle-1h"
+            }
+        },
+        {
+            "Attack": {
+                "StopOnTerrainHit": true,
+                "StopOnEntityHit": true,
+                "CollideWithTerrain": true,
+                "MaxReach": 12,
+                "DamageTypesByType": {
+                    "*-iron": [
+                        {
+                            "Damage": {
+                                "DamageType": "SlashingAttack",
+                                "Strength": 4,
+                                "Damage": 6.5
+                            },
+                            "Knockback": 1,
+                            "DurabilityDamage": 1,
+                            "Collider": [ 0.5, 0, 0.5, 3.8, 0, 0.5 ]
+                        }
+                    ],
+                    "*-meteoriciron": [
+                        {
+                            "Damage": {
+                                "DamageType": "SlashingAttack",
+                                "Strength": 5,
+                                "Damage": 6.5
+                            },
+                            "Knockback": 1,
+                            "DurabilityDamage": 1,
+                            "Collider": [ 0.5, 0, 0.5, 3.8, 0, 0.5 ]
+                        }
+                    ],
+                    "*-steel": [
+                        {
+                            "Damage": {
+                                "DamageType": "SlashingAttack",
+                                "Strength": 6,
+                                "Damage": 7
+                            },
+                            "Knockback": 1,
+                            "DurabilityDamage": 1,
+                            "Collider": [ 0.5, 0, 0.5, 3.8, 0, 0.5 ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

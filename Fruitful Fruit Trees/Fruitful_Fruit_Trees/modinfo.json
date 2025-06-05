@@ -1,0 +1,16 @@
+{
+    "type": "code",
+    "modid": "fruitfulfruittrees",
+    "name": "Fruitful Fruit Trees",
+    "authors": [
+        "Len Kagamine"
+    ],
+    "contributors": [
+        "Paxilmaniac"
+    ],
+    "description": "Makes fruit trees grow much faster, and ignore the 'Survive a Winter' part.",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": ""
+    }
+}
