@@ -1,0 +1,16 @@
+{
+    "type": "code",
+    "modid": "veep",
+    "name": "Vint Eng x Elec Prog",
+    "authors": [
+        "LenKagamine"
+    ],
+    "description": "Adds a converter between Electrical Progressive systems and Vintage Engineering Systems",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "",
+        "vintageengineering": "",
+        "electricalprogressivecore": "",
+        "electricalprogressivebasics": ""
+    }
+}

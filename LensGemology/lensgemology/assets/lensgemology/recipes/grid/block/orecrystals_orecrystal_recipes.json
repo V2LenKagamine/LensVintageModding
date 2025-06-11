@@ -150,5 +150,53 @@
 			code: "seed_crystals-quartz-ore_down",
 			quantity: 1
 		}
+	},
+	{
+		//-- Crystal Seeds Salt --//
+		"ingredientPattern": "CMCMCMCMC",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 1
+			},
+			"M": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:salt",
+				"quantity": 16
+			}
+		},
+		"output": {
+			"type": "block",
+			"code": "seed_crystals-salt-ore_down",
+			"quantity": 1
+		}
+	},
+	{
+		//-- Crystal Seeds Salt --//
+		"ingredientPattern": "CMCMCMCMC",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 1
+			},
+			"M": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:saltpeter",
+				"quantity": 2
+			}
+		},
+		"output": {
+			"type": "block",
+			"code": "seed_crystals-saltpeter-ore_down",
+			"quantity": 1
+		}
 	}
 ]

@@ -15,7 +15,7 @@
 				type: "item",
 				code: "game:*",
 				allowedVariants: ["clearquartz", "ore-quartz"],
-				quantity: 1,
+				quantity: 4,
 			},
 			"M": {
 				type: "item",
@@ -28,7 +28,7 @@
 		output: {
 			type: "block",
 			code: "orecrystals_glass-{material}",
-			quantity: 4
+			quantity: 16
 		}
 	},
 	{
@@ -47,7 +47,7 @@
 				type: "item",
 				code: "game:*",
 				allowedVariants: ["clearquartz", "ore-quartz"],
-				quantity: 1,
+				quantity: 4,
 			},
 			"M": {
 				type: "item",
@@ -60,7 +60,7 @@
 		output: {
 			type: "block",
 			code: "orecrystals_glass-{material}",
-			quantity: 4
+			quantity: 16
 		}
 	},
 	{
@@ -79,7 +79,7 @@
 				type: "item",
 				code: "game:*",
 				allowedVariants: ["clearquartz", "ore-quartz"],
-				quantity: 1,
+				quantity: 4,
 			},
 			"M": {
 				type: "item",
@@ -91,7 +91,7 @@
 		output: {
 			type: "block",
 			code: "orecrystals_glass-{gem}",
-			quantity: 4
+			quantity: 16
 		}
 	},
 	{
@@ -110,7 +110,7 @@
 				type: "item",
 				code: "game:*",
 				allowedVariants: ["clearquartz", "ore-quartz"],
-				quantity: 1,
+				quantity: 4,
 			},
 			"M": {
 				type: "item",
@@ -122,7 +122,7 @@
 		output: {
 			type: "block",
 			code: "orecrystals_glass-quartz",
-			quantity: 4
+			quantity: 16
 		}
 	},
 	{
@@ -141,7 +141,7 @@
 				type: "item",
 				code: "game:*",
 				allowedVariants: ["clearquartz", "ore-quartz"],
-				quantity: 1,
+				quantity: 4,
 			},
 			"M": {
 				type: "item",
@@ -152,7 +152,7 @@
 		output: {
 			type: "block",
 			code: "orecrystals_glass-flint",
-			quantity: 4
+			quantity: 16
 		}
 	},
 	{
@@ -170,21 +170,83 @@
 			"G": {
 				type: "item",
 				code: "game:*",
-				allowedVariants: ["clearquartz", "ore-quartz"],
-				quantity: 1,
+				allowedVariants: [ "clearquartz", "ore-quartz" ],
+				quantity: 4,
 			},
 			"M": {
 				type: "item",
 				name: "mineral",
 				code: "game:nugget-*",
-				allowedVariants: ["nativesilver", "nativegold"],
+				allowedVariants: [ "nativesilver", "nativegold" ],
 				quantity: 1,
 			},
 		},
 		output: {
-			type: "block",
-			code: "orecrystals_glass-quartz_{mineral}",
-			quantity: 4
+			"type": "block",
+			"code": "orecrystals_glass-quartz_{mineral}",
+			"quantity": 16
+		}
+	},
+	{
+		//-- Salt Glass --//
+
+		"ingredientPattern": "SGSGMGSGS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 1
+			},
+			"G": {
+				"type": "item",
+				"code": "game:*",
+				"allowedVariants": [ "clearquartz", "ore-quartz" ],
+				"quantity": 4
+			},
+			"M": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:salt",
+				"quantity": 8
+			}
+		},
+		"output": {
+			"type": "block",
+			"code": "orecrystals_glass-salt",
+			"quantity": 16
+		}
+	},
+	{
+		//-- saltpeter --//
+
+		"ingredientPattern": "SGSGMGSGS",
+		"width": 3,
+		"height": 3,
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"quantity": 1
+			},
+			"G": {
+				"type": "item",
+				"code": "game:*",
+				"allowedVariants": [ "clearquartz", "ore-quartz" ],
+				"quantity": 4
+			},
+			"M": {
+				"type": "item",
+				"name": "mineral",
+				"code": "game:saltpeter",
+				"quantity": 1
+			}
+		},
+		"output": {
+			"type": "block",
+			"code": "orecrystals_glass-saltpeter",
+			"quantity": 16
 		}
 	}
 ]

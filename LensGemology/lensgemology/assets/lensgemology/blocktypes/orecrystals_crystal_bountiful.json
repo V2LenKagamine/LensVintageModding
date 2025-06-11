@@ -54,7 +54,9 @@
 				"sulfur",
 				"sylvite",
 				"uranium",
-				"wolframite"
+				"wolframite",
+				"salt",
+				"saltpeter"
 			]
 		},
 		{
@@ -374,7 +376,9 @@
 		"*-sulfur-*": [ 8, 3, 4 ],
 		"*-sylvite-*": [ 3, 3, 4 ],
 		"*-uranium-*": [ 11, 3, 4 ],
-		"*-wolframite-*": [ 40, 3, 4 ]
+		"*-wolframite-*": [ 40, 3, 4 ],
+		"*-salt-*": [ 58, 1, 4 ],
+		"*-saltpeter-*": [ 58, 0, 4 ]
 	},
 	"resistance": 0.1,
 	"sounds": {
@@ -386,16 +390,18 @@
 		"zOffset": 3,
 		"reflective": true
 	},
-	"drops": [
-		{
-			"type": "item",
-			"code": "orecrystals_crystalshard",
-			"tool": "chisel",
-			"quantity": {
-				"avg": 0.2,
-				"var": 0,
-				"dist": "uniform"
+	"dropsByType": {
+		"*": [
+			{
+				"type": "item",
+				"code": "orecrystals_crystalshard",
+				"tool": "chisel",
+				"quantity": {
+					"avg": 0.2,
+					"var": 0,
+					"dist": "uniform"
+				}
 			}
-		}
-	]
+		]
+	}
 }

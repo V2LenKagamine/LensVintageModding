@@ -54,7 +54,9 @@
 				"sulfur",
 				"sylvite",
 				"uranium",
-				"wolframite"
+				"wolframite",
+				"salt",
+				"saltpeter"
 			]
 		},
 		{
@@ -374,7 +376,9 @@
 		"*-sulfur-*": [ 8, 3, 2 ],
 		"*-sylvite-*": [ 3, 3, 2 ],
 		"*-uranium-*": [ 11, 3, 2 ],
-		"*-wolframite-*": [ 40, 3, 2 ]
+		"*-wolframite-*": [ 40, 3, 2 ],
+		"*-salt-*": [ 58, 1, 2 ],
+		"*-saltpeter-*": [ 58, 0, 2 ]
 	},
 	"resistance": 0.1,
 	"sounds": {

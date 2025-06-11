@@ -264,9 +264,9 @@ namespace LensGemology
             else
                 BreakParticles(pos);
         }
-
         private ItemStack[] FindItemDrops(int amount)
         {
+            Random Randy = new Random();
             ItemStack[] returned = new ItemStack[1] { new ItemStack(api.World.GetItem(new AssetLocation("lensgemology:orecrystals_crystalshard")))};
             var attempt = api.World.GetItem(new AssetLocation("game:nugget-" + FirstCodePart(1)));
             if ( attempt != null)
@@ -284,7 +284,26 @@ namespace LensGemology
             if( attempt != null)
             {
                 ItemStack tmp = new ItemStack(attempt, 1);
-                tmp.Attributes.SetString("potential", "low");
+                int roll = Randy.Next(0, 101);
+                string poten = "low";
+                switch (roll)
+                {
+                    case 1 when roll >= 80:
+                        {
+                            poten = "high";
+                            break;
+                        }
+                    case 2 when roll >= 30 && roll < 80:
+                        {
+                            poten = "medium";
+                            break;
+                        }
+                    default:
+                        {
+                            break;
+                        }
+                }
+                tmp.Attributes.SetString("potential", poten);
                 returned[0]=(tmp);
                 
                 return returned;
@@ -303,6 +322,16 @@ namespace LensGemology
                 case "flint":
                     {
                         returned[0] = new ItemStack(api.World.GetItem(new AssetLocation("game:flint")), amount);
+                        return returned;
+                    }
+                case "salt":
+                    {
+                        returned[0] = new ItemStack(api.World.GetItem(new AssetLocation("game:salt")), amount * 4);
+                        return returned;
+                    }
+                case "saltpeter":
+                    {
+                        returned[0] = new ItemStack(api.World.GetItem(new AssetLocation("game:saltpeter")), amount);
                         return returned;
                     }
             } return null;

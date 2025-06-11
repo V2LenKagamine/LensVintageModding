@@ -1,0 +1,64 @@
+﻿[
+    {
+        "ingredientPattern": " C ,SCS,WPW",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "vinteng:metalrod-copper"
+            },
+            "S": {
+                "type": "block",
+                "code": "game:catenary-lvpower",
+                "quantity": 2
+            },
+            "W": {
+                "type": "block",
+                "code": "electricalprogressivebasics:ecable-32v-copper-single-part",
+                "quantity": 2
+            },
+            "P": {
+                "type": "item",
+                "code": "game:metalplate-iron"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "veep:energyconverter-toep-down",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "T",
+        "width": 1,
+        "height": 1,
+        "ingredients": {
+            "T": {
+                "type": "block",
+                "code": "veep:energyconverter-toep-down"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "veep:energyconverter-tove-down",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "T",
+        "width": 1,
+        "height": 1,
+        "ingredients": {
+            "T": {
+                "type": "block",
+                "code": "veep:energyconverter-tove-down"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "veep:energyconverter-toep-down",
+            "quantity": 1
+        }
+    }
+]

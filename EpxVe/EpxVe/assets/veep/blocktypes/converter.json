@@ -1,0 +1,152 @@
+﻿{
+    "code": "energyconverter",
+    "class": "BlockVeepConverter",
+    "entityclass": "BEVeepConverter",
+    "entityBehaviorsByType": {
+        "energyconverter-tove-*": [
+            { "name": "ElectricalProgressive" },
+            { "name": "BEBhvVeepToVE" },
+            {
+                "name": "Electric",
+                "properties": {
+                    "canExtractPower": true,
+                    "canReceivePower": false,
+                    "entitytype": "Producer",
+                    "maxpower": 1000,
+                    "maxpps": 32
+                }
+            }
+        ],
+        "energyconverter-toep-*": [
+            { "name": "ElectricalProgressive" },
+            { "name": "BEBhvVeepToEP" },
+            {
+                "name": "Electric",
+                "properties": {
+                    "canExtractPower": false,
+                    "canReceivePower": true,
+                    "entitytype": "Consumer",
+                    "maxpower": 1000,
+                    "maxpps": 32
+                }
+            }
+        ]
+    },
+    "behaviors": [
+        {
+            "name": "OmniRotatable",
+            "properties": {
+                "rotateSides": true,
+                "facing": "block"
+            }
+        }
+    ],
+    "attributes": {
+        "handbook": {
+            "groupBy": [ "energyconverter-*" ]
+        },
+        "wireNodes": [
+            {
+                "index": 0,
+                "wirefunction": "Power",
+                "powertier": "LV",
+                "maxconnections": 1,
+                "x1": 0.4,
+                "y1": 0.5,
+                "z1": 0.4,
+                "x2": 0.6,
+                "y2": 0.7,
+                "z2": 0.6,
+                "rotateXByType": {
+                    "*-up": 180,
+                    "*-south": 270,
+                    "*-north": 90
+                },
+                "rotateZByType": {
+                    "*-east": 90,
+                    "*-west": 270
+                }
+
+            }
+        ],
+        "maxcapacity": 1000,
+        "voltage": 32,
+        "maxCurrent": 20.0,
+        "isolated": true,
+        "isolatedEnvironment": true,
+        "power": 128.0,
+        "chargable": false,
+        "consume": 20
+    },
+    "variantgroups": [
+
+        {
+            "code": "type",
+            "states": [ "toep", "tove"]
+        },
+
+        {
+            "code": "rot",
+            "states": [ "east", "south", "west", "north", "up", "down" ]
+        }
+    ],
+    "shapeByType": {
+        "*-down": {
+            "base": "converter"
+        },
+        "*-up": {
+            "base": "converter",
+            "rotateX": 180
+        },
+        "*-south": {
+            "base": "converter",
+            "rotateX": 270
+        },
+        "*-north": {
+            "base": "converter",
+            "rotateX": 90
+        },
+        "*-east": {
+            "base": "converter",
+            "rotateZ": 90
+        },
+        "*-west": {
+            "base": "converter",
+            "rotateZ": 270
+        }
+    },
+    "collisionSelectionBoxes": [
+        {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0,
+            "x2": 1,
+            "y2": 0.15,
+            "z2": 1,
+            "rotateXByType": {
+                "*-up": 180,
+                "*-south": 270,
+                "*-north": 90
+            },
+            "rotateZByType": {
+                "*-east": 90,
+                "*-west": 270
+            }
+        }
+    ],
+    "sounds": {
+        "place": "game:block/anvil",
+        "walk": "game:walk/stone"
+    },
+    "drawtype": "json",
+    "sidesolid": { "all": false },
+    "sideopaque": { "all": false },
+    "blockmaterial": "Metal",
+    "creativeInventory": {
+        "mechanics": [ "*-down" ]
+    },
+    "lightAbsorption": 0,
+    "maxStackSize": 8,
+    "replaceable": 600,
+    "resistance": 1.5
+}

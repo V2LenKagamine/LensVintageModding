@@ -1,0 +1,129 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"copper": "game:block/metal/ingot/copper",
+		"gold": "game:block/metal/ingot/gold",
+		"iron": "game:block/metal/ingot/iron"
+	},
+	"elements": [
+		{
+			"name": "Cube2",
+			"from": [ 0.1, 0.0, 0.1 ],
+			"to": [ 15.9, 2.0, 15.9 ],
+			"rotationOrigin": [ 0.1, 0.0, 0.1 ],
+			"faces": {
+				"north": { "texture": "#iron", "uv": [ 0.0, 0.0, 15.5, 2.0 ] },
+				"east": { "texture": "#iron", "uv": [ 0.0, 0.0, 15.5, 2.0 ] },
+				"south": { "texture": "#iron", "uv": [ 0.0, 0.0, 15.5, 2.0 ] },
+				"west": { "texture": "#iron", "uv": [ 0.0, 0.0, 15.5, 2.0 ] },
+				"up": { "texture": "#iron", "uv": [ 0.0, 0.0, 15.5, 15.5 ] },
+				"down": { "texture": "#iron", "uv": [ 0.0, 0.0, 15.5, 15.5 ] }
+			},
+			"children": [
+				{
+					"name": "Cube3",
+					"from": [ 7.4, 0.1, -0.1 ],
+					"to": [ 8.4, 2.3, 7.4 ],
+					"rotationOrigin": [ 7.4, 0.1, -0.1 ],
+					"faces": {
+						"north": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+						"east": { "texture": "#copper", "uv": [ 0.0, 0.0, 7.5, 2.0 ] },
+						"south": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+						"west": { "texture": "#copper", "uv": [ 0.0, 0.0, 7.5, 2.0 ] },
+						"up": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 7.5 ] }
+					},
+					"children": [
+						{
+							"name": "Cube4",
+							"from": [ 1.0, 0.0, 8.5 ],
+							"to": [ 2.0, 2.2, 16.0 ],
+							"rotationOrigin": [ 1.0, 0.0, 8.5 ],
+							"rotationY": 90.0,
+							"faces": {
+								"north": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+								"east": { "texture": "#copper", "uv": [ 0.0, 0.0, 7.5, 2.0 ] },
+								"south": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+								"west": { "texture": "#copper", "uv": [ 0.0, 0.0, 7.5, 2.0 ] },
+								"up": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 7.5 ] }
+							}
+						},
+						{
+							"name": "Cube5",
+							"from": [ 0.0, 0.0, 8.5 ],
+							"to": [ 1.0, 2.2, 16.0 ],
+							"rotationOrigin": [ 0.0, 0.0, 8.5 ],
+							"faces": {
+								"north": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+								"east": { "texture": "#copper", "uv": [ 0.0, 0.0, 7.5, 2.0 ] },
+								"south": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+								"west": { "texture": "#copper", "uv": [ 0.0, 0.0, 7.5, 2.0 ] },
+								"up": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 7.5 ] }
+							}
+						},
+						{
+							"name": "Cube6",
+							"from": [ 0.0, 0.0, 7.5 ],
+							"to": [ 1.0, 2.2, 15.0 ],
+							"rotationOrigin": [ 0.0, 0.0, 7.5 ],
+							"rotationY": -90.0,
+							"faces": {
+								"north": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+								"east": { "texture": "#copper", "uv": [ 0.0, 0.0, 7.5, 2.0 ] },
+								"south": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+								"west": { "texture": "#copper", "uv": [ 0.0, 0.0, 7.5, 2.0 ] },
+								"up": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 7.5 ] }
+							}
+						}
+					]
+				},
+				{
+					"name": "Cube7",
+					"from": [ 6.9, 2.0, 6.9 ],
+					"to": [ 8.9, 6.0, 8.9 ],
+					"rotationOrigin": [ 6.9, 2.0, 6.9 ],
+					"faces": {
+						"north": { "texture": "#iron", "uv": [ 0.0, 0.0, 2.0, 4.0 ] },
+						"east": { "texture": "#iron", "uv": [ 0.0, 0.0, 2.0, 4.0 ] },
+						"south": { "texture": "#iron", "uv": [ 0.0, 0.0, 2.0, 4.0 ] },
+						"west": { "texture": "#iron", "uv": [ 0.0, 0.0, 2.0, 4.0 ] },
+						"up": { "texture": "#iron", "uv": [ 0.0, 0.0, 2.0, 2.0 ] }
+					},
+					"children": [
+						{
+							"name": "Cube8",
+							"from": [ 0.25, 7.0, 0.25 ],
+							"to": [ 1.75, 8.5, 1.75 ],
+							"rotationOrigin": [ 0.3, 7.0, 0.3 ],
+							"faces": {
+								"north": { "texture": "#gold", "uv": [ 0.0, 0.0, 1.5, 1.5 ] },
+								"east": { "texture": "#gold", "uv": [ 0.0, 0.0, 1.5, 1.5 ] },
+								"south": { "texture": "#gold", "uv": [ 0.0, 0.0, 1.5, 1.5 ] },
+								"west": { "texture": "#gold", "uv": [ 0.0, 0.0, 1.5, 1.5 ] },
+								"up": { "texture": "#gold", "uv": [ 0.0, 0.0, 1.5, 1.5 ] },
+								"down": { "texture": "#gold", "uv": [ 0.0, 0.0, 1.5, 1.5 ] }
+							}
+						},
+						{
+							"name": "Cube9",
+							"from": [ 0.5, 4.0, 0.5 ],
+							"to": [ 1.5, 7.0, 1.5 ],
+							"rotationOrigin": [ 0.5, 4.0, 0.5 ],
+							"faces": {
+								"north": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 3.0 ] },
+								"east": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 3.0 ] },
+								"south": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 3.0 ] },
+								"west": { "texture": "#copper", "uv": [ 0.0, 0.0, 1.0, 3.0 ] }
+							}
+						}
+					]
+				}
+			]
+		}
+	]}

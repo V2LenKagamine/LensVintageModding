@@ -51,6 +51,8 @@ namespace LensGemology
                 colourDict.Add("sylvite", ColorFromRgba(255, 110, 52, 100));
                 colourDict.Add("uranium", ColorFromRgba(173, 183, 59, 100));
                 colourDict.Add("wolframite", ColorFromRgba(153, 169, 255, 100));
+                colourDict.Add("saltpeter", ColorFromRgba(255, 255, 255, 100));
+                colourDict.Add("salt", ColorFromRgba(255, 221, 238, 100));
             }
         }
         public static void InitLights()
@@ -95,6 +97,8 @@ namespace LensGemology
                 lightDict.Add("sylvite", new byte[] { 3, 3, 4 });
                 lightDict.Add("uranium", new byte[] { 11, 3, 4 });
                 lightDict.Add("wolframite", new byte[] { 40, 3, 4 });
+                lightDict.Add("saltpeter", new byte[] { 58, 0, 4 });
+                lightDict.Add("salt", new byte[] { 58, 1, 4 });
             }
         }
         public static void Destroy()

@@ -279,6 +279,20 @@
 	"block-orecrystals_crystal_bountiful-wolframite-*": "Giant Wolframite Crystal",
 	"block-orecrystals_glass-wolframite": "Crystalline Wolframite Glass",
 
+	"block-seed_crystals-salt-*": "Salt Seed Crystals",
+	"block-orecrystals_crystal_poor-salt-*": "Tiny Salt Crystal",
+	"block-orecrystals_crystal_medium-salt-*": "Small Salt Crystal",
+	"block-orecrystals_crystal_rich-salt-*": "Large Salt Crystal",
+	"block-orecrystals_crystal_bountiful-salt-*": "Giant Salt Crystal",
+	"block-orecrystals_glass-salt": "Crystalline Salt Glass",
+
+	"block-seed_crystals-saltpeter-*": "Saltpeter Seed Crystals",
+	"block-orecrystals_crystal_poor-saltpeter-*": "Tiny Saltpeter Crystal",
+	"block-orecrystals_crystal_medium-saltpeter-*": "Small Saltpeter Crystal",
+	"block-orecrystals_crystal_rich-saltpeter-*": "Large Saltpeter Crystal",
+	"block-orecrystals_crystal_bountiful-saltpeter-*": "Giant Saltpeter Crystal",
+	"block-orecrystals_glass-saltpeter": "Crystalline Saltpeter Glass",
+
 	"tut-title": "Growing Ore 101",
 	"tut-text": "Ore Crystals can be created by using the shattered remains of Crystalized Ores, extracted with a hammer and chisel, and then planted anywhere. The lower in the world they are, however, the faster they will grow. When ready to harvest, simply break them with a chisel and a hammer in off-hand. This will yeild more shards for more crystals and some of the ore they were growing."
 }
