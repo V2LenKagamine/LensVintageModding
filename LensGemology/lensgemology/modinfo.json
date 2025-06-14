@@ -7,7 +7,7 @@
     ],
     "contributors": ["Taska Raine","Kagranack"],
     "description": "Shiny ore gems that grow more ores!",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "dependencies": {
         "game": ""
     }

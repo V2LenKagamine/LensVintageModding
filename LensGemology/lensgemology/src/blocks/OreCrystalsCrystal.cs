@@ -285,21 +285,22 @@ namespace LensGemology
             {
                 ItemStack tmp = new ItemStack(attempt, 1);
                 int roll = Randy.Next(0, 101);
-                string poten = "low";
+                string poten;
                 switch (roll)
                 {
-                    case 1 when roll >= 80:
+                    case int x when x >= 85:
                         {
                             poten = "high";
                             break;
                         }
-                    case 2 when roll >= 30 && roll < 80:
+                    case int x when x >= 50 && x < 85:
                         {
                             poten = "medium";
                             break;
                         }
                     default:
                         {
+                            poten = "low";
                             break;
                         }
                 }

@@ -43,7 +43,7 @@
     ],
     "attributes": {
         "handbook": {
-            "groupBy": [ "energyconverter-*" ]
+            "groupBy": [ "energyconverter-*-*" ]
         },
         "wireNodes": [
             {
@@ -115,6 +115,21 @@
             "rotateZ": 270
         }
     },
+    "dropsByType": {
+        "*-toep-*": [
+            {
+                "type": "block",
+                "code": "energyconverter-toep-down"
+            }
+
+        ],
+        "*-tove-*": [
+            {
+                "type": "block",
+                "code": "energyconverter-toep-down"
+            }
+        ]
+    },
     "collisionSelectionBoxes": [
         {
             "x1": 0,
@@ -143,7 +158,7 @@
     "sideopaque": { "all": false },
     "blockmaterial": "Metal",
     "creativeInventory": {
-        "mechanics": [ "*-down" ]
+        "mechanics": [ "*-*-down" ]
     },
     "lightAbsorption": 0,
     "maxStackSize": 8,
