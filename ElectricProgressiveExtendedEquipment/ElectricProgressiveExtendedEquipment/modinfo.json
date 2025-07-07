@@ -1,0 +1,16 @@
+{
+    "type": "code",
+    "modid": "extendedelectrictools",
+    "name": "Electric Extended Equipment",
+    "authors": [
+        "LenKagamine"
+    ],
+    "description": "An extension of electric tools to be used with Electric Progressive.",
+    "version": "1.0.1",
+    "dependencies": {
+        "game": "",
+        "electricalprogressivebasics": "",
+        "overhaullib": "",
+        "chiseltools": ""
+    }
+}

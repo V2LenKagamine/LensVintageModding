@@ -1,4 +1,6 @@
-﻿using Vintagestory.API.Common;
+﻿using LensMiniTweaks.src.blocks;
+using LensstoryMod;
+using Vintagestory.API.Common;
 
 namespace LensMiniTweaks
 {
@@ -9,8 +11,17 @@ namespace LensMiniTweaks
         {
             base.Start(api);
 
+            api.RegisterItemClass("lenspruningscissors", typeof(PruningScissors));
+            api.RegisterItemClass("lentreemeal", typeof(TreegrowItem));
+
             api.RegisterBlockClass("lensshroomstrateblock", typeof(MushroomSubBlock));
             api.RegisterBlockEntityClass("lensshroomstrate", typeof(MushroomSubBE));
+
+            api.RegisterBlockClass("lenswaterfillblock", typeof(WaterfillBlock));
+            api.RegisterBlockEntityClass("lenswaterfillbe", typeof(WaterfillBE));
+
+            api.RegisterBlockClass("lensreinforcedbloomeryblock", typeof(ReinforcedBloomery));
+            api.RegisterBlockEntityClass("lensreinforcedbloomery", typeof(ReinforcedBloomeryBE));
 
             logger = api.Logger;
         }

@@ -6,6 +6,10 @@
     "item-arrow-sturdy-iron": "Iron Sturdy Arrow",
     "item-arrow-sturdy-meteoriciron": "Meteoric Iron Sturdy Arrow",
     "item-arrow-sturdy-steel": "Steel Sturdy Arrow",
+
+    "item-treemeal": "Temporal Bonemeal",
+    "itemdesc-treemeal": "Can be slapped on a fruit tree root to time jump the tree forward.",
+
     "itemdesc-arrow-sturdy-*": "Won't break, but hard to fire.",
 
     "block-shroomstrate": "Mushroom Growth Substrate",
@@ -24,6 +28,22 @@
     "block-clearglass-pink": "Pink Borderless Glass",
     "block-clearglass-plain": "Borderless Glass",
     "block-clearglass-quartz": "Quartz Borderless Glass",
+
+    "block-reinforcedbloomery-*": "Reinforced Bloomery",
+
+    "block-waterfillblock": "Waterfill Corner",
+    "blockdesc-waterfillblock": "Place one, link the other, place in an opposite corner and shiftclick. Boom. Water.",
+
+    "item-pruningscissors-copper": "Copper Pruning Scissors",
+    "item-pruningscissors-iron": "Iron Pruning Scissors",
+    "item-pruningscissors-meteoriciron": "Meteoric Iron Pruning Scissors",
+    "item-pruningscissors-steel": "Steel Pruning Scissors",
+    "item-pruningscissors-bismuthbronze": "Bismuth Bronze Pruning Scissors",
+    "item-pruningscissors-blackbronze": "Black Bronze Pruning Scissors",
+    "item-pruningscissors-tinbronze": "Tin Bronze Pruning Scissors",
+    "item-pruningscissors-gold": "Golden Pruning Scissors",
+    "item-pruningscissors-silver": "Silver Pruning Scissors",
+    "itemdesc-pruningscissors-*": "Break branchy or regular leaves to ensure a sapling drop.",
 
     "game:recipeingredient-item-ciderportion-*": "mulled cider"
 }

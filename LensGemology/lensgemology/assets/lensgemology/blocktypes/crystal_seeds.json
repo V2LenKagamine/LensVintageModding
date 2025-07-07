@@ -66,209 +66,209 @@
 	],
 	"shapebytype": {
 		"*-ore_up": {
-			"base": "block/seed_crystals",
+			"base": "block/orecrystals_crystal_seed",
 			"rotateX": 180,
 			"alternates": [
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": 180,
 					"rotateY": 45
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": 180,
 					"rotateY": 90
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": 180,
 					"rotateY": 135
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": 180,
 					"rotateY": 180
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": 180,
 					"rotateY": 225
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": 180,
 					"rotateY": 270
 				}
 			]
 		},
 		"*-ore_down": {
-			"base": "block/seed_crystals",
+			"base": "block/orecrystals_crystal_seed",
 			"alternates": [
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateY": 45
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateY": 90
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateY": 135
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateY": 180
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateY": 225
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateY": 270
 				}
 			]
 		},
 		"*-ore_north": {
-			"base": "block/seed_crystals",
+			"base": "block/orecrystals_crystal_seed",
 			"rotateX": 90,
 			"alternates": [
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": 90,
 					"rotateY": 45
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": 90,
 					"rotateY": 90
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": 90,
 					"rotateY": 135
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": 90,
 					"rotateY": 180
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": 90,
 					"rotateY": 225
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": 90,
 					"rotateY": 270
 				}
 			]
 		},
 		"*-ore_south": {
-			"base": "block/seed_crystals",
+			"base": "block/orecrystals_crystal_seed",
 			"rotateX": -90,
 			"alternates": [
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": -90,
 					"rotateY": 45
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": -90,
 					"rotateY": 90
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": -90,
 					"rotateY": 135
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": -90,
 					"rotateY": 180
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": -90,
 					"rotateY": 225
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateX": -90,
 					"rotateY": 270
 				}
 			]
 		},
 		"*-ore_east": {
-			"base": "block/seed_crystals",
+			"base": "block/orecrystals_crystal_seed",
 			"rotateZ": 90,
 			"alternates": [
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateZ": 90,
 					"rotateX": 45
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateZ": 90,
 					"rotateX": 90
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateZ": 90,
 					"rotateX": 135
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateZ": 90,
 					"rotateX": 180
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateZ": 90,
 					"rotateX": 225
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateZ": 90,
 					"rotateX": 270
 				}
 			]
 		},
 		"*-ore_west": {
-			"base": "block/seed_crystals",
+			"base": "block/orecrystals_crystal_seed",
 			"rotateZ": -90,
 			"alternates": [
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateZ": -90,
 					"rotateX": 45
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateZ": -90,
 					"rotateX": 90
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateZ": -90,
 					"rotateX": 135
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateZ": -90,
 					"rotateX": 180
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateZ": -90,
 					"rotateX": 225
 				},
 				{
-					"base": "block/seed_crystals",
+					"base": "block/orecrystals_crystal_seed",
 					"rotateZ": -90,
 					"rotateX": 270
 				}

@@ -1,0 +1,26 @@
+{
+    "ingredientPattern": "S,P,G",
+    "ingredients": {
+        "G": {
+            "type": "item",
+            "code": "game:gear-temporal",
+            "quantity": 1
+        },
+        "S": {
+            "type": "item",
+            "code": "game:metalplate-steel",
+            "quantity": 1
+        },
+        "P": {
+            "type": "item",
+            "code": "chiseltools:palette-*",
+            "quantity": 1
+        }
+    },
+    "width": 1,
+    "height": 3,
+    "output": {
+        "type": "item",
+        "code": "extendedelectrictools:epalette"
+    }
+}

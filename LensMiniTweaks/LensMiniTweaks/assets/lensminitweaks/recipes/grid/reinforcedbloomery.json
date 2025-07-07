@@ -1,0 +1,23 @@
+﻿{
+    "ingredientPattern": "_B_,BBB,RPR",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+        "P": {
+            "type": "item",
+            "code": "game:metalplate-iron"
+        },
+        "B": {
+            "type": "item",
+            "code": "game:refractorybrick-fired-*"
+        },
+        "R": {
+            "type": "block",
+            "code": "game:refractorybricks-good-*"
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "reinforcedbloomery-north"
+    }
+}

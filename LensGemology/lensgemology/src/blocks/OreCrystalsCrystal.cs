@@ -22,7 +22,7 @@ namespace LensGemology
         {
             base.OnLoaded(api);
 
-            if (FirstCodePart() == "orecrystals_crystal_poor") return;
+            if (FirstCodePart() == "orecrystals_crystal_poor" || FirstCodePart() == "decocrystal") return;
 
             if (this.FirstCodePart() == "seed_crystals")
                 interactions = ObjectCacheUtil.GetOrCreate(api, "crystalSeedsInteractions", () =>

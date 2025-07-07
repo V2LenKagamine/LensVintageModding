@@ -25,4 +25,10 @@
   </Content>
 </ItemGroup>
 
+<ItemGroup>
+  <Content Update="assets\lensgemology\blocktypes\deco-crystals.json">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </Content>
+</ItemGroup>
+
 </Project>

@@ -1,0 +1,167 @@
+﻿{
+    "code": "reinforcedbloomery",
+    "class": "lensreinforcedbloomeryblock",
+    "entityClass": "lensreinforcedbloomery",
+    "behaviors": [ { "name": "HorizontalOrientable" } ],
+    "variantgroups": [
+        {
+            "code": "side",
+            "loadFromProperties": "abstract/horizontalorientation"
+        }
+    ],
+    "creativeinventory": {
+        "general": [ "*-north" ],
+        "construction": [ "*-north" ],
+        "lensstorytab": [ "*-north" ]
+    },
+    "shapeByType": {
+        "*-north": {
+            "base": "block/reinforcedbloomery",
+            "rotateY": 0
+        },
+        "*-east": {
+            "base": "block/reinforcedbloomery",
+            "rotateY": 270
+        },
+        "*-south": {
+            "base": "block/reinforcedbloomery",
+            "rotateY": 180
+        },
+        "*-west": {
+            "base": "block/reinforcedbloomery",
+            "rotateY": 90
+        }
+    },
+    "attributes": {
+        "handbook": {
+            "groupBy": [ "reinforcedbloomery-*" ],
+            "extraSections": [
+                {
+                    "title": "handbook-block-reinforcedbloomery-title",
+                    "text": "handbook-block-reinforcedbloomery-text"
+                }
+            ]
+        }
+    },
+    "guiTransform": {
+        "rotation": {
+            "x": -22.6,
+            "y": 135,
+            "z": 0
+        }
+    },
+    "blockmaterial": "Ceramic",
+    "replaceable": 900,
+    "lightAbsorption": 99,
+    "maxStackSize": 1,
+    "resistance": 4,
+    "sideopaqueByType": {
+        "*-north": {
+            "down": true,
+            "up": false,
+            "horizontals": false,
+            "north": false
+        },
+        "*-east": {
+            "down": true,
+            "up": false,
+            "horizontals": false,
+            "east": false
+        },
+        "*-south": {
+            "down": true,
+            "up": false,
+            "horizontals": false,
+            "south": false
+        },
+        "*-west": {
+            "down": true,
+            "up": false,
+            "horizontals": false,
+            "west": false
+        }
+    },
+    "sidesolidByType": {
+        "*-north": {
+            "all": false,
+            "east": true,
+            "north": true,
+            "west": true
+        },
+        "*-east": {
+            "all": false,
+            "north": true,
+            "south": true,
+            "east": true
+        },
+        "*-south": {
+            "all": false,
+            "east": true,
+            "south": true,
+            "west": true
+        },
+        "*-west": {
+            "all": false,
+            "west": true,
+            "south": true,
+            "north": true
+        }
+    },
+    "collisionboxes": [
+        {
+            "x1": 0,
+            "y1": 0.25,
+            "z1": 0,
+            "x2": 1,
+            "y2": 1,
+            "z2": 1
+        },
+        {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0.25,
+            "x2": 1,
+            "y2": 0.25,
+            "z2": 1,
+            "rotateYByType": {
+                "*-north": 180,
+                "*-east": 90,
+                "*-west": 270
+            }
+        },
+        {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0,
+            "x2": 0.375,
+            "y2": 0.25,
+            "z2": 0.25,
+            "rotateYByType": {
+                "*-north": 180,
+                "*-east": 90,
+                "*-west": 270
+            }
+        },
+        {
+            "x1": 0.625,
+            "y1": 0,
+            "z1": 0,
+            "x2": 1,
+            "y2": 0.25,
+            "z2": 0.25,
+            "rotateYByType": {
+                "*-north": 180,
+                "*-east": 90,
+                "*-west": 270
+            }
+        }
+    ],
+    "selectionbox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 1,
+        "z2": 1
+    }
+}

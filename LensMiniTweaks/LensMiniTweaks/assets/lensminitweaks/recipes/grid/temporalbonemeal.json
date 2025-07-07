@@ -1,0 +1,28 @@
+[
+    {
+        "ingredientPattern": "TBT,BCB,TBT",
+        "ingredients": {
+            "T": {
+                "type": "item",
+                "code": "game:gear-temporal"
+            },
+            "B": {
+                "type": "item",
+                "code": "game:bonemeal",
+                "quantity": 4
+            },
+            "C": {
+                "type": "item",
+                "code": "game:compost",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "treemeal",
+            "quantity": 4
+        }
+    }
+]

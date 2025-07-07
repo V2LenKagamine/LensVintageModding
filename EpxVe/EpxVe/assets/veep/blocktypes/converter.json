@@ -126,7 +126,7 @@
         "*-tove-*": [
             {
                 "type": "block",
-                "code": "energyconverter-toep-down"
+                "code": "energyconverter-tove-down"
             }
         ]
     },

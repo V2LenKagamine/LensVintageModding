@@ -1,0 +1,22 @@
+﻿[
+    {
+        "ingredientPattern": "_H_,S_S",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:shears-*",
+                "name": "metal"
+            },
+            "S": {
+                "type": "item",
+                "code": "game:stick"
+            }
+        },
+        "width": 3,
+        "height": 2,
+        "output": {
+            "type": "item",
+            "code": "pruningscissors-{metal}"
+        }
+    }
+]

@@ -1,0 +1,451 @@
+﻿{
+	"code": "decocrystal",
+	"class": "OreCrystalsCrystal",
+	"behaviors": [],
+	"creativeinventory": {
+		"general": [ "decocrystal-*-*-ore_down" ],
+		"decorative": [ "decocrystal-*-*-ore_down" ],
+		"crystals": [ "decocrystal-*-*-ore_down" ]
+	},
+	"attributes": {
+		"handbook": {
+			"groupBy": [ "decocrystal-*-*-ore_down" ]
+		}
+	},
+	"variantgroups": [
+		{
+			"code": "size",
+			"states": [
+				"seed",
+				"poor",
+				"medium",
+				"rich",
+				"bountiful"
+			]
+		},
+		{
+			"code": "crystal",
+			"states": [
+				"alum",
+				"anthracite",
+				"bismuthinite",
+				"bituminouscoal",
+				"borax",
+				"cassiterite",
+				"chromite",
+				"cinnabar",
+				"corundum",
+				"flint",
+				"fluorite",
+				"galena",
+				"galena_nativesilver",
+				"graphite",
+				"hematite",
+				"ilmenite",
+				"kernite",
+				"lapislazuli",
+				"lignite",
+				"limonite",
+				"magnetite",
+				"malachite",
+				"nativecopper",
+				"olivine",
+				"olivine_peridot",
+				"diamond",
+				"emerald",
+				"pentlandite",
+				"phosphorite",
+				"quartz",
+				"quartz_nativegold",
+				"quartz_nativesilver",
+				"rhodochrosite",
+				"sphalerite",
+				"sulfur",
+				"sylvite",
+				"uranium",
+				"wolframite",
+				"salt",
+				"saltpeter"
+			]
+		},
+		{
+			"code": "type",
+			"states": [ "ore_up", "ore_down", "ore_north", "ore_south", "ore_east", "ore_west" ]
+		}
+	],
+	"shapebytype": {
+		"*-seed-*-ore_up": {
+			"base": "block/orecrystals_crystal_{size}",
+			"rotateX": 180,
+			"alternates": [
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 180,
+					"rotateY": 45
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 180,
+					"rotateY": 90
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 180,
+					"rotateY": 135
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 180,
+					"rotateY": 180
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 180,
+					"rotateY": 225
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 180,
+					"rotateY": 270
+				}
+			]
+		},
+		"*-ore_down": {
+			"base": "block/orecrystals_crystal_{size}",
+			"alternates": [
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateY": 45
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateY": 90
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateY": 135
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateY": 180
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateY": 225
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateY": 270
+				}
+			]
+		},
+		"*-ore_north": {
+			"base": "block/orecrystals_crystal_{size}",
+			"rotateX": 90,
+			"alternates": [
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 90,
+					"rotateY": 45
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 90,
+					"rotateY": 90
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 90,
+					"rotateY": 135
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 90,
+					"rotateY": 180
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 90,
+					"rotateY": 225
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 90,
+					"rotateY": 270
+				}
+			]
+		},
+		"*-ore_south": {
+			"base": "block/orecrystals_crystal_{size}",
+			"rotateX": -90,
+			"alternates": [
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": -90,
+					"rotateY": 45
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": -90,
+					"rotateY": 90
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": -90,
+					"rotateY": 135
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": -90,
+					"rotateY": 180
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": -90,
+					"rotateY": 225
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": -90,
+					"rotateY": 270
+				}
+			]
+		},
+		"*-ore_east": {
+			"base": "block/orecrystals_crystal_{size}",
+			"rotateZ": 90,
+			"alternates": [
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateZ": 90,
+					"rotateX": 45
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateZ": 90,
+					"rotateX": 90
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateZ": 90,
+					"rotateX": 135
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateZ": 90,
+					"rotateX": 180
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateZ": 90,
+					"rotateX": 225
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateZ": 90,
+					"rotateX": 270
+				}
+			]
+		},
+		"*-ore_west": {
+			"base": "block/orecrystals_crystal_{size}",
+			"rotateZ": -90,
+			"alternates": [
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateZ": -90,
+					"rotateX": 45
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateZ": -90,
+					"rotateX": 90
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateZ": -90,
+					"rotateX": 135
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateZ": -90,
+					"rotateX": 180
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateZ": -90,
+					"rotateX": 225
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateZ": -90,
+					"rotateX": 270
+				}
+			]
+		},
+		"*-ore_up": {
+			"base": "block/orecrystals_crystal_{size}",
+			"rotateX": 180,
+			"alternates": [
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 180,
+					"rotateY": 45
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 180,
+					"rotateY": 90
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 180,
+					"rotateY": 135
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 180,
+					"rotateY": 180
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 180,
+					"rotateY": 225
+				},
+				{
+					"base": "block/orecrystals_crystal_{size}",
+					"rotateX": 180,
+					"rotateY": 270
+				}
+			]
+		}
+	},
+	"blockmaterial": "Other",
+	"drawtype": "json",
+	"sidesolid": { "all": false },
+	"sideopaque": { "all": false },
+	"textures": {
+		"crystal": { "base": "block/{crystal}" }
+	},
+	"renderPass": "Transparent",
+	"collisionbox": null,
+	"selectionbox": {
+		"x1": 0.3,
+		"y1": 0.0,
+		"z1": 0.3,
+		"x2": 0.7,
+		"y2": 0.6,
+		"z2": 0.7,
+
+		"rotateXByType": {
+			"*-ore_down": 0,
+			"*-ore_up": 180,
+			"*-ore_south": -90,
+			"*-ore_north": 90
+		},
+		"rotateZByType": {
+			"*-ore_east": 90,
+			"*-ore_west": -90
+		}
+	},
+	"guiTransform": {
+		"translation": {
+			"x": 0,
+			"y": -10,
+			"z": 0
+		},
+		"rotation": {
+			"x": -22.6,
+			"y": -91,
+			"z": -2
+		},
+		"scale": 1.5
+	},
+	"fpHandTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0.25,
+			"z": 0.5
+		}
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -2.3,
+			"y": -1.6,
+			"z": -1.5
+		},
+		"rotation": {
+			"x": 1,
+			"y": 1,
+			"z": -90
+		}
+	},
+	"materialDensity": 3000,
+	"replaceable": 5000,
+	"lightAbsorption": 0,
+	"lightHsvByType": {
+		"*-alum-*": [ 10, 3, 4 ],
+		"*-anthracite-*": [ 47, 1, 4 ],
+		"*-bismuthinite-*": [ 14, 3, 4 ],
+		"*-bituminouscoal-*": [ 0, 1, 4 ],
+		"*-borax-*": [ 11, 1, 4 ],
+		"*-cassiterite-*": [ 6, 3, 4 ],
+		"*-chromite-*": [ 52, 1, 4 ],
+		"*-cinnabar-*": [ 62, 3, 4 ],
+		"*-corundum-*": [ 59, 3, 4 ],
+		"*-flint-*": [ 8, 5, 4 ],
+		"*-fluorite-*": [ 9, 3, 4 ],
+		"*-galena-*": [ 35, 3, 4 ],
+		"*-galena_nativesilver-*": [ 35, 1, 4 ],
+		"*-graphite-*": [ 3, 5, 4 ],
+		"*-hematite-*": [ 1, 3, 4 ],
+		"*-ilmenite-*": [ 2, 5, 4 ],
+		"*-kernite-*": [ 6, 3, 4 ],
+		"*-lapislazuli-*": [ 38, 3, 4 ],
+		"*-lignite-*": [ 3, 5, 4 ],
+		"*-limonite-*": [ 5, 3, 4 ],
+		"*-magnetite-*": [ 40, 1, 4 ],
+		"*-malachite-*": [ 27, 3, 4 ],
+		"*-nativecopper-*": [ 3, 3, 4 ],
+		"*-olivine-*": [ 12, 3, 4 ],
+		"*-olivine_peridot-*": [ 15, 3, 4 ],
+		"*-diamond-*": [ 33, 3, 4 ],
+		"*-emerald-*": [ 26, 3, 4 ],
+		"*-pentlandite-*": [ 7, 5, 4 ],
+		"*-phosphorite-*": [ 4, 3, 4 ],
+		"*-quartz-*": [ 0, 0, 4 ],
+		"*-quartz_nativegold-*": [ 8, 3, 4 ],
+		"*-quartz_nativesilver-*": [ 34, 1, 4 ],
+		"*-rhodochrosite-*": [ 1, 3, 4 ],
+		"*-sphalerite-*": [ 6, 5, 4 ],
+		"*-sulfur-*": [ 8, 3, 4 ],
+		"*-sylvite-*": [ 3, 3, 4 ],
+		"*-uranium-*": [ 11, 3, 4 ],
+		"*-wolframite-*": [ 40, 3, 4 ],
+		"*-salt-*": [ 58, 1, 4 ],
+		"*-saltpeter-*": [ 58, 0, 4 ]
+	},
+	"resistance": 0.1,
+	"sounds": {
+		"place": "game:player/buildhigh",
+		"break": "block/glass",
+		"hit": "game:block/glass"
+	},
+	"vertexFlags": {
+		"zOffset": 3,
+		"reflective": true
+	},
+	"dropsByType": {
+		"*": [
+			{
+				"type": "block",
+				"code": "decocrystal-{size}-{crystal}-ore_down",
+				"quantity": {
+					"avg": 1,
+					"var": 0,
+					"dist": "uniform"
+				}
+			}
+		]
+	}
+}

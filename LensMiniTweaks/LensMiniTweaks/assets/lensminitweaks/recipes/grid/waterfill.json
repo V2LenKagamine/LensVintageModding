@@ -1,0 +1,28 @@
+{
+    "ingredientPattern": "_P_,PWP,_P_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+        "P": {
+            "type": "item",
+            "code": "game:plank-*"
+        },
+        "W": {
+            "type": "block",
+            "code": "game:woodbucket"
+        }
+    },
+    "attributes": {
+        "liquidContainerProps": {
+            "requiresContent": {
+                "type": "item",
+                "code": "game:waterportion"
+            },
+            "requiresLiters": 10
+        }
+    },
+    "output": {
+        "type": "block",
+        "code": "waterfillblock"
+    }
+}

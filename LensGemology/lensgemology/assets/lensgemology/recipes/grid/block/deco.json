@@ -1,0 +1,117 @@
+[
+    {
+        "ingredientPattern": "_S_,_G_,___",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:hammer-*",
+                "isTool": true
+            },
+            "G": {
+                "type": "block",
+                "name": "material",
+                "code": "orecrystals_glass-*",
+                "quantity": 1
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "decocrystal-seed-{material}-ore_down",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "___,SG_,___",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:hammer-*",
+                "isTool": true
+            },
+            "G": {
+                "type": "block",
+                "name": "material",
+                "code": "orecrystals_glass-*",
+                "quantity": 1
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "decocrystal-poor-{material}-ore_down",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "___,_GS,___",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:hammer-*",
+                "isTool": true
+            },
+            "G": {
+                "type": "block",
+                "name": "material",
+                "code": "orecrystals_glass-*",
+                "quantity": 1
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "decocrystal-medium-{material}-ore_down",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "___,_G_,_S_",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:hammer-*",
+                "isTool": true
+            },
+            "G": {
+                "type": "block",
+                "name": "material",
+                "code": "orecrystals_glass-*",
+                "quantity": 1
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "decocrystal-rich-{material}-ore_down",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "S__,_G_,___",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "game:hammer-*",
+                "isTool": true
+            },
+            "G": {
+                "type": "block",
+                "name": "material",
+                "code": "orecrystals_glass-*",
+                "quantity": 1
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "decocrystal-bountiful-{material}-ore_down",
+            "quantity": 1
+        }
+    }
+]
