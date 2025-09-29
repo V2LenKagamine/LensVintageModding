@@ -226,7 +226,8 @@ namespace EpxVe.src
 
         public float Produce_give()
         {
-            float amnt = Math.Min(CurrentPower, OrderedPower);
+            //float amnt = Math.Min(CurrentPower, OrderedPower);
+            float amnt = CurrentPower;
             GivingPower = amnt;
             ExtractPower((ulong)amnt);
             return amnt;
