@@ -117,6 +117,7 @@ namespace EpxVe.src
         }
         public void Update()
         {
+            Blockentity.MarkDirty();
         }
         #region StolenFromElectricalBEBehavior
         public ulong ReceivePower(ulong powerOffered, float dt = 1f, bool simulate = false)
@@ -204,6 +205,7 @@ namespace EpxVe.src
             {
                 NetworkIDs = new Dictionary<int, long>();
             }
+
         }
 
         #endregion StolenFromElectricalBEBehavior
@@ -248,8 +250,10 @@ namespace EpxVe.src
 
         protected float powerReceive;
         protected float powGetNeed;
+        //I have no idea what this does and cba to find out right now.
+        public float AvgConsumeCoeff { get; set; }
 
-       public float Consume_request()
+        public float Consume_request()
        {
            float powNeeded = Math.Max(Math.Min(MaxPower - RealPow, 32), 0);
            powGetNeed = powNeeded;
