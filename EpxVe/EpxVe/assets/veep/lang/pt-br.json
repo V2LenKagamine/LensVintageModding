@@ -1,0 +1,4 @@
+﻿{
+  "veep:block-energyconverter-tove-*": "Transformador EP-VE",
+  "veep:block-energyconverter-toep-*": "Transformador VE-EP"
+}

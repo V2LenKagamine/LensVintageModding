@@ -1,4 +1,4 @@
-{
+﻿{
     "type": "code",
     "modid": "veep",
     "name": "Vint Eng x Elec Prog",
@@ -6,11 +6,11 @@
         "LenKagamine"
     ],
     "description": "Adds a converter between Electrical Progressive systems and Vintage Engineering Systems",
-    "version": "2.0.2",
+    "version": "2.1.0",
     "dependencies": {
         "game": "1.21.0",
         "vintageengineering": "0.3.13",
-        "electricalprogressivecore": "2.0.5",
-        "electricalprogressivebasics": "2.0.5"
+        "electricalprogressivecore": "2.3.2",
+        "electricalprogressivebasics": "2.3.2"
     }
 }
