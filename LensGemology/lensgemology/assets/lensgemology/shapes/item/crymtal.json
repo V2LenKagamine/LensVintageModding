@@ -9,7 +9,7 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"quartz": "block/quartz"
+		"quartz": "game:block/glass/quartzglass"
 	},
 	"elements": [
 		{
