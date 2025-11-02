@@ -1,4 +1,10 @@
 ﻿{
-  "veep:block-energyconverter-tove-*": "EP-VE měnič",
-  "veep:block-energyconverter-toep-*": "VE-EP měnič"
+    "veep:block-energyconverter-tove-*": "Odepsáno!!!",
+    "veep:block-energyconverter-toep-*": "Odepsáno!!!",
+    "veep:block-powconv-tove-lv-*": "EP-VE LV měnič",
+    "veep:block-powconv-toep-lv-*": "VE-EP LV měnič",
+    "veep:block-powconv-tove-mv-*": "EP-VE MV měnič",
+    "veep:block-powconv-toep-mv-*": "VE-EP MV měnič",
+    "veep:block-powconv-tove-hv-*": "EP-VE HV měnič",
+    "veep:block-powconv-toep-hv-*": "VE-EP HV měnič"
 }

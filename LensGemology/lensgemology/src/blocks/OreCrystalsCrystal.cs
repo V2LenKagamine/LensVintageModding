@@ -340,8 +340,7 @@ namespace LensGemology
 
         private SimpleParticleProperties InitBreakParticles(Vec3d pos)
         {
-            Random rand = new Random();
-            Vec3f velocityRand = new Vec3f((float)rand.NextDouble(), (float)rand.NextDouble(), (float)rand.NextDouble()) * 6;
+            Vec3f velocityRand = new Vec3f((float)api.World.Rand.NextDouble(), (float)api.World.Rand.NextDouble(), (float) api.World.Rand.NextDouble()) * 6;
 
             return new SimpleParticleProperties()
             {
@@ -388,7 +387,6 @@ namespace LensGemology
     }
     public class OreCrystalsCrystalBE : BlockEntity
     {
-        protected static Random rand = new Random();
         protected double nextGrowTime;
         protected double totalHoursLastUpdate;
 
@@ -403,7 +401,7 @@ namespace LensGemology
             nextGrowTime = Api.World.Calendar.TotalHours + Math.Max(120 * ((float)Pos.Y / Api.World.BlockAccessor.MapSizeY),12);
             if (Api is ICoreServerAPI)
             {
-                RegisterGameTickListener(CommonTick, 3000 + rand.Next(50));
+                RegisterGameTickListener(CommonTick, 3000 + Api.World.Rand.Next(50));
             }
         }
 

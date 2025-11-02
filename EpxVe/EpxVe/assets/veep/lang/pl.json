@@ -1,4 +1,10 @@
 ﻿{
-  "veep:block-energyconverter-tove-*": "Transformator EP-VE",
-  "veep:block-energyconverter-toep-*": "Transformator VE-EP"
+    "veep:block-energyconverter-tove-*": "Amortyzowane!!!",
+    "veep:block-energyconverter-toep-*": "Amortyzowane!!!",
+    "veep:block-powconv-tove-lv-*": "Transformator LV EP-VE",
+    "veep:block-powconv-toep-lv-*": "Transformator LV VE-EP",
+    "veep:block-powconv-tove-mv-*": "Transformator MV EP-VE",
+    "veep:block-powconv-toep-mv-*": "Transformator MV VE-EP",
+    "veep:block-powconv-tove-hv-*": "Transformator HV EP-VE",
+    "veep:block-powconv-toep-hv-*": "Transformator HV VE-EP"
 }

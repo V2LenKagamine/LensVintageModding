@@ -62,4 +62,10 @@
   </Content>
 </ItemGroup>
 
+<ItemGroup>
+  <Content Update="assets\veep\blocktypes\energyconverter.json">
+    <SubType>Component</SubType>
+  </Content>
+</ItemGroup>
+
 </Project>

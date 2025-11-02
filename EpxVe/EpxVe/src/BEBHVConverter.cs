@@ -27,14 +27,14 @@ namespace EpxVe.src
 
         protected BEBehaviorElectricalProgressive EPSys => Blockentity.GetBehavior<BEBehaviorElectricalProgressive>();
 
-        public float MaxEn = 1000f; //Todo: Move to block property?
+        public float MaxEn;
 
         public float RealPow;
 
         
         public ulong MaxPower => (ulong)MaxEn;
 
-        public ulong MaxPPS => 100;
+        public ulong MaxPowPerSec;
 
         public bool CanReceive;
 
@@ -62,6 +62,8 @@ namespace EpxVe.src
 
         bool IElectricalBlockEntity.CanExtractPower => CanExtract;
 
+        ulong IElectricalBlockEntity.MaxPPS => MaxPowPerSec;
+
         public override void Initialize(ICoreAPI api, JsonObject properties)
         {
             base.Initialize(api, properties);
@@ -70,6 +72,8 @@ namespace EpxVe.src
             CanExtract = Blockentity.GetBehavior<ElectricBEBehavior>().properties["canExtractPower"].AsBool();
             ElecType = Enum.Parse<EnumElectricalEntityType>(Blockentity.GetBehavior<ElectricBEBehavior>().properties["entitytype"].AsString());
 
+            MaxPowPerSec = (ulong)Blockentity.GetBehavior<ElectricBEBehavior>().properties["maxpps"].AsInt();
+            MaxEn = (ulong)Blockentity.GetBehavior<ElectricBEBehavior>().properties["maxpower"].AsInt();
             IsLoaded = true;
 
             if (electricConnections == null) electricConnections = new Dictionary<int, List<WireNode>>();
@@ -104,7 +108,7 @@ namespace EpxVe.src
 
         public ulong RatedPower(float dt, bool isInsert = false)
         {
-            ulong rate = (ulong)Math.Round(MaxPPS * dt);
+            ulong rate = (ulong)Math.Round(MaxPowPerSec * dt);
             if (isInsert)
             {
                 ulong emptycap = (ulong)(MaxPower - RealPow);
@@ -125,7 +129,7 @@ namespace EpxVe.src
             if(!CanReceive) { return powerOffered; }
             if (RealPow >= MaxPower) return powerOffered;
 
-            ulong pps = (ulong)Math.Round(MaxPPS * dt);
+            ulong pps = (ulong)Math.Round(MaxPowPerSec * dt);
 
             if (pps == 0) pps = ulong.MaxValue;
             else pps += 2;
@@ -151,7 +155,7 @@ namespace EpxVe.src
         {
             if (!CanExtract) return powerWanted;
             if (RealPow == 0) return powerWanted;
-            ulong pps = (ulong)Math.Round(MaxPPS * dt);
+            ulong pps = (ulong)Math.Round(MaxPowPerSec * dt);
             if (pps == 0) pps = ulong.MaxValue;
             pps = (ulong)((pps > RealPow) ? RealPow : pps);
 
@@ -208,6 +212,11 @@ namespace EpxVe.src
 
         }
 
+        public BlockPos GetPosition()
+        {
+            return Pos.Copy();
+        }
+
         #endregion StolenFromElectricalBEBehavior
     }
 
@@ -256,7 +265,7 @@ namespace EpxVe.src
 
         public float Consume_request()
        {
-           float powNeeded = Math.Max(Math.Min(MaxPower - RealPow, 32), 0);
+           float powNeeded = Math.Max(Math.Min(MaxPower - RealPow, MaxPowPerSec), 0);
            powGetNeed = powNeeded;
            return powNeeded;
        }

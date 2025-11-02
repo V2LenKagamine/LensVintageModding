@@ -1,4 +1,10 @@
 ﻿{
-  "veep:block-energyconverter-tove-*": "Transformador EP-VE",
-  "veep:block-energyconverter-toep-*": "Transformador VE-EP"
+    "veep:block-energyconverter-tove-*": "Depreciado!!!",
+    "veep:block-energyconverter-toep-*": "Depreciado!!!",
+    "veep:block-powconv-tove-lv-*": "Transformador LV EP-VE",
+    "veep:block-powconv-toep-lv-*": "Transformador LV VE-EP",
+    "veep:block-powconv-tove-mv-*": "Transformador MV EP-VE",
+    "veep:block-powconv-toep-mv-*": "Transformador MV VE-EP",
+    "veep:block-powconv-tove-hv-*": "Transformador HV EP-VE",
+    "veep:block-powconv-toep-hv-*": "Transformador HV VE-EP"
 }

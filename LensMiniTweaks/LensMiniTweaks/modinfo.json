@@ -6,7 +6,7 @@
         "LenKagamine"
     ],
     "description": "Contains tweaks from Lens Tweaks cherry picked for a specific server.",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "dependencies": {
         "game": ""
     }

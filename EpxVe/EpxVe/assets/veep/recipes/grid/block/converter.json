@@ -25,7 +25,37 @@
         },
         "output": {
             "type": "block",
-            "code": "veep:energyconverter-toep-down",
+            "code": "veep:powconv-toep-lv-down",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": " C ,SCS,WPW",
+        "width": 3,
+        "height": 3,
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "vinteng:metalrod-copper"
+            },
+            "S": {
+                "type": "block",
+                "code": "game:catenary-mvpower",
+                "quantity": 2
+            },
+            "W": {
+                "type": "block",
+                "code": "electricalprogressivebasics:ecable-128v-copper-single-part",
+                "quantity": 2
+            },
+            "P": {
+                "type": "item",
+                "code": "game:metalplate-iron"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "veep:powconv-toep-mv-down",
             "quantity": 1
         }
     },
@@ -36,12 +66,28 @@
         "ingredients": {
             "T": {
                 "type": "block",
-                "code": "veep:energyconverter-toep-down"
+                "code": "veep:powconv-toep-lv-down"
             }
         },
         "output": {
             "type": "block",
-            "code": "veep:energyconverter-tove-down",
+            "code": "veep:powconv-tove-lv-down",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "TT,TT",
+        "width": 2,
+        "height": 2,
+        "ingredients": {
+            "T": {
+                "type": "block",
+                "code": "veep:powconv-toep-lv-down"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "veep:powconv-toep-mv-down",
             "quantity": 1
         }
     },
@@ -52,12 +98,28 @@
         "ingredients": {
             "T": {
                 "type": "block",
-                "code": "veep:energyconverter-tove-down"
+                "code": "veep:powconv-tove-lv-down"
             }
         },
         "output": {
             "type": "block",
-            "code": "veep:energyconverter-toep-down",
+            "code": "veep:powconv-toep-lv-down",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "TT,TT",
+        "width": 2,
+        "height": 2,
+        "ingredients": {
+            "T": {
+                "type": "block",
+                "code": "veep:powconv-tove-lv-down"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "veep:powconv-tove-mv-down",
             "quantity": 1
         }
     }

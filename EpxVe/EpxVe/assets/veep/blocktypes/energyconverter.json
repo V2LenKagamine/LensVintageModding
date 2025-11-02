@@ -1,0 +1,330 @@
+﻿{
+    "code": "powconv",
+    "class": "BlockVeepConverter",
+    "entityclass": "BEVeepConverter",
+    "entityBehaviorsByType": {
+        "powconv-tove-lv-*": [
+            { "name": "ElectricalProgressive" },
+            { "name": "BEBhvVeepToVE" },
+            {
+                "name": "Electric",
+                "properties": {
+                    "canExtractPower": true,
+                    "canReceivePower": false,
+                    "entitytype": "Producer",
+                    "maxpower": 640,
+                    "maxpps": 32
+                }
+            }
+        ],
+        "powconv-toep-lv-*": [
+            { "name": "ElectricalProgressive" },
+            { "name": "BEBhvVeepToEP" },
+            {
+                "name": "Electric",
+                "properties": {
+                    "canExtractPower": false,
+                    "canReceivePower": true,
+                    "entitytype": "Consumer",
+                    "maxpower": 640,
+                    "maxpps": 32
+                }
+            }
+        ],
+        "powconv-tove-mv-*": [
+            { "name": "ElectricalProgressive" },
+            { "name": "BEBhvVeepToVE" },
+            {
+                "name": "Electric",
+                "properties": {
+                    "canExtractPower": true,
+                    "canReceivePower": false,
+                    "entitytype": "Producer",
+                    "maxpower": 2560,
+                    "maxpps": 128
+                }
+            }
+        ],
+        "powconv-toep-mv-*": [
+            { "name": "ElectricalProgressive" },
+            { "name": "BEBhvVeepToEP" },
+            {
+                "name": "Electric",
+                "properties": {
+                    "canExtractPower": false,
+                    "canReceivePower": true,
+                    "entitytype": "Consumer",
+                    "maxpower": 2560,
+                    "maxpps": 128
+                }
+            }
+        ],
+        "powconv-tove-hv-*": [
+            { "name": "ElectricalProgressive" },
+            { "name": "BEBhvVeepToVE" },
+            {
+                "name": "Electric",
+                "properties": {
+                    "canExtractPower": true,
+                    "canReceivePower": false,
+                    "entitytype": "Producer",
+                    "maxpower": 10240,
+                    "maxpps": 512
+                }
+            }
+        ],
+        "powconv-toep-hv-*": [
+            { "name": "ElectricalProgressive" },
+            { "name": "BEBhvVeepToEP" },
+            {
+                "name": "Electric",
+                "properties": {
+                    "canExtractPower": false,
+                    "canReceivePower": true,
+                    "entitytype": "Consumer",
+                    "maxpower": 10240,
+                    "maxpps": 512
+                }
+            }
+        ]
+    },
+    "behaviors": [
+        {
+            "name": "OmniRotatable",
+            "properties": {
+                "rotateSides": true,
+                "facing": "block"
+            }
+        }
+    ],
+    "attributesByType": {
+        "powconv-*-lv-*": {
+            "handbook": {
+                "groupBy": [ "powconv-*-lv-*" ]
+            },
+            "wireNodes": [
+                {
+                    "index": 0,
+                    "wirefunction": "Power",
+                    "powertier": "LV",
+                    "maxconnections": 1,
+                    "x1": 0.4,
+                    "y1": 0.5,
+                    "z1": 0.4,
+                    "x2": 0.6,
+                    "y2": 0.7,
+                    "z2": 0.6,
+                    "rotateXByType": {
+                        "*-up": 180,
+                        "*-south": 270,
+                        "*-north": 90
+                    },
+                    "rotateZByType": {
+                        "*-east": 90,
+                        "*-west": 270
+                    }
+
+                }
+            ],
+            "maxcapacity": 640,
+            "voltage": 32,
+            "maxCurrent": 1024.0,
+            "isolated": true,
+            "isolatedEnvironment": true,
+            "power": 128.0,
+            "chargable": false,
+            "consume": 20
+        },
+        "powconv-*-mv-*": {
+            "handbook": {
+                "groupBy": [ "powconv-*-mv-*" ]
+            },
+            "wireNodes": [
+                {
+                    "index": 0,
+                    "wirefunction": "Power",
+                    "powertier": "MV",
+                    "maxconnections": 1,
+                    "x1": 0.4,
+                    "y1": 0.5,
+                    "z1": 0.4,
+                    "x2": 0.6,
+                    "y2": 0.7,
+                    "z2": 0.6,
+                    "rotateXByType": {
+                        "*-up": 180,
+                        "*-south": 270,
+                        "*-north": 90
+                    },
+                    "rotateZByType": {
+                        "*-east": 90,
+                        "*-west": 270
+                    }
+
+                }
+            ],
+            "maxcapacity": 2560,
+            "voltage": 128,
+            "maxCurrent": 1024.0,
+            "isolated": true,
+            "isolatedEnvironment": true,
+            "power": 512.0,
+            "chargable": false,
+            "consume": 20
+        },
+        "powconv-*-hv-*": {
+            "handbook": {
+                "groupBy": [ "powconv-*-hv-*" ]
+            },
+            "wireNodes": [
+                {
+                    "index": 0,
+                    "wirefunction": "Power",
+                    "powertier": "HV",
+                    "maxconnections": 1,
+                    "x1": 0.4,
+                    "y1": 0.5,
+                    "z1": 0.4,
+                    "x2": 0.6,
+                    "y2": 0.7,
+                    "z2": 0.6,
+                    "rotateXByType": {
+                        "*-up": 180,
+                        "*-south": 270,
+                        "*-north": 90
+                    },
+                    "rotateZByType": {
+                        "*-east": 90,
+                        "*-west": 270
+                    }
+
+                }
+            ],
+            "maxcapacity": 10240,
+            "voltage": 512,
+            "maxCurrent": 4096.0,
+            "isolated": true,
+            "isolatedEnvironment": true,
+            "power": 2048.0,
+            "chargable": false,
+            "consume": 20
+        }
+    },
+    "variantgroups": [
+
+        {
+            "code": "type",
+            "states": [ "toep", "tove"]
+        },
+        {
+            "code": "pow",
+            "states": ["lv","mv","hv"]
+        },
+        {
+            "code": "rot",
+            "states": [ "east", "south", "west", "north", "up", "down" ]
+        }
+    ],
+    "shapeByType": {
+        "*-down": {
+            "base": "converter"
+        },
+        "*-up": {
+            "base": "converter",
+            "rotateX": 180
+        },
+        "*-south": {
+            "base": "converter",
+            "rotateX": 270
+        },
+        "*-north": {
+            "base": "converter",
+            "rotateX": 90
+        },
+        "*-east": {
+            "base": "converter",
+            "rotateZ": 90
+        },
+        "*-west": {
+            "base": "converter",
+            "rotateZ": 270
+        }
+    },
+    "dropsByType": {
+        "*-toep-lv-*": [
+            {
+                "type": "block",
+                "code": "powconv-toep-lv-down"
+            }
+
+        ],
+        "*-tove-lv-*": [
+            {
+                "type": "block",
+                "code": "powconv-tove-lv-down"
+            }
+        ],
+        "*-toep-mv-*": [
+            {
+                "type": "block",
+                "code": "powconv-toep-mv-down"
+            }
+
+        ],
+        "*-tove-mv-*": [
+            {
+                "type": "block",
+                "code": "powconv-tove-mv-down"
+            }
+        ],
+        "*-toep-hv-*": [
+            {
+                "type": "block",
+                "code": "powconv-toep-hv-down"
+            }
+
+        ],
+        "*-tove-hv-*": [
+            {
+                "type": "block",
+                "code": "powconv-tove-hv-down"
+            }
+        ]
+    },
+    "collisionSelectionBoxes": [
+        {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0,
+            "x2": 1,
+            "y2": 0.15,
+            "z2": 1,
+            "rotateXByType": {
+                "*-up": 180,
+                "*-south": 270,
+                "*-north": 90
+            },
+            "rotateZByType": {
+                "*-east": 90,
+                "*-west": 270
+            }
+        }
+    ],
+    "sounds": {
+        "place": "game:block/anvil",
+        "walk": "game:walk/stone"
+    },
+    "drawtype": "json",
+    "sidesolid": { "all": false },
+    "sideopaque": { "all": false },
+    "blockmaterial": "Metal",
+  "creativeInventory": {
+    "general": [ "*-*-*-down" ],
+    "vinteng": [ "*-*-*-down" ],
+    "electricity": [ "*-*-*-down" ]
+  },
+    "lightAbsorption": 0,
+    "maxStackSize": 8,
+    "replaceable": 600,
+    "resistance": 1.5
+}

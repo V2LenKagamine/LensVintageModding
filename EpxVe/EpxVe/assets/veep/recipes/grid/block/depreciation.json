@@ -1,0 +1,34 @@
+[
+    {
+        "ingredientPattern": "T",
+        "width": 1,
+        "height": 1,
+        "ingredients": {
+            "T": {
+                "type": "block",
+                "code": "veep:energyconverter-toep-down"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "veep:powconv-tove-lv-down",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "T",
+        "width": 1,
+        "height": 1,
+        "ingredients": {
+            "T": {
+                "type": "block",
+                "code": "veep:energyconverter-tove-down"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "veep:powconv-toep-lv-down",
+            "quantity": 1
+        }
+    }
+]

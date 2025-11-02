@@ -1,4 +1,10 @@
 ﻿{
-    "veep:block-energyconverter-tove-*": "EP-VE трансформатор",
-    "veep:block-energyconverter-toep-*": "VE-EP трансформатор"
+    "veep:block-energyconverter-tove-*": "Амортизированный!!!",
+    "veep:block-energyconverter-toep-*": "Амортизированный!!!",
+    "veep:block-powconv-tove-lv-*": "EP-VE LV трансформатор",
+    "veep:block-powconv-toep-lv-*": "VE-EP LV трансформатор",
+    "veep:block-powconv-tove-mv-*": "EP-VE MV трансформатор",
+    "veep:block-powconv-toep-mv-*": "VE-EP MV трансформатор",
+    "veep:block-powconv-tove-hv-*": "EP-VE HV трансформатор",
+    "veep:block-powconv-toep-hv-*": "VE-EP HV трансформатор"
 }

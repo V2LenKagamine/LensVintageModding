@@ -12,7 +12,7 @@
                     "canExtractPower": true,
                     "canReceivePower": false,
                     "entitytype": "Producer",
-                    "maxpower": 1000,
+                    "maxpower": 640,
                     "maxpps": 32
                 }
             }
@@ -26,7 +26,7 @@
                     "canExtractPower": false,
                     "canReceivePower": true,
                     "entitytype": "Consumer",
-                    "maxpower": 1000,
+                    "maxpower": 640,
                     "maxpps": 32
                 }
             }

@@ -26,8 +26,7 @@ namespace LensMiniTweaks
     {
         Block growing; 
         string growingName;
-        static int radius = 3;
-        private static readonly Random randy = new();
+        static int radius;
         public bool OnPlayerInteract(IPlayer player)
         {
             ItemSlot slot = player.InventoryManager.ActiveHotbarSlot;
@@ -49,6 +48,7 @@ namespace LensMiniTweaks
         public override void Initialize(ICoreAPI api)
         {
             base.Initialize(api);
+            radius = 3;
             if(api.Side == EnumAppSide.Server)
             {
                 RegisterGameTickListener(OnTick,900000); //15 minutes
@@ -81,8 +81,8 @@ namespace LensMiniTweaks
             var blockyboi = Api.World.BlockAccessor;
             while(togen-- >0)
             {
-                var xpos = radius - randy.Next((2 * radius) + 1);
-                var zpos = radius - randy.Next((2 * radius) + 1);
+                var xpos = radius - Api.World.Rand.Next(2 * radius);
+                var zpos = radius - Api.World.Rand.Next(2 * radius);
                 posholder.Set(Pos.X + xpos, Pos.Y + 1, Pos.Z + zpos);
                 var mushroom = blockyboi.GetBlock(posholder);
                 var growmaybe = blockyboi.GetBlock(posholder.DownCopy());
@@ -101,10 +101,10 @@ namespace LensMiniTweaks
             var togen = 1;
             while (togen-- > 0)
             {
-                var ymod = 1 + randy.Next(5);
+                var ymod = 1 + Api.World.Rand.Next(5);
                 posholder.Set(Pos.X, Pos.Y + ymod, Pos.Z);
                 if(!(blockyboi.GetBlock(posholder) is BlockLog log) || log.Variant["type"] == "resin" || blockyboi.GetLightLevel(posholder,EnumLightLevelType.MaxLight) > 12) { continue; }
-                var side = randy.Next(4);
+                var side = Api.World.Rand.Next(4);
                 BlockFacing right = null;
                 for (int i = 0; i < 4; i++) 
                 {

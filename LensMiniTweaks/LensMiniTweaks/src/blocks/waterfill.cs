@@ -27,8 +27,8 @@ namespace LensMiniTweaks.src.blocks
     public class WaterfillBE : BlockEntity
     {
 
-        public BlockPos LinkedPos = new(0,0,0);
-        private readonly BlockPos NullPos = new(0,0,0);
+        public BlockPos LinkedPos;
+        private BlockPos NullPos;
         public bool OnPlayerInteract(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
             if(Api.Side != EnumAppSide.Server) { return true; }
@@ -75,6 +75,8 @@ namespace LensMiniTweaks.src.blocks
         public override void OnBlockPlaced(ItemStack byItemStack = null)
         {
             base.OnBlockPlaced(byItemStack);
+            NullPos = new(0, 0, 0);
+            LinkedPos = new(0, 0, 0);
             if (byItemStack != null) {
                 LinkedPos = byItemStack.Attributes.GetBlockPos("LinkedTo",NullPos);
                 if(Api.World.BlockAccessor.GetBlockEntity(LinkedPos) is WaterfillBE wortor)
