@@ -9,7 +9,7 @@
         "Paxilmaniac"
     ],
     "description": "Makes fruit trees grow much faster, and ignore the 'Survive a Winter' part.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "dependencies": {
         "game": ""
     }

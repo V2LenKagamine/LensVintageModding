@@ -1,3 +1,5 @@
+using LensTweaks.src.blocks;
+using LensTweaks.src.items;
 using Vintagestory.API.Common;
 
 namespace LensstoryMod {
@@ -8,6 +10,7 @@ namespace LensstoryMod {
         {
             base.Start(api);
             api.RegisterItemClass("lenspruningscissors", typeof(PruningScissors));
+            api.RegisterItemClass("lentreemeal", typeof(TreegrowItem));
 
             api.RegisterBlockClass("lensreinforcedbloomeryblock", typeof(ReinforcedBloomery));
             api.RegisterBlockEntityClass("lensreinforcedbloomery", typeof(ReinforcedBloomeryBE));
@@ -23,6 +26,9 @@ namespace LensstoryMod {
 
             api.RegisterBlockClass("lensmanarepairblock", typeof(ManaRepairBlock));
             api.RegisterBlockEntityClass("lensmanarepair",typeof(ManaRepairBE));
+
+            api.RegisterBlockClass("lenswaterfillblock", typeof(WaterfillBlock));
+            api.RegisterBlockEntityClass("lenswaterfillbe", typeof(WaterfillBE));
 
             api.RegisterBlockClass("lensmagmaforgeblock", typeof(MagmaForgeBlock));
             api.RegisterBlockEntityClass("lensmagmaforge",typeof (MagmaForgeBe));

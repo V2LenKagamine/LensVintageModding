@@ -180,8 +180,13 @@ namespace LensGemology
                     {
                         Block harvestedCrystal = world.GetBlock(new AssetLocation("lensgemology", "orecrystals_crystal_poor-" + FirstCodePart(1) + "-" + LastCodePart()));
 
-                        if (harvestedCrystal.Id != world.BlockAccessor.GetBlockId(pos.Copy()))
-                            world.BlockAccessor.SetBlock(harvestedCrystal.Id, pos);
+                        if(harvestedCrystal == null)
+                        {
+                            LensGemology.logger.Log(EnumLogType.Error,string.Format("Harvested crystal at %s somehow has no poor variant. Bad!",pos.Copy()));
+                        }
+
+                        if (harvestedCrystal?.Id != world.BlockAccessor.GetBlockId(pos.Copy()))
+                            world.BlockAccessor.SetBlock(harvestedCrystal?.Id != null ? harvestedCrystal.Id : 0, pos);
                         else
                             world.BlockAccessor.SetBlock(0, pos);
 

@@ -1,0 +1,57 @@
+﻿{
+    "code": "waterfillblock",
+    "class": "lenswaterfillblock",
+    "entityClass": "lenswaterfillbe",
+    "shape": { "base": "game:block/basic/cube" },
+    "drawtype": "Cube",
+    "maxstacksize": 1,
+    "creativeinventory": {
+        "general": [ "*" ],
+        "lensstorytab": [ "*" ]
+    },
+    "attributes": {
+        "maxArea": 4096
+    },
+    "blockmaterial": "Stone",
+    "replaceable": 900,
+    "lightAbsorption": 0,
+    "maxStackSize": 64,
+    "materialDensity": 700,
+    "resistance": 0.25,
+    "textures": {
+        "all": { "base": "block/waterfill" }
+    },
+    "sideopaque": {
+        "all": true
+    },
+    "sidesolid": {
+        "all": true
+    },
+    "sounds": {
+        "place": "game:block/planks",
+        "break": "game:block/planks",
+        "hit": "game:block/planks"
+    },
+    "groundTransform": {
+        "origin": {
+            "x": 0.5,
+            "y": -0.01,
+            "z": 0.5
+        }
+    },
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "tpHandTransform": {
+        "translation": {
+            "x": -1.23,
+            "y": -0.91,
+            "z": -0.8
+        },
+        "rotation": {
+            "x": -2,
+            "y": 25,
+            "z": -78
+        },
+        "scale": 0.4
+    }
+}

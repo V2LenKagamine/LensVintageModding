@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CakeBuild", "CakeBuild\CakeBuild.csproj", "{A9E2DB9E-44CB-45FD-AAC7-2526634CE3CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fruitful Fruit Trees", "Fruitful Fruit Trees\Fruitful Fruit Trees.csproj", "{395BCCB4-0678-42D1-878F-1BD6FB3828CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fruitful Fruit Trees", "Fruitful_Fruit_Trees\Fruitful_Fruit_Trees.csproj", "{395BCCB4-0678-42D1-878F-1BD6FB3828CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

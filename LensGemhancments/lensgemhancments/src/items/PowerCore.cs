@@ -24,10 +24,15 @@ namespace LensGemhancments
         public override void OnModifiedInInventorySlot(IWorldAccessor world, ItemSlot slot, ItemStack extractedStack = null)
         {
             if (extractedStack == null) { return; }
-            string searchingfor = extractedStack.Item.FirstCodePart() == "armor" ? "armor" : "tool";
-            if (!slot.Itemstack.ItemAttributes[searchingfor].Exists) { return; }
-            var selected = slot.Itemstack.ItemAttributes[searchingfor];
-            if (!(selected[GEM_STAT].Exists || selected[GEM_VALUE].Exists)) { return; }
+            if (!slot.Itemstack.ItemAttributes["armor"].Exists && !slot.Itemstack.ItemAttributes["tool"].Exists) { return; }
+            var selected = slot.Itemstack.ItemAttributes["armor"];
+            if (!(selected[GEM_STAT].Exists || selected[GEM_VALUE].Exists)) { 
+                selected = slot.Itemstack.ItemAttributes["tool"];
+                if (!(selected[GEM_STAT].Exists || selected[GEM_VALUE].Exists))
+                {
+                    return;
+                }
+            }
             int maxGems = SlotableItem.getMaxGems(extractedStack);
             if(!extractedStack.Attributes.HasAttribute(GEM_SLOTTED))
             {

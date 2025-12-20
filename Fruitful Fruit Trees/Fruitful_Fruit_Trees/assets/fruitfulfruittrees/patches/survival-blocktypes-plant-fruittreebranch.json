@@ -70,14 +70,14 @@
     {
         "op": "replace",
         "path": "/attributes/fruittreeProperties/cherry/fruitingDays/avg",
-        "value": 30,
+        "value": 3,
         "file": "game:blocktypes/plant/fruittreebranch.json",
         "side": "Server"
     },
     {
         "op": "replace",
         "path": "/attributes/fruittreeProperties/cherry/fruitingDays/var",
-        "value": 4,
+        "value": 1,
         "file": "game:blocktypes/plant/fruittreebranch.json",
         "side": "Server"
     },

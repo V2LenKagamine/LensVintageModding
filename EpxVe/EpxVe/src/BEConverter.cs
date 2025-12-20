@@ -69,8 +69,8 @@ namespace EpxVe.src
 
 
             EParams thing = new(32, 40f, "", 0, 1, 1, false, false, true);
+            LoadEProperties.Load(Block, this,FacingHelper.Faces(correct).First().Index,correct);
             EPSys!.Connection = correct;
-            EPSys.Eparams = ( thing,FacingHelper.Faces(correct).First().Index);
         }
     }
 }
