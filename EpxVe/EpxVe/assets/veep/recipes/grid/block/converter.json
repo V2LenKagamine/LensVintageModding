@@ -122,5 +122,37 @@
             "code": "veep:powconv-tove-mv-down",
             "quantity": 1
         }
+    },
+    {
+        "ingredientPattern": "T",
+        "width": 1,
+        "height": 1,
+        "ingredients": {
+            "T": {
+                "type": "block",
+                "code": "veep:powconv-toep-mv-down"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "veep:powconv-tove-mv-down",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "T",
+        "width": 1,
+        "height": 1,
+        "ingredients": {
+            "T": {
+                "type": "block",
+                "code": "veep:powconv-tove-mv-down"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "veep:powconv-toep-mv-down",
+            "quantity": 1
+        }
     }
 ]
