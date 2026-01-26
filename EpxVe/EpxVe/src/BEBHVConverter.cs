@@ -230,15 +230,19 @@ namespace EpxVe.src
         protected float GivingPower;
         public void Produce_order(float amount)
         {
+            if(RealPow <= 0)
+            {
+                OrderedPower = 0;
+                return;
+            }
             OrderedPower = amount;
+            RealPow = Math.Max(RealPow - amount,0);
         }
 
         public float Produce_give()
         {
-            //float amnt = Math.Min(CurrentPower, OrderedPower);
-            float amnt = CurrentPower;
+            float amnt = Math.Max(RealPow,0);
             GivingPower = amnt;
-            ExtractPower((ulong)amnt);
             return amnt;
         }
 
