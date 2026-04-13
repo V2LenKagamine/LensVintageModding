@@ -12,8 +12,8 @@
                     "canExtractPower": true,
                     "canReceivePower": false,
                     "entitytype": "Producer",
-                    "maxpower": 640,
-                    "maxpps": 32
+                    "maxpower": 5000,
+                    "maxpps": 500
                 }
             }
         ],
@@ -26,8 +26,8 @@
                     "canExtractPower": false,
                     "canReceivePower": true,
                     "entitytype": "Consumer",
-                    "maxpower": 640,
-                    "maxpps": 32
+                    "maxpower": 5000,
+                    "maxpps": 500
                 }
             }
         ],
@@ -40,8 +40,8 @@
                     "canExtractPower": true,
                     "canReceivePower": false,
                     "entitytype": "Producer",
-                    "maxpower": 2560,
-                    "maxpps": 128
+                    "maxpower": 10000,
+                    "maxpps": 2000
                 }
             }
         ],
@@ -54,8 +54,8 @@
                     "canExtractPower": false,
                     "canReceivePower": true,
                     "entitytype": "Consumer",
-                    "maxpower": 2560,
-                    "maxpps": 128
+                    "maxpower": 10000,
+                    "maxpps": 2000
                 }
             }
         ],
@@ -68,8 +68,8 @@
                     "canExtractPower": true,
                     "canReceivePower": false,
                     "entitytype": "Producer",
-                    "maxpower": 10240,
-                    "maxpps": 512
+                    "maxpower": 80000,
+                    "maxpps": 8000
                 }
             }
         ],
@@ -82,8 +82,8 @@
                     "canExtractPower": false,
                     "canReceivePower": true,
                     "entitytype": "Consumer",
-                    "maxpower": 10240,
-                    "maxpps": 512
+                    "maxpower": 80000,
+                    "maxpps": 8000
                 }
             }
         ]
@@ -107,7 +107,7 @@
                     "index": 0,
                     "wirefunction": "Power",
                     "powertier": "LV",
-                    "maxconnections": 1,
+                    "maxconnections": 9,
                     "x1": 0.4,
                     "y1": 0.5,
                     "z1": 0.4,
@@ -144,7 +144,7 @@
                     "index": 0,
                     "wirefunction": "Power",
                     "powertier": "MV",
-                    "maxconnections": 1,
+                    "maxconnections": 9,
                     "x1": 0.4,
                     "y1": 0.5,
                     "z1": 0.4,
@@ -181,7 +181,7 @@
                     "index": 0,
                     "wirefunction": "Power",
                     "powertier": "HV",
-                    "maxconnections": 1,
+                    "maxconnections": 9,
                     "x1": 0.4,
                     "y1": 0.5,
                     "z1": 0.4,

@@ -5,9 +5,9 @@
     "authors": [
         "LenKagamine"
     ],
-    "description": "Contains tweaks from Lens Tweaks cherry picked for a specific server.",
-    "version": "1.0.5",
+    "description": "Contains tweaks from Lens Tweaks that are more tame.",
+    "version": "1.0.6",
     "dependencies": {
-        "game": ""
+        "game": "1.22.0-rc.6"
     }
 }

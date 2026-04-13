@@ -1,0 +1,24 @@
+{
+    "code": "temppistonhead",
+    "class": "temppistonhead",
+    "entityclass": "temppistheadbe",
+    "drawtype": "json",
+    "comment": "'north east south west up down' for below var group",
+    "variantgroups": [
+        {
+            "code": "rot",
+            "loadFromPropertiesCombine": [ "abstract/horizontalorientation", "abstract/verticalorientation" ]
+        }
+    ],
+    "shape": { "base": "game:block/basic/cube" },
+    "blockmaterial": "Metal",
+    "replaceable": 900,
+    "resistance": 2,
+    "drops": [
+    ],
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "textures": {
+        "all": { "base": "game:block/metal/plate/stainlesssteel" }
+    }
+}

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TempMach/CakeBuild/CakeBuild.csproj" />
+  <Project Path="TempMach/TempMach/TempMach.csproj" />
+</Solution>

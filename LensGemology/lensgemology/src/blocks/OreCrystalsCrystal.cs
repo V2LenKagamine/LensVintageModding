@@ -187,8 +187,8 @@ namespace LensGemology
 
                         if (harvestedCrystal?.Id != world.BlockAccessor.GetBlockId(pos.Copy()))
                             world.BlockAccessor.SetBlock(harvestedCrystal?.Id != null ? harvestedCrystal.Id : 0, pos);
-                        else
-                            world.BlockAccessor.SetBlock(0, pos);
+                        else if(harvestedCrystal?.Id == this.Id)
+                            world.BlockAccessor.SetBlock(world.GetBlock(new AssetLocation("lensgemology", "seed_crystals-"+FirstCodePart(1)+"-"+LastCodePart()))?.Id ?? 0, pos);
 
                         if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
                             byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, CRYSTAL_DURABILITY_DAMAGE);
@@ -237,7 +237,7 @@ namespace LensGemology
                         }
                     case "orecrystals_crystal_bountiful":
                         {
-                            real = drops.Append(FindItemDrops(10));
+                            real = drops.Append(FindItemDrops(8));
                             break;
                         }
                 }
@@ -265,7 +265,7 @@ namespace LensGemology
             }
 
             if (api.Side == EnumAppSide.Server)
-                world.PlaySoundAt(Sounds.GetBreakSound(byPlayer), pos.X, pos.Y, pos.Z, byPlayer, true, 32, 1);
+                world.PlaySoundAt(Sounds.GetBreakSound(byPlayer), pos.X, pos.Y, pos.Z,pos.dimension);
             else
                 BreakParticles(pos);
         }

@@ -1,0 +1,55 @@
+﻿{
+    "code": "machwand",
+    "class": "machwanditem",
+    "creativeinventory": {
+        "general": [ "*" ],
+        "tempmachtab": [ "*" ]
+    },
+    "shape": {
+        "base": "item/temptuner"
+    },
+    "guiTransform": {
+        "translation": {
+            "x": -16,
+            "y": -21,
+            "z": 0
+        },
+        "rotation": {
+            "x": -12,
+            "y": -1,
+            "z": 140
+        },
+        "scale": 3
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -1.5,
+            "y": -1.1,
+            "z": -0.9
+        },
+        "rotation": {
+            "x": -1,
+            "y": 4,
+            "z": -110
+        },
+        "scale": 0.5
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 90,
+            "y": 0,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": 0.5299
+        },
+        "scale": 4
+    }
+}

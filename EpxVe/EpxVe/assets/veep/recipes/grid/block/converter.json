@@ -6,7 +6,7 @@
         "ingredients": {
             "C": {
                 "type": "item",
-                "code": "vinteng:metalrod-copper"
+                "code": "vinteng:metalbar-copper"
             },
             "S": {
                 "type": "block",
@@ -36,7 +36,7 @@
         "ingredients": {
             "C": {
                 "type": "item",
-                "code": "vinteng:metalrod-copper"
+                "code": "vinteng:metalbar-copper"
             },
             "S": {
                 "type": "block",

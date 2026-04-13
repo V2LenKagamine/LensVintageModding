@@ -1,0 +1,125 @@
+{
+    "code": "temppiston",
+    "class": "tempmach_piston_b",
+    "entityclass": "tempmach_piston_be",
+    "behaviors": [
+        {
+            "name": "OmniRotatable",
+            "properties": { "rotateSides": "true" }
+        }
+    ],
+    "drawtype": "json", 
+    "entityBehaviors": [
+        { "name": "tempmach_piston_bhv" },
+        { "name": "TempNet" }
+    ],
+    "comment": "'north east south west up down' for below var group",
+    "variantgroups": [
+        {
+            "code": "rot",
+            "loadFromPropertiesCombine": [ "abstract/horizontalorientation", "abstract/verticalorientation" ]
+        }
+    ],
+    "creativeinventory": {
+        "general": [ "*-up" ],
+        "tempmachtab": [ "*-up" ]
+    },
+    "shape": { "base": "game:block/basic/cube" },
+    "blockmaterial": "Metal",
+    "replaceable": 900,
+    "resistance": 2,
+    "attributes": {
+        "handbook": {
+            "groupBy": [ "piston-*" ],
+            "extraSections": [
+                {
+                    "title": "handbook-block-piston-title",
+                    "text": "handbook-block-piston-text"
+                }
+            ]
+        }
+    },
+    "drops": [
+        {
+            "type": "block",
+            "code": "temppiston-up",
+            "quantity": { "avg": 1 }
+        }
+    ],
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "texturesByType": {
+        "*-up": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "up": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-down": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "down": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-north": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "north": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-east": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "east": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-south": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "south": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        },
+        "*-west": {
+            "all": { "base": "game:block/metal/plate/stainlesssteel" },
+            "west": {
+                "base": "game:block/metal/plate/stainlesssteel",
+                "blendedoverlays": [
+                    {
+                        "base": "game:block/metal/lantern/bismuth-deco",
+                        "blendMode": "Overlay"
+                    }
+                ]
+            }
+        }
+    }
+}

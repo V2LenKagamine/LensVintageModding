@@ -11,14 +11,14 @@
             },
             "S": {
                 "type": "item",
-                "code": "game:chisel-*",
-                "name": "agh",
+                "code": "game:rod-*",
+                "name": "rod",
                 "allowedVariants": [ "iron", "meteoriciron", "steel" ]
             },
             "F": {
                 "type": "item",
                 "code": "game:metalnailsandstrips-*",
-                "name": "buh",
+                "name": "strips",
                 "allowedVariants": [ "iron", "meteoriciron", "steel" ],
                 "quantity": 2
             }

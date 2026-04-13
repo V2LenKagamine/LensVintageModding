@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "tempmach",
+    "name": "Temporal Machinations",
+    "authors": [
+        "Len Kagamine"
+    ],
+    "description": "TLDR Its wireless redstone.",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "1.21.6"
+    }
+}

@@ -1,0 +1,171 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\LensVintageModding\\TemporalMachinations\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4547C191-9306-E044-B9C4-7668E080DD53}|TempMach\\TempMach\\TempMach.csproj|f:\\lensvintagemodding\\temporalmachinations\\tempmach\\tempmach\\assets\\tempmach\\lang\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4547C191-9306-E044-B9C4-7668E080DD53}|TempMach\\TempMach\\TempMach.csproj|solutionrelative:tempmach\\tempmach\\assets\\tempmach\\lang\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4547C191-9306-E044-B9C4-7668E080DD53}|TempMach\\TempMach\\TempMach.csproj|f:\\lensvintagemodding\\temporalmachinations\\tempmach\\tempmach\\assets\\tempmach\\blocktypes\\redstone\\piston.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4547C191-9306-E044-B9C4-7668E080DD53}|TempMach\\TempMach\\TempMach.csproj|solutionrelative:tempmach\\tempmach\\assets\\tempmach\\blocktypes\\redstone\\piston.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\SourceServer\\212cbbf3836bbf52369f78b91f7a6426023b9b21372f4c8adc3af4f17a666c53\\src\\libraries\\System.Private.CoreLib\\src\\System\\Threading\\ThreadPoolWorkQueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\SourceServer\\15731e8fe316de9da068e488b9d9362c3e45e4649f47b7a03f07053cb748d285\\statushud\\system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4547C191-9306-E044-B9C4-7668E080DD53}|TempMach\\TempMach\\TempMach.csproj|f:\\lensvintagemodding\\temporalmachinations\\tempmach\\tempmach\\src\\blocks\\redstone\\piston.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4547C191-9306-E044-B9C4-7668E080DD53}|TempMach\\TempMach\\TempMach.csproj|solutionrelative:tempmach\\tempmach\\src\\blocks\\redstone\\piston.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4547C191-9306-E044-B9C4-7668E080DD53}|TempMach\\TempMach\\TempMach.csproj|f:\\lensvintagemodding\\temporalmachinations\\tempmach\\tempmach\\src\\camoable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4547C191-9306-E044-B9C4-7668E080DD53}|TempMach\\TempMach\\TempMach.csproj|solutionrelative:tempmach\\tempmach\\src\\camoable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4547C191-9306-E044-B9C4-7668E080DD53}|TempMach\\TempMach\\TempMach.csproj|f:\\lensvintagemodding\\temporalmachinations\\tempmach\\tempmach\\assets\\tempmach\\blocktypes\\redstone\\pistonhead.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4547C191-9306-E044-B9C4-7668E080DD53}|TempMach\\TempMach\\TempMach.csproj|solutionrelative:tempmach\\tempmach\\assets\\tempmach\\blocktypes\\redstone\\pistonhead.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4547C191-9306-E044-B9C4-7668E080DD53}|TempMach\\TempMach\\TempMach.csproj|f:\\lensvintagemodding\\temporalmachinations\\tempmach\\tempmach\\tempmachmodsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4547C191-9306-E044-B9C4-7668E080DD53}|TempMach\\TempMach\\TempMach.csproj|solutionrelative:tempmach\\tempmach\\tempmachmodsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThreadPoolWorkQueue.cs",
+              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\SourceServer\\212cbbf3836bbf52369f78b91f7a6426023b9b21372f4c8adc3af4f17a666c53\\src\\libraries\\System.Private.CoreLib\\src\\System\\Threading\\ThreadPoolWorkQueue.cs",
+              "ToolTip": "C:\\Users\\user\\AppData\\Local\\SourceServer\\212cbbf3836bbf52369f78b91f7a6426023b9b21372f4c8adc3af4f17a666c53\\src\\libraries\\System.Private.CoreLib\\src\\System\\Threading\\ThreadPoolWorkQueue.cs",
+              "ViewState": "AgIAAN4DAAAAAAAAAAAnwPEDAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T21:33:45.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "system.cs",
+              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\SourceServer\\15731e8fe316de9da068e488b9d9362c3e45e4649f47b7a03f07053cb748d285\\statushud\\system.cs",
+              "ToolTip": "C:\\Users\\user\\AppData\\Local\\SourceServer\\15731e8fe316de9da068e488b9d9362c3e45e4649f47b7a03f07053cb748d285\\statushud\\system.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAnwGMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T21:33:32.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "camoable.cs",
+              "DocumentMoniker": "F:\\LensVintageModding\\TemporalMachinations\\TempMach\\tempmach\\src\\camoable.cs",
+              "RelativeDocumentMoniker": "TempMach\\tempmach\\src\\camoable.cs",
+              "ToolTip": "F:\\LensVintageModding\\TemporalMachinations\\TempMach\\tempmach\\src\\camoable.cs",
+              "RelativeToolTip": "TempMach\\tempmach\\src\\camoable.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAwwFMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T06:32:50.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "pistonhead.json",
+              "DocumentMoniker": "F:\\LensVintageModding\\TemporalMachinations\\TempMach\\tempmach\\assets\\tempmach\\blocktypes\\redstone\\pistonhead.json",
+              "RelativeDocumentMoniker": "TempMach\\tempmach\\assets\\tempmach\\blocktypes\\redstone\\pistonhead.json",
+              "ToolTip": "F:\\LensVintageModding\\TemporalMachinations\\TempMach\\tempmach\\assets\\tempmach\\blocktypes\\redstone\\pistonhead.json",
+              "RelativeToolTip": "TempMach\\tempmach\\assets\\tempmach\\blocktypes\\redstone\\pistonhead.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-12T05:42:16.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "piston.json",
+              "DocumentMoniker": "F:\\LensVintageModding\\TemporalMachinations\\TempMach\\tempmach\\assets\\tempmach\\blocktypes\\redstone\\piston.json",
+              "RelativeDocumentMoniker": "TempMach\\tempmach\\assets\\tempmach\\blocktypes\\redstone\\piston.json",
+              "ToolTip": "F:\\LensVintageModding\\TemporalMachinations\\TempMach\\tempmach\\assets\\tempmach\\blocktypes\\redstone\\piston.json",
+              "RelativeToolTip": "TempMach\\tempmach\\assets\\tempmach\\blocktypes\\redstone\\piston.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-11T21:49:01.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "piston.cs",
+              "DocumentMoniker": "F:\\LensVintageModding\\TemporalMachinations\\TempMach\\tempmach\\src\\blocks\\redstone\\piston.cs",
+              "RelativeDocumentMoniker": "TempMach\\tempmach\\src\\blocks\\redstone\\piston.cs",
+              "ToolTip": "F:\\LensVintageModding\\TemporalMachinations\\TempMach\\tempmach\\src\\blocks\\redstone\\piston.cs",
+              "RelativeToolTip": "TempMach\\tempmach\\src\\blocks\\redstone\\piston.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAUwMIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T20:55:08.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "en.json",
+              "DocumentMoniker": "F:\\LensVintageModding\\TemporalMachinations\\TempMach\\tempmach\\assets\\tempmach\\lang\\en.json",
+              "RelativeDocumentMoniker": "TempMach\\tempmach\\assets\\tempmach\\lang\\en.json",
+              "ToolTip": "F:\\LensVintageModding\\TemporalMachinations\\TempMach\\tempmach\\assets\\tempmach\\lang\\en.json",
+              "RelativeToolTip": "TempMach\\tempmach\\assets\\tempmach\\lang\\en.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-11T04:39:33.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TempMachModSystem.cs",
+              "DocumentMoniker": "F:\\LensVintageModding\\TemporalMachinations\\TempMach\\tempmach\\TempMachModSystem.cs",
+              "RelativeDocumentMoniker": "TempMach\\tempmach\\TempMachModSystem.cs",
+              "ToolTip": "F:\\LensVintageModding\\TemporalMachinations\\TempMach\\tempmach\\TempMachModSystem.cs",
+              "RelativeToolTip": "TempMach\\tempmach\\TempMachModSystem.cs",
+              "ViewState": "AgIAAAoBAAAAAAAAAAAqwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T23:22:19.064Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
