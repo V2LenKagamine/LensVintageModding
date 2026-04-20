@@ -5,7 +5,7 @@
     "authors": [
         "Len Kagamine"
     ],
-    "description": "TLDR Its wireless redstone.",
+    "description": "TLDR Its wireless redstone and some stuff to use it with.",
     "version": "1.0.0",
     "dependencies": {
         "game": "1.21.6"

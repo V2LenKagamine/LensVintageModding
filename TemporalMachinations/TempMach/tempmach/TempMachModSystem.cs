@@ -40,7 +40,7 @@ namespace TempMach
             RegisterTrio(api, "piston", typeof(PistonBlock), typeof(PistonBE), typeof(PistonBhv));
             api.RegisterBlockClass("temppistonhead", typeof(PistonHead));
             api.RegisterBlockEntityClass("temppistheadbe",typeof(PistonHeadBE));
-
+            RegisterTrio(api, "semireal", typeof(SemiPermBlock), typeof(SemiPermBE), typeof(SemiPermBhv));
 
             api.RegisterBlockEntityClass("tempmach_simpletoggle_be", typeof(SimpleToggleBlockBe));
             api.RegisterBlockEntityBehaviorClass("tempmach_simpletoggle_bhv", typeof(SimpleToggleBlockBhv));

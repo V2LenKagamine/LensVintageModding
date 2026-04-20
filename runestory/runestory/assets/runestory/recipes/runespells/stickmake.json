@@ -1,0 +1,9 @@
+{
+    "code": "makesticks",
+    "enabled": true,
+    "attributes": {
+
+    },
+    "reagents": [ "game:ingot-*" ],
+    "imgpath": "spellicons/stick"
+}

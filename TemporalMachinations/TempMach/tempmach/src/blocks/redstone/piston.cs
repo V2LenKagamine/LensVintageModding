@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
 using Vintagestory.API.Common;
+using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
@@ -22,34 +23,6 @@ namespace TempMach
                 return entity.TryCamo(world, byPlayer, blockSel);
             }
             return base.OnBlockInteractStart(world, byPlayer, blockSel);
-        }
-
-        private static readonly Dictionary<string, Cuboidf[]> bruh = new()
-        {
-        { "up", [new(0,0,0,1,2,1)] },
-        { "down", [new(0,-1,0,1,1,1)] },
-        { "north", [new(0,0,0,1,1,2)] },
-        { "south", [new(0,0,-1,1,1,1)] },
-        { "east", [new(0,0,0,2,1,1)] },
-        { "west", [new(-1,0,0,1,1,1)] },
-        };
-
-        public override Cuboidf[] GetSelectionBoxes(IBlockAccessor blockAccessor, BlockPos pos)
-        {
-            if (blockAccessor.GetBlockEntity(pos) is PistonBE pist && pist.toggle)
-            {
-                return bruh[Variant["rot"] is string v ? string.Intern(v) : "up"];
-            }
-            return base.GetSelectionBoxes(blockAccessor,pos);
-        }
-
-        public override Cuboidf[] GetCollisionBoxes(IBlockAccessor blockAccessor, BlockPos pos)
-        {
-            if (blockAccessor.GetBlockEntity(pos) is PistonBE pist && pist.toggle)
-            {
-                return bruh[Variant["rot"] is string v ? string.Intern(v) : "up"];
-            }
-            return base.GetCollisionBoxes(blockAccessor,pos);
         }
     }
     public class PistonBE : CamoableBE
@@ -80,7 +53,7 @@ namespace TempMach
                     }
                 case "north":
                     {
-                        offset = new(0, 0, 1);
+                        offset = new(0, 0, -1);
                         break;
                     }
                 case "east":
@@ -90,7 +63,7 @@ namespace TempMach
                     }
                 case "south":
                     {
-                        offset = new(0, 0, -1);
+                        offset = new(0, 0, 1);
                         break;
                     }
                 case "west":
@@ -126,7 +99,16 @@ namespace TempMach
         {
             for (int i = 0; i < codesinorder.Count; i++)
             {
-                Api.World.BlockAccessor.SetBlock(Api.World.GetBlock(codesinorder[i]).Id, Pos.AddCopy(offset * (i + 1)));
+                Vec3i dopos = offset * (i + 1);
+                Api.World.BlockAccessor.SetBlock(Api.World.GetBlock(codesinorder[i]).Id, Pos.AddCopy(dopos));
+                Api.World.BlockAccessor.TriggerNeighbourBlockUpdate(Pos.AddCopy(dopos));
+                if (i == codesinorder.Count - 1) {
+                    Entity[] inway = Api.World.GetEntitiesAround(Pos.AddCopy(dopos).ToVec3d(), 1, 1);
+                    foreach (Entity pushed in inway)
+                    {
+                        pushed.Pos.Add(offset.ToBlockPos().ToVec3f());
+                    }
+                }
             }
             if(Api.World.BlockAccessor.GetBlockEntity(Pos.AddCopy(offset)) is PistonHeadBE boi)
             {
@@ -138,6 +120,7 @@ namespace TempMach
                     MarkDirty(true);
                 }
                 head = Pos.AddCopy(offset);
+                Api.World.BlockAccessor.TriggerNeighbourBlockUpdate(Pos.AddCopy(offset));
             }
         }
 
@@ -145,11 +128,17 @@ namespace TempMach
         {
             base.ToTreeAttributes(tree);
             tree.SetBool("wason",toggle);
+            tree.SetVec3i("thehead", head?.AsVec3i ?? Vec3i.Zero);
         }
         public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
         {
             base.FromTreeAttributes(tree, worldAccessForResolve);
             toggle = tree.GetBool("wason");
+            Vec3i temp = tree.GetVec3i("thehead");
+            if (temp != Vec3i.Zero)
+            {
+                head = temp.AsBlockPos;
+            }
         }
     }
     public class PistonBhv : BlockEntityBehavior, IRedstoneTaker
@@ -172,6 +161,8 @@ namespace TempMach
                 if(bones.head != null && Api.World.BlockAccessor.GetBlockEntity(bones.head) is PistonHeadBE)
                 {
                     Api.World.BlockAccessor.SetBlock(0, bones.head);
+                    Api.World.BlockAccessor.TriggerNeighbourBlockUpdate(bones.head);
+
                 }
             }
         }

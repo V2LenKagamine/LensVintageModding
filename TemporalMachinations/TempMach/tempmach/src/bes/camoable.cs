@@ -93,6 +93,15 @@ namespace TempMach
                 MarkDirty(true);
             }
         }
+
+        public override void GetBlockInfo(IPlayer forPlayer, StringBuilder dsc)
+        {
+            base.GetBlockInfo(forPlayer, dsc);
+            if (forPlayer.InventoryManager.GetHotbarItemstack(forPlayer.InventoryManager.ActiveHotbarSlotNumber)?.Item?.Code == "tempmach:machwand")
+            {
+                dsc.AppendLine("Can be Camoflaged with any cubic block with a rightclick, or have it removed with an empty hand and shift+rightclick.");
+            }
+        }
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
             base.ToTreeAttributes(tree);

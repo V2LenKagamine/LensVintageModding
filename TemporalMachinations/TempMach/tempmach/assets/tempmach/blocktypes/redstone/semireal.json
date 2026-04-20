@@ -1,0 +1,24 @@
+{
+    "code": "semirealcube",
+    "class": "tempmach_semireal_b",
+    "entityclass": "tempmach_semireal_be",
+    "drawtype": "json",
+    "entityBehaviors": [
+        { "name": "tempmach_semireal_bhv" },
+        { "name": "TempNet" }
+    ],
+    "creativeinventory": {
+        "general": [ "*" ],
+        "tempmachtab": [ "*" ]
+    },
+    "shape": { "base": "game:block/basic/cube" },
+    "blockmaterial": "Metal",
+    "replaceable": 900,
+    "faceCullMode": "NeverCull",
+    "resistance": 1.5,
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "textures": {
+        "all": { "base": "game:block/metal/plate/stainlesssteel" }
+    }
+}

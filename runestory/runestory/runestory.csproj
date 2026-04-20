@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\$(Configuration)\Mods\mod</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="ImGui.NET">
+      <HintPath>..\depends\ImGui.NET.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ImGuiController_OpenTK">
+      <HintPath>..\depends\ImGuiController_OpenTK.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ImGuizmo.NET">
+      <HintPath>..\depends\ImGuizmo.NET.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ImNodes.NET">
+      <HintPath>..\depends\ImNodes.NET.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ImPlot.NET">
+      <HintPath>..\depends\ImPlot.NET.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VintagestoryAPI">
+      <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSImGui">
+      <HintPath>..\depends\VSImGui.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSImGui_DebugTools">
+      <HintPath>..\depends\VSImGui_DebugTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSSurvivalMod">
+      <HintPath>$(VINTAGE_STORY)/Mods/VSSurvivalMod.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSEssentials">
+      <HintPath>$(VINTAGE_STORY)/Mods/VSEssentials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSCreativeMod">
+      <HintPath>$(VINTAGE_STORY)/Mods/VSCreativeMod.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(VINTAGE_STORY)/Lib/Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(VINTAGE_STORY)/Lib/0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VintagestoryLib">
+      <HintPath>$(VINTAGE_STORY)/VintagestoryLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>$(VINTAGE_STORY)/Lib/protobuf-net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="cairo-sharp">
+      <HintPath>$(VINTAGE_STORY)/Lib/cairo-sharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+<ItemGroup>
+  <Content Include="assets\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </Content>
+  <Content Include="modinfo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </Content>
+</ItemGroup>
+
+<ItemGroup>
+  <Folder Include="assets\runestory\spellicons\" />
+  <Folder Include="src\entity\spells\" />
+</ItemGroup>
+
+</Project>
