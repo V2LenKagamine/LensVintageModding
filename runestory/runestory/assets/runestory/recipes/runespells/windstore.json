@@ -1,0 +1,18 @@
+{
+    "code": "windstore",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-air": 4,
+            "runestory:rune-soul": 1,
+            "runestory:rune-gamma": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-air",
+            "runestory:item-rune-soul",
+            "runestory:item-rune-gamma"
+        ],
+        "langCode": "windstoredsc"
+    },
+    "imgpath": "windstore"
+}

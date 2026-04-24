@@ -3,8 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HarmonyLib;
+using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
+using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Server;
+using Vintagestory.API.Util;
+using Vintagestory.Server;
 
 namespace runestory
 {
@@ -12,33 +18,92 @@ namespace runestory
     {
         public string spellCode;
         public Entity spawnedBy;
-        public override void OnEntitySpawn()
+        public override void Initialize(EntityProperties properties, ICoreAPI api, long InChunkIndex3d)
         {
-            base.OnEntitySpawn();
-            if(spellCode != null)
+            base.Initialize(properties, api, InChunkIndex3d);
+            if (spellCode != null)
             {
-                EntityProperties? possible = Api.World.GetEntityType(new("runestory" + spellCode));
+                BaseRuneSpell spell = Api.ModLoader.GetModSystem<runestoryModSystem>().AllSpells.Find(poss => poss.Code == spellCode);
+                EntityProperties? possible = Api.World.GetEntityType(new("runestory:" + spellCode));
                 if(possible is EntityProperties resolved)
                 {
                     BaseRuneEnt goodspell = Api.World.ClassRegistry.CreateEntity(resolved) as BaseRuneEnt;
                     if (spawnedBy != null)
                     {
-                        goodspell.spawnedBy = spawnedBy;
-                        Vec3d pos = spawnedBy.ServerPos.XYZ.AddCopy(0, spawnedBy.LocalEyePos.Y, 0);
-                        Vec3d ahead = pos.AheadCopy(1, spawnedBy.SidedPos.Pitch, spawnedBy.SidedPos.Yaw);
-                        Vec3d velo = (ahead - pos);
+                        if (!CheckReagents(spawnedBy, spell))
+                        {
+                            Die();
+                            return;
+                        }
 
-                        goodspell.ServerPos.SetPos(spawnedBy.SidedPos.BehindCopy(0.21).XYZ.Add(0, spawnedBy.LocalEyePos.Y, 0));
-                        goodspell.ServerPos.Motion.Set(velo);
-                        goodspell.Pos.SetFrom(goodspell.ServerPos);
+                        goodspell.spawnedBy = spawnedBy;
+                        goodspell.ourSpell = spell;
+
+                        Vec3d pos = spawnedBy.Pos.XYZ.AddCopy(0, spawnedBy.LocalEyePos.Y, 0);
+                        Vec3d ahead = pos.AheadCopy(1, spawnedBy.Pos.Pitch, spawnedBy.Pos.Yaw);
+                        Vec3d velo = (ahead - pos) * 0.65f;
+                        //velo = new(0f, 0f, 0f);
+                        goodspell.Pos.SetPos(spawnedBy.Pos.AheadCopy(0.5f).XYZ.Add(0, spawnedBy.LocalEyePos.Y, 0));
+                        goodspell.Pos.Motion.Set(velo);
                         goodspell.World = spawnedBy.World;
                         goodspell.SetRotation();
 
-                        Api.World.SpawnEntity(goodspell);
+                        Api.World.SpawnPriorityEntity(goodspell);
                     }
                 }
             }
             Die();
+        }
+
+        public bool CheckReagents(Entity spawner,BaseRuneSpell spell) 
+        {
+            if(spawner is EntityPlayer ply && spellCode != null)
+            {
+                if (ply.Player.WorldData.CurrentGameMode == EnumGameMode.Creative) { return true; }
+                
+                int lookingAmt = spell?.Reagents?.Count ?? 0;
+                Dictionary<ItemSlot, int> takeamnts = new(lookingAmt);
+                for (int i = 0; i < lookingAmt; i++)
+                {
+                    string lookingfor = spell.Reagents.ElementAt(i).Key;
+                    bool good = false;
+                    ply.WalkInventory(slot => {
+                        if(slot.Itemstack?.Collectible?.Code is null) { return true; }
+                        bool returner = false;
+                        int amtTake = spell.Reagents.ElementAt(i).Value;
+                        if (lookingfor.Contains('*'))
+                        {
+                            returner = WildcardUtil.Match(lookingfor, slot.Itemstack.Collectible.Code.ToString()) && slot.Itemstack.StackSize >= amtTake;
+                        }
+                        else
+                        {
+                            returner = (slot.Itemstack.Collectible.Code.ToString() == lookingfor && slot.Itemstack.StackSize >= amtTake);
+                        }
+                        if(returner)
+                        {
+                            takeamnts.Add(slot,amtTake);
+                            good = true;
+                            return false;
+                        }
+                        return true;
+                    });
+                    if(!good) {
+                        (Api.World.PlayerByUid(ply.PlayerUID) as IServerPlayer).SendLocalisedMessage(GlobalConstants.GeneralChatGroup,"runestory:cast-fail");
+                        return false; 
+                    }
+                }
+                //Todo: add possibility to not consume?
+                foreach (var pair in takeamnts) {
+                    pair.Key.TakeOut(pair.Value);
+                    if (pair.Key.Itemstack?.StackSize <= 0)
+                    {
+                        pair.Key.TakeOutWhole();
+                    }
+                    pair.Key.MarkDirty();
+                }
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -1,0 +1,16 @@
+{
+    "code": "ignitespell",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-fire": 1,
+            "runestory:rune-alpha": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-fire",
+            "runestory:item-rune-alpha"
+        ],
+        "langCode": "ignitespelldsc"
+    },
+    "imgpath": "genericfire"
+}

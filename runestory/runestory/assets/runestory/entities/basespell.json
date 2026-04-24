@@ -1,0 +1,30 @@
+{
+    "code": "basestartrunespell",
+    "class": "basesummonrunespell",
+    "client": {
+        "renderer": "Shape",
+        "shape": { "base": "game:item/stone" },
+        "textures": {
+            "material": { "base": "game:block/stone/rock/obsidian1" }
+        },
+        "size": 0.5,
+        "behaviors": [
+            { "code": "passivephysics" },
+            { "code": "interpolateposition" }
+        ]
+    },
+    "server": {
+        "behaviors": [
+            { "code": "passivephysics" },
+            {
+                "code": "despawn",
+                "minSeconds": 10
+            }
+        ]
+    },
+    "hitboxSize": {
+        "x": 0.25,
+        "y": 0.25,
+        "z": 0.25
+    }
+}

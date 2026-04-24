@@ -1,0 +1,26 @@
+[
+    {
+        "code": "makeearthrune-stone",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:stone-*": 4
+            },
+            "outputs": {
+                "runestory:rune-earth": 1
+            }
+        }
+    },
+    {
+        "code": "makeearthrune-rock",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:rock-*": 1
+            },
+            "outputs": {
+                "runestory:rune-earth": 4
+            }
+        }
+    }
+]

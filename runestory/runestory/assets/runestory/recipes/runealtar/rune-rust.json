@@ -1,0 +1,12 @@
+{
+    "code": "makerustrune-gear",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "game:gear-rusty": 1
+        },
+        "outputs": {
+            "runestory:rune-rust": 4
+        }
+    }
+}

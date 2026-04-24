@@ -5,7 +5,7 @@
     "authors": [
         "Len Kagamine"
     ],
-    "description": "Runescape themed magic mod. Remember, 92 is half of 99!",
+    "description": "Runes to cast magic spells.",
     "version": "1.0.0",
     "dependencies": {
         "game": "",

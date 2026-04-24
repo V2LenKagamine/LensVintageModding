@@ -1,0 +1,20 @@
+﻿{
+    "code": "groupheal",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-self": 2,
+            "runestory:rune-water": 3,
+            "runestory:rune-earth": 3,
+            "runestory:rune-beta": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-self",
+            "runestory:item-rune-water",
+            "runestory:item-rune-earth",
+            "runestory:item-rune-beta"
+        ],
+        "langCode": "groupheal"
+    },
+    "imgpath": "groupheal"
+}

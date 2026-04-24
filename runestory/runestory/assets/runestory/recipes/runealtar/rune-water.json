@@ -1,0 +1,62 @@
+[
+    {
+        "code": "makewaterrune-fish",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:fish-raw": 1
+            },
+            "outputs": {
+                "runestory:rune-water": 2
+            }
+        }
+    },
+    {
+        "code": "makewaterrune-fishbones",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:bone-fish": 1
+            },
+            "outputs": {
+                "runestory:rune-water": 1
+            }
+        }
+    },
+    {
+        "code": "makewaterrune-ice",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:lakeice": 8
+            },
+            "outputs": {
+                "runestory:rune-water": 1
+            }
+        }
+    },
+    {
+        "code": "makewaterrune-gice",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:glacierice": 4
+            },
+            "outputs": {
+                "runestory:rune-water": 1
+            }
+        }
+    },
+    {
+        "code": "makewaterrune-pgice",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:packedglacierice": 2
+            },
+            "outputs": {
+                "runestory:rune-water": 1
+            }
+        }
+    }
+]

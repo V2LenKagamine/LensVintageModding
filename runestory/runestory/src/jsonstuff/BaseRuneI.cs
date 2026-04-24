@@ -16,7 +16,13 @@ namespace runestory
         public string imgPath { get; set; }
         public bool Enabled { get; set; }
         public JsonObject Attributes { get; set; }
-        public string[] Reagents { get; }
+        Dictionary<string, int> Reagents { get; }
+        string[] ReagNames { get; }
+
+        public string langCode { get; set; }
+
+        public string ElementalType { get; set; }
+        public bool Resolve(IWorldAccessor world, string errsrc);
 
         public BaseRuneI<T> Clone();
 

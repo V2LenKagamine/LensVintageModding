@@ -1,0 +1,18 @@
+{
+    "code": "fertilizespell",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-earth":4,
+            "runestory:rune-water": 4,
+            "runestory:rune-beta": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-earth",
+            "runestory:item-rune-water",
+            "runestory:item-rune-beta"
+        ],
+        "langCode": "fertilizespelldsc"
+    },
+    "imgpath": "genericearth"
+}

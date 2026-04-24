@@ -1,0 +1,105 @@
+{
+    "code": "runebag",
+    "maxstacksize": 1,
+    "shape": { "base": "game:item/bag/linensack" },
+    "behaviors": [
+        { "name": "runepouchbag" }
+    ],
+    "variantgroups": [
+        {
+            "code": "type",
+            "states": [ "primitive","linen","leather" ]
+        }
+    ],
+    "texturesByType": {
+        "*-primitive": {
+            "linen": { "base": "items/runebag/linen" },
+            "top": { "base": "items/runebag/top-linen" }
+        },
+        "*-linen": {
+            "linen": { "base": "items/runebag/reed" },
+            "top": { "base": "items/runebag/top-reed" }
+        },
+        "*-leather": {
+            "linen": { "base": "items/runebag/leather" },
+            "top": { "base": "items/runebag/top-leather" }
+        }
+    },
+
+    "attributesByType": {
+        "*-primitive": {
+            "backpack": {
+                "quantitySlots": 3,
+                "slotBgColor": "#b99bba"
+            }
+        },
+        "*-linen": {
+            "backpack": {
+                "quantitySlots": 4,
+                "slotBgColor": "#b99bba"
+            }
+        },
+        "*-leather": {
+            "backpack": {
+                "quantitySlots": 5,
+                "slotBgColor": "#b99bba"
+            }
+        }
+    },
+    "storageFlags": 2,
+    "creativeinventory": {
+        "general": [ "*" ],
+        "items": [ "*" ],
+        "runestorytab": ["*"]
+    },
+    "guiTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": -25,
+            "y": 23,
+            "z": 180
+        },
+        "origin": {
+            "x": 0.5299,
+            "y": 0.23,
+            "z": 0.5
+        },
+        "scale": 2.7,
+        "rotate": true
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -0.7,
+            "y": -0.5,
+            "z": -0.6
+        },
+        "rotation": {
+            "x": -4,
+            "y": 47,
+            "z": -17
+        },
+        "scale": 0.81
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 180,
+            "y": 33,
+            "z": -180
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0.5
+        },
+        "scale": 2.5
+    }
+}

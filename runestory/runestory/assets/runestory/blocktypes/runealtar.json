@@ -1,0 +1,21 @@
+{
+    "code": "runealtar",
+    "behaviors": [
+        {
+            "name": "runealtar-chiselsteal-bb"
+        }
+    ],
+    "entityBehaviors": [
+        {"name": "runealtar-chiselsteal-bhv"}
+    ],
+    "class": "runealtar-b",
+    "entityclass": "runealtar-be",
+    "shape": { "base": "game:block/basic/cube" },
+    "texture": {"base": "game:block/stone/rock/granite1"},
+    "resistance": 2,
+    "requiredminingtier": 1,
+    "facecullmode": "NeverCull",
+    "creativeinventory": {
+        "runestorytab": [ "*" ]
+    }
+}

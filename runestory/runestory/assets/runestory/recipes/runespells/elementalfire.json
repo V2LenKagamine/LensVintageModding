@@ -1,0 +1,53 @@
+[
+    {
+        "code": "firebolt",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-fire": 2,
+                "runestory:rune-alpha": 1
+            },
+            "reagentnames": [
+                "runestory:item-rune-fire",
+                "runestory:item-rune-alpha"
+            ],
+            "langCode": "fireboltdsc",
+            "elementType": "fire"
+        },
+        "imgpath": "genericfire"
+    },
+    {
+        "code": "firesurge",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-fire": 4,
+                "runestory:rune-beta": 1
+            },
+            "reagentnames": [
+                "runestory:item-rune-fire",
+                "runestory:item-rune-beta"
+            ],
+            "langCode": "firesurgedsc",
+            "elementType": "fire"
+        },
+        "imgpath": "genericfire"
+    },
+    {
+        "code": "fireblast",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-fire": 6,
+                "runestory:rune-gamma": 1
+            },
+            "reagentnames": [
+                "runestory:item-rune-fire",
+                "runestory:item-rune-gamma"
+            ],
+            "langCode": "fireblastdsc",
+            "elementType": "fire"
+        },
+        "imgpath": "genericfire"
+    }
+]

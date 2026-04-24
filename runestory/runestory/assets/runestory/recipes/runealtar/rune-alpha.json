@@ -1,0 +1,26 @@
+[
+    {
+        "code": "makealpharune-firew",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:firewood": 1
+            },
+            "outputs": {
+                "runestory:rune-alpha": 4
+            }
+        }
+    },
+    {
+        "code": "makealpharune-afirew",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:agedfirewood": 1
+            },
+            "outputs": {
+                "runestory:rune-alpha": 16
+            }
+        }
+    }
+]

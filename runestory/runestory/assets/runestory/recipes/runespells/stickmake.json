@@ -1,9 +1,16 @@
 {
-    "code": "makesticks",
+    "code": "makestick",
     "enabled": true,
     "attributes": {
-
+        "reagents": {
+            "runestory:rune-air": 1,
+            "runestory:rune-alpha": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-air",
+            "runestory:item-rune-alpha"
+        ],
+        "langCode": "makestickdsc"
     },
-    "reagents": [ "game:ingot-*" ],
-    "imgpath": "spellicons/stick"
+    "imgpath": "genericair"
 }

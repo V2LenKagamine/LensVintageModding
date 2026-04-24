@@ -1,0 +1,53 @@
+[
+    {
+        "code": "earthbolt",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-earth": 2,
+                "runestory:rune-alpha": 1
+            },
+            "reagentnames": [
+                "runestory:item-rune-earth",
+                "runestory:item-rune-alpha"
+            ],
+            "langCode": "earthboltdsc",
+            "elementType": "earth"
+        },
+        "imgpath": "genericearth"
+    },
+    {
+        "code": "earthsurge",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-earth": 4,
+                "runestory:rune-beta": 1
+            },
+            "reagentnames": [
+                "runestory:item-rune-earth",
+                "runestory:item-rune-beta"
+            ],
+            "langCode": "earthsurgedsc",
+            "elementType": "earth"
+        },
+        "imgpath": "genericearth"
+    },
+    {
+        "code": "earthblast",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-earth": 6,
+                "runestory:rune-gamma": 1
+            },
+            "reagentnames": [
+                "runestory:item-rune-earth",
+                "runestory:item-rune-gamma"
+            ],
+            "langCode": "earthblastdsc",
+            "elementType": "earth"
+        },
+        "imgpath": "genericearth"
+    }
+]

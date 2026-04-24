@@ -1,0 +1,53 @@
+[
+    {
+        "code": "waterbolt",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-water": 2,
+                "runestory:rune-alpha": 1
+            },
+            "reagentnames": [
+                "runestory:item-rune-water",
+                "runestory:item-rune-alpha"
+            ],
+            "langCode": "waterboltdsc",
+            "elementType": "water"
+        },
+        "imgpath": "genericwater"
+    },
+    {
+        "code": "watersurge",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-water": 4,
+                "runestory:rune-beta": 1
+            },
+            "reagentnames": [
+                "runestory:item-rune-water",
+                "runestory:item-rune-beta"
+            ],
+            "langCode": "watersurgedsc",
+            "elementType": "water"
+        },
+        "imgpath": "genericwater"
+    },
+    {
+        "code": "waterblast",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-water": 6,
+                "runestory:rune-gamma": 1
+            },
+            "reagentnames": [
+                "runestory:item-rune-water",
+                "runestory:item-rune-gamma"
+            ],
+            "langCode": "waterblastdsc",
+            "elementType": "water"
+        },
+        "imgpath": "genericwater"
+    }
+]

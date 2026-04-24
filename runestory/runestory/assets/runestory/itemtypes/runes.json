@@ -1,0 +1,128 @@
+{
+    "code": "rune",
+    "attributes": {
+        "handbook": {
+            "groupBy": [ "rune-*" ]
+        }
+    },
+    "variantgroups": [
+        {
+            "code": "type",
+            "states": [ "blank", "water", "earth", "fire", "air", "soul", "self", "balance", "rust", "alpha","beta","gamma"]
+        }
+    ],
+    "texturesByType": {
+        "rune-blank": {
+            "runeface": { "base": "items/runes/blank" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-water": {
+            "runeface": { "base": "items/runes/water" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-earth": {
+            "runeface": { "base": "items/runes/earth" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-air": {
+            "runeface": { "base": "items/runes/air" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-fire": {
+            "runeface": { "base": "items/runes/fire" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-soul": {
+            "runeface": { "base": "items/runes/soul" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-self": {
+            "runeface": { "base": "items/runes/self" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-balance": {
+            "runeface": { "base": "items/runes/balance" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-rust": {
+            "runeface": { "base": "items/runes/rust" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-alpha": {
+            "runeface": { "base": "items/runes/alpha" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-beta": {
+            "runeface": { "base": "items/runes/beta" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-gamma": {
+            "runeface": { "base": "items/runes/gamma" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        }
+    },
+    "creativeinventory": {
+        "general": [ "*" ],
+        "items": [ "*" ],
+        "runestorytab": [ "*" ]
+    },
+    "maxstacksize": 64,
+    "shape": { "base": "items/rune" },
+    "tpHandTransform": {
+        "translation": {
+            "x": 0.7,
+            "y": -0.1,
+            "z": -0.5
+        },
+        "rotation": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+        },
+        "scaleXyz": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        }
+    },
+    "guiTransform": {
+        "translation": {
+            "x": 6,
+            "y": 7,
+            "z": -1
+        },
+        "rotation": {
+            "x": 120,
+            "y": 180,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5299,
+            "y": -0.92,
+            "z": 0
+        },
+        "scaleXyz": {
+            "x": -3.75,
+            "y": 3.75,
+            "z": 3.75
+        }
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0.3,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": 0.5299
+        },
+        "scale": 3
+    }
+}

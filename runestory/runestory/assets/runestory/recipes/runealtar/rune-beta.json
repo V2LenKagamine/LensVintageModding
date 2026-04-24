@@ -1,0 +1,26 @@
+[
+    {
+        "code": "makebetarune-native",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:nugget-nativecopper": 1
+            },
+            "outputs": {
+                "runestory:rune-beta": 16
+            }
+        }
+    },
+    {
+        "code": "makebetarune-native",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:nugget-malachite": 1
+            },
+            "outputs": {
+                "runestory:rune-beta": 16
+            }
+        }
+    }
+]

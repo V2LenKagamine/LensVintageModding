@@ -1,0 +1,12 @@
+{
+    "code": "makesoulrune-tempgear",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "game:gear-temporal": 1
+        },
+        "outputs": {
+            "runestory:rune-soul": 16
+        }
+    }
+}

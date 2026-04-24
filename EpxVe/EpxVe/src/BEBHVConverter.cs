@@ -19,6 +19,7 @@ using Vintagestory.Common;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using HarmonyLib;
 using Vintagestory.API.Util;
+using WireNode = VintageEngineering.Electrical.Systems.Catenary.WireNode;
 
 namespace EpxVe.src
 {
@@ -54,7 +55,7 @@ namespace EpxVe.src
 
         public bool IsLoaded { get; set; } = false;
 
-        protected Dictionary<int, List<WireNode>> electricConnections = null;
+        protected Dictionary<int, List<VintageEngineering.Electrical.Systems.Catenary.WireNode>> electricConnections = null;
 
         protected Dictionary<int, long> NetworkIDs = null;
 
@@ -76,7 +77,7 @@ namespace EpxVe.src
             MaxEn = (ulong)Blockentity.GetBehavior<ElectricBEBehavior>().properties["maxpower"].AsInt();
             IsLoaded = true;
 
-            if (electricConnections == null) electricConnections = new Dictionary<int, List<WireNode>>();
+            if (electricConnections == null) electricConnections = new Dictionary<int, List<VintageEngineering.Electrical.Systems.Catenary.WireNode>>();
             if (NetworkIDs == null) NetworkIDs = new Dictionary<int, long>();
             if (NetworkIDs.Count > 0 && electricConnections.Count > 0 && api.Side == EnumAppSide.Server)
             {
@@ -194,7 +195,7 @@ namespace EpxVe.src
             byte[] connections = tree.GetBytes("connections");
             if (connections != null)
             {
-                electricConnections = SerializerUtil.Deserialize<Dictionary<int, List<WireNode>>>(tree.GetBytes("connections"));
+                electricConnections = SerializerUtil.Deserialize<Dictionary<int, List<VintageEngineering.Electrical.Systems.Catenary.WireNode>>>(tree.GetBytes("connections"));
             }
             else
             {

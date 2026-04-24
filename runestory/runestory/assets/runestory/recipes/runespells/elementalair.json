@@ -1,0 +1,53 @@
+[
+    {
+        "code": "airbolt",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-air": 2,
+                "runestory:rune-alpha": 1
+            },
+            "reagentnames": [
+                "runestory:item-rune-air",
+                "runestory:item-rune-alpha"
+            ],
+            "langCode": "airboltdsc",
+            "elementType": "air"
+        },
+        "imgpath": "genericair"
+    },
+    {
+        "code": "airsurge",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-air": 4,
+                "runestory:rune-beta": 1
+            },
+            "reagentnames": [
+                "runestory:item-rune-air",
+                "runestory:item-rune-beta"
+            ],
+            "langCode": "airsurgedsc",
+            "elementType": "air"
+        },
+        "imgpath": "genericair"
+    },
+    {
+        "code": "airblast",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-air": 6,
+                "runestory:rune-gamma": 1
+            },
+            "reagentnames": [
+                "runestory:item-rune-air",
+                "runestory:item-rune-gamma"
+            ],
+            "langCode": "airblastdsc",
+            "elementType": "air"
+        },
+        "imgpath": "genericair"
+    }
+]

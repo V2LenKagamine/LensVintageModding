@@ -1,0 +1,38 @@
+﻿[
+    {
+        "code": "makegammarune-hema",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:nugget-hematite": 1
+            },
+            "outputs": {
+                "runestory:rune-gamma": 16
+            }
+        }
+    },
+    {
+        "code": "makegammarune-lim",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:nugget-limonite": 1
+            },
+            "outputs": {
+                "runestory:rune-gamma": 16
+            }
+        }
+    },
+    {
+        "code": "makegammarune-mag",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:nugget-magnetite": 1
+            },
+            "outputs": {
+                "runestory:rune-gamma": 16
+            }
+        }
+    }
+]

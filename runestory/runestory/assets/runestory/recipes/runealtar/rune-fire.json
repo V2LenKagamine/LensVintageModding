@@ -1,0 +1,50 @@
+[
+    {
+        "code": "makefirerune-char",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:powder-charcoal": 1
+            },
+            "outputs": {
+                "runestory:rune-fire": 4
+            }
+        }
+    },
+    {
+        "code": "makefirerune-char2",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:charcoal": 1
+            },
+            "outputs": {
+                "runestory:rune-fire": 4
+            }
+        }
+    },
+    {
+        "code": "makefirerune-brown",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:ore-lignite": 1
+            },
+            "outputs": {
+                "runestory:rune-fire": 12
+            }
+        }
+    },
+    {
+        "code": "makefirerune-black",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:ore-bituminouscoal": 1
+            },
+            "outputs": {
+                "runestory:rune-fire": 16
+            }
+        }
+    }
+]

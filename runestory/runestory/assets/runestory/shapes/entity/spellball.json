@@ -1,0 +1,99 @@
+{
+	"editor": {
+		"collapsedPaths": "",
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"allface": "game:block/stone/rock/basalt1"
+	},
+	"elements": [
+		{
+			"name": "Cube2",
+			"from": [ 4.0, 4.0, 4.0 ],
+			"to": [ 12.0, 12.0, 12.0 ],
+			"renderPass": 3,
+			"rotationOrigin": [ 4.0, 4.0, 4.0 ],
+			"faces": {
+				"north": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+				"east": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+				"south": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+				"west": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+				"up": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+				"down": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] }
+			},
+			"children": [
+				{
+					"name": "Cube3",
+					"from": [ 0.0, 0.0, 0.0 ],
+					"to": [ 8.0, 8.0, 8.0 ],
+					"renderPass": 3,
+					"rotationOrigin": [ 4.0, 4.0, 4.0 ],
+					"rotationX": 45.0,
+					"rotationY": 5.0,
+					"rotationZ": 45.0,
+					"faces": {
+						"north": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+						"east": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+						"south": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+						"west": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+						"up": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+						"down": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] }
+					}
+				},
+				{
+					"name": "Cube4",
+					"from": [ 0.0, 0.0, 0.0 ],
+					"to": [ 8.0, 8.0, 8.0 ],
+					"rotationOrigin": [ 4.0, 4.0, 4.0 ],
+					"rotationX": -45.0,
+					"rotationZ": -45.0,
+					"faces": {
+						"north": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+						"east": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+						"south": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+						"west": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+						"up": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+						"down": { "texture": "#allface", "uv": [ 0.0, 0.0, 8.0, 8.0 ] }
+					}
+				}
+			]
+		}
+	],
+	"animations": [
+		{
+			"name": "idle",
+			"code": "idle",
+			"quantityframes": 30,
+			"onActivityStopped": "Stop",
+			"onAnimationEnd": "Repeat",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"Cube3": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Cube4": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 14,
+					"elements": {
+						"Cube3": { "rotationX": -180.0, "rotationY": -180.0, "rotationZ": 0.0 },
+						"Cube4": { "rotationX": 180.0, "rotationY": 0.0, "rotationZ": 180.0 }
+					}
+				},
+				{
+					"frame": 29,
+					"elements": {
+						"Cube3": { "rotationX": -360.0, "rotationY": -360.0, "rotationZ": 0.0 },
+						"Cube4": { "rotationX": 360.0, "rotationY": 0.0, "rotationZ": 360.0 }
+					}
+				}
+			]
+		}
+	]
+}

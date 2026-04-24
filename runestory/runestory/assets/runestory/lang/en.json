@@ -1,6 +1,110 @@
 {
     "whyamihere": "justtosuffer",
+
+
     "toggle-spell": "(RuneStory) Toggle Spell Select Menu",
     "cast-spell": "(RuneStory) Cast Currently Selected Spell",
-    "makesticks": "Pick Branch"
+    "cast-fail": "You are missing something to cast that...",
+    "cast-fail-toosoon": "You are still tired from the last spell, slow down!",
+    "game:tabname-runestorytab": "RuneStory Items",
+
+
+    "nodsc": "This spell has no lang describing it! Is the Attribute 'langCode' set?",
+
+    "makestick": "Wind Shears",
+    "makestickdsc": "Casts a projectile that turns Leaves into Sticks in a 3x3x3 area where it lands.",
+
+    "healother": "Mend Bolt",
+    "healotherdsc": "Casts a projectile that heals the target, or the nearest to its landing point, 2.5 HP over 5 seconds.",
+
+    "healself": "Mend Self",
+    "healselfdsc": "Heals the caster 2.5HP over 5 seconds.",
+
+    "groupheal": "Mend Group",
+    "grouphealdsc": "Heal yourself, and any nearby players, for 2.5 + 0.5 health per extra target, over 5 seconds.",
+
+    "windstore": "Wind-Store",
+    "windstoredsc": "When activated while sneaking: Mark a location in the world. Otherwise: Send all items in a 2 block radius from landing point to location, or the inventory there, if possible.",
+
+    "ignitespell": "Ignite",
+    "ignitespelldsc": "Casts a projectile that ignites what it hits. Charcoal pits, pitkilns, or unfortunate creatures. Does no direct damage.",
+
+    "fertilizespell": "Restore Nutrients",
+    "fertilizespelldsc": "Tries to give 5% N,K,and P to the farmland you are targeting, or the farmland under the crop you are targeting. Ignores NKP cap.",
+
+    "airbolt": "Air Bolt",
+    "airboltdsc": "A simple Projectile spell. Has a very small AOE if you miss.",
+
+    "airsurge": "Air Surge",
+    "airsurgedsc": "A simple Projectile spell. Has a small AOE if you miss. Moderate damage.",
+
+    "airblast": "Air Blast",
+    "airblastdsc": "A simple Projectile spell. Has a large AOE if you miss. Heavy damage.",
+
+    "firebolt": "Fire Bolt",
+    "fireboltdsc": "A simple Projectile spell. Has a very small AOE if you miss.",
+
+    "firesurge": "Fire Surge",
+    "firesurgedsc": "A simple Projectile spell. Has a small AOE if you miss. Moderate damage.",
+
+    "fireblast": "Fire Blast",
+    "fireblastdsc": "A simple Projectile spell. Has a large AOE if you miss. Heavy damage.",
+
+    "earthbolt": "Earthen Bolt",
+    "earthboltdsc": "A simple Projectile spell. Has a very small AOE if you miss.",
+
+    "earthsurge": "Earthen Surge",
+    "earthsurgedsc": "A simple Projectile spell. Has a small AOE if you miss. Moderate damage.",
+
+    "earthblast": "Earthen Blast",
+    "earthblastdsc": "A simple Projectile spell. Has a large AOE if you miss. Heavy damage.",
+
+    "waterbolt": "Water Bolt",
+    "waterboltdsc": "A simple Projectile spell. Has a very small AOE if you miss.",
+
+    "watersurge": "Water Surge",
+    "watersurgedsc": "A simple Projectile spell. Has a small AOE if you miss. Moderate damage.",
+
+    "waterblast": "Water Blast",
+    "waterblastdsc": "A simple Projectile spell. Has a large AOE if you miss. Heavy damage.",
+
+
+
+    "CommentRunes": "I CBA to add proper handbook integration for recipes, so, if you change the recipes, update the lang, kay? kay.",
+    "item-rune-blank": "Blank Rune",
+    "item-rune-water": "Water Rune",
+    "itemdesc-rune-water": "Made with raw fish, fishbones, or ice in varying amounts.",
+    "item-rune-air": "Air Rune",
+    "itemdesc-rune-air": "Made with any base game flour.",
+    "item-rune-fire": "Fire Rune",
+    "itemdesc-rune-fire": "Made with charcoal or coal. Better burnables craft more runes.",
+    "item-rune-earth": "Earth Rune",
+    "itemdesc-rune-earth": "Made with any stones. Rocks can craft more per item.",
+    "item-rune-soul": "Soul Rune",
+    "itemdesc-rune-soul": "Made with a temporal gear; one makes 16.",
+    "item-rune-self": "Self Rune",
+    "itemdesc-rune-self": "Made with Bones or Bonemeal.",
+    "item-rune-balance": "Balance Rune",
+    "itemdesc-rune-balance": "Made with quartz, with crushed being more efficient.",
+    "item-rune-rust": "Rust Rune",
+    "itemdesc-rune-rust": "Made with Rusty Gears. Makes a few per gear",
+    "item-rune-alpha": "Dim Rune",
+    "itemdesc-rune-alpha": "Made with firewood. Aged is more efficient.",
+    "item-rune-beta": "Bright Rune",
+    "itemdesc-rune-beta": "Made with raw copper nuggets,like malachite.",
+    "item-rune-gamma": "Shining Rune",
+    "itemdesc-rune-gamma": "Made with raw iron nuggets, like magnetite.",
+    "item-rune-delta": "Radiant Rune",
+    "itemdesc-rune-delta": "Doesnt yet exist.",
+    "item-rune-epsilon": "Blinding Rune",
+    "itemdesc-rune-epsilon": "Doesnt yet exist.",
+
+    "item-runebag-primitive": "Crude Rune Pouch",
+    "item-runebag-linen": "Rune Pouch",
+    "item-runebag-leather": "Leather Rune Pouch",
+
+    "block-runealtar": "Rune Altar",
+
+    "hbrunes-title": "<strong>(RuneStory) Runecraft and Spells</strong>",
+    "hbrunes-text": "<strong>Casting And Selecting Spells</strong><br>Casting and selecting spells are done with the keybind. By default, ALT + F will bring up your spell menu, and X will cast the spell, or try to.<br><br><strong>Making Runes:</strong><br> Runes are made by placing blank runes into a Rune Altar, throwing the necissary ingredients nearby, and Sneak + Rclicking with a stick.<br>If you don't have enough blank runes in the altar, the craft will fail.<br><br><strong>Elemental Types:</strong><br>There are four types of elemental spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target, and deal some more damage.<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly heal the caster on hit.<br><strong>Air</strong> spells deal much more knockback."
 }
