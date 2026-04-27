@@ -1,0 +1,59 @@
+[
+    {
+        "ingredientPattern": "H,C",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "game:basket-normal-*"
+            },
+            "H": {
+                "type": "item",
+                "code": "rune-blank"
+            }
+        },
+        "width": 1,
+        "height": 2,
+        "output": {
+            "type": "item",
+            "code": "runebag-primitive"
+        }
+    },
+    {
+        "ingredientPattern": "H,C",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "game:linensack"
+            },
+            "H": {
+                "type": "item",
+                "code": "rune-blank"
+            }
+        },
+        "width": 1,
+        "height": 2,
+        "output": {
+            "type": "item",
+            "code": "runebag-linen"
+        }
+    },
+    {
+        "ingredientPattern": "H,C",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "game:backpack-normal"
+            },
+            "H": {
+                "type": "item",
+                "code": "rune-blank"
+            }
+        },
+        "width": 1,
+        "height": 2,
+        "output": {
+            "type": "item",
+            "code": "runebag-leather"
+        }
+    }
+]

@@ -1,5 +1,17 @@
 [
     {
+        "code": "makefirerune-peat",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:peatbrick": 1
+            },
+            "outputs": {
+                "runestory:rune-fire": 2
+            }
+        }
+    },
+    {
         "code": "makefirerune-char",
         "enabled": true,
         "attributes": {
@@ -7,7 +19,7 @@
                 "game:powder-charcoal": 1
             },
             "outputs": {
-                "runestory:rune-fire": 4
+                "runestory:rune-fire": 8
             }
         }
     },
@@ -19,7 +31,7 @@
                 "game:charcoal": 1
             },
             "outputs": {
-                "runestory:rune-fire": 4
+                "runestory:rune-fire": 8
             }
         }
     },
@@ -31,7 +43,7 @@
                 "game:ore-lignite": 1
             },
             "outputs": {
-                "runestory:rune-fire": 12
+                "runestory:rune-fire": 16
             }
         }
     },
@@ -43,7 +55,7 @@
                 "game:ore-bituminouscoal": 1
             },
             "outputs": {
-                "runestory:rune-fire": 16
+                "runestory:rune-fire": 20
             }
         }
     }

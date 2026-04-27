@@ -21,11 +21,49 @@ namespace runestory
             Vec3i range = new(0, 1, 0);
             Api.World.BlockAccessor.WalkBlocks(new (target.Copy().AsVec3i - range,Pos.Dimension),new (target.Copy().AsVec3i + range, Pos.Dimension), (block,ex,why,zee) =>
             {
-                if(Api.World.BlockAccessor.GetBlockEntity(new(ex,why,zee))is BlockEntityFarmland farm)
+                BlockPos targ = new(ex, why, zee);
+                if (Api.World.BlockAccessor.GetBlockEntity(targ)is BlockEntityFarmland farm)
                 {
-                    farm.ConsumeNutrients(EnumSoilNutrient.N, -5);
-                    farm.ConsumeNutrients(EnumSoilNutrient.K, -5);
-                    farm.ConsumeNutrients(EnumSoilNutrient.P, -5);
+                    switch(Api.World.Rand.Next(0,3))
+                    {
+                        case 0:
+                            {
+                                farm.ConsumeNutrients(EnumSoilNutrient.N, -5);
+                                break;
+                            }
+                        case 1:
+                            {
+                                farm.ConsumeNutrients(EnumSoilNutrient.K, -5);
+                                break;
+                            }
+                        case 2:
+                            {
+                                farm.ConsumeNutrients(EnumSoilNutrient.P, -5);
+                                break;
+                            }
+                    }
+                    
+                }
+                if(Api.World.BlockAccessor.GetBlockEntity(targ) is BlockEntityBerryBushFarmland bush)
+                {
+                    switch (Api.World.Rand.Next(0, 3))
+                    {
+                        case 0:
+                            {
+                                bush.ConsumeNutrients(EnumSoilNutrient.N, -5);
+                                break;
+                            }
+                        case 1:
+                            {
+                                bush.ConsumeNutrients(EnumSoilNutrient.K, -5);
+                                break;
+                            }
+                        case 2:
+                            {
+                                bush.ConsumeNutrients(EnumSoilNutrient.P, -5);
+                                break;
+                            }
+                    }
                 }
             });
             Die();

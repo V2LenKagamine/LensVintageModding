@@ -1,0 +1,100 @@
+[
+    {
+        "code": "papreed",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:papyrusroot": 1
+            },
+            "outputs": {
+                "game:cattailroot": 1
+            }
+        }
+    },
+    {
+        "code": "reedpap",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:cattailroot": 1
+            },
+            "outputs": {
+                "game:papyrusroot": 1
+            }
+        }
+    },
+
+    {
+        "code": "bluered",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:clay-blue": 1
+            },
+            "outputs": {
+                "game:clay-red": 1
+            }
+        }
+    },
+    {
+        "code": "redblue",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:clay-blue": 1
+            },
+            "outputs": {
+                "game:clay-red": 1
+            }
+        }
+    },
+
+    {
+        "code": "agefire",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:firewood": 1
+            },
+            "outputs": {
+                "game:agedfirewood": 1
+            }
+        }
+    },
+    {
+        "code": "deagefire",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:agedfirewood": 1
+            },
+            "outputs": {
+                "game:firewood": 1
+            }
+        }
+    },
+    {
+        "code": "gearup",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:gear-rusty": 8
+            },
+            "outputs": {
+                "game:gear-temporal": 1
+            }
+        }
+    },
+    {
+        "code": "geardown",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:gear-temporal": 1
+            },
+            "outputs": {
+                "game:gear-rusty": 8
+            }
+        }
+    }
+]

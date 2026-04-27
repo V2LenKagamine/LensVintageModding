@@ -1,6 +1,7 @@
 {
     "code": "ebow",
     "class": "EPEElectricBow",
+    "enabled": false,
     "creativeinventory": {
         "general": [ "*" ],
         "items": [ "*" ],

@@ -91,7 +91,7 @@ namespace runestory
 
         bool TryAttackEntity()
         {
-            if (World is IClientWorldAccessor || World.ElapsedMilliseconds <= msLaunch + 250) return false;
+            if (World is IClientWorldAccessor || World.ElapsedMilliseconds <= msLaunch + 100) return false;
 
             Cuboidd projectileBox = SelectionBox.ToDouble().Translate(Pos.X, Pos.Y, Pos.Z);
 
@@ -126,12 +126,10 @@ namespace runestory
                 pos.Pitch = 0;
                 pos.Yaw =
                     GameMath.PI + (float)Math.Atan2(pos.Motion.X / speed, pos.Motion.Z / speed)
-                    + GameMath.Cos((World.ElapsedMilliseconds - msLaunch) / 200f) * 0.03f
-                ;
+                    + GameMath.Cos((World.ElapsedMilliseconds - msLaunch) / 200f) * 0.03f;
                 pos.Roll =
                     -(float)Math.Asin(GameMath.Clamp(-pos.Motion.Y / speed, -1, 1))
-                    + GameMath.Sin((World.ElapsedMilliseconds - msLaunch) / 200f) * 0.03f
-                ;
+                    + GameMath.Sin((World.ElapsedMilliseconds - msLaunch) / 200f) * 0.03f;
             }
         }
         public abstract void OnTouchEntity(Entity entity);
@@ -164,7 +162,7 @@ namespace runestory
             if (canDamage && World.Side == EnumAppSide.Server)
             {
                 float dmg = Damage;
-                if (spawnedBy != null) dmg *= spawnedBy.Stats.GetBlended("rangedWeaponsDamage");
+                if (spawnedBy != null) dmg *= spawnedBy.Stats.GetBlended(runestoryModSystem.RMS_Stat_MagicDamage);
 
                 bool didDamage = false;
 
@@ -184,7 +182,17 @@ namespace runestory
                         CauseEntity = spawnedBy,
                         Type = EnumDamageType.PiercingAttack
                     }, dmg);
-                    if (ignite) { target.Ignite(); }
+                    if (ignite) {
+                        target.ReceiveDamage(new DamageSource()
+                        {
+                            Source = fromPlayer != null ? EnumDamageSource.Player : EnumDamageSource.Entity,
+                            SourceEntity = this,
+                            CauseEntity = spawnedBy,
+                            TicksPerDuration = 20,
+                            Duration = TimeSpan.FromSeconds(10),
+                            Type = EnumDamageType.Fire
+                        }, dmg);
+                    }
                 }
 
 

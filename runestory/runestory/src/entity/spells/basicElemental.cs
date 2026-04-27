@@ -71,13 +71,9 @@ namespace runestory.src.entity.spells
             {
                 case "water":
                     {
-                        spawnedBy.ReceiveDamage(new DamageSource()
-                        {
-                            Source = EnumDamageSource.Player,
-                            SourceEntity = this,
-                            CauseEntity = spawnedBy,
-                            Type = EnumDamageType.Heal
-                        }, 0.1f * tier);
+                        TempBuff tmp = new();
+                        tmp.DoStats(spawnedBy as EntityPlayer, "hungerrate", -0.05f * tier, (30 * 1000) * tier, "waterbuff" ,"waterbuff");
+
                         break;
                     }
                 case "earth":

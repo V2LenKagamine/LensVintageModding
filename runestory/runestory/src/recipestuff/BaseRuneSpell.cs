@@ -33,6 +33,8 @@ namespace runestory
         Dictionary<string, int> BaseRuneI<BaseRuneSpell>.Reagents => Reagents;
         string[] BaseRuneI<BaseRuneSpell>.ReagNames => ReagNames;
         public string langCode { get; set; }
+        public string spellType { get; set; }
+        public int spellTier { get; set; }
         public string imgPath { get; set; }
 
         public BaseRuneI<BaseRuneSpell> Clone() 
@@ -42,12 +44,19 @@ namespace runestory
 
             for (int i = 0; i < Reagents.Count; i++) { reagClone.Add(Reagents.ElementAt(i).Key, Reagents.ElementAt(i).Value); }
             for (int i = 0; i < ReagNames.Length; i++) { namesclone[i] = ReagNames[i]; }
-            return new BaseRuneSpell { Code = this.Code, Attributes = this.Attributes, Reagents = reagClone ,ReagNames = namesclone,langCode= langCode,ElementalType = ElementalType ?? "none"};
+            return new BaseRuneSpell { Code = this.Code, Attributes = this.Attributes, Reagents = reagClone ,ReagNames = namesclone,langCode= langCode,ElementalType = ElementalType ?? "none",spellType = spellType ?? "util",spellTier = spellTier};
         }
 
         public bool SatisfiesAsIngredient(int index, ItemStack inputStack)
         {
-            return WildcardUtil.Match(new AssetLocation(Reagents.ElementAt(index).Key),inputStack.Collectible.Code);
+            if (inputStack.Collectible.Code.ToString().Contains('*'))
+            {
+                return WildcardUtil.Match(new AssetLocation(Reagents.ElementAt(index).Key), inputStack.Collectible.Code);
+            }
+            else
+            {
+                return Reagents.ElementAt(index).Key == inputStack.Collectible.Code.ToString();
+            }
         }
 
         public bool Resolve(IWorldAccessor world,string errSrc)
@@ -62,7 +71,15 @@ namespace runestory
                 {
                     ReagNames = Attributes["reagentnames"].AsObject<string[]>();
                 }
-                if(Attributes["elementType"].Exists){
+                if (Attributes["spelltier"].Exists)
+                {
+                    spellTier = Attributes["spelltier"].AsObject<int>();
+                }
+                else
+                {
+                    ElementalType = "none";
+                }
+                if (Attributes["elementType"].Exists){
                     ElementalType = Attributes["elementType"].AsObject<string>();
                 }
                 else
@@ -76,6 +93,14 @@ namespace runestory
                 else
                 {
                     langCode = "nodsc";
+                }
+                if (Attributes["spelltype"].Exists)
+                {
+                    spellType = Attributes["spelltype"].AsObject<string>();
+                }
+                else
+                {
+                    spellType = "util";
                 }
             }
             return true;
@@ -104,6 +129,8 @@ namespace runestory
             }
             writer.Write(langCode ?? "nodsc");
             writer.Write(ElementalType ?? "none");
+            writer.Write(spellType ?? "util");
+            writer.Write(spellTier);
         }
         public void FromBytes(BinaryReader reader, IWorldAccessor resolver)
         {
@@ -124,6 +151,8 @@ namespace runestory
             }
             langCode = reader.ReadString();
             ElementalType = reader.ReadString();
+            spellType = reader.ReadString();
+            spellTier = reader.ReadInt32();
         }
     }
 }

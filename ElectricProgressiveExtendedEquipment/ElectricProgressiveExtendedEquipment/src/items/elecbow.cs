@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CombatOverhaul.Implementations;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Common;
 using Vintagestory.GameContent;
 
 namespace ElectricProgressiveExtendedEquipment.src.items
 {
+    /*
     public class ElecBow : BowItem
     {
         int consperaction;
@@ -27,7 +27,7 @@ namespace ElectricProgressiveExtendedEquipment.src.items
             base.OnHeldAttackStart(slot, byEntity, blockSel, entitySel, ref handling);
         }
 
-        public override void DamageItem(IWorldAccessor world, Entity byEntity, ItemSlot itemslot, int amount = 1)
+        public override void DamageItem(IWorldAccessor world, Entity byEntity, ItemSlot itemslot, int amount = 1, bool destroyOnZeroDurability = false)
         {
             int dura = itemslot.Itemstack.Attributes.GetInt("durability");
             if (dura > amount)
@@ -49,4 +49,5 @@ namespace ElectricProgressiveExtendedEquipment.src.items
             dsc.AppendLine(inSlot.Itemstack.Attributes.GetInt("durability") * consperaction + "/" + inSlot.Itemstack.Collectible.GetMaxDurability(inSlot.Itemstack) * consperaction + " Power");
         }
     }
+    */
 }

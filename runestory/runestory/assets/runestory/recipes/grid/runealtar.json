@@ -1,0 +1,27 @@
+[
+    {
+        "ingredientPattern": "H,C,S",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:hammer-*",
+                "isTool": true,
+                "toolDurabilityCost": 5
+            },
+            "C": {
+                "type": "item",
+                "code": "rune-blank"
+            },
+            "S": {
+                "type": "block",
+                "code": "game:rock-*"
+            }
+        },
+        "width": 1,
+        "height": 3,
+        "output": {
+            "type": "block",
+            "code": "runealtar"
+        }
+    }
+]

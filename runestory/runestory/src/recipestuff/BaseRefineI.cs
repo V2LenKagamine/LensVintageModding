@@ -9,22 +9,17 @@ using Vintagestory.API.Datastructures;
 
 namespace runestory
 {
-    public interface BaseRuneI<T>
+    public interface BaseRefineRecipeI<T>
     {
         public string Code { get; set; }
-
-        public string imgPath { get; set; }
         public bool Enabled { get; set; }
         public JsonObject Attributes { get; set; }
         Dictionary<string, int> Reagents { get; }
-        string[] ReagNames { get; }
+        Dictionary<string, int> Outputs { get; }
 
-        public string langCode { get; set; }
-
-        public string ElementalType { get; set; }
         public bool Resolve(IWorldAccessor world, string errsrc);
 
-        public BaseRuneI<T> Clone();
+        public BaseRefineRecipeI<T> Clone();
 
 
     }

@@ -7,19 +7,19 @@
                 "game:bone": 1
             },
             "outputs": {
-                "runestory:rune-body": 2
+                "runestory:rune-self": 4
             }
         }
     },
     {
-        "code": "makebodyrune-bone",
+        "code": "makebodyrune-bonemeal",
         "enabled": true,
         "attributes": {
             "reagents": {
                 "game:bonemeal": 1
             },
             "outputs": {
-                "runestory:rune-body": 2
+                "runestory:rune-self": 4
             }
         }
     }

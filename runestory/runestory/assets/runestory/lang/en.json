@@ -1,12 +1,28 @@
 {
     "whyamihere": "justtosuffer",
+    "createdbyrunealtar": "Runecrafted from",
+    "runecraftsinto": "Runecrafts into",
+    "atrunealtar": "Rune Altar With Blank Runes",
 
+    "createdbyrefine": "Refined from",
+    "refinesinto": "Refines into",
+    "atrefine": "Refine Spell",
 
     "toggle-spell": "(RuneStory) Toggle Spell Select Menu",
     "cast-spell": "(RuneStory) Cast Currently Selected Spell",
     "cast-fail": "You are missing something to cast that...",
     "cast-fail-toosoon": "You are still tired from the last spell, slow down!",
+    "runedissipatebuff": "You feel a subtle change as a temporary effect dissipates.",
+    "windbuffon": "You feel lighter on your feet.",
+    "mendingmist": "You feel a soft cloak of water surround you.",
+    "dwarfbuffon": "You feel in tune with the soil and stone.",
+    "mindexpand": "You feel your mind expand to the spell: ",
+    "knownspell": "You already know this spell.",
+    "allknown": "You already know all you can learn from these.",
+    "crumbletodust": "Its knowledge absorbed, the item crumbles to dust!",
     "game:tabname-runestorytab": "RuneStory Items",
+    "magicdamagestat": "Magic Damage: ",
+    "runeconsumechance": "Free Cast Chance: ",
 
 
     "nodsc": "This spell has no lang describing it! Is the Attribute 'langCode' set?",
@@ -29,8 +45,32 @@
     "ignitespell": "Ignite",
     "ignitespelldsc": "Casts a projectile that ignites what it hits. Charcoal pits, pitkilns, or unfortunate creatures. Does no direct damage.",
 
+    "superheat": "Superheat",
+    "superheatdsc": "Sets the temperature of your mainhand item to 1100C. Hope you're holding tongs.",
+
+    "foragespell": "Summon Forage",
+    "foragespelldsc": "Summons a random seed, and if you're lucky, a random fruit.",
+
+    "magelight": "Rune of Light",
+    "magelightdsc": "Summons a rune that provides a temporary light source before decaying back into a Blank Rune",
+
     "fertilizespell": "Restore Nutrients",
-    "fertilizespelldsc": "Tries to give 5% N,K,and P to the farmland you are targeting, or the farmland under the crop you are targeting. Ignores NKP cap.",
+    "fertilizespelldsc": "Tries to give 5 percent N,K,or P to the farmland you are targeting, or the farmland under the crop you are targeting. Ignores NKP cap.",
+
+    "rockblast": "Boulder-Bust Blast",
+    "rockblastdsc": "Causes a rock-destroying explosion of radius 5. Bakoom!",
+
+    "dwarfbless": "Dwarven Blessing",
+    "dwarfblessdsc": "Grants you and any nearby players 10 percent mining speed and ore drop rate for 2 minutes, 30 seconds.",
+
+    "windfeet": "Wind Feet",
+    "windfeetdsc": "Gives you and any nearby players 25 percent walkspeed for 5 minutes.",
+
+    "watercloak": "Mending Mist Cloak",
+    "watercloakdsc": "Gives you and any nearby players 25 health over 5 minutes",
+
+    "refinespell": "Refine",
+    "refinespelldsc": "Refines, or exchanges, many items into many other items.",
 
     "airbolt": "Air Bolt",
     "airboltdsc": "A simple Projectile spell. Has a very small AOE if you miss.",
@@ -70,41 +110,46 @@
 
 
 
-    "CommentRunes": "I CBA to add proper handbook integration for recipes, so, if you change the recipes, update the lang, kay? kay.",
     "item-rune-blank": "Blank Rune",
+    "itemdesc-rune-blank": "Can be used to make other runes when in a Rune Altar. Search 'Rune' in the handbook!",
     "item-rune-water": "Water Rune",
-    "itemdesc-rune-water": "Made with raw fish, fishbones, or ice in varying amounts.",
+    "itemdesc-rune-water": "Smooth to the touch.",
     "item-rune-air": "Air Rune",
-    "itemdesc-rune-air": "Made with any base game flour.",
+    "itemdesc-rune-air": "Light as a feather.",
     "item-rune-fire": "Fire Rune",
-    "itemdesc-rune-fire": "Made with charcoal or coal. Better burnables craft more runes.",
+    "itemdesc-rune-fire": "Feels warm.",
     "item-rune-earth": "Earth Rune",
-    "itemdesc-rune-earth": "Made with any stones. Rocks can craft more per item.",
+    "itemdesc-rune-earth": "Heavier than it looks...",
     "item-rune-soul": "Soul Rune",
-    "itemdesc-rune-soul": "Made with a temporal gear; one makes 16.",
+    "itemdesc-rune-soul": "You feel a distant connection to something...",
     "item-rune-self": "Self Rune",
-    "itemdesc-rune-self": "Made with Bones or Bonemeal.",
+    "itemdesc-rune-self": "Mirror Like reflection.",
     "item-rune-balance": "Balance Rune",
-    "itemdesc-rune-balance": "Made with quartz, with crushed being more efficient.",
+    "itemdesc-rune-balance": "As all things should be.",
     "item-rune-rust": "Rust Rune",
-    "itemdesc-rune-rust": "Made with Rusty Gears. Makes a few per gear",
+    "itemdesc-rune-rust": "Smells of blood.",
     "item-rune-alpha": "Dim Rune",
-    "itemdesc-rune-alpha": "Made with firewood. Aged is more efficient.",
+    "itemdesc-rune-alpha": "Contains faint magical energies.",
     "item-rune-beta": "Bright Rune",
-    "itemdesc-rune-beta": "Made with raw copper nuggets,like malachite.",
+    "itemdesc-rune-beta": "Contains a small amount of magic.",
     "item-rune-gamma": "Shining Rune",
-    "itemdesc-rune-gamma": "Made with raw iron nuggets, like magnetite.",
+    "itemdesc-rune-gamma": "You can feel the magic, its faint, but there.",
     "item-rune-delta": "Radiant Rune",
-    "itemdesc-rune-delta": "Doesnt yet exist.",
+    "itemdesc-rune-delta": "The aura radiating from this rune is palpible",
     "item-rune-epsilon": "Blinding Rune",
-    "itemdesc-rune-epsilon": "Doesnt yet exist.",
+    "itemdesc-rune-epsilon": "The rune pulses in tune to your thoughts.",
+    "item-runelamp": "Rune of Light",
 
     "item-runebag-primitive": "Crude Rune Pouch",
     "item-runebag-linen": "Rune Pouch",
     "item-runebag-leather": "Leather Rune Pouch",
+    "item-runicpickaxe": "Rune Infused Pickaxe",
+    "itemdesc-runicpickaxe": "Can only break rock, but may drop a random rune while doing so.",
+    "item-runemagicresearch-*": "Runic Research Notes",
+    "runicresearch": "A scroll containing the recipe and instructions for a Runic Spell. Can be used to gain knowledge of {0} spell for tier {1}.",
 
     "block-runealtar": "Rune Altar",
 
-    "hbrunes-title": "<strong>(RuneStory) Runecraft and Spells</strong>",
-    "hbrunes-text": "<strong>Casting And Selecting Spells</strong><br>Casting and selecting spells are done with the keybind. By default, ALT + F will bring up your spell menu, and X will cast the spell, or try to.<br><br><strong>Making Runes:</strong><br> Runes are made by placing blank runes into a Rune Altar, throwing the necissary ingredients nearby, and Sneak + Rclicking with a stick.<br>If you don't have enough blank runes in the altar, the craft will fail.<br><br><strong>Elemental Types:</strong><br>There are four types of elemental spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target, and deal some more damage.<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly heal the caster on hit.<br><strong>Air</strong> spells deal much more knockback."
+    "hbrunes-title": "(RuneStory) Runecraft and Spells",
+    "hbrunes-text": "<strong>Casting And Selecting Spells</strong><br>Casting and selecting spells are done with the keybind. By default, ALT + F will bring up your spell menu, and X will cast the spell, or try to.<br><br><strong>Making Runes:</strong><br>Runes are made by placing blank runes into a Rune Altar, throwing the necissary ingredients nearby, and Sneak + Rclicking with a stick.<br>If you don't have enough blank runes in the altar, the craft will fail. You may need multiple items per rune.<br><br><strong>Elemental Types:</strong><br>There are four types of elemental spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target, and deal some more damage.<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly heal the caster on hit.<br><strong>Air</strong> spells deal much more knockback."
 }

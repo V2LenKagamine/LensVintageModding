@@ -1,0 +1,16 @@
+{
+    "code": "superheat",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-fire": 2
+        },
+        "reagentnames": [
+            "runestory:item-rune-fire"
+        ],
+        "langCode": "superheatdsc",
+        "spelltype": "util",
+        "spelltier": 1
+    },
+    "imgpath": "superheat"
+}

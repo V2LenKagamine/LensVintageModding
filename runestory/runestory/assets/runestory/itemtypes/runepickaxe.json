@@ -1,0 +1,129 @@
+{
+    "code": "runicpickaxe",
+    "class": "runicpickaxeitem",
+    "tags": [ "tool", "tool-pickaxe" ],
+    "storageFlags": 5,
+    "shape": { "base": "game:item/tool/pickaxe" },
+    "textures": {
+        "metal": { "base": "game:block/stone/rock/basalt1" }
+    },
+    "attributes": {
+        "heldItemPitchFollow": 0.9,
+        "attachableToEntity": { "categoryCode": "toolholding" },
+        "toolrackTransform": {
+            "rotation": {
+                "y": 2.5,
+                "z": -1
+            },
+            "translation": {
+                "x": -0.1,
+                "y": 0.59
+            },
+            "scale": 1.25
+        },
+        "groundStorageTransform": {
+            "translation": {
+                "x": 0,
+                "y": 0.1,
+                "z": -0.105
+            },
+            "rotation": {
+                "x": 20,
+                "y": 88,
+                "z": -87
+            },
+            "scale": 0.88
+        },
+        "slotRefillIdentifier": "pickaxe"
+    },
+    "behaviors": [
+        {
+            "name": "GroundStorable",
+            "properties": {
+                "layout": "WallHalves",
+                "wallOffY": 1,
+                "ctrlKey": true,
+                "selectionBox": {
+                    "x1": 0,
+                    "y1": 0,
+                    "z1": 0,
+                    "x2": 1,
+                    "y2": 0.1,
+                    "z2": 1
+                },
+                "collisionBox": {
+                    "x1": 0,
+                    "y1": 0,
+                    "z1": 0,
+                    "x2": 0,
+                    "y2": 0,
+                    "z2": 0
+                }
+            }
+        }
+    ],
+    "tool": "pickaxe",
+    "damagedby": [ "blockbreaking"],
+    "heldTpHitAnimation": "pickaxe",
+    "tooltier":3,
+    "miningspeed": {
+            "stone": 10
+    },
+    "attackpower": 1.5,
+    "durability": 300,
+    "creativeinventory": {
+        "general": [ "*" ],
+        "items": [ "*" ],
+        "tools": [ "*" ],
+        "runestorytab" :  ["*"]
+    },
+    "guiTransform": {
+        "rotation": {
+            "x": -89,
+            "y": 47,
+            "z": 33
+        },
+        "origin": {
+            "x": 0.65,
+            "y": 0,
+            "z": 0.47
+        },
+        "scale": 1.49
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0.5
+        },
+        "scale": 3.4
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -0.87,
+            "y": -0.01,
+            "z": -0.56
+        },
+        "rotation": {
+            "x": -90,
+            "y": 0,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0.5
+        },
+        "scale": 0.8
+    }
+}

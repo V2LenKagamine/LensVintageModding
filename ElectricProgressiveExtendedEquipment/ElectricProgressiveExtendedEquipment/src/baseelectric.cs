@@ -20,7 +20,7 @@ namespace ElectricProgressiveExtendedEquipment.src
             consperaction = Attributes["perDurabilityDrain"] != null ? Attributes["perDurabilityDrain"].AsInt() : 20;
         }
 
-        public override void DamageItem(IWorldAccessor world, Entity byEntity, ItemSlot itemslot, int amount = 1)
+        public override void DamageItem(IWorldAccessor world, Entity byEntity, ItemSlot itemslot, int amount = 1, bool destroyOnZeroDurability = false)
         {
             int dura = itemslot.Itemstack.Attributes.GetInt("durability");
             if (dura > amount)

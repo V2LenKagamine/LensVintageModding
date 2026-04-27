@@ -1,12 +1,26 @@
-{
-    "code": "makeairrune-flour",
-    "enabled": true,
-    "attributes": {
-        "reagents": {
-            "game:flour-*": 1
-        },
-        "outputs": {
-            "runestory:rune-air": 2
+[
+    {
+        "code": "makeairrune-flour",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:flour-*": 1
+            },
+            "outputs": {
+                "runestory:rune-air": 4
+            }
+        }
+    },
+    {
+        "code": "makeairrune-pap",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:papyrustops": 1
+            },
+            "outputs": {
+                "runestory:rune-air": 1
+            }
         }
     }
-}
+]

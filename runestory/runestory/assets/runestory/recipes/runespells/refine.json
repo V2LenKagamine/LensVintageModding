@@ -1,0 +1,18 @@
+{
+    "code": "refinespell",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-balance": 1,
+            "runestory:rune-alpha": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-balance",
+            "runestory:item-rune-alpha"
+        ],
+        "langCode": "refinespelldsc",
+        "spelltype": "util",
+        "spelltier": 1
+    },
+    "imgpath": "refinespell"
+}

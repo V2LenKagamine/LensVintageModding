@@ -16,7 +16,6 @@ namespace runestory.src.entity.spells
             Die();
         }
 
-
         public void Heal(Entity entity)
         {
             if (Api.Side == EnumAppSide.Client) { return; }

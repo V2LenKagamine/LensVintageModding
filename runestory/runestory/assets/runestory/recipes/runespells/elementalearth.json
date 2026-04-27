@@ -4,24 +4,24 @@
         "enabled": true,
         "attributes": {
             "reagents": {
-                "runestory:rune-earth": 2,
-                "runestory:rune-alpha": 1
+                "runestory:rune-earth": 1
             },
             "reagentnames": [
-                "runestory:item-rune-earth",
-                "runestory:item-rune-alpha"
+                "runestory:item-rune-earth"
             ],
             "langCode": "earthboltdsc",
-            "elementType": "earth"
+            "elementType": "earth",
+            "spelltype": "dmg",
+            "spelltier": 1
         },
-        "imgpath": "genericearth"
+        "imgpath": "eartht1"
     },
     {
         "code": "earthsurge",
         "enabled": true,
         "attributes": {
             "reagents": {
-                "runestory:rune-earth": 4,
+                "runestory:rune-earth": 2,
                 "runestory:rune-beta": 1
             },
             "reagentnames": [
@@ -29,16 +29,18 @@
                 "runestory:item-rune-beta"
             ],
             "langCode": "earthsurgedsc",
-            "elementType": "earth"
+            "elementType": "earth",
+            "spelltype": "dmg",
+            "spelltier": 2
         },
-        "imgpath": "genericearth"
+        "imgpath": "eartht2"
     },
     {
         "code": "earthblast",
         "enabled": true,
         "attributes": {
             "reagents": {
-                "runestory:rune-earth": 6,
+                "runestory:rune-earth": 3,
                 "runestory:rune-gamma": 1
             },
             "reagentnames": [
@@ -46,8 +48,10 @@
                 "runestory:item-rune-gamma"
             ],
             "langCode": "earthblastdsc",
-            "elementType": "earth"
+            "elementType": "earth",
+            "spelltype": "dmg",
+            "spelltier": 3
         },
-        "imgpath": "genericearth"
+        "imgpath": "eartht3"
     }
 ]

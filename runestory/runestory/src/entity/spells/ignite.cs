@@ -4,6 +4,7 @@ using System.Text;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
 namespace runestory.src.entity.spells
@@ -19,25 +20,63 @@ namespace runestory.src.entity.spells
         public override void OnCollided()
         {
             if ((spawnedBy as EntityPlayer)?.BlockSelection?.HitPosition is null) { return; }
-            FireB((spawnedBy as EntityPlayer).BlockSelection.Position);
+            FireB();
             Die();
         }
 
         public void Fire(Entity entity)
         {
+            if (Api.Side == EnumAppSide.Client) { return; }
             entity.Ignite();
         }
-        public void FireB(BlockPos bloc)
+        public void FireB()
         {
-
-            if(Api.World.BlockAccessor.GetBlockEntity(bloc) is BlockEntityPitKiln pit) 
+            if (Api.Side == EnumAppSide.Client) { return; }
+            World.BlockAccessor.WalkBlocks(Pos.XYZ.AddCopy(1, 1, 1).AsBlockPos, Pos.XYZ.AddCopy(-1, -1, -1).AsBlockPos, (blocc, ex, why, zee) =>
             {
-                pit.TryIgnite(spawnedBy as IPlayer);
-            }
-            else if(Api.World.BlockAccessor.GetBlockEntity(bloc) is BlockEntityCharcoalPit cha)
-            {
-                cha.IgniteNow();
-            }
+                BlockPos bloc = new(ex, why, zee);
+                if (Api.World.BlockAccessor.GetBlockEntity(bloc) is BlockEntityPitKiln pit)
+                {
+                    pit.TryIgnite(spawnedBy as IPlayer);
+                    pit.MarkDirty();
+                    return;
+                }
+                if (Api.World.BlockAccessor.GetBlockEntity(bloc) is BlockEntityCharcoalPit cha)
+                {
+                    cha.IgniteNow();
+                    cha.MarkDirty();
+                    return;
+                }
+                if (Api.World.BlockAccessor.GetBlockEntity(bloc) is BlockEntityFirepit firep)
+                {
+                    if (!firep.IsBurning)
+                    {
+                        firep.igniteFuel();
+                        firep.setBlockState("lit");
+                        firep.MarkDirty();
+                    }
+                    return;
+                }
+                if (Api.World.BlockAccessor.GetBlock(bloc) is BlockTorch torch)
+                {
+                    if (torch.Variant.ContainsKey("state"))
+                    {
+                        AssetLocation blockCode = torch.CodeWithVariant("state", "lit");
+                        World.BlockAccessor.SetBlock(World.GetBlock(blockCode).Id, bloc);
+                    }
+                    return;
+                }
+                if (Api.World.BlockAccessor.GetBlockEntity(bloc) is BlockEntityBomb bomb)
+                {
+                    bomb.Combust(4f);
+                    return;
+                }
+                if (World.BlockAccessor.GetBlockEntity(bloc) is BlockEntityForge forg)
+                {
+                    forg.TryIgnite();
+                    return;
+                }
+            });
         }
     }
 }

@@ -15,7 +15,7 @@ using JsonObject = Vintagestory.API.Datastructures.JsonObject;
 
 namespace runestory
 {
-    public class BaseRuneAltar : IByteSerializable, BaseRuneAltarI<BaseRuneAltar>
+    public class BaseRefineRecipe : IByteSerializable, BaseRefineRecipeI<BaseRefineRecipe>
     {
         public string Code { get; set; }
 
@@ -25,25 +25,34 @@ namespace runestory
         [JsonConverter(typeof(JsonAttributesConverter))]
         public JsonObject Attributes { get; set; }
 
+        Dictionary<string, int> BaseRefineRecipeI<BaseRefineRecipe>.Reagents => Reagents;
+        Dictionary<string, int> BaseRefineRecipeI<BaseRefineRecipe>.Outputs => Outputs;
+
         public Dictionary<string, int> Reagents;
+        public Dictionary<string, int> Outputs;
 
-        public Dictionary<string, int> OutputItems;
-        Dictionary<string, int> BaseRuneAltarI<BaseRuneAltar>.Reagents => Reagents;
-        Dictionary<string, int> BaseRuneAltarI<BaseRuneAltar>.OutputItems => OutputItems;
 
-        public BaseRuneAltarI<BaseRuneAltar> Clone() 
+
+        public BaseRefineRecipeI<BaseRefineRecipe> Clone() 
         {
             Dictionary<string, int> reagClone = new(Reagents.Count);
-            Dictionary<string, int> outclone = new(OutputItems.Count);
+            Dictionary<string, int> outClone = new(Outputs.Count);
 
             for (int i = 0; i < Reagents.Count; i++) { reagClone.Add(Reagents.ElementAt(i).Key, Reagents.ElementAt(i).Value); }
-            for (int i = 0; i < OutputItems.Count; i++) { outclone.Add(OutputItems.ElementAt(i).Key, OutputItems.ElementAt(i).Value); }
-            return new BaseRuneAltar { Code = this.Code, Attributes = this.Attributes, Reagents = reagClone ,OutputItems = outclone};
+            for (int i = 0; i < Outputs.Count; i++) { outClone.Add(Outputs.ElementAt(i).Key, Outputs.ElementAt(i).Value); }
+            return new BaseRefineRecipe { Code = this.Code, Attributes = this.Attributes, Reagents = reagClone,Outputs = outClone};
         }
 
         public bool SatisfiesAsIngredient(int index, ItemStack inputStack)
         {
-            return WildcardUtil.Match(new AssetLocation(Reagents.ElementAt(index).Key),inputStack.Collectible.Code);
+            if( inputStack.Collectible.Code.ToString().Contains('*'))
+            {
+                return WildcardUtil.Match(new AssetLocation(Reagents.ElementAt(index).Key), inputStack.Collectible.Code);
+            }
+            else
+            { 
+                return Reagents.ElementAt(index).Key == inputStack.Collectible.Code.ToString();
+            }
         }
 
         public bool Resolve(IWorldAccessor world,string errSrc)
@@ -56,7 +65,7 @@ namespace runestory
                 }
                 if (Attributes["outputs"].Exists)
                 {
-                    OutputItems = Attributes["outputs"].AsObject<Dictionary<string, int>>();
+                    Outputs = Attributes["outputs"].AsObject<Dictionary<string, int>>();
                 }
             }
             return true;
@@ -77,11 +86,11 @@ namespace runestory
                 writer.Write(Reagents.ElementAt(i).Key);
                 writer.Write(Reagents.ElementAt(i).Value);
             }
-            writer.Write(OutputItems.Count);
-            for (int i = 0; i < OutputItems.Count; i++)
+            writer.Write(Outputs.Count);
+            for (int i = 0; i < Outputs.Count; i++)
             {
-                writer.Write(OutputItems.ElementAt(i).Key);
-                writer.Write(OutputItems.ElementAt(i).Value);
+                writer.Write(Outputs.ElementAt(i).Key);
+                writer.Write(Outputs.ElementAt(i).Value);
             }
         }
         public void FromBytes(BinaryReader reader, IWorldAccessor resolver)
@@ -94,11 +103,11 @@ namespace runestory
             {
                 Reagents.Add(reader.ReadString(),reader.ReadInt32());
             }
-            int namesize = reader.ReadInt32();
-            OutputItems = new Dictionary<string, int>(namesize);
-            for (int i = 0; i < namesize; i++)
+            int outsize = reader.ReadInt32();
+            Outputs = new Dictionary<string, int>(outsize);
+            for (int i = 0; i < outsize; i++)
             {
-                OutputItems.Add(reader.ReadString(), reader.ReadInt32());
+                Outputs.Add(reader.ReadString(), reader.ReadInt32());
             }
         }
     }

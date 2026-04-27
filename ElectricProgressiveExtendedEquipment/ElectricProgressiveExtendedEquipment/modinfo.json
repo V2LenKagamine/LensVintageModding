@@ -6,11 +6,10 @@
         "LenKagamine"
     ],
     "description": "An extension of electric tools to be used with Electric Progressive.",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "dependencies": {
-        "game": "",
+        "game": "1.22.0",
         "electricalprogressivebasics": "",
-        "overhaullib": "",
         "chiseltools": ""
     }
 }

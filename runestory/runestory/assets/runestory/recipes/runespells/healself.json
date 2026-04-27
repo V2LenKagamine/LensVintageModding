@@ -4,17 +4,15 @@
     "attributes": {
         "reagents": {
             "runestory:rune-self": 1,
-            "runestory:rune-water": 1,
-            "runestory:rune-earth": 1,
-            "runestory:rune-alpha": 1
+            "runestory:rune-water": 2
         },
         "reagentnames": [
             "runestory:item-rune-self",
-            "runestory:item-rune-water",
-            "runestory:item-rune-earth",
-            "runestory:item-rune-alpha"
+            "runestory:item-rune-water"
         ],
-        "langCode": "healselfdsc"
+        "langCode": "healselfdsc",
+        "spelltype": "supp",
+        "spelltier": 1
     },
     "imgpath": "selfheal"
 }

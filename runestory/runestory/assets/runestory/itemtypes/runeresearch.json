@@ -1,0 +1,95 @@
+{
+    "code": "runemagicresearch",
+    "class": "runemagicresearchclass",
+    "variantgroups": [
+        {
+            "code": "level",
+            "states": [ "tier1", "tier2", "tier3", "tier4", "tier5" ]
+        },
+        {
+            "code": "amount",
+            "states": [ "single", "all" ]
+        }
+    ],
+    "attributesByType": {
+        "*-tier1-all": {
+            "spellTierUnlocked": 1,
+            "onlyOneSpell": false
+        },
+        "*-tier2-all": {
+            "spellTierUnlocked": 2,
+            "onlyOneSpell": false
+        },
+        "*-tier3-all": {
+            "spellTierUnlocked": 3,
+            "onlyOneSpell": false
+        },
+        "*-tier4-all": {
+            "spellTierUnlocked": 4,
+            "onlyOneSpell": false
+        },
+        "*-tier5-all": {
+            "spellTierUnlocked": 5,
+            "onlyOneSpell": false
+        },
+        "*-tier1-*": {
+            "spellTierUnlocked": 1
+        },
+        "*-tier2-*": {
+            "spellTierUnlocked": 2
+        },
+        "*-tier3-*": {
+            "spellTierUnlocked": 3
+        },
+        "*-tier4-*": {
+            "spellTierUnlocked": 4
+        },
+        "*-tier5-*": {
+            "spellTierUnlocked": 5
+        }
+    },
+    "creativeinventory": {
+        "general": [ "*" ],
+        "items": [ "*" ],
+        "runestorytab": [ "*" ]
+    },
+    "maxstacksize": 16,
+    "shape": { "base": "game:item/lore/scroll-plain" },
+    "guiTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": -19,
+            "y": -59,
+            "z": 20
+        },
+        "origin": {
+            "x": 0.48,
+            "y": 0.05,
+            "z": 0.52
+        },
+        "scale": 2.4
+    },
+    "tpHandTransform": {
+
+        "translation": {
+            "x": -0.75,
+            "y": -0.08,
+            "z": -0.63
+        },
+        "rotation": {
+            "x": -56,
+            "y": -8,
+            "z": -8
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.1,
+            "z": 0.5
+        },
+        "scale": 0.8
+    }
+}

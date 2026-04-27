@@ -15,15 +15,16 @@
                 "toolDurabilityCost": 1
             },
             "S": {
-                "type": "item",
-                "code": "game:bone"
+                "type": "block",
+                "code": "game:polishedrockslab-*"
             }
         },
-        "width": 1,
-        "height": 3,
+        "width": 3,
+        "height": 1,
         "output": {
             "type": "item",
-            "code": "rune-blank"
+            "code": "rune-blank",
+            "quantity": 4
         }
     }
 ]

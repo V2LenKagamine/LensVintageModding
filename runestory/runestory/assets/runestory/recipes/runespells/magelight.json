@@ -1,0 +1,18 @@
+{
+    "code": "magelight",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-fire": 1,
+            "runestory:rune-air": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-fire",
+            "runestory:item-rune-air"
+        ],
+        "langCode": "magelightdsc",
+        "spelltype": "util",
+        "spelltier": 1
+    },
+    "imgpath": "magelight"
+}

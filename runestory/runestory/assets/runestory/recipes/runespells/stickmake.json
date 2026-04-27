@@ -3,14 +3,14 @@
     "enabled": true,
     "attributes": {
         "reagents": {
-            "runestory:rune-air": 1,
-            "runestory:rune-alpha": 1
+            "runestory:rune-air": 1
         },
         "reagentnames": [
-            "runestory:item-rune-air",
-            "runestory:item-rune-alpha"
+            "runestory:item-rune-air"
         ],
-        "langCode": "makestickdsc"
+        "langCode": "makestickdsc",
+        "spelltype": "util",
+        "spelltier": 1
     },
     "imgpath": "genericair"
 }

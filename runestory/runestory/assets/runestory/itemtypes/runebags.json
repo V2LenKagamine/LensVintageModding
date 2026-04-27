@@ -13,12 +13,12 @@
     ],
     "texturesByType": {
         "*-primitive": {
-            "linen": { "base": "items/runebag/linen" },
-            "top": { "base": "items/runebag/top-linen" }
-        },
-        "*-linen": {
             "linen": { "base": "items/runebag/reed" },
             "top": { "base": "items/runebag/top-reed" }
+        },
+        "*-linen": {
+            "linen": { "base": "items/runebag/linen" },
+            "top": { "base": "items/runebag/top-linen" }
         },
         "*-leather": {
             "linen": { "base": "items/runebag/leather" },

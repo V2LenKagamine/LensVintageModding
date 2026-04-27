@@ -4,24 +4,24 @@
         "enabled": true,
         "attributes": {
             "reagents": {
-                "runestory:rune-water": 2,
-                "runestory:rune-alpha": 1
+                "runestory:rune-water": 1
             },
             "reagentnames": [
-                "runestory:item-rune-water",
-                "runestory:item-rune-alpha"
+                "runestory:item-rune-water"
             ],
             "langCode": "waterboltdsc",
-            "elementType": "water"
+            "elementType": "water",
+            "spelltype": "dmg",
+            "spelltier": 1
         },
-        "imgpath": "genericwater"
+        "imgpath": "watert1"
     },
     {
         "code": "watersurge",
         "enabled": true,
         "attributes": {
             "reagents": {
-                "runestory:rune-water": 4,
+                "runestory:rune-water": 2,
                 "runestory:rune-beta": 1
             },
             "reagentnames": [
@@ -29,16 +29,18 @@
                 "runestory:item-rune-beta"
             ],
             "langCode": "watersurgedsc",
-            "elementType": "water"
+            "elementType": "water",
+            "spelltype": "dmg",
+            "spelltier": 2
         },
-        "imgpath": "genericwater"
+        "imgpath": "watert2"
     },
     {
         "code": "waterblast",
         "enabled": true,
         "attributes": {
             "reagents": {
-                "runestory:rune-water": 6,
+                "runestory:rune-water": 3,
                 "runestory:rune-gamma": 1
             },
             "reagentnames": [
@@ -46,8 +48,10 @@
                 "runestory:item-rune-gamma"
             ],
             "langCode": "waterblastdsc",
-            "elementType": "water"
+            "elementType": "water",
+            "spelltype": "dmg",
+            "spelltier": 3
         },
-        "imgpath": "genericwater"
+        "imgpath": "watert3"
     }
 ]

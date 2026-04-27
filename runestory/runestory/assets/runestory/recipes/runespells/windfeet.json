@@ -1,0 +1,18 @@
+{
+    "code": "windfeet",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-air": 2,
+            "runestory:rune-beta": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-air",
+            "runestory:item-rune-beta"
+        ],
+        "langCode": "windfeetdsc",
+        "spelltype": "supp",
+        "spelltier": 2
+    },
+    "imgpath": "windfeet"
+}

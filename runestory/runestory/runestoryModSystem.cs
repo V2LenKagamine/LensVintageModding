@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using System.Reflection;
+using HarmonyLib;
 using Newtonsoft.Json.Linq;
 using runestory.src.entity.spells;
+using runestory.src.items;
+using runestory.src.recipestuff;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Config;
+using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.API.Util;
@@ -29,9 +34,22 @@ namespace runestory
         public IClientNetworkChannel capi_Runechannel;
         public IServerNetworkChannel sapi_Runechannel;
 
+        public static string RMS_SpellKnowledge => "RMSKnownSpells";
+        public static string RMS_Stat_RuneChance => "RuneConsumeChance";
+        public static string RMS_Stat_MagicDamage => "magicWeaponsDamage";
+
+        private Harmony RMSHarmony;
+
         public List<BaseRuneSpell> AllSpells = [];
         public List<BaseRuneAltar> AltarRecipes = [];
+        public List<BaseRefineRecipe> RefineRecipes = [];
 
+        /* Quick reference to all attributes that change the characters Stats:
+         *  healingeffectivness, maxhealthExtraPoints, walkSpeed, hungerrate, rangedWeaponsAcc, rangedWeaponsSpeed
+         *rangedWeaponsDamage, meleeWeaponsDamage, mechanicalsDamage, animalLootDropRate, forageDropRate, wildCropDropRate
+         *vesselContentsDropRate, oreDropRate, rustyGearDropRate, miningSpeedMul, animalSeekingRange, armorDurabilityLoss,
+         *bowDrawingStrength, wholeVesselLootChance, temporalGearTLRepairCost, animalHarvestingTime
+         */
         public override void StartPre(ICoreAPI api)
         {
             if (api is not ICoreClientAPI capi) return;
@@ -79,6 +97,7 @@ namespace runestory
         }
         public void SetCastDelay(Entity ent, BaseRuneSpell spell)
         {
+            //Todo: Config?
             long percastMS = 500;
             int TotalReag = 0;
             if (spell is not null)
@@ -103,6 +122,7 @@ namespace runestory
 
             AllSpells = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BaseRuneSpell>>("runespells").Recipes;
             AltarRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BaseRuneAltar>>("runealtar").Recipes;
+            RefineRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BaseRefineRecipe>>("refinespell").Recipes;
 
 
             if (api.Side == EnumAppSide.Client)
@@ -127,9 +147,17 @@ namespace runestory
             api.RegisterEntity("healselfspellent", typeof(HealSelf));
             api.RegisterEntity("windstorespellent", typeof(StoreItems));
             api.RegisterEntity("ignitespellspellent", typeof(Ignite));
-            api.RegisterEntity("fertilizespellspellent", typeof(GrowSpell));
+            api.RegisterEntity("fertilizespellspellent", typeof(GrowSpell)); 
             api.RegisterEntity("elementalspellent", typeof(BasicElemental));
             api.RegisterEntity("grouphealspellent", typeof(HealAOE));
+            api.RegisterEntity("rockblastspellent", typeof(BlastSpell));
+            api.RegisterEntity("superheatspellent", typeof(SuperHeat));
+            api.RegisterEntity("foragespellspellent", typeof(ForageSpell));
+            api.RegisterEntity("windfeetspellent", typeof(WindFeet));
+            api.RegisterEntity("dwarfblessspellent", typeof(DwarfBlessing));
+            api.RegisterEntity("watercloakspellent", typeof(WaterCloak));
+            api.RegisterEntity("magelightspellent", typeof(MageLight));
+            api.RegisterEntity("refinespellspellent", typeof(RefineItemSpell));
 
             api.RegisterBlockClass("runealtar-b", typeof(RuneAltarBlock));
             api.RegisterBlockEntityClass("runealtar-be", typeof(RuneAltarBe));
@@ -137,6 +165,8 @@ namespace runestory
             api.RegisterBlockBehaviorClass("runealtar-chiselsteal-bb", typeof(BBChiseledCover));
 
             api.RegisterCollectibleBehaviorClass("runepouchbag", typeof(CollectibleRuneBag));
+            api.RegisterItemClass("runicpickaxeitem", typeof(RunePickaxe));
+            api.RegisterItemClass("runemagicresearchclass", typeof(RunicResearch));
 
             api.Logger.Notification("RuneStory is coded by Len, god save us all.");
         }
@@ -144,6 +174,35 @@ namespace runestory
         {
             api.Event.PlayerJoin += player => {
                 player.Entity.Attributes.SetLong("runespellnextcasttime", 0); 
+            };
+            api.Event.PlayerNowPlaying += (IServerPlayer player) =>
+            {
+                if (player.Entity is EntityPlayer)
+                {
+                    Entity e = player.Entity;
+                    e.AddBehavior(new PlayerTempBuffer(e));
+                    e.Attributes.TryGetAttribute(RMS_SpellKnowledge, out IAttribute spellsmaybe);
+                    if (spellsmaybe is null)
+                    {
+                        string[] defspells = [];
+                        foreach (var spll in AllSpells.Where(spell => spell.spellTier == 1))
+                        {
+                            defspells = defspells.AddToArray(spll.Code);
+                        }
+
+                        e.WatchedAttributes.SetAttribute(RMS_SpellKnowledge, new StringArrayAttribute(defspells));
+                    }
+                    if(!(e.Stats.Where(stat => stat.Key == RMS_Stat_MagicDamage).Any()))
+                    {
+                        //e.Stats.Register(RMS_Stat_MagicDamage);
+                        e.Stats.Set(RMS_Stat_MagicDamage, "base", 1f, true);
+                    }
+                    if (!(e.Stats.Where(stat => stat.Key == RMS_Stat_RuneChance).Any()))
+                    {
+                        //e.Stats.Register(RMS_Stat_RuneChance);
+                        e.Stats.Set(RMS_Stat_RuneChance, "base", 1f, true);
+                    }
+                }
             };
             api.Logger.Notification("Runestory is running. Why would you do this to your poor server.");
         }
@@ -153,9 +212,9 @@ namespace runestory
             if(api is not ICoreServerAPI sApi) { return; }
             bool classExclu = sApi.World.Config.GetBool("classExclusiveRecipes", true);
 
-
             LoadSpells(sApi);
             LoadRuneAltars(sApi);
+            LoadRefineRecipes(sApi);
         }
 
         public override void StartClientSide(ICoreClientAPI api)
@@ -164,11 +223,32 @@ namespace runestory
             runeGuiSys.Draw += theOneGui.Draw;
             runeGuiSys.Closed += theOneGui.Close;
 
+            RMSHarmony = new Harmony("runestory");
+
+            RMSHarmony.Patch(typeof(CollectibleBehaviorHandbookTextAndExtraInfo)
+                    .GetMethod(nameof(CollectibleBehaviorHandbookTextAndExtraInfo.GetHandbookInfo)),
+                postfix: typeof(GetHandbookInfoPatch).GetMethod(
+                    nameof(GetHandbookInfoPatch.Postfix)));
+
+            RMSHarmony.Patch(typeof(CollectibleBehaviorHandbookTextAndExtraInfo)
+                    .GetMethod("addCreatedByInfo", BindingFlags.NonPublic | BindingFlags.Instance),
+                postfix: typeof(AddCreatedByPatch).GetMethod(
+                    nameof(AddCreatedByPatch.Postfix)));
+
             api.Logger.Notification("Runestory? On my client? Its more likely than you think!");
 
             api.Assets.AddModOrigin("runestory", "textures/spellicons");
         }
-
+        public override void Dispose()
+        {
+            theOneGui = null;
+            if (RMSHarmony is not null)
+            {
+                RMSHarmony.UnpatchAll("runestory");
+            }
+            base.Dispose();
+        }
+        #region Spells
         public void LoadSpells(ICoreServerAPI api)
         {
             Dictionary<AssetLocation, JToken> loadedSpells = api.Assets.GetMany<JToken>(api.Server.Logger, "recipes/runespells");
@@ -226,6 +306,7 @@ namespace runestory
             AllSpells.Add(spell);
             loaded++;
         }
+        #endregion
         #region RuneAltar
         public void LoadRuneAltars(ICoreServerAPI api)
         {
@@ -268,14 +349,12 @@ namespace runestory
             }
 
             api.Logger.Log(EnumLogType.Debug, $"Found {found} altar recipes, loaded {loaded}, and {failed} failed.");
-            api.Logger.Log(EnumLogType.StoryEvent, "The Fall from the First Age...");
         }
-
         public void LoadRuneAltar<T>(ICoreServerAPI api, AssetLocation assLoc, BaseRuneAltar spell, ref int loaded, ref int failed) where T : BaseRuneAltarI<T>
         {
             if (!spell.Enabled) return;
             if (spell.Code == null) { spell.Code = assLoc; }
-            if (!spell.Resolve(api.World, "RuneStory Spell Resolver"))
+            if (!spell.Resolve(api.World, "RuneStory Altar Resolver"))
             {
                 failed++;
             }
@@ -284,10 +363,63 @@ namespace runestory
             loaded++;
         }
         #endregion
-        public override void Dispose()
+        #region RefineRecipes
+        public void LoadRefineRecipes(ICoreServerAPI api)
         {
-            theOneGui = null;
-            base.Dispose();
+            Dictionary<AssetLocation, JToken> loadedRefines = api.Assets.GetMany<JToken>(api.Server.Logger, "recipes/refinespell");
+
+            int loaded = 0;
+            int failed = 0;
+            int found = 0;
+            foreach ((AssetLocation path, JToken jboi) in loadedRefines)
+            {
+                if (jboi is JObject yepjson)
+                {
+
+                    BaseRefineRecipe? parsed = yepjson.ToObject<BaseRefineRecipe>(path.Domain);
+
+                    if (parsed == null)
+                    {
+                        api.Logger.Error($"Failed parsing Refine Recipe at {path}");
+                        continue;
+                    }
+                    LoadRefineRecipe<BaseRefineRecipe>(api, path, parsed, ref loaded, ref failed);
+                    found++;
+
+                }
+                else if (jboi is JArray jarray)
+                {
+                    foreach (JToken tok in jarray)
+                    {
+                        BaseRefineRecipe? parsed = tok.ToObject<BaseRefineRecipe>(path.Domain);
+
+                        if (parsed == null)
+                        {
+                            api.Logger.Error($"Failed parsing Redine Recipe at {path}");
+                            continue;
+                        }
+                        LoadRefineRecipe<BaseRefineRecipe>(api, path, parsed, ref loaded, ref failed);
+                        found++;
+                    }
+                }
+            }
+
+            api.Logger.Log(EnumLogType.Debug, $"Found {found} Refine recipes, loaded {loaded}, and {failed} failed.");
         }
+        public void LoadRefineRecipe<T>(ICoreServerAPI api, AssetLocation assLoc, BaseRefineRecipe spell, ref int loaded, ref int failed) where T : BaseRefineRecipeI<T>
+        {
+            if (!spell.Enabled) return;
+            if (spell.Code == null) { spell.Code = assLoc; }
+            if (!spell.Resolve(api.World, "Runestory Refine Resolver"))
+            {
+                failed++;
+            }
+
+            RefineRecipes.Add(spell);
+            loaded++;
+        }
+
+        #endregion
+
     }
 }

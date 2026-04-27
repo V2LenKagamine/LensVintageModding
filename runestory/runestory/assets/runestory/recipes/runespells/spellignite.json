@@ -3,14 +3,14 @@
     "enabled": true,
     "attributes": {
         "reagents": {
-            "runestory:rune-fire": 1,
-            "runestory:rune-alpha": 1
+            "runestory:rune-fire": 1
         },
         "reagentnames": [
-            "runestory:item-rune-fire",
-            "runestory:item-rune-alpha"
+            "runestory:item-rune-fire"
         ],
-        "langCode": "ignitespelldsc"
+        "langCode": "ignitespelldsc",
+        "spelltype": "util",
+        "spelltier": 1
     },
     "imgpath": "genericfire"
 }

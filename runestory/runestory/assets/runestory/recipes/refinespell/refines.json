@@ -1,0 +1,63 @@
+[
+    {
+        "code": "pappaper",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:papyrustops": 1
+            },
+            "outputs": {
+                "game:paper-parchment": 1
+            }
+        }
+    },
+    {
+        "code": "reedpaper",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:stone-*": 8
+            },
+            "outputs": {
+                "game:salt": 1
+            }
+        }
+    },
+    {
+        "code": "saltyrock",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:cattailtops": 2
+            },
+            "outputs": {
+                "game:paper-parchment": 1
+            }
+        }
+    },
+    {
+        "code": "rotcomp",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:rot": 4
+            },
+            "outputs": {
+                "game:compost": 1
+            }
+        }
+    },
+    {
+        "code": "flaxgrass",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:hay-normal-ud": 4
+            },
+            "outputs": {
+                "game:flaxfibers": 1
+            }
+        }
+    }
+
+]

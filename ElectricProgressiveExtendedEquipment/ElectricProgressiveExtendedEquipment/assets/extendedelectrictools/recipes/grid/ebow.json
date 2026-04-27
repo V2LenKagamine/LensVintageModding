@@ -1,5 +1,6 @@
 {
     "ingredientPattern": "_RC,PGC,_RC",
+    "enabled": false,
     "ingredients": {
         "R": {
             "type": "item",

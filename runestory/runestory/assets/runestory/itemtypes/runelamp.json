@@ -1,0 +1,90 @@
+{
+    "code": "runelamp",
+    "attributes": {
+        "handbook": {
+            "groupBy": [ "runelamp" ]
+        }
+    },
+    "storageFlags": 257,
+    "lightHsv": [ 4, 4, 18 ],
+    "transitionableProps": [
+        {
+            "type": "Cure",
+            "freshhours": { "avg": 0 },
+            "transitonHours": { "avg": 24 },
+            "transitionedstack": {
+                "type": "item",
+                "code": "runestory:rune-blank"
+            }
+        }
+    ],
+    "textures": {
+        "runeface": { "base": "items/runes/lamp" },
+        "base": { "base": "game:block/stone/rock/basalt1" }
+    },
+    "creativeinventory": {
+        "general": [ "*" ],
+        "items": [ "*" ],
+        "runestorytab": [ "*" ]
+    },
+
+    "maxstacksize": 1,
+    "shape": { "base": "items/rune" },
+    "tpHandTransform": {
+        "translation": {
+            "x": 0.7,
+            "y": -0.1,
+            "z": -0.5
+        },
+        "rotation": {
+            "x": 0,
+            "y": 90,
+            "z": 0
+        },
+        "scaleXyz": {
+            "x": -1,
+            "y": 1,
+            "z": 1
+        }
+    },
+    "guiTransform": {
+        "translation": {
+            "x": 6,
+            "y": 7,
+            "z": -1
+        },
+        "rotation": {
+            "x": 120,
+            "y": 180,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5299,
+            "y": -0.92,
+            "z": 0
+        },
+        "scaleXyz": {
+            "x": -3.75,
+            "y": 3.75,
+            "z": 3.75
+        }
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0.3,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": 0.5299
+        },
+        "scale": 3
+    }
+}

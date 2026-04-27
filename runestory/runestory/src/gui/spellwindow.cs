@@ -9,7 +9,9 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Config;
+using Vintagestory.API.Datastructures;
 using Vintagestory.API.Util;
+using Vintagestory.Common;
 using VSImGui.API;
 
 namespace runestory
@@ -17,6 +19,9 @@ namespace runestory
     public class SpellWindow
     {
         private bool isOpen = false;
+
+        private string openTab = "all";
+
 
         public string SelectedSpell;
         private runestoryModSystem RMS => runestoryModSystem.runeCApi.ModLoader.GetModSystem<runestoryModSystem>();  //Cursed.
@@ -50,38 +55,55 @@ namespace runestory
         public CallbackGUIStatus Draw(float dt)
         {
             if (!isOpen) return CallbackGUIStatus.Closed;
-            if(ImGui.IsKeyPressed(ImGuiKey.Escape))
+            if (ImGui.IsKeyPressed(ImGuiKey.Escape))
             {
                 Close();
             }
+            Entity us = runestoryModSystem.runeCApi.World.Player.Entity;
+            us.WatchedAttributes.TryGetAttribute("RMSKnownSpells", out IAttribute playerSpells);
+            IEnumerable<BaseRuneSpell> validspells = RMS.AllSpells.Where(poss => (playerSpells.GetValue() as string[])?.Contains(poss.Code) ?? false);
 
-            int spellcount = RMS.AllSpells.Count;
+            if ((us as EntityPlayer).Player.WorldData.CurrentGameMode == EnumGameMode.Creative) { validspells = RMS.AllSpells; }
 
+            if (openTab == "supp") { validspells = validspells.Where(spell => spell.spellType == "supp"); }
+            if (openTab == "dmg") { validspells = validspells.Where(spell => spell.spellType == "dmg"); }
+            if (openTab == "util") { validspells = validspells.Where(spell => spell.spellType == "util"); }
+
+            if (validspells is null) { return CallbackGUIStatus.Closed; }
+            int spellcount = validspells.Count() ;
             ElementBounds window = runestoryModSystem.runeCApi.Gui.WindowBounds;
-            ImGui.SetNextWindowSize(new Vector2(Math.Max(250,20f + (60f * Math.Min(spellcount,8))),40f + (55f * (float)Math.Ceiling(spellcount/8d))));
+            ImGui.SetNextWindowSize(new Vector2(500f, 85f + (55f * (float)Math.Ceiling(spellcount / 8d))));
             ImGui.Begin("Spell Select Window");
             try
             {
                 Vector2 buttsize = new Vector2(45, 45);
-               
-                for(int i = 0; i < spellcount ;i++)
+
+                if(ImGui.SmallButton("All Spells")){SetTab("all");}
+                ImGui.SameLine();
+                if(ImGui.SmallButton("Damage Spells")){SetTab("dmg");}
+                ImGui.SameLine();
+                if(ImGui.SmallButton("Utility Spells")){SetTab("util"); }
+                ImGui.SameLine();
+                if (ImGui.SmallButton("Support Spells")) {SetTab("supp"); }
+
+                for (int i = 0; i < spellcount; i++)
                 {
-                    BaseRuneSpell spell = RMS.AllSpells[i];
+                    BaseRuneSpell spell = validspells.ElementAt(i);
                     if (i % 8 != 0)
                     {
                         ImGui.SameLine();
                     }
-                    bool pressed = ImGui.ImageButton(i.ToString(),runestoryModSystem.runeCApi.Render.GetOrLoadTexture("runestory:textures/spellicons/" + spell.imgPath + ".png"), buttsize);
+                    bool pressed = ImGui.ImageButton(i.ToString(), runestoryModSystem.runeCApi.Render.GetOrLoadTexture("runestory:textures/spellicons/" + spell.imgPath + ".png"), buttsize);
                     string req = "Requires:\n";
-                    for (int j = 0; j < spell.ReagNames.Length; j++) 
+                    for (int j = 0; j < spell.ReagNames.Length; j++)
                     {
                         string k = Lang.Get(spell.ReagNames[j]);
-                        if(k is not null)
+                        if (k is not null)
                         {
                             req += k + " x " + spell.Reagents.ElementAt(j).Value.ToString() + "\n";
                         }
                     }
-                    if(!ImGui.IsKeyDown(ImGuiKey.LeftShift))
+                    if (!ImGui.IsKeyDown(ImGuiKey.LeftShift))
                     {
                         ImGui.SetItemTooltip(Lang.Get("runestory:" + spell.Code) + "\n" + req + "\nHold LEFT SHIFT for info.");
                     }
@@ -94,8 +116,11 @@ namespace runestory
                     {
                         onButtonClick(spell.Code);
                     }
-
                 }
+                ImGui.BulletText(Lang.Get("runestory:magicdamagestat") + (int)(us.Stats.GetBlended(runestoryModSystem.RMS_Stat_MagicDamage) * 100f) + "%%");
+                ImGui.SameLine();
+                ImGui.BulletText(Lang.Get("runestory:runeconsumechance") + (int)Math.Max(((us.Stats.GetBlended(runestoryModSystem.RMS_Stat_RuneChance) * 100f) - 100),0) + "%%");
+
             }
             catch (Exception e) { runestoryModSystem.Runelogger.LogException(EnumLogType.Error, e); }
             finally { ImGui.End(); }
@@ -110,6 +135,10 @@ namespace runestory
                 spellID = spell
             });
             Close();
+        }
+        public void SetTab(string tab)
+        {
+            openTab = tab;
         }
     }
 }

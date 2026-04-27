@@ -16,6 +16,7 @@
     "requiredminingtier": 1,
     "facecullmode": "NeverCull",
     "creativeinventory": {
+        "general": ["*"],
         "runestorytab": [ "*" ]
     }
 }

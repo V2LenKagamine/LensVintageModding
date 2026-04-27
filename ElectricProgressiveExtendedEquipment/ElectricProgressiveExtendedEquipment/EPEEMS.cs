@@ -9,7 +9,7 @@ namespace ElectricProgressiveExtendedEquipment
         {
             base.Start(api);
 
-            api.RegisterItemClass("EPEElectricBow", typeof(ElecBow));
+            //api.RegisterItemClass("EPEElectricBow", typeof(ElecBow));
             api.RegisterItemClass("EPEElectricPalette", typeof(ElectricPalette));
         }
     }

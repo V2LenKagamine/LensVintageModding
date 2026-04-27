@@ -7,7 +7,7 @@
                 "game:nugget-hematite": 1
             },
             "outputs": {
-                "runestory:rune-gamma": 16
+                "runestory:rune-gamma": 12
             }
         }
     },
@@ -19,7 +19,7 @@
                 "game:nugget-limonite": 1
             },
             "outputs": {
-                "runestory:rune-gamma": 16
+                "runestory:rune-gamma": 12
             }
         }
     },
@@ -31,7 +31,7 @@
                 "game:nugget-magnetite": 1
             },
             "outputs": {
-                "runestory:rune-gamma": 16
+                "runestory:rune-gamma": 12
             }
         }
     }

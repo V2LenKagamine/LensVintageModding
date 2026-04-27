@@ -1,0 +1,13 @@
+
+    {
+        "code": "makeruncpick",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:pickaxe-copper": 1
+            },
+            "outputs": {
+                "runestory:runicpickaxe": 1
+            }
+        }
+    }

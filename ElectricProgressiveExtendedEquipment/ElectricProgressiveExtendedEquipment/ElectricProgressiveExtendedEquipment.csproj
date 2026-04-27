@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>bin\$(Configuration)\Mods\mod</OutputPath>
   </PropertyGroup>
@@ -11,13 +11,9 @@
       <HintPath>..\references\chiseltools.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Overhaullib">
-      <HintPath>..\references\Overhaullib.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="VintagestoryAPI">
       <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
-      <Private>false</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
       <HintPath>$(VINTAGE_STORY)/Mods/VSSurvivalMod.dll</HintPath>
@@ -41,7 +37,7 @@
     </Reference>
     <Reference Include="VintagestoryLib">
       <HintPath>$(VINTAGE_STORY)/VintagestoryLib.dll</HintPath>
-      <Private>false</Private>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
 

@@ -41,13 +41,13 @@ namespace runestory
 
                         Vec3d pos = spawnedBy.Pos.XYZ.AddCopy(0, spawnedBy.LocalEyePos.Y, 0);
                         Vec3d ahead = pos.AheadCopy(1, spawnedBy.Pos.Pitch, spawnedBy.Pos.Yaw);
-                        Vec3d velo = (ahead - pos) * 0.65f;
+                        Vec3d velo = (ahead - pos) * 0.55f;
                         //velo = new(0f, 0f, 0f);
-                        goodspell.Pos.SetPos(spawnedBy.Pos.AheadCopy(0.5f).XYZ.Add(0, spawnedBy.LocalEyePos.Y, 0));
+                        goodspell.Pos.SetPos(spawnedBy.Pos.BehindCopy(0.21f).XYZ.Add(0, spawnedBy.LocalEyePos.Y, 0));
                         goodspell.Pos.Motion.Set(velo);
                         goodspell.World = spawnedBy.World;
                         goodspell.SetRotation();
-
+                        World.PlaySoundAt(new AssetLocation("runestory:sounds/spellcast"),this,null,20f);
                         Api.World.SpawnPriorityEntity(goodspell);
                     }
                 }
@@ -88,18 +88,19 @@ namespace runestory
                         return true;
                     });
                     if(!good) {
-                        (Api.World.PlayerByUid(ply.PlayerUID) as IServerPlayer).SendLocalisedMessage(GlobalConstants.GeneralChatGroup,"runestory:cast-fail");
+                        (Api.World.PlayerByUid(ply.PlayerUID) as IServerPlayer).SendMessage(GlobalConstants.GeneralChatGroup,Lang.Get("runestory:cast-fail"),EnumChatType.Notification);
                         return false; 
                     }
                 }
-                //Todo: add possibility to not consume?
-                foreach (var pair in takeamnts) {
-                    pair.Key.TakeOut(pair.Value);
-                    if (pair.Key.Itemstack?.StackSize <= 0)
-                    {
-                        pair.Key.TakeOutWhole();
+                if (World.Rand.Next() < ply.Stats.GetBlended(runestoryModSystem.RMS_Stat_RuneChance)-1f) {
+                    foreach (var pair in takeamnts) {
+                        pair.Key.TakeOut(pair.Value);
+                        if (pair.Key.Itemstack?.StackSize <= 0)
+                        {
+                            pair.Key.TakeOutWhole();
+                        }
+                        pair.Key.MarkDirty();
                     }
-                    pair.Key.MarkDirty();
                 }
                 return true;
             }

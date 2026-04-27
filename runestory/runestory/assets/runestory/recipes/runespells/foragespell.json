@@ -1,0 +1,16 @@
+{
+    "code": "foragespell",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-earth": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-earth"
+        ],
+        "langCode": "foragespelldsc",
+        "spelltype": "util",
+        "spelltier": 1
+    },
+    "imgpath": "forage"
+}

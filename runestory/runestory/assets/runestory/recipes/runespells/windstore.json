@@ -12,7 +12,9 @@
             "runestory:item-rune-soul",
             "runestory:item-rune-gamma"
         ],
-        "langCode": "windstoredsc"
+        "langCode": "windstoredsc",
+        "spelltype": "util",
+        "spelltier": 3
     },
     "imgpath": "windstore"
 }
