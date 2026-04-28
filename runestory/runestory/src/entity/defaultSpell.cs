@@ -16,6 +16,7 @@ namespace runestory
 {
     public class defaultSpell : Entity
     {
+        public bool freeCast = false;
         public string spellCode;
         public Entity spawnedBy;
         public override void Initialize(EntityProperties properties, ICoreAPI api, long InChunkIndex3d)
@@ -23,7 +24,7 @@ namespace runestory
             base.Initialize(properties, api, InChunkIndex3d);
             if (spellCode != null)
             {
-                BaseRuneSpell spell = Api.ModLoader.GetModSystem<runestoryModSystem>().AllSpells.Find(poss => poss.Code == spellCode);
+                BaseRuneSpell spell = Api.ModLoader.GetModSystem<RunestoryMS>().AllSpells.Find(poss => poss.Code == spellCode);
                 EntityProperties? possible = Api.World.GetEntityType(new("runestory:" + spellCode));
                 if(possible is EntityProperties resolved)
                 {
@@ -38,6 +39,7 @@ namespace runestory
 
                         goodspell.spawnedBy = spawnedBy;
                         goodspell.ourSpell = spell;
+                        goodspell.freeCasted = freeCast;
 
                         Vec3d pos = spawnedBy.Pos.XYZ.AddCopy(0, spawnedBy.LocalEyePos.Y, 0);
                         Vec3d ahead = pos.AheadCopy(1, spawnedBy.Pos.Pitch, spawnedBy.Pos.Yaw);
@@ -92,7 +94,9 @@ namespace runestory
                         return false; 
                     }
                 }
-                if (World.Rand.Next() < ply.Stats.GetBlended(runestoryModSystem.RMS_Stat_RuneChance)-1f) {
+                float noconsume = ply.Stats.GetBlended(RunestoryMS.RMS_Stat_RuneChance);
+                if (World.Rand.NextDouble() < (noconsume)) {
+                    freeCast = true;
                     foreach (var pair in takeamnts) {
                         pair.Key.TakeOut(pair.Value);
                         if (pair.Key.Itemstack?.StackSize <= 0)

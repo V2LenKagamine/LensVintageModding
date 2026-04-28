@@ -1,0 +1,36 @@
+{
+    "code": "airdoom",
+    "class": "elementalspellent",
+    "client": {
+        "renderer": "Shape",
+        "shape": { "base": "entity/spellball" },
+        "textures": {
+            "allface": { "base": "entity/spellballs/air" }
+        },
+        "size": 0.5,
+        "behaviors": [
+            { "code": "passivephysics" },
+            { "code": "interpolateposition" }
+        ],
+        "animations": [
+            {
+                "code": "idle",
+                "animation": "idle"
+            }
+        ]
+    },
+    "server": {
+        "behaviors": [
+            { "code": "passivephysics" },
+            {
+                "code": "despawn",
+                "minSeconds": 10
+            }
+        ]
+    },
+    "hitboxSize": {
+        "x": 0.3,
+        "y": 0.3,
+        "z": 0.3
+    }
+}

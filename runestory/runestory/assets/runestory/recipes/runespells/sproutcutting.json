@@ -1,0 +1,20 @@
+{
+    "code": "sproutcutspell",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-earth": 8,
+            "runestory:rune-water": 8,
+            "runestory:rune-delta": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-earth",
+            "runestory:item-rune-water",
+            "runestory:item-rune-delta"
+        ],
+        "langCode": "sproutcutspelldsc",
+        "spelltype": "util",
+        "spelltier": 4
+    },
+    "imgpath": "sproutcut"
+}

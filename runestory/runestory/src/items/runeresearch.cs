@@ -73,20 +73,21 @@ namespace runestory
             if (byEntity.World.Side == EnumAppSide.Server && secondsUsed >= 1.5f)
             {
 
-                IEnumerable<BaseRuneSpell> validOptions = api.ModLoader.GetModSystem<runestoryModSystem>().AllSpells.Where(spell => spell.Code == spellUnlocked || spell.spellTier == tierUnlocked);
+                IEnumerable<BaseRuneSpell> validOptions = api.ModLoader.GetModSystem<RunestoryMS>().AllSpells.Where(spell => spell.Code == spellUnlocked || spell.spellTier == tierUnlocked);
                 if (byEntity is EntityPlayer ply)
                 {
 
-                    string[] knownspells = (string[])ply.WatchedAttributes.GetAttribute(runestoryModSystem.RMS_SpellKnowledge).GetValue();
+                    string[] knownspells = (string[])ply.WatchedAttributes.GetAttribute(RunestoryMS.RMS_SpellKnowledge).GetValue();
                     if (validOptions.Count() == 1)
                     {
                         if (knownspells.Contains(validOptions.First().Code))
                         {
                             (ply.Player as IServerPlayer).SendMessage(GlobalConstants.InfoLogChatGroup, Lang.Get("runestory:knownspell"), EnumChatType.Notification);
+                            (ply.Player as IServerPlayer).SendMessage(GlobalConstants.InfoLogChatGroup, Lang.Get("runestory:nowallknown"), EnumChatType.Notification);
                             return;
                         }
                         knownspells = knownspells.AddToArray(validOptions.First().Code);
-                        ply.WatchedAttributes.SetAttribute(runestoryModSystem.RMS_SpellKnowledge, new StringArrayAttribute(knownspells));
+                        ply.WatchedAttributes.SetAttribute(RunestoryMS.RMS_SpellKnowledge, new StringArrayAttribute(knownspells));
                     }
                     else
                     {
@@ -100,7 +101,7 @@ namespace runestory
                                 knownspells = knownspells.AddToArray(target.Code);
 
                                 (ply.Player as IServerPlayer).SendMessage(GlobalConstants.InfoLogChatGroup, Lang.Get("runestory:mindexpand") + Lang.Get("runestory:"+target.Code), EnumChatType.Notification);
-                                ply.WatchedAttributes.SetAttribute(runestoryModSystem.RMS_SpellKnowledge, new StringArrayAttribute(knownspells));
+                                ply.WatchedAttributes.SetAttribute(RunestoryMS.RMS_SpellKnowledge, new StringArrayAttribute(knownspells));
                                 if (onlyOneSpell)
                                 {
                                     break;

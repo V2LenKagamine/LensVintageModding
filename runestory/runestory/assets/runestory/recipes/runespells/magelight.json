@@ -4,11 +4,13 @@
     "attributes": {
         "reagents": {
             "runestory:rune-fire": 1,
-            "runestory:rune-air": 1
+            "runestory:rune-air": 1,
+            "runestory:rune-alpha": 1
         },
         "reagentnames": [
             "runestory:item-rune-fire",
-            "runestory:item-rune-air"
+            "runestory:item-rune-air",
+            "runestory:item-rune-alpha"
         ],
         "langCode": "magelightdsc",
         "spelltype": "util",

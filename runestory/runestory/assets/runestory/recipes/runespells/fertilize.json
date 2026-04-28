@@ -3,8 +3,8 @@
     "enabled": true,
     "attributes": {
         "reagents": {
-            "runestory:rune-earth": 1,
-            "runestory:rune-balance": 1,
+            "runestory:rune-earth": 2,
+            "runestory:rune-balance": 2,
             "runestory:rune-beta": 1
         },
         "reagentnames": [

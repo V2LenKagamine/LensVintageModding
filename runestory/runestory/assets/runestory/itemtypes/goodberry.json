@@ -1,0 +1,118 @@
+{
+    "code": "goodberryitem",
+    "class": "goodberryitemclass",
+    "shape": { "base": "game:item/food/fruit/whitecurrant" },
+    "texture": { "base": "game:item/food/fruit/whitecurrant" },
+    "attributes": {
+        "groundStorageTransform": {
+            "origin": {
+                "x": 0.5,
+                "y": -0,
+                "z": 0.5
+            }
+        },
+        "inMouthTransform": {
+            "translation": {
+                "x": -1.4,
+                "y": -0.3,
+                "z": -1.4
+            },
+            "rotation": {
+                "x": 0,
+                "y": 55,
+                "z": 0
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.12,
+                "z": 0.5
+            },
+            "scale": 0.36
+        },
+        "displayable": {
+            "shelf": {
+                "size": {
+                    "width": 4,
+                    "height": 4,
+                    "length": 4
+                }
+            }
+        }
+    },
+    "creativeinventory": {
+        "general": [ "*" ],
+        "items": [ "*" ],
+        "runestorytab": [ "*" ]
+    },
+    "maxstacksize": 1,
+    "materialDensity": 600,
+    "transitionableProps": [
+        {
+            "type": "Perish",
+            "freshHours": { "avg": 23 },
+            "transitionHours": { "avg": 1 },
+            "transitionedStack": {
+                "type": "item",
+                "code": "game:rot"
+            },
+            "transitionRatio": 0.25
+        }
+    ],
+    "guiTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 138,
+            "y": 0,
+            "z": -1
+        },
+        "origin": {
+            "x": 0.48,
+            "y": 0.1,
+            "z": 0.5
+        },
+        "scale": 3.19
+
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -0.4,
+            "y": -0,
+            "z": -0.42
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -90
+        },
+        "origin": {
+            "x": 0.5,
+            "y": -0,
+            "z": 0.5
+        },
+        "scale": 1
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -3
+        },
+        "origin": {
+            "x": 0.47,
+            "y": 0,
+            "z": 0.5
+        },
+        "scale": 5.0
+    },
+    "heldRightReadyAnimation": "holdbothhands",
+    "heldTpIdleAnimation": "holdbothhands"
+}

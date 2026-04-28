@@ -8,7 +8,7 @@
     "variantgroups": [
         {
             "code": "type",
-            "states": [ "blank", "water", "earth", "fire", "air", "soul", "self", "balance", "rust", "alpha","beta","gamma"]
+            "states": [ "blank", "water", "earth", "fire", "air", "soul", "self", "balance", "rust", "alpha","beta","gamma","delta","epsilon"]
         }
     ],
     "texturesByType": {
@@ -58,6 +58,14 @@
         },
         "rune-gamma": {
             "runeface": { "base": "items/runes/gamma" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-delta": {
+            "runeface": { "base": "items/runes/delta" },
+            "base": { "base": "game:block/stone/rock/basalt1" }
+        },
+        "rune-epsilon": {
+            "runeface": { "base": "items/runes/epsilon" },
             "base": { "base": "game:block/stone/rock/basalt1" }
         }
     },

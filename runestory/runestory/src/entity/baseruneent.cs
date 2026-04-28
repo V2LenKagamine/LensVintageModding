@@ -23,6 +23,8 @@ namespace runestory
 
         public BaseRuneSpell ourSpell;
 
+        public bool freeCasted = false;
+
         long msLaunch;
 
         protected bool beforeCollided;
@@ -162,7 +164,7 @@ namespace runestory
             if (canDamage && World.Side == EnumAppSide.Server)
             {
                 float dmg = Damage;
-                if (spawnedBy != null) dmg *= spawnedBy.Stats.GetBlended(runestoryModSystem.RMS_Stat_MagicDamage);
+                if (spawnedBy != null) dmg *= spawnedBy.Stats.GetBlended(RunestoryMS.RMS_Stat_MagicDamage);
 
                 bool didDamage = false;
 
@@ -175,6 +177,18 @@ namespace runestory
                 for(int i =0;i<inrange.Length;i++) 
                 {
                     Entity target = inrange.ElementAt(i);
+                    if (ignite)
+                    {
+                        target.ReceiveDamage(new DamageSource()
+                        {
+                            Source = fromPlayer != null ? EnumDamageSource.Player : EnumDamageSource.Entity,
+                            SourceEntity = this,
+                            CauseEntity = spawnedBy,
+                            TicksPerDuration = 10,
+                            Duration = TimeSpan.FromSeconds(10),
+                            Type = EnumDamageType.PiercingAttack
+                        }, dmg * 0.3f);
+                    }
                     target.ReceiveDamage(dmgSrc ?? new DamageSource()
                     {
                         Source = fromPlayer != null ? EnumDamageSource.Player : EnumDamageSource.Entity,
@@ -182,17 +196,7 @@ namespace runestory
                         CauseEntity = spawnedBy,
                         Type = EnumDamageType.PiercingAttack
                     }, dmg);
-                    if (ignite) {
-                        target.ReceiveDamage(new DamageSource()
-                        {
-                            Source = fromPlayer != null ? EnumDamageSource.Player : EnumDamageSource.Entity,
-                            SourceEntity = this,
-                            CauseEntity = spawnedBy,
-                            TicksPerDuration = 20,
-                            Duration = TimeSpan.FromSeconds(10),
-                            Type = EnumDamageType.Fire
-                        }, dmg);
-                    }
+                    
                 }
 
 

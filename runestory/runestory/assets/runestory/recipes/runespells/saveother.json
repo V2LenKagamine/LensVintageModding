@@ -1,0 +1,20 @@
+{
+    "code": "saveother",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-air": 1,
+            "runestory:rune-water": 8,
+            "runestory:rune-gamma": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-air",
+            "runestory:item-rune-water",
+            "runestory:item-rune-gamma"
+        ],
+        "langCode": "saveotherdsc",
+        "spelltype": "supp",
+        "spelltier": 3
+    },
+    "imgpath": "saveother"
+}

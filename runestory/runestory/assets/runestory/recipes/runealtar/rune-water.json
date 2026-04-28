@@ -19,7 +19,7 @@
                 "game:fish-raw": 1
             },
             "outputs": {
-                "runestory:rune-water": 4
+                "runestory:rune-water": 2
             }
         }
     },
@@ -31,7 +31,7 @@
                 "game:bone-fish": 1
             },
             "outputs": {
-                "runestory:rune-water": 2
+                "runestory:rune-water": 1
             }
         }
     },

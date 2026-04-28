@@ -31,8 +31,9 @@ namespace runestory.src.entity.spells
                 {
                     try
                     {
-                        TempBuff wind = new();
-                        wind.DoStats((target as EntityPlayer), "walkspeed", 0.25f, (5 * 60 * 1000), "spellwindfeet", "spellwindfeet");
+                        PlayerTempBuffer tmp = (target as EntityPlayer).GetBehavior<PlayerTempBuffer>();
+                        tmp.AddTempBuff((target as EntityPlayer), "walkspeed", 0.25f, (5 * 60 * 1000), "spellwindfeet");
+
                         ((target as EntityPlayer).Player as IServerPlayer).SendMessage(
                             GlobalConstants.InfoLogChatGroup,
                             Lang.Get("runestory:windbuffon"),

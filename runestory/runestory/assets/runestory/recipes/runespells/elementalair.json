@@ -21,12 +21,10 @@
         "enabled": true,
         "attributes": {
             "reagents": {
-                "runestory:rune-air": 2,
-                "runestory:rune-beta": 1
+                "runestory:rune-air": 3
             },
             "reagentnames": [
-                "runestory:item-rune-air",
-                "runestory:item-rune-beta"
+                "runestory:item-rune-air"
             ],
             "langCode": "airsurgedsc",
             "elementType": "air",
@@ -40,12 +38,10 @@
         "enabled": true,
         "attributes": {
             "reagents": {
-                "runestory:rune-air": 3,
-                "runestory:rune-gamma": 1
+                "runestory:rune-air": 6
             },
             "reagentnames": [
-                "runestory:item-rune-air",
-                "runestory:item-rune-gamma"
+                "runestory:item-rune-air"
             ],
             "langCode": "airblastdsc",
             "elementType": "air",
@@ -53,5 +49,39 @@
             "spelltier": 3
         },
         "imgpath": "airt3"
+    },
+    {
+        "code": "airexplosion",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-air": 9
+            },
+            "reagentnames": [
+                "runestory:item-rune-air"
+            ],
+            "langCode": "airexplosiondsc",
+            "elementType": "air",
+            "spelltype": "dmg",
+            "spelltier": 4
+        },
+        "imgpath": "airt4"
+    },
+    {
+        "code": "airdoom",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-air": 12
+            },
+            "reagentnames": [
+                "runestory:item-rune-air"
+            ],
+            "langCode": "airdoomdsc",
+            "elementType": "air",
+            "spelltype": "dmg",
+            "spelltier": 5
+        },
+        "imgpath": "airt5"
     }
 ]

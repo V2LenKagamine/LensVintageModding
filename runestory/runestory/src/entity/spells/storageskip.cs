@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
@@ -33,8 +34,11 @@ namespace runestory.src.entity.spells
                 spawnedBy.Attributes.SetInt("senditems-x", ply.BlockSelection.Position.X);
                 spawnedBy.Attributes.SetInt("senditems-y", ply.BlockSelection.Position.Y);
                 spawnedBy.Attributes.SetInt("senditems-z", ply.BlockSelection.Position.Z);
-
                 (ply.Player as IServerPlayer).SendMessage(GlobalConstants.GeneralChatGroup,$"You mentally attune your mind to send items to cordinates {ply.BlockSelection.Position.X}, {ply.BlockSelection.Position.Y}, {ply.BlockSelection.Position.Z}.",EnumChatType.Notification);
+                for(int i =0;i< ourSpell.Reagents.Count;i++)
+                {
+                    ply.TryGiveItemStack(new(World.GetItem(ourSpell.Reagents.ElementAt(i).Key),ourSpell.Reagents.ElementAt(i).Value));
+                }
             }
             else
             {

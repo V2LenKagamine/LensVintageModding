@@ -1,37 +1,37 @@
 ﻿[
     {
-        "code": "makegammarune-hema",
+        "code": "makegammarune-native",
         "enabled": true,
         "attributes": {
             "reagents": {
-                "game:nugget-hematite": 1
+                "game:nugget-nativecopper": 1
             },
             "outputs": {
-                "runestory:rune-gamma": 12
+                "runestory:rune-gamma": 4
             }
         }
     },
     {
-        "code": "makegammarune-lim",
+        "code": "makegammarune-mal",
         "enabled": true,
         "attributes": {
             "reagents": {
-                "game:nugget-limonite": 1
+                "game:nugget-malachite": 1
             },
             "outputs": {
-                "runestory:rune-gamma": 12
+                "runestory:rune-gamma": 4
             }
         }
     },
     {
-        "code": "makegammarune-mag",
+        "code": "makegammarune-cop",
         "enabled": true,
         "attributes": {
             "reagents": {
-                "game:nugget-magnetite": 1
+                "game:metalbit-copper": 1
             },
             "outputs": {
-                "runestory:rune-gamma": 12
+                "runestory:rune-gamma": 4
             }
         }
     }

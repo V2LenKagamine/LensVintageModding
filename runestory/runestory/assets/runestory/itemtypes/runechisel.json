@@ -1,0 +1,176 @@
+{
+    "code": "runicchisel",
+    "class": "runicchiselitem",
+    "tags": [ "tool", "tool-chisel" ],
+    "attributes": {
+        "attachableToEntity": { "categoryCode": "toolholding" },
+        "heldItemPitchFollow": 1,
+        "alwaysPlayHeldReady": true,
+        "toolrackTransform": {
+            "translation": {
+                "x": 0,
+                "y": 0.61,
+                "z": 0
+            },
+            "rotation": {
+                "x": 5,
+                "y": 180,
+                "z": -1
+            },
+            "scale": 1.25
+        },
+        "groundStorageTransform": {
+            "translation": {
+                "x": 0,
+                "y": -0.06,
+                "z": 0.025
+            },
+            "rotation": {
+                "x": 26,
+                "y": 88,
+                "z": -87
+            },
+            "scale": 0.88
+        },
+        "onTongTransform": {
+            "translation": {
+                "x": -1.2,
+                "y": -0.39,
+                "z": -0.43
+            },
+            "rotation": {
+                "x": -5,
+                "y": 91,
+                "z": -13
+            },
+            "scale": 0.9
+        },
+        "rememberToolModeWhenBroken": true,
+        "onMetalTongTransform": {
+            "translation": {
+                "x": -1.14,
+                "y": -0.18,
+                "z": -0.63
+            },
+            "rotation": {
+                "x": -11,
+                "y": 89,
+                "z": -8
+            },
+            "origin": {
+                "x": 0.5,
+                "y": -0,
+                "z": 0.5
+            },
+            "scale": 0.9
+        },
+        "forgable": true,
+        "inForgeTransform": {
+            "translation": {
+                "x": 0,
+                "y": 0.015,
+                "z": -0.1
+            },
+            "rotation": {
+                "x": 0,
+                "y": 105,
+                "z": 0
+            },
+            "origin": {
+                "x": 0.57,
+                "y": 0.28,
+                "z": 0.57
+            }
+        },
+        "displayable": {
+            "shelf": {
+                "size": {
+                    "width": 2,
+                    "height": 2,
+                    "length": 8
+                },
+                "transform": {
+                    "translation": {
+                        "x": 0,
+                        "y": -0,
+                        "z": 0.05
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 90,
+                        "z": 0
+                    }
+                }
+            }
+        }
+    },
+    "shape": { "base": "game:item/tool/chisel" },
+    "tool": "Chisel",
+    "heldRightReadyAnimation": "chiselready",
+    "heldTpHitAnimation": "chiselhit",
+    "heldTpUseAnimation": "chiselhit",
+    "creativeinventory": {
+        "general": [ "*" ],
+        "items": [ "*" ],
+        "tools": [ "*" ],
+        "runestorytab": ["*"]
+    },
+    "textures": {
+        "metal": { "base": "game:block/stone/rock/basalt1" }
+    },
+    "guiTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 9,
+            "y": 137,
+            "z": -53
+        },
+        "origin": {
+            "x": 0.44,
+            "y": 0,
+            "z": 0.38
+        },
+        "scale": 2.92
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0.5
+        },
+        "scale": 4.31
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -0.5599,
+            "y": 0.04,
+            "z": -0.65
+        },
+        "rotation": {
+            "x": -3,
+            "y": 0,
+            "z": -170
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0.5
+        },
+        "scale": 0.76
+    },
+    "durability":600
+}

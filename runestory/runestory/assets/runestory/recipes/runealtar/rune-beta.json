@@ -1,25 +1,13 @@
 [
     {
-        "code": "makebetarune-native",
+        "code": "makebetarune-firew",
         "enabled": true,
         "attributes": {
             "reagents": {
-                "game:nugget-nativecopper": 1
+                "game:firewood": 1
             },
             "outputs": {
-                "runestory:rune-beta": 8
-            }
-        }
-    },
-    {
-        "code": "makebetarune-native",
-        "enabled": true,
-        "attributes": {
-            "reagents": {
-                "game:nugget-malachite": 1
-            },
-            "outputs": {
-                "runestory:rune-beta": 8
+                "runestory:rune-beta": 2
             }
         }
     }

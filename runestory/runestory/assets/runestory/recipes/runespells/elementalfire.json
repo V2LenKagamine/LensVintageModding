@@ -21,12 +21,10 @@
         "enabled": true,
         "attributes": {
             "reagents": {
-                "runestory:rune-fire": 2,
-                "runestory:rune-beta": 1
+                "runestory:rune-fire": 3
             },
             "reagentnames": [
-                "runestory:item-rune-fire",
-                "runestory:item-rune-beta"
+                "runestory:item-rune-fire"
             ],
             "langCode": "firesurgedsc",
             "elementType": "fire",
@@ -40,12 +38,10 @@
         "enabled": true,
         "attributes": {
             "reagents": {
-                "runestory:rune-fire": 3,
-                "runestory:rune-gamma": 1
+                "runestory:rune-fire": 6
             },
             "reagentnames": [
-                "runestory:item-rune-fire",
-                "runestory:item-rune-gamma"
+                "runestory:item-rune-fire"
             ],
             "langCode": "fireblastdsc",
             "elementType": "fire",
@@ -53,5 +49,39 @@
             "spelltier": 2
         },
         "imgpath": "firet3"
+    },
+    {
+        "code": "fireexplosion",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-fire": 9
+            },
+            "reagentnames": [
+                "runestory:item-rune-fire"
+            ],
+            "langCode": "fireexplosiondsc",
+            "elementType": "fire",
+            "spelltype": "dmg",
+            "spelltier": 4
+        },
+        "imgpath": "firet4"
+    },
+    {
+        "code": "firedoom",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-fire": 12
+            },
+            "reagentnames": [
+                "runestory:item-rune-fire"
+            ],
+            "langCode": "firedoomdsc",
+            "elementType": "fire",
+            "spelltype": "dmg",
+            "spelltier": 5
+        },
+        "imgpath": "firet5"
     }
 ]

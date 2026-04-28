@@ -1,0 +1,18 @@
+{
+    "code": "desecrate",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-rust": 2,
+            "runestory:rune-beta": 2
+        },
+        "reagentnames": [
+            "runestory:item-rune-rust",
+            "runestory:item-rune-beta"
+        ],
+        "langCode": "desecratedsc",
+        "spelltype": "util",
+        "spelltier": 2
+    },
+    "imgpath": "desecrate"
+}

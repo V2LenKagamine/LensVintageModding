@@ -54,7 +54,7 @@ namespace runestory.src.recipestuff
         public static List<ItemStack> GetRuneFrom(CollectibleObject collectible, ICoreAPI api)
         {
             List<ItemStack> Output = [];
-            foreach (BaseRuneAltar rec in api.ModLoader.GetModSystem<runestoryModSystem>().AltarRecipes.Where(pos =>
+            foreach (BaseRuneAltar rec in api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes.Where(pos =>
             {
                 bool found = false;
                 for (int i = 0; i < pos.Reagents.Count(); i++)
@@ -92,7 +92,7 @@ namespace runestory.src.recipestuff
         public static List<ItemStack> GetRuneInto(CollectibleObject collectible, ICoreAPI api)
         {
             List<ItemStack> Output = [];
-            foreach (BaseRuneAltar rec in api.ModLoader.GetModSystem<runestoryModSystem>().AltarRecipes.Where(pos =>
+            foreach (BaseRuneAltar rec in api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes.Where(pos =>
             {
                 bool found = false;
                 for (int i = 0; i < pos.OutputItems.Count(); i++)
@@ -146,7 +146,7 @@ namespace runestory.src.recipestuff
         public static List<ItemStack> GetRefinedFrom(CollectibleObject collectible, ICoreAPI api)
         {
             List<ItemStack> Output = [];
-            foreach (BaseRefineRecipe rec in api.ModLoader.GetModSystem<runestoryModSystem>().RefineRecipes.Where(pos =>
+            foreach (BaseRefineRecipe rec in api.ModLoader.GetModSystem<RunestoryMS>().RefineRecipes.Where(pos =>
             {
                 bool found = false;
                 for (int i = 0; i < pos.Reagents.Count(); i++)
@@ -182,7 +182,7 @@ namespace runestory.src.recipestuff
         public static List<ItemStack> GetRefinedInto(CollectibleObject collectible, ICoreAPI api)
         {
             List<ItemStack> Output = [];
-            foreach (BaseRefineRecipe rec in api.ModLoader.GetModSystem<runestoryModSystem>().RefineRecipes.Where(pos =>
+            foreach (BaseRefineRecipe rec in api.ModLoader.GetModSystem<RunestoryMS>().RefineRecipes.Where(pos =>
             {
                 bool found = false;
                 for (int i = 0; i < pos.Outputs.Count(); i++)

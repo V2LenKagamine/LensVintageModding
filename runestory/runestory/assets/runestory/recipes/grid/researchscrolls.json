@@ -1,6 +1,6 @@
 [
     {
-        "ingredientPattern": "WHE,_C_,FSA",
+        "ingredientPattern": "WHE,ICI,FSA",
         "ingredients": {
             "H": {
                 "type": "item",
@@ -35,6 +35,11 @@
                 "type": "item",
                 "code": "runestory:rune-air",
                 "quantity": 16
+            },
+            "I": {
+                "type": "item",
+                "code": "runestory:rune-blank",
+                "quantity": 16
             }
         },
         "width": 3,
@@ -46,7 +51,7 @@
         }
     },
     {
-        "ingredientPattern": "WHE,_C_,FSA",
+        "ingredientPattern": "WHE,ICI,FSA",
         "ingredients": {
             "H": {
                 "type": "item",
@@ -81,6 +86,11 @@
                 "type": "item",
                 "code": "runestory:rune-air",
                 "quantity": 24
+            },
+            "I": {
+                "type": "item",
+                "code": "game:rod-copper",
+                "quantity": 1
             }
         },
         "width": 3,
@@ -88,6 +98,109 @@
         "output": {
             "type": "item",
             "code": "runestory:runemagicresearch-tier3-single",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "WHE,ICI,FSA",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:inkandquill",
+                "isTool": true
+            },
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier3-single"
+            },
+            "S": {
+                "type": "item",
+                "code": "runestory:rune-delta",
+                "quantity": 48
+            },
+            "W": {
+                "type": "item",
+                "code": "runestory:rune-water",
+                "quantity": 32
+            },
+            "E": {
+                "type": "item",
+                "code": "runestory:rune-earth",
+                "quantity": 32
+            },
+            "F": {
+                "type": "item",
+                "code": "runestory:rune-fire",
+                "quantity": 32
+            },
+            "A": {
+                "type": "item",
+                "code": "runestory:rune-air",
+                "quantity": 32
+            },
+            "I": {
+                "type": "item",
+                "code": "game:rod-*",
+                "allowedVariants": [ "tinbronze", "bismuthbronze", "blackbronze" ],
+                "quantity": 1
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier4-single",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "WHE,ICI,FSA",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:inkandquill",
+                "isTool": true
+            },
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier4-single"
+            },
+            "S": {
+                "type": "item",
+                "code": "runestory:rune-epsilon",
+                "quantity": 64
+            },
+            "W": {
+                "type": "item",
+                "code": "runestory:rune-water",
+                "quantity": 48
+            },
+            "E": {
+                "type": "item",
+                "code": "runestory:rune-earth",
+                "quantity": 48
+            },
+            "F": {
+                "type": "item",
+                "code": "runestory:rune-fire",
+                "quantity": 48
+            },
+            "A": {
+                "type": "item",
+                "code": "runestory:rune-air",
+                "quantity": 48
+            },
+            "I": {
+                "type": "item",
+                "code": "game:rod-electrum",
+                "quantity": 1
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier5-single",
             "quantity": 1
         }
     }

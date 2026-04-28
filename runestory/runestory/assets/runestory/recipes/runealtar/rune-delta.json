@@ -1,0 +1,14 @@
+[
+    {
+        "code": "makedeltarune-copnick",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:metalbit-cupronickel": 1
+            },
+            "outputs": {
+                "runestory:rune-delta": 4
+            }
+        }
+    }
+]

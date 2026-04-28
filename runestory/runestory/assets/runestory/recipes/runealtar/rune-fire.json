@@ -24,18 +24,6 @@
         }
     },
     {
-        "code": "makefirerune-char2",
-        "enabled": true,
-        "attributes": {
-            "reagents": {
-                "game:charcoal": 1
-            },
-            "outputs": {
-                "runestory:rune-fire": 8
-            }
-        }
-    },
-    {
         "code": "makefirerune-brown",
         "enabled": true,
         "attributes": {

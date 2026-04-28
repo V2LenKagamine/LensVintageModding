@@ -31,9 +31,10 @@ namespace runestory.src.entity.spells
                 {
                     try
                     {
-                        TempBuff wind = new();
-                        List<EffectPowerDuration> buffs = [new("miningSpeedMul", 0.1f, (2.5f * 60 * 1000)), new("oreDropRate", 0.1f, (2.5f * 60 * 1000))];
-                        wind.DoStats((target as EntityPlayer), buffs, "spelldwarfbless", "spelldwarfbless");
+                        PlayerTempBuffer tmp = (target as EntityPlayer).GetBehavior<PlayerTempBuffer>();
+                        tmp.AddTempBuff(target as EntityPlayer, "miningSpeedMul", 0.2f, (2.5f * 60 * 1000),"dwarfblessing");
+                        tmp.AddTempBuff(target as EntityPlayer, "oreDropRate", 0.05f, (2.5f * 60 * 1000), "dwarfblessing");
+                        
                         ((target as EntityPlayer).Player as IServerPlayer).SendMessage(
                             GlobalConstants.InfoLogChatGroup,
                             Lang.Get("runestory:dwarfbuffon"),

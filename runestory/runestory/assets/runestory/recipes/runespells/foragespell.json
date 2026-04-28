@@ -3,10 +3,12 @@
     "enabled": true,
     "attributes": {
         "reagents": {
-            "runestory:rune-earth": 1
+            "runestory:rune-earth": 1,
+            "runestory:rune-alpha": 1
         },
         "reagentnames": [
-            "runestory:item-rune-earth"
+            "runestory:item-rune-earth",
+            "runestory:item-rune-alpha"
         ],
         "langCode": "foragespelldsc",
         "spelltype": "util",

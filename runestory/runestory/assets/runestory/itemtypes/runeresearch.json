@@ -1,6 +1,11 @@
 {
     "code": "runemagicresearch",
     "class": "runemagicresearchclass",
+    "attributes": {
+        "handbook": {
+            "groupBy": [ "runemagicresearch-{level}-*" ]
+        }
+    },
     "variantgroups": [
         {
             "code": "level",

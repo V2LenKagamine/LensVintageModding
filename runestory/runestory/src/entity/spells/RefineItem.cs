@@ -18,9 +18,9 @@ namespace runestory.src.entity.spells
 
             Entity[] NearUs = Api.World.GetEntitiesInsideCuboid(Pos.XYZ.AddCopy(-1, -1, -1).AsBlockPos, Pos.XYZ.AddCopy(1, 1, 1).AsBlockPos, ent => ent.OnGround && ent is EntityItem);
 
-            for (int i = 0; i < Api.ModLoader.GetModSystem<runestoryModSystem>().RefineRecipes.Count; i++)
+            for (int i = 0; i < Api.ModLoader.GetModSystem<RunestoryMS>().RefineRecipes.Count; i++)
             {
-                BaseRefineRecipe recipe = Api.ModLoader.GetModSystem<runestoryModSystem>().RefineRecipes[i];
+                BaseRefineRecipe recipe = Api.ModLoader.GetModSystem<RunestoryMS>().RefineRecipes[i];
                 List<Entity> toEat = [];
                 bool valid = false;
                 int MaxCanMake = int.MaxValue;

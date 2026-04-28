@@ -4,12 +4,14 @@ using System.Text;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
+using Vintagestory.GameContent;
 
 namespace runestory.src.entity.spells
 {
+
     public class BasicElemental : BaseRuneEnt
     {
-        public override void OnTouchEntity(Entity entity)
+        public override void OnTouchEntity(Entity entity) 
         {
             if (entity != spawnedBy && entity is not null)
             {
@@ -26,73 +28,72 @@ namespace runestory.src.entity.spells
 
         public void HitEntity(Entity entity)
         {
-            if(Api.Side == EnumAppSide.Client) { return; }
-            int tier = 0;
+            if (Api.Side == EnumAppSide.Client) { return; }
+            int tier = ourSpell.spellTier;
             Vec2f aoe = new(0f, 0f);
-            foreach (KeyValuePair<string, int> reag in ourSpell.Reagents)
+            if (tier == 0) { return; }
+            float dam = 1f;
+            switch (tier)
             {
-                switch (reag.Key)
-                {
-                    case string x when x.Contains("alpha"):
-                        {
-                            tier = 1;
-                            aoe = new(0.5f, 0.5f);
-                            break;
-                        }
-                    case string x when x.Contains("beta"):
-                        {
-                            tier = 2;
-                            aoe = new(1f, 1f);
-                            break;
-                        }
-                    case string x when x.Contains("gamma"):
-                        {
-                            tier = 3;
-                            aoe = new(5f, 5f);
-                            break;
-                        }
-                    default: { break; }
-                }
-                if (tier > 0) { continue; }
+                case 1:
+                    {
+                        aoe = new(0f, 0f);
+                        dam = 3.5f;
+                        break;
+                    }
+                case 2:
+                    {
+                        aoe = new(0f, 0f);
+                        dam = 4.5f;
+                        break;
+                    }
+                case 3:
+                    {
+                        aoe = new(3f, 3f);
+                        dam = 4.5f;
+                        break;
+                    }
+                case 4:
+                    {
+                        aoe = new(3f, 3f);
+                        dam = 6.5f;
+                        break;
+                    }
+                case 5:
+                    {
+                        aoe = new(3f, 3f);
+                        dam = 8f;
+                        break;
+                    }
             }
-            if(tier == 0) { return; }
-            float dam = 3f * tier;
             DamageSource hitdmg = new()
             {
                 Source = EnumDamageSource.Player,
                 CauseEntity = spawnedBy,
                 SourceEntity = this,
-                KnockbackStrength = 0.5f,
+                KnockbackStrength = 0.75f * tier,
                 Type = EnumDamageType.PiercingAttack
 
             };
             bool ignition = false;
-            switch (ourSpell.ElementalType)
-            {
-                case "water":
-                    {
-                        TempBuff tmp = new();
-                        tmp.DoStats(spawnedBy as EntityPlayer, "hungerrate", -0.05f * tier, (30 * 1000) * tier, "waterbuff" ,"waterbuff");
 
-                        break;
-                    }
-                case "earth":
-                    {
-                        dam *= 1.2f;
-                        break;
-                    }
-                case "air":
-                    {
-                        hitdmg.KnockbackStrength *= 2;
-                        break;
-                    }
-                case "fire":
-                    {
-                        dam *= 1.1f;
-                        ignition = true;
-                        break;
-                    }
+            if (ourSpell.ElementalType.Contains("water"))
+            {
+                (spawnedBy as EntityPlayer).GetBehavior<PlayerTempBuffer>()?.AddTempBuff(spawnedBy as EntityPlayer, "hungerrate", -0.05f * tier, (30 * 1000) * tier, "waterbuff");
             }
+            if (ourSpell.ElementalType.Contains("earth"))
+            {
+                dam *= 1.2f;
+            }
+            if (ourSpell.ElementalType.Contains("air"))
+            {
+                hitdmg.KnockbackStrength *= 1.25f;
+            }
+            if (ourSpell.ElementalType.Contains("fire"))
+            {
+                ignition = true;
+            }
+
             Damage = dam;
             SimpleHitEntity(entity ?? null, hitdmg, aoe, ignition);
             Die();

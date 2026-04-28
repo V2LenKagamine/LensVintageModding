@@ -21,12 +21,10 @@
         "enabled": true,
         "attributes": {
             "reagents": {
-                "runestory:rune-water": 2,
-                "runestory:rune-beta": 1
+                "runestory:rune-water": 3
             },
             "reagentnames": [
-                "runestory:item-rune-water",
-                "runestory:item-rune-beta"
+                "runestory:item-rune-water"
             ],
             "langCode": "watersurgedsc",
             "elementType": "water",
@@ -40,12 +38,10 @@
         "enabled": true,
         "attributes": {
             "reagents": {
-                "runestory:rune-water": 3,
-                "runestory:rune-gamma": 1
+                "runestory:rune-water": 6
             },
             "reagentnames": [
-                "runestory:item-rune-water",
-                "runestory:item-rune-gamma"
+                "runestory:item-rune-water"
             ],
             "langCode": "waterblastdsc",
             "elementType": "water",
@@ -53,5 +49,40 @@
             "spelltier": 3
         },
         "imgpath": "watert3"
+    },
+
+    {
+        "code": "waterexplosion",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-water": 9
+            },
+            "reagentnames": [
+                "runestory:item-rune-water"
+            ],
+            "langCode": "waterexplosiondsc",
+            "elementType": "water",
+            "spelltype": "dmg",
+            "spelltier": 4
+        },
+        "imgpath": "watert4"
+    },
+    {
+        "code": "waterdoom",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-water": 12
+            },
+            "reagentnames": [
+                "runestory:item-rune-water"
+            ],
+            "langCode": "waterdoomdsc",
+            "elementType": "water",
+            "spelltype": "dmg",
+            "spelltier": 5
+        },
+        "imgpath": "watert5"
     }
 ]

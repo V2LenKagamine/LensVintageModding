@@ -15,20 +15,78 @@ namespace runestory
     public class PlayerTempBuffer : EntityBehavior
     {
 
+        public List<TempBuff> TempBuffList = [];
         public static string RunetempBuffKey => "runestorytempbuff";
         public PlayerTempBuffer(Entity entity) : base(entity)
         {
+        }
+
+
+        public void AddTempBuff(TempBuff tempBuff)
+        {
+            tempBuff.ApplyStats();
+            TempBuffList.Add(tempBuff);
+        }
+        public void AddTempBuff(List<TempBuff> tempBuffs)
+        {
+            foreach (TempBuff tempBuff in tempBuffs)
+            {
+                tempBuff.ApplyStats();
+                TempBuffList.Add(tempBuff);
+            }
+        }
+
+        public void AddTempBuff(EntityPlayer entity, List<EffectPowerDuration> stats, string code, string sourceId)
+        {
+
+            TempBuff boi = new TempBuff
+            {
+                affected = entity,
+                EffPowDurList = stats,
+                effectID = sourceId,
+            };
+            boi.ApplyStats();
+            TempBuffList.Add(boi);
+
+        }
+        public void AddTempBuff(EntityPlayer entity, string effect, float change, float durationTicks, string sourceId)
+        {
+
+            TempBuff boi = new TempBuff
+            {
+                affected = entity,
+                EffPowDurList = [new(effect, change, durationTicks)],
+                effectID = sourceId,
+            };
+            boi.ApplyStats();
+            TempBuffList.Add(boi);
+
         }
 
         public override void OnEntityDeath(DamageSource damageSourceForDeath)
         {
             IServerPlayer P = entity.World.PlayerByUid((entity as EntityPlayer).PlayerUID) as IServerPlayer;
 
-            TempBuff scroll = new TempBuff();
-            scroll.RemoveAll((P.Entity), RunetempBuffKey);
-            scroll = null; //Goodbye sweet summer child.
+            foreach(TempBuff t in TempBuffList)
+            {
+                t.Dissapate();
+                TempBuffList.Remove(t);
+            }
+            TempBuffList = [];
 
             base.OnEntityDeath(damageSourceForDeath);
+        }
+
+        public override void OnEntityDespawn(EntityDespawnData despawn)
+        {
+            foreach (TempBuff t in TempBuffList)
+            {
+                t.Dissapate();
+                TempBuffList.Remove(t);
+            }
+            TempBuffList = null;
+
+            base.OnEntityDespawn(despawn);
         }
 
         public override string PropertyName()
@@ -39,48 +97,13 @@ namespace runestory
 
     public class TempBuff
     {
-        EntityPlayer affected;
+        public EntityPlayer affected;
 
-        List<EffectPowerDuration> EffPowDurList = new();
+        public List<EffectPowerDuration> EffPowDurList;
 
-        string sourceCodeString;
+        public static string RunetempBuffKey => PlayerTempBuffer.RunetempBuffKey;
 
-        string effectID;
-
-
-        public void DoStats(EntityPlayer entity, List<EffectPowerDuration> stats, string code, string sourceId)
-        {
-            affected = entity;
-            EffPowDurList = stats;
-            sourceCodeString = code;
-            effectID = sourceId;
-            if (EffPowDurList.Count >= 1)
-            {
-                ApplyStats();
-            }
-        }
-        public void DoStats(EntityPlayer entity, EffectPowerDuration stats, string code, string sourceId)
-        {
-            affected = entity;
-            EffPowDurList = [stats];
-            sourceCodeString = code;
-            effectID = sourceId;
-            if (EffPowDurList.Count >= 1)
-            {
-                ApplyStats();
-            }
-        }
-        public void DoStats(EntityPlayer entity, string effect,float change, float durationTicks, string code, string sourceId)
-        {
-            affected = entity;
-            EffPowDurList = [new(effect,change,durationTicks)];
-            sourceCodeString = code;
-            effectID = sourceId;
-            if (EffPowDurList.Count >= 1)
-            {
-                ApplyStats();
-            }
-        }
+        public string effectID;
 
         public void DissapateEffect(float dt)
         {
@@ -89,20 +112,24 @@ namespace runestory
 
         public void Dissapate() //Experimental Code, may crash, must check.
         {
+            if (EffPowDurList is null) { return; }
             foreach (EffectPowerDuration trio in EffPowDurList)
             {
-                affected.Stats.Remove(trio.Effect, sourceCodeString);
+                affected.Stats.Remove(trio.Effect, RunetempBuffKey);
                 affected.WatchedAttributes.RemoveAttribute(effectID);
             }
             IServerPlayer player = (
                affected.World.PlayerByUid(affected.PlayerUID)
                as IServerPlayer
            );
-            player.SendMessage(
+            player?.SendMessage(
                 GlobalConstants.InfoLogChatGroup,
                 Lang.Get("runestory:runedissipatebuff"),
                 EnumChatType.Notification
             );
+            affected = null;
+            EffPowDurList = null;
+            effectID = null;
         }
 
         public void ApplyStats()
@@ -115,10 +142,10 @@ namespace runestory
                 for (int j =0;j < statslist.Count(); j++)
                 {
                     var stat = statslist.ElementAt(j);
-                    if(stat.Value.ValuesByKey.ContainsKey(sourceCodeString)) { nobuff = false; break; }
+                    if(stat.Value.ValuesByKey.ContainsKey(RunetempBuffKey)) { nobuff = false; break; }
                 }
                 if(!nobuff) { continue; }
-                affected.Stats.Set(EffPowDurList.ElementAt(i).Effect, sourceCodeString, EffPowDurList.ElementAt(i).Power, false);
+                affected.Stats.Set(EffPowDurList.ElementAt(i).Effect, RunetempBuffKey, EffPowDurList.ElementAt(i).Power, false);
 
                 long discallback = affected.World.RegisterCallback(DissapateEffect, (int)Math.Floor(EffPowDurList.ElementAt(i).Duration));// in minutes
                 //affected.WatchedAttributes.SetLong(effectID, discallback);
@@ -133,6 +160,11 @@ namespace runestory
                 player.Stats.Remove(stat.Key, code);
             }
             player.GetBehavior<EntityBehaviorHealth>().MarkDirty();
+
+
+            affected = null;
+            EffPowDurList = null;
+            effectID = null;
         }
     }
     public struct EffectPowerDuration

@@ -1,0 +1,20 @@
+{
+    "code": "warcry",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-earth": 4,
+            "runestory:rune-fire": 4,
+            "runestory:rune-gamma": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-earth",
+            "runestory:item-rune-fire",
+            "runestory:item-rune-gamma"
+        ],
+        "langCode": "warcrydsc",
+        "spelltype": "supp",
+        "spelltier": 3
+    },
+    "imgpath": "warcry"
+}

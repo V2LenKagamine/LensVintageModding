@@ -101,10 +101,10 @@ namespace runestory
 
             Entity[] nearAltar = Api.World.GetEntitiesInsideCuboid(Pos.AddCopy(-1, -1, -1), Pos.AddCopy(1, 1, 1), ent => ent.OnGround && ent is EntityItem);
 
-            for (int i = 0; i < Api.ModLoader.GetModSystem<runestoryModSystem>().AltarRecipes.Count; i++)
+            for (int i = 0; i < Api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes.Count; i++)
             {
                 int MaxCanMake = Contents.StackSize;
-                BaseRuneAltar recipe = Api.ModLoader.GetModSystem<runestoryModSystem>().AltarRecipes[i];
+                BaseRuneAltar recipe = Api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes[i];
                 Entity[] toEat = new Entity[recipe.Reagents.Count];
                 bool valid = false;
                 for (int j = 0; j < recipe.Reagents.Count; j++)

@@ -3,10 +3,12 @@
     "enabled": true,
     "attributes": {
         "reagents": {
-            "runestory:rune-fire": 2
+            "runestory:rune-fire": 2,
+            "runestory:rune-alpha": 1
         },
         "reagentnames": [
-            "runestory:item-rune-fire"
+            "runestory:item-rune-fire",
+            "runestory:item-rune-alpha"
         ],
         "langCode": "superheatdsc",
         "spelltype": "util",

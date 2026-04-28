@@ -6,6 +6,7 @@ using System.Reflection;
 using HarmonyLib;
 using Newtonsoft.Json.Linq;
 using runestory.src.entity.spells;
+using runestory.src.gui;
 using runestory.src.items;
 using runestory.src.recipestuff;
 using Vintagestory.API.Client;
@@ -21,7 +22,7 @@ using VSImGui;
 
 namespace runestory
 {
-    public class runestoryModSystem : ModSystem
+    public class RunestoryMS : ModSystem
     {
         public static ILogger Runelogger;
 
@@ -29,7 +30,8 @@ namespace runestory
         public static ICoreServerAPI runeSApi;
         public ImGuiModSystem runeGuiSys;
 
-        public SpellWindow theOneGui;
+        public SpellWindow SpellWindowGui;
+        public TempStatusHud TempStatusHudGui;
 
         public IClientNetworkChannel capi_Runechannel;
         public IServerNetworkChannel sapi_Runechannel;
@@ -53,20 +55,115 @@ namespace runestory
         public override void StartPre(ICoreAPI api)
         {
             if (api is not ICoreClientAPI capi) return;
-
-            if (theOneGui == null)
-            {
-                theOneGui = new();
-            }
+            
             runeCApi = capi;
             capi.Input.RegisterHotKey("runestorytogglespell", Lang.Get("runestory:toggle-spell"), GlKeys.F, HotkeyType.GUIOrOtherControls, true);
             capi.Input.RegisterHotKey("runestorycastspell", Lang.Get("runestory:cast-spell"), GlKeys.X, HotkeyType.CharacterControls);
 
+            if (SpellWindowGui == null)
+            {
+                SpellWindowGui = new();
+            }
+            if (TempStatusHudGui == null)
+            {
+                TempStatusHudGui = new();
+            }
 
-            capi.Input.SetHotKeyHandler("runestorytogglespell", delegate { theOneGui.ToggleOpen(); return true; } );
+            capi.Input.SetHotKeyHandler("runestorytogglespell", delegate { SpellWindowGui.ToggleOpen(); return true; } );
             capi.Input.SetHotKeyHandler("runestorycastspell", delegate { OnCastRequest(capi); return true; });
         }
 
+        public override void Start(ICoreAPI api)
+        {
+            Runelogger = api.Logger;
+
+
+            AllSpells = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BaseRuneSpell>>("runespells").Recipes;
+            AltarRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BaseRuneAltar>>("runealtar").Recipes;
+            RefineRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BaseRefineRecipe>>("refinespell").Recipes;
+
+
+            if (api.Side == EnumAppSide.Client)
+            {
+                capi_Runechannel = (api as ICoreClientAPI).Network.RegisterChannel("runespellchannel")
+                    .RegisterMessageType(typeof(CTS_SpellPacket))
+                    .RegisterMessageType(typeof(CTS_SelectPacket));
+            }
+            else
+            {
+                runeSApi = api as ICoreServerAPI;
+                sapi_Runechannel = (api as ICoreServerAPI).Network.RegisterChannel("runespellchannel")
+                    .RegisterMessageType(typeof(CTS_SpellPacket))
+                    .SetMessageHandler<CTS_SpellPacket>(OnRecCastRequest)
+                    .RegisterMessageType(typeof(CTS_SelectPacket))
+                    .SetMessageHandler<CTS_SelectPacket>(OnRecSpellSelect);
+            }
+
+            api.RegisterEntity("basesummonrunespell", typeof(defaultSpell));
+            api.RegisterEntity("makestickspellent", typeof(MakeStickEnt));
+            api.RegisterEntity("healotherspellent", typeof(HealOther));
+            api.RegisterEntity("healselfspellent", typeof(HealSelf));
+            api.RegisterEntity("windstorespellent", typeof(StoreItems));
+            api.RegisterEntity("ignitespellspellent", typeof(Ignite));
+            api.RegisterEntity("fertilizespellspellent", typeof(GrowSpell));
+            api.RegisterEntity("elementalspellent", typeof(BasicElemental));
+            api.RegisterEntity("grouphealspellent", typeof(HealAOE));
+            api.RegisterEntity("rockblastspellent", typeof(BlastSpell));
+            api.RegisterEntity("superheatspellent", typeof(SuperHeat));
+            api.RegisterEntity("foragespellspellent", typeof(ForageSpell));
+            api.RegisterEntity("windfeetspellent", typeof(WindFeet));
+            api.RegisterEntity("dwarfblessspellent", typeof(DwarfBlessing));
+            api.RegisterEntity("watercloakspellent", typeof(WaterCloak));
+            api.RegisterEntity("magelightspellent", typeof(MageLight));
+            api.RegisterEntity("refinespellspellent", typeof(RefineItemSpell));
+            api.RegisterEntity("flowerfieldspellent", typeof(FlowerFieldSpell));
+            api.RegisterEntity("desecratespellent", typeof(DesecrateSpell));
+            api.RegisterEntity("goodberryspellent", typeof(GoodBerry));
+            api.RegisterEntity("warcryspellent", typeof(WarCrySpell));
+            api.RegisterEntity("saveselfspellent", typeof(SaveSelf));
+            api.RegisterEntity("saveotherspellent", typeof(SaviorSpell));
+            api.RegisterEntity("sproutcutspellspellent", typeof(SproutCutting));
+
+            api.RegisterBlockClass("runealtar-b", typeof(RuneAltarBlock));
+            api.RegisterBlockEntityClass("runealtar-be", typeof(RuneAltarBe));
+            api.RegisterBlockEntityBehaviorClass("runealtar-chiselsteal-bhv", typeof(BEBChiseledCover));
+            api.RegisterBlockBehaviorClass("runealtar-chiselsteal-bb", typeof(BBChiseledCover));
+
+            api.RegisterCollectibleBehaviorClass("runepouchbag", typeof(CollectibleRuneBag));
+            api.RegisterItemClass("runicpickaxeitem", typeof(RunePickaxe));
+            api.RegisterItemClass("runicchiselitem", typeof(RuneChisel));
+            api.RegisterItemClass("runemagicresearchclass", typeof(RunicResearch));
+            api.RegisterItemClass("goodberryitemclass", typeof(GoodBerryItem));
+
+
+            api.Logger.Notification("RuneStory is coded by Len, god save us all.");
+        }
+        public override void StartClientSide(ICoreClientAPI api)
+        {
+            runeGuiSys = api.ModLoader.GetModSystem<ImGuiModSystem>();
+            runeGuiSys.Draw += SpellWindowGui.Draw;
+            runeGuiSys.Closed += SpellWindowGui.Close;
+
+            runeGuiSys.Draw += TempStatusHudGui.Draw;
+            runeGuiSys.Closed += TempStatusHudGui.Close;
+
+            RMSHarmony = new Harmony("runestory");
+
+            RMSHarmony.Patch(typeof(CollectibleBehaviorHandbookTextAndExtraInfo)
+                    .GetMethod(nameof(CollectibleBehaviorHandbookTextAndExtraInfo.GetHandbookInfo)),
+                postfix: typeof(GetHandbookInfoPatch).GetMethod(
+                    nameof(GetHandbookInfoPatch.Postfix)));
+
+            RMSHarmony.Patch(typeof(CollectibleBehaviorHandbookTextAndExtraInfo)
+                    .GetMethod("addCreatedByInfo", BindingFlags.NonPublic | BindingFlags.Instance),
+                postfix: typeof(AddCreatedByPatch).GetMethod(
+                    nameof(AddCreatedByPatch.Postfix)));
+
+
+            api.Logger.Notification("Runestory? On my client? Its more likely than you think!");
+
+            api.Assets.AddModOrigin("runestory", "textures/spellicons");
+        }
         public void OnCastRequest(ICoreClientAPI capi)
         {
             capi.Network.GetChannel("runespellchannel").SendPacket(new CTS_SpellPacket
@@ -115,61 +212,7 @@ namespace runestory
         {
             fromPlayer.Entity.Attributes.SetString("runespellselected", pack.spellID);
         }
-        public override void Start(ICoreAPI api)
-        {
-            Runelogger = api.Logger;
 
-
-            AllSpells = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BaseRuneSpell>>("runespells").Recipes;
-            AltarRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BaseRuneAltar>>("runealtar").Recipes;
-            RefineRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BaseRefineRecipe>>("refinespell").Recipes;
-
-
-            if (api.Side == EnumAppSide.Client)
-            {
-                capi_Runechannel = (api as ICoreClientAPI).Network.RegisterChannel("runespellchannel")
-                    .RegisterMessageType(typeof(CTS_SpellPacket))
-                    .RegisterMessageType(typeof(CTS_SelectPacket));
-            }
-            else
-            {
-                runeSApi = api as ICoreServerAPI;
-                sapi_Runechannel = (api as ICoreServerAPI).Network.RegisterChannel("runespellchannel")
-                    .RegisterMessageType(typeof(CTS_SpellPacket))
-                    .SetMessageHandler<CTS_SpellPacket>(OnRecCastRequest)
-                    .RegisterMessageType(typeof(CTS_SelectPacket))
-                    .SetMessageHandler<CTS_SelectPacket>(OnRecSpellSelect);
-            }
-
-            api.RegisterEntity("basesummonrunespell", typeof(defaultSpell));
-            api.RegisterEntity("makestickspellent", typeof(MakeStickEnt));
-            api.RegisterEntity("healotherspellent", typeof(HealOther));
-            api.RegisterEntity("healselfspellent", typeof(HealSelf));
-            api.RegisterEntity("windstorespellent", typeof(StoreItems));
-            api.RegisterEntity("ignitespellspellent", typeof(Ignite));
-            api.RegisterEntity("fertilizespellspellent", typeof(GrowSpell)); 
-            api.RegisterEntity("elementalspellent", typeof(BasicElemental));
-            api.RegisterEntity("grouphealspellent", typeof(HealAOE));
-            api.RegisterEntity("rockblastspellent", typeof(BlastSpell));
-            api.RegisterEntity("superheatspellent", typeof(SuperHeat));
-            api.RegisterEntity("foragespellspellent", typeof(ForageSpell));
-            api.RegisterEntity("windfeetspellent", typeof(WindFeet));
-            api.RegisterEntity("dwarfblessspellent", typeof(DwarfBlessing));
-            api.RegisterEntity("watercloakspellent", typeof(WaterCloak));
-            api.RegisterEntity("magelightspellent", typeof(MageLight));
-            api.RegisterEntity("refinespellspellent", typeof(RefineItemSpell));
-
-            api.RegisterBlockClass("runealtar-b", typeof(RuneAltarBlock));
-            api.RegisterBlockEntityClass("runealtar-be", typeof(RuneAltarBe));
-            api.RegisterBlockEntityBehaviorClass("runealtar-chiselsteal-bhv", typeof(BEBChiseledCover));
-            api.RegisterBlockBehaviorClass("runealtar-chiselsteal-bb", typeof(BBChiseledCover));
-
-            api.RegisterCollectibleBehaviorClass("runepouchbag", typeof(CollectibleRuneBag));
-            api.RegisterItemClass("runicpickaxeitem", typeof(RunePickaxe));
-            api.RegisterItemClass("runemagicresearchclass", typeof(RunicResearch));
-
-            api.Logger.Notification("RuneStory is coded by Len, god save us all.");
-        }
         public override void StartServerSide(ICoreServerAPI api)
         {
             api.Event.PlayerJoin += player => {
@@ -217,31 +260,10 @@ namespace runestory
             LoadRefineRecipes(sApi);
         }
 
-        public override void StartClientSide(ICoreClientAPI api)
-        {
-            runeGuiSys = api.ModLoader.GetModSystem<ImGuiModSystem>();
-            runeGuiSys.Draw += theOneGui.Draw;
-            runeGuiSys.Closed += theOneGui.Close;
-
-            RMSHarmony = new Harmony("runestory");
-
-            RMSHarmony.Patch(typeof(CollectibleBehaviorHandbookTextAndExtraInfo)
-                    .GetMethod(nameof(CollectibleBehaviorHandbookTextAndExtraInfo.GetHandbookInfo)),
-                postfix: typeof(GetHandbookInfoPatch).GetMethod(
-                    nameof(GetHandbookInfoPatch.Postfix)));
-
-            RMSHarmony.Patch(typeof(CollectibleBehaviorHandbookTextAndExtraInfo)
-                    .GetMethod("addCreatedByInfo", BindingFlags.NonPublic | BindingFlags.Instance),
-                postfix: typeof(AddCreatedByPatch).GetMethod(
-                    nameof(AddCreatedByPatch.Postfix)));
-
-            api.Logger.Notification("Runestory? On my client? Its more likely than you think!");
-
-            api.Assets.AddModOrigin("runestory", "textures/spellicons");
-        }
         public override void Dispose()
         {
-            theOneGui = null;
+            SpellWindowGui = null;
+            TempStatusHudGui = null;
             if (RMSHarmony is not null)
             {
                 RMSHarmony.UnpatchAll("runestory");

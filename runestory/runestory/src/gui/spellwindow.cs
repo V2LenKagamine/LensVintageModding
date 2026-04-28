@@ -24,7 +24,7 @@ namespace runestory
 
 
         public string SelectedSpell;
-        private runestoryModSystem RMS => runestoryModSystem.runeCApi.ModLoader.GetModSystem<runestoryModSystem>();  //Cursed.
+        private RunestoryMS RMS => RunestoryMS.runeCApi.ModLoader.GetModSystem<RunestoryMS>();  //Cursed.
 
         public void ToggleOpen()
         {
@@ -59,7 +59,7 @@ namespace runestory
             {
                 Close();
             }
-            Entity us = runestoryModSystem.runeCApi.World.Player.Entity;
+            Entity us = RunestoryMS.runeCApi.World.Player.Entity;
             us.WatchedAttributes.TryGetAttribute("RMSKnownSpells", out IAttribute playerSpells);
             IEnumerable<BaseRuneSpell> validspells = RMS.AllSpells.Where(poss => (playerSpells.GetValue() as string[])?.Contains(poss.Code) ?? false);
 
@@ -70,9 +70,9 @@ namespace runestory
             if (openTab == "util") { validspells = validspells.Where(spell => spell.spellType == "util"); }
 
             if (validspells is null) { return CallbackGUIStatus.Closed; }
-            int spellcount = validspells.Count() ;
-            ElementBounds window = runestoryModSystem.runeCApi.Gui.WindowBounds;
-            ImGui.SetNextWindowSize(new Vector2(500f, 85f + (55f * (float)Math.Ceiling(spellcount / 8d))));
+            int spellcount = validspells.Count();
+            ElementBounds window = RunestoryMS.runeCApi.Gui.WindowBounds;
+            ImGui.SetNextWindowSize(new Vector2(500f, 85f + (56f * (float)Math.Ceiling(spellcount / 8d))));
             ImGui.Begin("Spell Select Window");
             try
             {
@@ -93,9 +93,9 @@ namespace runestory
                     {
                         ImGui.SameLine();
                     }
-                    bool pressed = ImGui.ImageButton(i.ToString(), runestoryModSystem.runeCApi.Render.GetOrLoadTexture("runestory:textures/spellicons/" + spell.imgPath + ".png"), buttsize);
+                    bool pressed = ImGui.ImageButton(i.ToString(), RunestoryMS.runeCApi.Render.GetOrLoadTexture("runestory:textures/spellicons/" + spell.imgPath + ".png"), buttsize);
                     string req = "Requires:\n";
-                    for (int j = 0; j < spell.ReagNames.Length; j++)
+                    for (int j = 0; j < spell.Reagents.Count(); j++)
                     {
                         string k = Lang.Get(spell.ReagNames[j]);
                         if (k is not null)
@@ -105,7 +105,7 @@ namespace runestory
                     }
                     if (!ImGui.IsKeyDown(ImGuiKey.LeftShift))
                     {
-                        ImGui.SetItemTooltip(Lang.Get("runestory:" + spell.Code) + "\n" + req + "\nHold LEFT SHIFT for info.");
+                        ImGui.SetItemTooltip(Lang.Get("runestory:" + spell.Code) + "\n" + req + $"\nTier: {spell.spellTier}"+  "\nHold LEFT SHIFT for info.");
                     }
                     else
                     {
@@ -117,21 +117,21 @@ namespace runestory
                         onButtonClick(spell.Code);
                     }
                 }
-                ImGui.BulletText(Lang.Get("runestory:magicdamagestat") + (int)(us.Stats.GetBlended(runestoryModSystem.RMS_Stat_MagicDamage) * 100f) + "%%");
+                ImGui.BulletText(Lang.Get("runestory:magicdamagestat") + (int)(us.Stats.GetBlended(RunestoryMS.RMS_Stat_MagicDamage) * 100f) + "%%");
                 ImGui.SameLine();
-                ImGui.BulletText(Lang.Get("runestory:runeconsumechance") + (int)Math.Max(((us.Stats.GetBlended(runestoryModSystem.RMS_Stat_RuneChance) * 100f) - 100),0) + "%%");
+                ImGui.BulletText(Lang.Get("runestory:runeconsumechance") + (int)Math.Max(((us.Stats.GetBlended(RunestoryMS.RMS_Stat_RuneChance) * 100f) - 100),0) + "%%");
 
             }
-            catch (Exception e) { runestoryModSystem.Runelogger.LogException(EnumLogType.Error, e); }
+            catch (Exception e) { RunestoryMS.Runelogger.LogException(EnumLogType.Error, e); }
             finally { ImGui.End(); }
             return CallbackGUIStatus.GrabMouse;
         }
 
         public void onButtonClick(string spell)
         {
-            runestoryModSystem.runeCApi.Network.GetChannel("runespellchannel").SendPacket(new CTS_SelectPacket
+            RunestoryMS.runeCApi.Network.GetChannel("runespellchannel").SendPacket(new CTS_SelectPacket
             {
-                byPlayerID = runestoryModSystem.runeCApi.World.Player.Entity.EntityId,
+                byPlayerID = RunestoryMS.runeCApi.World.Player.Entity.EntityId,
                 spellID = spell
             });
             Close();

@@ -6,17 +6,40 @@
         }
     ],
     "entityBehaviors": [
-        {"name": "runealtar-chiselsteal-bhv"}
+        { "name": "runealtar-chiselsteal-bhv" }
     ],
+    "blockmaterial": "Wood",
     "class": "runealtar-b",
     "entityclass": "runealtar-be",
     "shape": { "base": "game:block/basic/cube" },
-    "texture": {"base": "game:block/stone/rock/granite1"},
+    "textures": {
+        "all": { "base": "game:block/wood/bark/ebony" },
+        "inside-north": {
+            "base": "game:block/wood/debarked/ebony",
+            "rotation": 90
+        },
+        "inside-east": {
+            "base": "game:block/wood/debarked/ebony",
+            "rotation": 90
+        },
+        "inside-south": {
+            "base": "game:block/wood/debarked/ebony",
+            "rotation": 90
+        },
+        "inside-west": {
+            "base": "game:block/wood/debarked/ebony",
+            "rotation": 90
+        },
+
+        "up": { "base": "game:block/wood/treetrunk/ebony" },
+        "down": { "base": "game:block/wood/treetrunk/ebony" }
+    },
     "resistance": 2,
     "requiredminingtier": 1,
+    "materialDensity": 700,
     "facecullmode": "NeverCull",
     "creativeinventory": {
-        "general": ["*"],
+        "general": [ "*" ],
         "runestorytab": [ "*" ]
     }
 }

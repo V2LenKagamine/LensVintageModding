@@ -1,25 +1,13 @@
 [
     {
-        "code": "makealpharune-firew",
+        "code": "makealpharune-stick",
         "enabled": true,
         "attributes": {
             "reagents": {
-                "game:firewood": 1
+                "game:stick": 1
             },
             "outputs": {
-                "runestory:rune-alpha": 4
-            }
-        }
-    },
-    {
-        "code": "makealpharune-afirew",
-        "enabled": true,
-        "attributes": {
-            "reagents": {
-                "game:agedfirewood": 1
-            },
-            "outputs": {
-                "runestory:rune-alpha": 16
+                "runestory:rune-alpha": 2
             }
         }
     }

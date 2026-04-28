@@ -1,0 +1,13 @@
+
+    {
+        "code": "makerunechisel",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:chisel-copper": 1
+            },
+            "outputs": {
+                "runestory:runicchisel": 1
+            }
+        }
+    }

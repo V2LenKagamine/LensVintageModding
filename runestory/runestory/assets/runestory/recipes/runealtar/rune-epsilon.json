@@ -1,0 +1,38 @@
+﻿[
+    {
+        "code": "makeepsilonrune-electrum",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:metalbit-electrum": 1
+            },
+            "outputs": {
+                "runestory:rune-delta": 4
+            }
+        }
+    },
+    {
+        "code": "makeepsilonrune-gold",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:nugget-nativegold": 1
+            },
+            "outputs": {
+                "runestory:rune-delta": 4
+            }
+        }
+    },
+    {
+        "code": "makeepsilonrune-silver",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:nugget-nativesilver": 1
+            },
+            "outputs": {
+                "runestory:rune-delta": 4
+            }
+        }
+    }
+]

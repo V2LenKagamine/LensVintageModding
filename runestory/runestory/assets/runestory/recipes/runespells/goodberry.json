@@ -1,0 +1,20 @@
+{
+    "code": "goodberry",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-water": 16,
+            "runestory:rune-earth": 16,
+            "runestory:rune-epsilon": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-water",
+            "runestory:item-rune-earth",
+            "runestory:item-rune-epsilon"
+        ],
+        "langCode": "goodberrydsc",
+        "spelltype": "util",
+        "spelltier": 5
+    },
+    "imgpath": "goodberry"
+}

@@ -5,7 +5,7 @@
         "renderer": "Shape",
         "shape": { "base": "entity/spellball" },
         "textures": {
-            "allface": { "base": "entity/spellballs/earth" }
+            "allface": { "base": "entity/spellballs/water" }
         },
         "size": 0.5,
         "behaviors": [
