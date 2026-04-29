@@ -1,0 +1,20 @@
+{
+    "code": "predatoryaura",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-air": 8,
+            "runestory:rune-fire": 8,
+            "runestory:rune-delta": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-air",
+            "runestory:item-rune-fire",
+            "runestory:item-rune-delta"
+        ],
+        "langCode": "predatoryauradsc",
+        "spelltype": "supp",
+        "spelltier": 4
+    },
+    "imgpath": "predatoryaura"
+}

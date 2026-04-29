@@ -61,10 +61,14 @@ namespace runestory.src.gui
                     ImGui.Begin("Temporary Effects",ImGuiWindowFlags.AlwaysAutoResize);
                     foreach (KeyValuePair<string, EntityFloatStats> entry in modifiedstats)
                     {
-                        ImGui.Text(Lang.Get("runestory:" + entry.Key) + ": ");
+                        ImGui.Text(Lang.Get("runestory:" + entry.Key) + ":");
                         ImGui.SameLine();
                         float val = entry.Value.ValuesByKey[PlayerTempBuffer.RunetempBuffKey].Value;
                         ImGui.Text(string.Format("{0}%%", (int)Math.Floor(val * 100)));
+                        ImGui.SameLine();
+                        int timeSec = (int)Math.Floor((us.Attributes.GetFloat(entry.Key) - RunestoryMS.runeCApi.World.ElapsedMilliseconds) / 1000);
+                        string formatted = $"{(timeSec%60<=1 ? 0 : (int)Math.Floor(timeSec / 60f))}:{(timeSec % 60 < 10 ? $"0{timeSec % 60}" : timeSec % 60)}";
+                        ImGui.Text("for " + (timeSec < 0 ? "??:??" : formatted));
                     }
                 }
                 catch (Exception e) { RunestoryMS.Runelogger.LogException(EnumLogType.Error, e); }

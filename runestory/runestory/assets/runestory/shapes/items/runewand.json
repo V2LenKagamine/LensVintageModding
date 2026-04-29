@@ -1,0 +1,79 @@
+{
+  "editor": {
+    "allAngles": false,
+    "entityTextureMode": false
+  },
+  "textureWidth": 16,
+  "textureHeight": 16,
+  "textureSizes": {
+    
+  },
+  "textures": {
+    "wandbase": "game:block/wood/plainoak",
+    "wandtip": "game:item/resource/temporalgear"
+  },
+  "elements": [
+    {
+      "name": "Cube2",
+      "from": [ 7.25, 0.0, 7.25 ],
+      "to": [ 8.75, 5.0, 8.75 ],
+      "rotationOrigin": [ 7.2, 0.0, 7.2 ],
+      "faces": {
+        "north": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 1.5, 5.0 ] },
+        "east": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 1.5, 5.0 ] },
+        "south": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 1.5, 5.0 ] },
+        "west": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 1.5, 5.0 ] },
+        "up": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 1.5, 1.5 ] },
+        "down": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 1.5, 1.5 ] }
+      },
+      "children": [
+        {
+          "name": "Cube3",
+          "from": [ 0.25, 5.0, 0.25 ],
+          "to": [ 1.25, 7.0, 1.25 ],
+          "rotationOrigin": [ 0.15, 5.0, 0.15 ],
+          "faces": {
+            "north": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+            "east": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+            "south": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+            "west": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+            "up": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+            "down": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "windMode": [ -1, -1, -1, -1 ], "enabled": false }
+          },
+          "children": [
+            {
+              "name": "Cube4",
+              "from": [ 0.25, 2.0, 0.25 ],
+              "to": [ 0.75, 4.0, 0.75 ],
+              "rotationOrigin": [ 0.2, 2.0, 0.1 ],
+              "faces": {
+                "north": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 0.5, 2.0 ] },
+                "east": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 0.5, 2.0 ] },
+                "south": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 0.5, 2.0 ] },
+                "west": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 0.5, 2.0 ] },
+                "up": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+                "down": { "texture": "#wandbase", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "windMode": [ -1, -1, -1, -1 ], "enabled": false }
+              },
+              "children": [
+                {
+                  "name": "Cube5",
+                  "from": [ 0.0, 2.0, 0.0 ],
+                  "to": [ 0.5, 2.5, 0.5 ],
+                  "rotationOrigin": [ -0.05, 2.0, -0.15 ],
+                  "faces": {
+                    "north": { "texture": "#wandtip", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+                    "east": { "texture": "#wandtip", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+                    "south": { "texture": "#wandtip", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+                    "west": { "texture": "#wandtip", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+                    "up": { "texture": "#wandtip", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+                    "down": { "texture": "#wandtip", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -113,20 +113,27 @@ namespace runestory
         public void Dissapate() //Experimental Code, may crash, must check.
         {
             if (EffPowDurList is null) { return; }
+             IServerPlayer player = (
+                    affected.World.PlayerByUid(affected.PlayerUID)
+                    as IServerPlayer);
             foreach (EffectPowerDuration trio in EffPowDurList)
             {
                 affected.Stats.Remove(trio.Effect, RunetempBuffKey);
                 affected.WatchedAttributes.RemoveAttribute(effectID);
+                RunestoryMS.runeSApi.Network.GetChannel(RunestoryMS.RMS_Net_Channel).SendPacket(new STC_BuffSync
+                {
+                    effect = trio.Effect,
+                    duration = -1,
+                }, player);
             }
-            IServerPlayer player = (
-               affected.World.PlayerByUid(affected.PlayerUID)
-               as IServerPlayer
-           );
+
+
             player?.SendMessage(
                 GlobalConstants.InfoLogChatGroup,
                 Lang.Get("runestory:runedissipatebuff"),
                 EnumChatType.Notification
             );
+
             affected = null;
             EffPowDurList = null;
             effectID = null;
@@ -148,7 +155,11 @@ namespace runestory
                 affected.Stats.Set(EffPowDurList.ElementAt(i).Effect, RunetempBuffKey, EffPowDurList.ElementAt(i).Power, false);
 
                 long discallback = affected.World.RegisterCallback(DissapateEffect, (int)Math.Floor(EffPowDurList.ElementAt(i).Duration));// in minutes
-                //affected.WatchedAttributes.SetLong(effectID, discallback);
+                RunestoryMS.runeSApi.Network.GetChannel(RunestoryMS.RMS_Net_Channel).SendPacket(new STC_BuffSync
+                {
+                    effect = EffPowDurList.ElementAt(i).Effect,
+                    duration = RunestoryMS.runeCApi.ElapsedMilliseconds + EffPowDurList.ElementAt(i).Duration,
+                }, affected.Player as IServerPlayer);
 
             }
         }

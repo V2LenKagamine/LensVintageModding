@@ -87,6 +87,7 @@
 </ItemGroup>
 
 <ItemGroup>
+  <Folder Include="assets\runestory\compatibility\" />
   <Folder Include="assets\runestory\textures\spellicons\" />
 </ItemGroup>
 

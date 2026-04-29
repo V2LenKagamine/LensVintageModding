@@ -1,20 +1,20 @@
 {
-    "code": "windstore",
+    "code": "invoketrust",
     "enabled": true,
     "attributes": {
         "reagents": {
-            "runestory:rune-air": 4,
-            "runestory:rune-soul": 2,
-            "runestory:rune-delta": 2
+            "runestory:rune-fire": 8,
+            "runestory:rune-air": 8,
+            "runestory:rune-delta": 1
         },
         "reagentnames": [
+            "runestory:item-rune-fire",
             "runestory:item-rune-air",
-            "runestory:item-rune-soul",
             "runestory:item-rune-delta"
         ],
-        "langCode": "windstoredsc",
+        "langCode": "invoketrustdsc",
         "spelltype": "util",
         "spelltier": 4
     },
-    "imgpath": "windstore"
+    "imgpath": "invoketrust"
 }

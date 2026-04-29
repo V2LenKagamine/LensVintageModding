@@ -79,7 +79,7 @@ namespace runestory.src.entity.spells
 
             if (ourSpell.ElementalType.Contains("water"))
             {
-                (spawnedBy as EntityPlayer).GetBehavior<PlayerTempBuffer>()?.AddTempBuff(spawnedBy as EntityPlayer, "hungerrate", -0.05f * tier, (30 * 1000) * tier, "waterbuff");
+                (spawnedBy as EntityPlayer).GetBehavior<PlayerTempBuffer>()?.AddTempBuff(spawnedBy as EntityPlayer, RunestoryMS.RMS_Stat_MagicDamage, -0.05f * tier, (30 * 1000) * tier, "waterbuff");
             }
             if (ourSpell.ElementalType.Contains("earth"))
             {

@@ -11,7 +11,7 @@
             "runestory:item-rune-beta"
         ],
         "langCode": "dwarfblessdsc",
-        "spelltype": "util",
+        "spelltype": "supp",
         "spelltier": 2
     },
     "imgpath": "dwarfbless"

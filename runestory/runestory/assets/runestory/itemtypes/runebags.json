@@ -8,7 +8,7 @@
     "variantgroups": [
         {
             "code": "type",
-            "states": [ "primitive","linen","leather" ]
+            "states": [ "primitive", "linen", "leather" ]
         }
     ],
     "texturesByType": {
@@ -25,24 +25,50 @@
             "top": { "base": "items/runebag/top-leather" }
         }
     },
-
     "attributesByType": {
         "*-primitive": {
             "backpack": {
                 "quantitySlots": 3,
                 "slotBgColor": "#b99bba"
+            },
+            "handbook": {
+                "extraSections": [
+                    {
+                        "title": "hbrunebag-title",
+                        "text": "hbrunebag-text"
+                    }
+                ],
+                "include": true
             }
         },
         "*-linen": {
             "backpack": {
                 "quantitySlots": 4,
                 "slotBgColor": "#b99bba"
+            },
+            "handbook": {
+                "extraSections": [
+                    {
+                        "title": "hbrunebag-title",
+                        "text": "hbrunebag-text"
+                    }
+                ],
+                "include": true
             }
         },
         "*-leather": {
             "backpack": {
                 "quantitySlots": 5,
                 "slotBgColor": "#b99bba"
+            },
+            "handbook": {
+                "extraSections": [
+                    {
+                        "title": "hbrunebag-title",
+                        "text": "hbrunebag-text"
+                    }
+                ],
+                "include": true
             }
         }
     },
@@ -50,7 +76,7 @@
     "creativeinventory": {
         "general": [ "*" ],
         "items": [ "*" ],
-        "runestorytab": ["*"]
+        "runestorytab": [ "*" ]
     },
     "guiTransform": {
         "translation": {

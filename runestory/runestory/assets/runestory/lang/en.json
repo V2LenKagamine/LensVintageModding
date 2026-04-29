@@ -14,11 +14,17 @@
     "hungerrate": "Hunger Rate",
     "meleeWeaponsDamage": "Melee Damage",
     "armorDurabilityLoss": "Armor Durability Loss",
+    "rangedWeaponsAcc": "Ranged Weapon Accuracy",
+    "rangedWeaponsDamage": "Ranged Weapon Damage",
+    "rangedWeaponsSpeed": "Ranged Weapon Draw Time",
+    "magicWeaponsDamage": "Magic Spell Damage",
+    "runeConsumeChance": "Free Cast Chance",
 
     "windbuffon": "You feel lighter on your feet.",
     "mendingmist": "You feel a soft cloak of water surround you.",
     "dwarfbuffon": "You feel in tune with the soil and stone.",
     "warcryon": "You feel ready to slay an army!",
+    "predauraon": "You feel the call of the hunt.",
 
     "toggle-spell": "(RuneStory) Toggle Spell Select Menu",
     "cast-spell": "(RuneStory) Cast Currently Selected Spell",
@@ -70,6 +76,9 @@
     "goodberry": "Good Berry",
     "goodberrydsc": "Summons a magical berry that fully satiates you.",
 
+    "bonestopeaches": "Bones to Peaches",
+    "bonestopeachesdsc": "Turns up to 8 bones in your inventory into peaches.",
+
     "fertilizespell": "Restore Nutrients",
     "fertilizespelldsc": "Tries to give 5 percent N,K,or P to the farmland you are targeting, or the farmland under the crop you are targeting. Ignores NKP cap.",
 
@@ -90,6 +99,18 @@
 
     "flowerfield": "Spring's Blossom",
     "flowerfielddsc": "Grows a random vanilla flower type in a 4 block radius around you.",
+
+    "enticebees": "Entice Bees",
+    "enticebeesdsc": "Casts a projectile that tries to fill a nearby bee-skep with a roaming colony of bees.",
+
+    "predatoryaura": "Predatory Instincts",
+    "predatoryauradsc": "Grants you and any nearby players 30 percent walkspeed and 10 percent to ranged damage, accuracy, and use speed for 2 minutes, 30 seconds.",
+
+    "growsapling": "Sapling Skip",
+    "growsaplingdsc": "Casts a projectile that tries to remove 3 days from the [already sprouted] tree sapling nearest to its landing point.",
+
+    "invoketrust": "Domesticate",
+    "invoketrustdsc": "Casts a projectile that raises the generation of a random animal near its landing point to 3, if it is lower. Will always raise the generation of an animal in range, if able.",
 
     "refinespell": "Refine",
     "refinespelldsc": "Refines, or exchanges, many items into many other items.",
@@ -195,6 +216,17 @@
     "itemdesc-rune-epsilon": "The rune pulses in tune to your thoughts.",
     "item-runelamp": "Rune of Light",
 
+    "item-runewand-primitive": "Primitive Rune Wand",
+    "itemdesc-runewand-primitive": "I mean, it works I guess. Miniscule increase to magic stats when in offhand.",
+    "item-runewand-basic": "Basic Rune Wand",
+    "itemdesc-runewand-basic": "Small increase to magic stats when in offhand.",
+    "item-runewand-standard": "Standard Rune Wand",
+    "itemdesc-runewand-standard": "Moderate increase to magic stats when in offhand.",
+    "item-runewand-scholar": "Scholar's Rune Wand",
+    "itemdesc-runewand-scholar": "Good increase to magic stats when in offhand.",
+    "item-runewand-master": "Master's Rune Wand",
+    "itemdesc-runewand-master": "Great increase to magic stats when in offhand.",
+
     "item-runebag-primitive": "Crude Rune Pouch",
     "item-runebag-linen": "Rune Pouch",
     "item-runebag-leather": "Leather Rune Pouch",
@@ -210,6 +242,22 @@
 
     "block-runealtar": "Rune Altar",
 
-    "hbrunes-title": "(RuneStory) Runecraft and Spells",
-    "hbrunes-text": "<strong>Casting And Selecting Spells</strong><br>Casting and selecting spells are done with the keybind. By default, ALT + F will bring up your spell menu, and X will cast the spell, or try to.<br><br><strong>Making Runes:</strong><br>Runes are made by placing blank runes into a Rune Altar, throwing the necissary ingredients nearby, and Sneak + Rclicking with a stick.<br>If you don't have enough blank runes in the altar, the craft will fail. You may need multiple items per rune.<br><br><strong>Elemental Types:</strong><br>There are four types of elemental spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target, and deal some more damage.<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly heal the caster on hit.<br><strong>Air</strong> spells deal much more knockback."
+    "hbrunes-title": "(RuneStory) Wizardry 101:",
+    "hbrunes-text": "<strong>Casting And Selecting Spells</strong><br>Casting and selecting spells are done with the keybind. By default, ALT + F will bring up your spell menu, and X will cast the spell, or try to. To select a spell, simply click on it, and the menu will close automatically for quick casting. The Spell Menu contains 2 optional filters, one for Tier, and one for Category.<br><strong>Damage</strong> spells are primarily combat focused.<br><strong>Support</strong> Spells aid in a task, be it combat or gathering.<br><strong>Utility</strong> Spells perform simple tricks,like heating an ingot,or making a sapling grow.",
+
+    "game:hbrunesbag-title": "(RuneStory) Rune Bags:",
+    "game:hbrunesbag-text": "(RuneStory) Rune bags contain less slots than a normal backpack item, and are only capable of holding runes. However, in a rune pouch, the stacksize limit for runes is doubled.",
+
+    "hbrunespells-title": "(RuneStory) Spells:",
+    "hbrunespells-text": "Spells are tricks that consume runes to perform an action, you can hold SHIFT in your spell menu over a spell for a quick description of its use. Casting a spell invokes a cooldown based on how many runes the spell contained. More runes infers a longer cooldown.<br><br><strong>Elemental Types:</strong><br>There are four types of elements for a damage spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target,dealing DoT<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly reduce hunger rate for a bit after hit.<br><strong>Air</strong> spells deal much more knockback.<br><br>Spells have a tier, this is merely an indicator of how powerful a given spell is.",
+
+    "game:hbmakingrunes-title": "(RuneStory) Making Runes:",
+    "game:hbmakingrunes-text": "To craft a rune, simply throw relevant items near the altar, and SNEAK + Rightclick while holding any Rune Wand. The Rune Altar must be filled with Blank Runes with right click for every craft, and consumes as many Blank Runes as output items. The Blank Runes may be retreived by sneaking while right-clicking with an empty hand. The Block may be Right-Clicked with any chiseled block to camoflage it as the chisled block; similar to QPChiselTools 'Decorative' blocks. The chiseled block can be retreived by breaking the altar.",
+
+    "hbrunemagicstats-title": "(RuneStory) Magical Stats:",
+    "hbrunemagicstats-text": "There are two magic stats related to runecraft, your Magic Damage and your Free Cast Chance,Both can be viewed in your spell select menu. Damage is self explanatory. Your Free Cast chance increases the odds that a spell will consume no runes on cast. Spells that return runes on successful casts do not trigger Free Cast chance rolls.",
+
+    "hblearningspells-title": "(RuneStory) Learning Spells",
+    "hblearningspells-text": "Spells can be learned with Spell Research items. By Default, however, you innately know all Tier 1 spells. When using a Spell Research item, you will always gain a random spell you do not know, and will be informed when you have learned every spell from a tier."
+
 }

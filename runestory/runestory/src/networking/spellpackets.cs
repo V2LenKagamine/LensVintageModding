@@ -18,7 +18,11 @@ namespace runestory
         public string spellID;
     }
     [ProtoContract]
-    public class STC_SpellPacket
+    public class STC_BuffSync
     {
+        [ProtoMember(1)]
+        public string effect;
+        [ProtoMember(2)]
+        public float duration;
     }
 }

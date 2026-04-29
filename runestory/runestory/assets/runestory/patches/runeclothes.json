@@ -1,0 +1,14 @@
+[
+    {
+        "enabled": false,
+        "file": "game:itemtypes/wearable/seraph/armor.json",
+        "op": "addmerge",
+        "path": "/attributes/magicAttributesByType",
+        "value": {
+            "armor-*-*-gold": {
+                "freeCastChance": 0.05,
+                "magicWeaponsDamage": 0.05
+            }
+        }
+    }
+]

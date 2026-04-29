@@ -1,0 +1,102 @@
+[
+    {
+        "ingredientPattern": "C,S",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:rune-blank",
+                    "quantity": 8
+            },
+            "S": {
+                "type": "item",
+                "code": "game:stick"
+            }
+        },
+        "width": 1,
+        "height": 2,
+        "output": {
+            "type": "item",
+            "code": "runestory:runewand-primitive"
+        }
+    },
+    {
+        "ingredientPattern": "C,S",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:rune-beta",
+                "quantity": 16
+            },
+            "S": {
+                "type": "item",
+                "code": "runestory:runewand-primitive"
+            }
+        },
+        "width": 1,
+        "height": 2,
+        "output": {
+            "type": "item",
+            "code": "runestory:runewand-basic"
+        }
+    },
+    {
+        "ingredientPattern": "C,S",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:rune-gamma",
+                "quantity": 32
+            },
+            "S": {
+                "type": "item",
+                "code": "runestory:runewand-basic"
+            }
+        },
+        "width": 1,
+        "height": 2,
+        "output": {
+            "type": "item",
+            "code": "runestory:runewand-standard"
+        }
+    },
+    {
+        "ingredientPattern": "C,S",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:rune-delta",
+                "quantity": 32
+            },
+            "S": {
+                "type": "item",
+                "code": "runestory:runewand-basic"
+            }
+        },
+        "width": 1,
+        "height": 2,
+        "output": {
+            "type": "item",
+            "code": "runestory:runewand-scholar"
+        }
+    },
+    {
+        "ingredientPattern": "C,S",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:rune-epsilon",
+                "quantity": 32
+            },
+            "S": {
+                "type": "item",
+                "code": "runestory:runewand-scholar"
+            }
+        },
+        "width": 1,
+        "height": 2,
+        "output": {
+            "type": "item",
+            "code": "runestory:runewand-master"
+        }
+    }
+]

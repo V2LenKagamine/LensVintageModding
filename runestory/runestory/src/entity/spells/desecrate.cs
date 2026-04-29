@@ -24,7 +24,7 @@ namespace runestory.src.entity.spells
         public void DoThing(Entity entity)
         {
             if(Api.Side == EnumAppSide.Client) { return; }
-            IHarvestable harvestable = entity.GetInterface<IHarvestable>();
+            IHarvestable harvestable = entity?.GetInterface<IHarvestable>();
             if (harvestable != null)
             {
                 try

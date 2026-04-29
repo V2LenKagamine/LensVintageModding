@@ -1,20 +1,22 @@
 {
-    "code": "windstore",
+    "code": "enticebees",
     "enabled": true,
     "attributes": {
         "reagents": {
             "runestory:rune-air": 4,
-            "runestory:rune-soul": 2,
-            "runestory:rune-delta": 2
+            "runestory:rune-earth": 4,
+            "runestory:rune-fire": 4,
+            "runestory:rune-delta": 1
         },
         "reagentnames": [
             "runestory:item-rune-air",
-            "runestory:item-rune-soul",
+            "runestory:item-rune-earth",
+            "runestory:item-rune-fire",
             "runestory:item-rune-delta"
         ],
-        "langCode": "windstoredsc",
+        "langCode": "enticebeesdsc",
         "spelltype": "util",
         "spelltier": 4
     },
-    "imgpath": "windstore"
+    "imgpath": "bees"
 }

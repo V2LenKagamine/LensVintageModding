@@ -22,6 +22,7 @@ namespace runestory
 
         private string openTab = "all";
 
+        private string tierTab = "all";
 
         public string SelectedSpell;
         private RunestoryMS RMS => RunestoryMS.runeCApi.ModLoader.GetModSystem<RunestoryMS>();  //Cursed.
@@ -69,10 +70,16 @@ namespace runestory
             if (openTab == "dmg") { validspells = validspells.Where(spell => spell.spellType == "dmg"); }
             if (openTab == "util") { validspells = validspells.Where(spell => spell.spellType == "util"); }
 
+            if (tierTab == "t1") { validspells = validspells.Where(spell => spell.spellTier == 1); }
+            if (tierTab == "t2") { validspells = validspells.Where(spell => spell.spellTier == 2); }
+            if (tierTab == "t3") { validspells = validspells.Where(spell => spell.spellTier == 3); }
+            if (tierTab == "t4") { validspells = validspells.Where(spell => spell.spellTier == 4); }
+            if (tierTab == "t5") { validspells = validspells.Where(spell => spell.spellTier == 5); }
+
             if (validspells is null) { return CallbackGUIStatus.Closed; }
             int spellcount = validspells.Count();
             ElementBounds window = RunestoryMS.runeCApi.Gui.WindowBounds;
-            ImGui.SetNextWindowSize(new Vector2(500f, 85f + (56f * (float)Math.Ceiling(spellcount / 8d))));
+            ImGui.SetNextWindowSize(new Vector2(500f, 100f + (56f * (float)Math.Ceiling(spellcount / 8d))));
             ImGui.Begin("Spell Select Window");
             try
             {
@@ -85,6 +92,18 @@ namespace runestory
                 if(ImGui.SmallButton("Utility Spells")){SetTab("util"); }
                 ImGui.SameLine();
                 if (ImGui.SmallButton("Support Spells")) {SetTab("supp"); }
+
+                if (ImGui.SmallButton("All Tiers")) { SetTier("all"); }
+                ImGui.SameLine();
+                if (ImGui.SmallButton("Tier 1")) { SetTier("t1"); }
+                ImGui.SameLine();
+                if (ImGui.SmallButton("Tier 2")) { SetTier("t2"); }
+                ImGui.SameLine();
+                if (ImGui.SmallButton("Tier 3")) { SetTier("t3"); }
+                ImGui.SameLine();
+                if (ImGui.SmallButton("Tier 4")) { SetTier("t4"); }
+                ImGui.SameLine();
+                if (ImGui.SmallButton("Tier 5")) { SetTier("t5"); }
 
                 for (int i = 0; i < spellcount; i++)
                 {
@@ -139,6 +158,11 @@ namespace runestory
         public void SetTab(string tab)
         {
             openTab = tab;
+        }
+
+        public void SetTier(string Tier)
+        {
+            tierTab = Tier;
         }
     }
 }

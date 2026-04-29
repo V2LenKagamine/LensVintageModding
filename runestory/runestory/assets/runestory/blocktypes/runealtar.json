@@ -8,6 +8,17 @@
     "entityBehaviors": [
         { "name": "runealtar-chiselsteal-bhv" }
     ],
+    "attributes": {
+        "handbook": {
+            "extraSections": [
+                {
+                    "title": "hbmakingrunes-title",
+                    "text": "hbmakingrunes-text"
+                }
+            ],
+            "include": true
+        }
+    },
     "blockmaterial": "Wood",
     "class": "runealtar-b",
     "entityclass": "runealtar-be",

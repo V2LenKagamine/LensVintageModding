@@ -49,8 +49,6 @@ namespace runestory.src.recipestuff
 
     public static class HandbookExtensions
     {
-
-
         public static List<ItemStack> GetRuneFrom(CollectibleObject collectible, ICoreAPI api)
         {
             List<ItemStack> Output = [];

@@ -1,0 +1,20 @@
+{
+    "code": "bonestopeaches",
+    "enabled": true,
+    "attributes": {
+        "reagents": {
+            "runestory:rune-earth": 4,
+            "runestory:rune-balance": 4,
+            "runestory:rune-delta": 1
+        },
+        "reagentnames": [
+            "runestory:item-rune-earth",
+            "runestory:item-rune-balance",
+            "runestory:item-rune-delta"
+        ],
+        "langCode": "bonestopeachesdsc",
+        "spelltype": "util",
+        "spelltier": 4
+    },
+    "imgpath": "bonepeach"
+}

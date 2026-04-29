@@ -12,7 +12,7 @@
         }
     },
     {
-        "code": "reedpaper",
+        "code": "saltrock",
         "enabled": true,
         "attributes": {
             "reagents": {
@@ -24,7 +24,19 @@
         }
     },
     {
-        "code": "saltyrock",
+        "code": "resinlogs",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:log-placed-pine-ud": 8
+            },
+            "outputs": {
+                "game:resin": 1
+            }
+        }
+    },
+    {
+        "code": "catpaper",
         "enabled": true,
         "attributes": {
             "reagents": {
@@ -56,6 +68,18 @@
             },
             "outputs": {
                 "game:flaxfibers": 1
+            }
+        }
+    },
+    {
+        "code": "sowingbad",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:flaxtwine": 6
+            },
+            "outputs": {
+                "game:sewingkit": 1
             }
         }
     }

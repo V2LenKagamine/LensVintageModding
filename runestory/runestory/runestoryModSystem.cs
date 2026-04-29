@@ -8,6 +8,7 @@ using Newtonsoft.Json.Linq;
 using runestory.src.entity.spells;
 using runestory.src.gui;
 using runestory.src.items;
+using runestory.src.MiscHarmony;
 using runestory.src.recipestuff;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -37,10 +38,11 @@ namespace runestory
         public IServerNetworkChannel sapi_Runechannel;
 
         public static string RMS_SpellKnowledge => "RMSKnownSpells";
-        public static string RMS_Stat_RuneChance => "RuneConsumeChance";
+        public static string RMS_Stat_RuneChance => "freeCastChance";
         public static string RMS_Stat_MagicDamage => "magicWeaponsDamage";
+        public static string RMS_Net_Channel => "runespellchannel";
 
-        private Harmony RMSHarmony;
+        public Harmony RMSHarmony;
 
         public List<BaseRuneSpell> AllSpells = [];
         public List<BaseRuneAltar> AltarRecipes = [];
@@ -54,6 +56,8 @@ namespace runestory
          */
         public override void StartPre(ICoreAPI api)
         {
+            RMSHarmony = new Harmony("runestory");
+
             if (api is not ICoreClientAPI capi) return;
             
             runeCApi = capi;
@@ -85,18 +89,21 @@ namespace runestory
 
             if (api.Side == EnumAppSide.Client)
             {
-                capi_Runechannel = (api as ICoreClientAPI).Network.RegisterChannel("runespellchannel")
+                capi_Runechannel = (api as ICoreClientAPI).Network.RegisterChannel(RMS_Net_Channel)
                     .RegisterMessageType(typeof(CTS_SpellPacket))
-                    .RegisterMessageType(typeof(CTS_SelectPacket));
+                    .RegisterMessageType(typeof(CTS_SelectPacket))
+                    .RegisterMessageType(typeof(STC_BuffSync))
+                    .SetMessageHandler<STC_BuffSync>(OnReceiveBuffSync);
             }
             else
             {
                 runeSApi = api as ICoreServerAPI;
-                sapi_Runechannel = (api as ICoreServerAPI).Network.RegisterChannel("runespellchannel")
+                sapi_Runechannel = (api as ICoreServerAPI).Network.RegisterChannel(RMS_Net_Channel)
                     .RegisterMessageType(typeof(CTS_SpellPacket))
                     .SetMessageHandler<CTS_SpellPacket>(OnRecCastRequest)
                     .RegisterMessageType(typeof(CTS_SelectPacket))
-                    .SetMessageHandler<CTS_SelectPacket>(OnRecSpellSelect);
+                    .SetMessageHandler<CTS_SelectPacket>(OnRecSpellSelect)
+                    .RegisterMessageType(typeof(STC_BuffSync));
             }
 
             api.RegisterEntity("basesummonrunespell", typeof(defaultSpell));
@@ -123,6 +130,11 @@ namespace runestory
             api.RegisterEntity("saveselfspellent", typeof(SaveSelf));
             api.RegisterEntity("saveotherspellent", typeof(SaviorSpell));
             api.RegisterEntity("sproutcutspellspellent", typeof(SproutCutting));
+            api.RegisterEntity("bonestopeachesspellent", typeof(BonePeaches));
+            api.RegisterEntity("enticebeesspellent", typeof(EnticeBees));
+            api.RegisterEntity("predatoryauraspellent", typeof(PredAura));
+            api.RegisterEntity("growsaplingspellent", typeof(GrowSapling));
+            api.RegisterEntity("invoketrustspellent", typeof(EnforceTrust));
 
             api.RegisterBlockClass("runealtar-b", typeof(RuneAltarBlock));
             api.RegisterBlockEntityClass("runealtar-be", typeof(RuneAltarBe));
@@ -138,6 +150,8 @@ namespace runestory
 
             api.Logger.Notification("RuneStory is coded by Len, god save us all.");
         }
+
+
         public override void StartClientSide(ICoreClientAPI api)
         {
             runeGuiSys = api.ModLoader.GetModSystem<ImGuiModSystem>();
@@ -146,8 +160,6 @@ namespace runestory
 
             runeGuiSys.Draw += TempStatusHudGui.Draw;
             runeGuiSys.Closed += TempStatusHudGui.Close;
-
-            RMSHarmony = new Harmony("runestory");
 
             RMSHarmony.Patch(typeof(CollectibleBehaviorHandbookTextAndExtraInfo)
                     .GetMethod(nameof(CollectibleBehaviorHandbookTextAndExtraInfo.GetHandbookInfo)),
@@ -160,17 +172,70 @@ namespace runestory
                     nameof(AddCreatedByPatch.Postfix)));
 
 
-            api.Logger.Notification("Runestory? On my client? Its more likely than you think!");
+            api.Logger.Notification("[RuneStory]? On my client? Its more likely than you think!");
 
             api.Assets.AddModOrigin("runestory", "textures/spellicons");
         }
+        public override void StartServerSide(ICoreServerAPI api)
+        {
+            api.Event.PlayerJoin += player => {
+                player.Entity.Attributes.SetLong("runespellnextcasttime", 0);
+
+                IInventory inv = player.InventoryManager.GetOwnInventory(GlobalConstants.characterInvClassName);
+                inv.SlotModified += (slotid) => AddRMSstats.UpdateEquips(inv, player);
+                inv = player.InventoryManager.GetHotbarInventory();
+                inv.SlotModified += (slotid) => AddRMSstats.UpdateHotbarEquips(inv, player);
+            };
+            api.Event.PlayerNowPlaying += (IServerPlayer player) =>
+            {
+                if (player.Entity is EntityPlayer)
+                {
+                    Entity e = player.Entity;
+                    e.AddBehavior(new PlayerTempBuffer(e));
+                    e.Attributes.TryGetAttribute(RMS_SpellKnowledge, out IAttribute spellsmaybe);
+                    if (spellsmaybe is null)
+                    {
+                        string[] defspells = [];
+                        foreach (var spll in AllSpells.Where(spell => spell.spellTier == 1))
+                        {
+                            defspells = defspells.AddToArray(spll.Code);
+                        }
+
+                        e.WatchedAttributes.SetAttribute(RMS_SpellKnowledge, new StringArrayAttribute(defspells));
+                    }
+                    if (!(e.Stats.Where(stat => stat.Key == RMS_Stat_MagicDamage).Any()))
+                    {
+                        //e.Stats.Register(RMS_Stat_MagicDamage);
+                        e.Stats.Set(RMS_Stat_MagicDamage, "base", 1f, true);
+                    }
+                    if (!(e.Stats.Where(stat => stat.Key == RMS_Stat_RuneChance).Any()))
+                    {
+                        //e.Stats.Register(RMS_Stat_RuneChance);
+                        e.Stats.Set(RMS_Stat_RuneChance, "base", 1f, true);
+                    }
+                }
+            };
+            api.Logger.Notification("[RuneStory] Welcome to ScapeRune!");
+        }
+
         public void OnCastRequest(ICoreClientAPI capi)
         {
-            capi.Network.GetChannel("runespellchannel").SendPacket(new CTS_SpellPacket
+            capi.Network.GetChannel(RMS_Net_Channel).SendPacket(new CTS_SpellPacket
             {
                 byPlayerID = capi.World.Player.Entity.EntityId,
             });
         }
+        private void OnRecSpellSelect(IServerPlayer fromPlayer, CTS_SelectPacket pack)
+        {
+            fromPlayer.Entity.Attributes.SetString("runespellselected", pack.spellID);
+        }
+
+        private void OnReceiveBuffSync(STC_BuffSync packet)
+        {
+            EntityPlayer us = runeCApi.World.Player.Entity;
+            us.Attributes.SetFloat(packet.effect,packet.duration);
+        }
+
         private void OnRecCastRequest(IPlayer from,CTS_SpellPacket pack)
         {
             //Todo: spawn and register ents
@@ -195,7 +260,7 @@ namespace runestory
         public void SetCastDelay(Entity ent, BaseRuneSpell spell)
         {
             //Todo: Config?
-            long percastMS = 500;
+            long percastMS = 800 - (int)Math.Min(400,spell.Reagents.Count * 100);
             int TotalReag = 0;
             if (spell is not null)
             {
@@ -208,48 +273,8 @@ namespace runestory
             ent.Attributes.SetLong("runespellnextcasttime", toset);
             ent.Attributes.MarkPathDirty("runespellnextcasttime");
         }
-        private void OnRecSpellSelect(IServerPlayer fromPlayer, CTS_SelectPacket pack)
-        {
-            fromPlayer.Entity.Attributes.SetString("runespellselected", pack.spellID);
-        }
 
-        public override void StartServerSide(ICoreServerAPI api)
-        {
-            api.Event.PlayerJoin += player => {
-                player.Entity.Attributes.SetLong("runespellnextcasttime", 0); 
-            };
-            api.Event.PlayerNowPlaying += (IServerPlayer player) =>
-            {
-                if (player.Entity is EntityPlayer)
-                {
-                    Entity e = player.Entity;
-                    e.AddBehavior(new PlayerTempBuffer(e));
-                    e.Attributes.TryGetAttribute(RMS_SpellKnowledge, out IAttribute spellsmaybe);
-                    if (spellsmaybe is null)
-                    {
-                        string[] defspells = [];
-                        foreach (var spll in AllSpells.Where(spell => spell.spellTier == 1))
-                        {
-                            defspells = defspells.AddToArray(spll.Code);
-                        }
-
-                        e.WatchedAttributes.SetAttribute(RMS_SpellKnowledge, new StringArrayAttribute(defspells));
-                    }
-                    if(!(e.Stats.Where(stat => stat.Key == RMS_Stat_MagicDamage).Any()))
-                    {
-                        //e.Stats.Register(RMS_Stat_MagicDamage);
-                        e.Stats.Set(RMS_Stat_MagicDamage, "base", 1f, true);
-                    }
-                    if (!(e.Stats.Where(stat => stat.Key == RMS_Stat_RuneChance).Any()))
-                    {
-                        //e.Stats.Register(RMS_Stat_RuneChance);
-                        e.Stats.Set(RMS_Stat_RuneChance, "base", 1f, true);
-                    }
-                }
-            };
-            api.Logger.Notification("Runestory is running. Why would you do this to your poor server.");
-        }
-
+       
         public override void AssetsLoaded(ICoreAPI api)
         {
             if(api is not ICoreServerAPI sApi) { return; }
@@ -258,6 +283,8 @@ namespace runestory
             LoadSpells(sApi);
             LoadRuneAltars(sApi);
             LoadRefineRecipes(sApi);
+
+            api.Logger.Notification("[RuneStory] All recipe types and spells loaded.");
         }
 
         public override void Dispose()
