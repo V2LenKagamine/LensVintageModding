@@ -97,16 +97,16 @@ namespace runestory
             Contents?.ResolveBlockOrItem(api.World);
         }
         public void DoRuneCraft(IWorldAccessor world,IPlayer ply) {
-            if (Contents is null) { return; }
+            if (Contents is null || Api.Side == EnumAppSide.Client) { return; }
 
             Entity[] nearAltar = Api.World.GetEntitiesInsideCuboid(Pos.AddCopy(-1, -1, -1), Pos.AddCopy(1, 1, 1), ent => ent.OnGround && ent is EntityItem);
 
             for (int i = 0; i < Api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes.Count; i++)
             {
-                int MaxCanMake = Contents.StackSize;
                 BaseRuneAltar recipe = Api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes[i];
-                Entity[] toEat = new Entity[recipe.Reagents.Count];
+                List<Entity> toEat = [];
                 bool valid = false;
+                int MaxCanMake = int.MaxValue;
                 for (int j = 0; j < recipe.Reagents.Count; j++)
                 {
                     bool found = false;
@@ -114,52 +114,88 @@ namespace runestory
                     {
                         if (recipe.Reagents.ElementAt(j).Key.Contains('*'))
                         {
-                            if(WildcardUtil.Match(recipe.Reagents.ElementAt(j).Key,(ent as EntityItem).Itemstack?.Collectible.Code?.ToString())) 
+                            if (WildcardUtil.Match(recipe.Reagents.ElementAt(j).Key, (ent as EntityItem).Itemstack?.Collectible.Code?.ToString()))
                             {
-                                MaxCanMake = Math.Min(MaxCanMake,(int)Math.Floor((ent as EntityItem).Itemstack.StackSize / (float)recipe.Reagents.ElementAt(j).Value));
-                                found = true; 
-                                toEat[j]=ent;
-                                break;
+                                found = true;
+                                EntityItem tmp = null;
+                                if (toEat.Count > 0)
+                                {
+                                    tmp = toEat.Where(boi => (boi as EntityItem).Itemstack.Collectible.Code == (ent as EntityItem).Itemstack.Collectible.Code)?.First() as EntityItem;
+                                }
+                                if (tmp is not null)
+                                {
+                                    //Pray to god this doesnt cause a Memory Leak
+                                    ItemStack Hell = new ItemStack((ent as EntityItem).Itemstack.Collectible, (ent as EntityItem).Itemstack.StackSize + tmp.Itemstack.StackSize);
+                                    tmp.Slot.Set(Hell);
+                                    tmp.Itemstack = Hell;
+                                    tmp.Slot.MarkDirty();
+                                    ent.Die();
+                                }
+                                else
+                                {
+                                    toEat.Add(ent);
+                                }
                             }
                         }
                         else
                         {
                             if ((ent as EntityItem).Itemstack?.Collectible?.Code?.ToString() == recipe.Reagents.ElementAt(j).Key)
                             {
-                                MaxCanMake = Math.Min(MaxCanMake, (int)Math.Floor((ent as EntityItem).Itemstack.StackSize / (float)recipe.Reagents.ElementAt(j).Value));
                                 found = true;
-                                toEat[j]=ent;
-                                break;
+                                EntityItem tmp = null;
+                                if (toEat.Count > 0)
+                                {
+                                    tmp = toEat.Where(boi => (boi as EntityItem).Itemstack.Collectible.Code == (ent as EntityItem).Itemstack.Collectible.Code)?.First() as EntityItem;
+                                }
+                                if (tmp is not null)
+                                {
+                                    ItemStack Hell = new ItemStack((ent as EntityItem).Itemstack.Collectible, (ent as EntityItem).Itemstack.StackSize + tmp.Itemstack.StackSize);
+                                    tmp.Slot.Set(Hell);
+                                    tmp.Itemstack = Hell;
+                                    tmp.Slot.MarkDirty();
+                                    ent.Die();
+                                }
+                                else
+                                {
+                                    toEat.Add(ent);
+                                }
                             }
                         }
                     }
                     if (!found) { break; }
-                    if(j == recipe.Reagents.Count - 1) {  valid = true; }
+                    if (j == recipe.Reagents.Count - 1) { valid = true; }
                 }
-                if(!valid) { continue; }
-                bool stillvalid = true;
-                for (int i5 = 0; i5 < recipe.OutputItems.Count; i5++)
+                for (int hate = 0; hate < toEat.Count; hate++)
                 {
-                   if(recipe.OutputItems.ElementAt(i5).Value * MaxCanMake > Contents.StackSize) { if (MaxCanMake > 1) { MaxCanMake--; } else if (MaxCanMake <= 1) { stillvalid = false; break; } }
-                }
-                if(!stillvalid) { continue; }
-                for (int i2 = 0; i2 < recipe.Reagents.Count;i2++)
-                {
-                    EntityItem victim = toEat[i2] as EntityItem;
-                    victim.Itemstack.StackSize -= (recipe.Reagents.ElementAt(i2).Value * MaxCanMake);
-                    victim.MarkTagsDirty();
-                    if (victim.Itemstack.StackSize <= 0)
+                    for (int stupid = 0; stupid < recipe.Reagents.Count; stupid++)
                     {
-                        victim.Die();
+                        EntityItem succ = toEat[hate] as EntityItem;
+                        if (!recipe.SatisfiesAsIngredient(stupid, succ.Slot.Itemstack)) { continue; }
+                        MaxCanMake = (int)Math.Min(MathF.Floor((succ.Itemstack.StackSize / (float)recipe.Reagents.ElementAt(stupid).Value)), MaxCanMake);
                     }
                 }
-                for(int i3 = 0;i3< recipe.OutputItems.Count;i3++)
+                if (!valid) { continue; }
+                for (int i2 = 0; i2 < toEat.Count; i2++)
                 {
-                    EntityItem newstack = Api.World.SpawnItemEntity(new(Api.World.GetItem(recipe.OutputItems.ElementAt(i3).Key),recipe.OutputItems.ElementAt(i3).Value),Pos.AddCopy(0,1.5f,0),new(Api.World.Rand.Next(-1,1)*0.1f, Api.World.Rand.Next(-1, 1) * 0.1f, Api.World.Rand.Next(-1, 1) * 0.1f)) as EntityItem;
-
-                    Contents.StackSize -= MaxCanMake * recipe.OutputItems.ElementAt(i3).Value;
-                    if (Contents.StackSize <= 0) { Contents = null; }
-                    MarkDirty();
+                    EntityItem victim = toEat[i2] as EntityItem;
+                    for (int i3 = 0; i3 < recipe.Reagents.Count(); i3++)
+                    {
+                        if (!recipe.SatisfiesAsIngredient(i3, victim.Slot.Itemstack)) { continue; }
+                        victim.Slot.Set(victim.Slot.TakeOut(recipe.Reagents.ElementAt(i3).Value * MaxCanMake));
+                        victim.MarkTagsDirty();
+                        if (victim.Itemstack is null || victim.Itemstack?.StackSize <= 0 || victim.Slot.Itemstack is null || victim.Slot.Itemstack?.StackSize <= 0)
+                        {
+                            victim.Die();
+                        }
+                    }
+                }
+                //Todo: Unhardcode
+                Contents?.StackSize -= MaxCanMake * recipe.OutputItems.First().Value;
+                if(Contents.StackSize<=0) { Contents = null; }
+                MarkDirty();
+                for (int i3 = 0; i3 < recipe.OutputItems.Count; i3++)
+                {
+                    EntityItem newstack = Api.World.SpawnItemEntity(new(Api.World.GetItem(recipe.OutputItems.ElementAt(i3).Key), recipe.OutputItems.ElementAt(i3).Value * MaxCanMake), Pos.AddCopy(0, 1.5f, 0), new(Api.World.Rand.Next(-1, 1) * 0.1f, Api.World.Rand.Next(-1, 1) * 0.1f, Api.World.Rand.Next(-1, 1) * 0.1f)) as EntityItem;
                 }
                 break; //We've done enough for one craft...
             }
@@ -168,7 +204,7 @@ namespace runestory
         {
             if(ply.Entity.Controls.ShiftKey)
             {
-                if(Contents is not null && WildcardUtil.Match("runestory:runewand-*",ply.InventoryManager.ActiveHotbarSlot?.Itemstack?.Collectible?.Code?.ToString()))
+                if(Contents is not null && WildcardUtil.Match("runestory:runewand-*",ply.InventoryManager.ActiveHotbarSlot?.Itemstack?.Collectible?.Code?.ToString() ?? "no"))
                 {
                     if(Api.Side == EnumAppSide.Server) 
                     { DoRuneCraft(world, ply); }

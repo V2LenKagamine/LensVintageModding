@@ -1,0 +1,263 @@
+{
+    "whyamihere": "justtosuffer",
+    "createdbyrunealtar": "Fabricado desde",
+    "runecraftsinto": "Se convierte en",
+    "atrunealtar": "Altar de Runas con Runas en Blanco",
+
+    "createdbyrefine": "Refinado desde",
+    "refinesinto": "Se refina en",
+    "atrefine": "Hechizo de Refinar",
+
+    "walkspeed": "Velocidad de caminata",
+    "oreDropRate": "Mineral extra",
+    "miningSpeedMul": "Velocidad de minería",
+    "hungerrate": "Tasa de hambre",
+    "meleeWeaponsDamage": "Daño cuerpo a cuerpo",
+    "armorDurabilityLoss": "Pérdida de durabilidad de armadura",
+    "rangedWeaponsAcc": "Precisión de arma a distancia",
+    "rangedWeaponsDamage": "Daño de arma a distancia",
+    "rangedWeaponsSpeed": "Tiempo de tensión de arma a distancia",
+    "magicWeaponsDamage": "Daño de hechizo mágico",
+    "runeConsumeChance": "Oportunidad de lanzamiento gratuito",
+
+    "windbuffon": "Te sientes más ligero de pies.",
+    "mendingmist": "Sientes una suave capa de agua rodearte.",
+    "dwarfbuffon": "Te sientes en sintonía con la tierra y la piedra.",
+    "warcryon": "¡Te sientes listo para arrasar con un ejército!",
+    "predauraon": "Sientes el llamado de la cacería.",
+
+    "toggle-spell": "(RuneStory) Alternar menú de selección de hechizos",
+    "cast-spell": "(RuneStory) Lanzar hechizo seleccionado",
+    "cast-fail": "Te falta algo para lanzar ese hechizo...",
+    "cast-fail-toosoon": "¡Aún estás cansado del último hechizo, ve más despacio!",
+    "runedissipatebuff": "Sientes un cambio sutil al disiparse un efecto temporal.",
+    "mindexpand": "Sientes tu mente expandirse con el hechizo: ",
+    "knownspell": "Ya conoces este hechizo.",
+    "allknown": "Ya sabes todo lo que puedes aprender de estos.",
+    "nowallknown": "Sientes que has aprendido todo lo posible para este nivel.",
+    "crumbletodust": "¡Su conocimiento absorbido, el objeto se desmorona en polvo!",
+    "game:tabname-runestorytab": "Objetos de RuneStory",
+    "magicdamagestat": "Daño mágico: ",
+    "runeconsumechance": "Oportunidad de lanzamiento gratuito: ",
+
+    "nodsc": "¡Este hechizo no tiene descripción de idioma! ¿Está configurado el atributo 'langCode'?",
+
+    "makestick": "Corte de Viento",
+    "makestickdsc": "Lanza un proyectil que convierte Hojas en Palos en un área de 3x3x3 donde aterriza.",
+
+    "healother": "Rayo Curativo",
+    "healotherdsc": "Lanza un proyectil que cura al objetivo, o al más cercano a su punto de aterrizaje, 2.5 PV en 5 segundos.",
+
+    "healself": "Curar a Uno Mismo",
+    "healselfdsc": "Cura al lanzador 2.5 PV en 5 segundos.",
+
+    "groupheal": "Curación en Grupo",
+    "grouphealdsc": "Cúrate a ti mismo y a los jugadores cercanos 2.5 + 0.5 de salud por objetivo adicional, en 5 segundos.",
+
+    "windstore": "Almacén de Viento",
+    "windstoredsc": "Al activarse agachado: el proyectil marcará el bloque seleccionado al aterrizar y devolverá las runas. De lo contrario: envía todos los objetos en un radio de 2 bloques desde el punto de aterrizaje a la ubicación marcada, o al inventario allí, si es posible.",
+
+    "ignitespell": "Ignición",
+    "ignitespelldsc": "Lanza un proyectil que incendia lo que golpea. Fosas de carbón, hornos de barro o criaturas desafortunadas. No causa daño directo.",
+
+    "superheat": "Súper Calentamiento",
+    "superheatdsc": "Aumenta la temperatura del objeto en tu mano principal a 1300°C. Las pilas de objetos más grandes tendrán su temperatura aumentada en menor medida.",
+
+    "foragespell": "Convocar Forrajeo",
+    "foragespelldsc": "Convoca una semilla aleatoria y, si tienes suerte, una fruta aleatoria.",
+
+    "magelight": "Runa de Luz",
+    "magelightdsc": "Convoca una runa que proporciona una fuente de luz temporal antes de descomponerse en una Runa en Blanco.",
+
+    "desecrate": "Profanar Cadáver",
+    "desecratedsc": "Lanza un proyectil que cosecha el cadáver más cercano con un 20 por ciento de eficiencia adicional.",
+
+    "goodberry": "Baya Bendita",
+    "goodberrydsc": "Convoca una baya mágica que te sacia completamente.",
+
+    "bonestopeaches": "Huesos a Duraznos",
+    "bonestopeachesdsc": "Convierte hasta 8 huesos en tu inventario en duraznos.",
+
+    "fertilizespell": "Restaurar Nutrientes",
+    "fertilizespelldsc": "Intenta dar un 5 por ciento de N, K o P a la tierra de cultivo que estás apuntando, o a la que está debajo del cultivo que apuntas. Ignora el límite de NKP.",
+
+    "rockblast": "Explosión Rompe-Rocas",
+    "rockblastdsc": "Convoca un proyectil que crea una explosión rompe-rocas de 5 bloques de ancho al aterrizar. ¡Capaz de dañarte a ti mismo!",
+
+    "dwarfbless": "Bendición Enana",
+    "dwarfblessdsc": "Te otorga a ti y a los jugadores cercanos un 20 por ciento de velocidad de minería y un 5 por ciento de tasa de mineral extra durante 2 minutos y 30 segundos.",
+
+    "warcry": "Grito de Guerra",
+    "warcrydsc": "Te otorga a ti y a los jugadores cercanos un 20 por ciento de daño cuerpo a cuerpo y reduce el daño a la armadura en un 20 por ciento durante 2 minutos y 30 segundos.",
+
+    "windfeet": "Pies de Viento",
+    "windfeetdsc": "Te otorga a ti y a los jugadores cercanos un 25 por ciento de velocidad de caminata durante 5 minutos.",
+
+    "watercloak": "Capa de Niebla Curativa",
+    "watercloakdsc": "Te otorga a ti y a los jugadores cercanos 25 de salud en 5 minutos.",
+
+    "flowerfield": "Florecimiento Primaveral",
+    "flowerfielddsc": "Hace crecer un tipo de flor vainilla aleatoria en un radio de 4 bloques alrededor de ti.",
+
+    "enticebees": "Atraer Abejas",
+    "enticebeesdsc": "Lanza un proyectil que intenta llenar una colmena cercana con una colonia de abejas errantes.",
+
+    "predatoryaura": "Instintos Depredadores",
+    "predatoryauradsc": "Te otorga a ti y a los jugadores cercanos un 30 por ciento de velocidad de caminata y un 10 por ciento a daño a distancia, precisión y velocidad de uso durante 2 minutos y 30 segundos.",
+
+    "growsapling": "Salto de Árbol",
+    "growsaplingdsc": "Lanza un proyectil que intenta eliminar 3 días del árbol más cercano [ya brotado] al punto de aterrizaje.",
+
+    "invoketrust": "Domesticar",
+    "invoketrustdsc": "Lanza un proyectil que eleva la generación de un animal aleatorio cercano a su punto de aterrizaje a 3, si es menor. Siempre elevará la generación de un animal al alcance, si puede.",
+
+    "refinespell": "Refinar",
+    "refinespelldsc": "Refina, o intercambia, muchos objetos por muchos otros objetos.",
+
+    "saveself": "Curación de Pánico",
+    "saveselfdsc": "Cura 2.5 PV instantáneamente, luego 7.5 más en 10 segundos.",
+
+    "saveother": "Curación de Pánico para Otro",
+    "saveotherdsc": "Lanza un proyectil que cura 2.5 PV instantáneamente, luego 7.5 más en 10 segundos.",
+
+    "sproutcutspell": "Esqueje Brotado",
+    "sproutcutspelldsc": "Lanza un proyectil que convence a un arbusto de bayas cercano para liberar un único esqueje sin rasgos.",
+
+    "airbolt": "Rayo de Aire",
+    "airboltdsc": "Un hechizo de proyectil simple. Daño aceptable.",
+
+    "airsurge": "Oleada de Aire",
+    "airsurgedsc": "Un hechizo de proyectil simple. Daño decente.",
+
+    "airblast": "Explosión de Aire",
+    "airblastdsc": "Un hechizo de proyectil simple. Tiene un pequeño AOE. Buen daño.",
+
+    "airexplosion": "Explosión de Aire Mayor",
+    "airexplosiondsc": "Un hechizo de proyectil simple. Tiene un AOE moderado. Gran daño.",
+
+    "airdoom": "Destrucción de Aire",
+    "airdoomdsc": "Un hechizo de proyectil simple. Tiene un gran AOE. Daño excelente.",
+
+    "earthbolt": "Rayo Terrestre",
+    "earthboltdsc": "Un hechizo de proyectil simple. Daño aceptable.",
+
+    "earthsurge": "Oleada Terrestre",
+    "earthsurgedsc": "Un hechizo de proyectil simple. Daño decente.",
+
+    "earthblast": "Explosión Terrestre",
+    "earthblastdsc": "Un hechizo de proyectil simple. Tiene un pequeño AOE. Buen daño.",
+
+    "earthexplosion": "Explosión Terrestre Mayor",
+    "earthexplosiondsc": "Un hechizo de proyectil simple. Tiene un AOE moderado. Gran daño.",
+
+    "earthdoom": "Destrucción Terrestre",
+    "earthdoomdsc": "Un hechizo de proyectil simple. Tiene un gran AOE. Daño excelente.",
+
+    "firebolt": "Rayo de Fuego",
+    "fireboltdsc": "Un hechizo de proyectil simple. Daño aceptable.",
+
+    "firesurge": "Oleada de Fuego",
+    "firesurgedsc": "Un hechizo de proyectil simple. Daño decente.",
+
+    "fireblast": "Explosión de Fuego",
+    "fireblastdsc": "Un hechizo de proyectil simple. Tiene un pequeño AOE. Buen daño.",
+
+    "fireexplosion": "Explosión de Fuego Mayor",
+    "fireexplosiondsc": "Un hechizo de proyectil simple. Tiene un AOE moderado. Gran daño.",
+
+    "firedoom": "Destrucción de Fuego",
+    "firedoomdsc": "Un hechizo de proyectil simple. Tiene un gran AOE. Daño excelente.",
+
+    "waterbolt": "Rayo de Agua",
+    "waterboltdsc": "Un hechizo de proyectil simple. Daño aceptable.",
+
+    "watersurge": "Oleada de Agua",
+    "watersurgedsc": "Un hechizo de proyectil simple. Daño decente.",
+
+    "waterblast": "Explosión de Agua",
+    "waterblastdsc": "Un hechizo de proyectil simple. Tiene un pequeño AOE. Buen daño.",
+
+    "waterexplosion": "Explosión de Agua Mayor",
+    "waterexplosiondsc": "Un hechizo de proyectil simple. Tiene un AOE moderado. Gran daño.",
+
+    "waterdoom": "Destrucción de Agua",
+    "waterdoomdsc": "Un hechizo de proyectil simple. Tiene un gran AOE. Daño excelente.",
+
+    "item-rune-blank": "Runa en Blanco",
+    "itemdesc-rune-blank": "Se puede usar para fabricar otras runas en un Altar de Runas. ¡Busca 'Runa' en el manual!",
+    "item-rune-water": "Runa de Agua",
+    "itemdesc-rune-water": "Suave al tacto.",
+    "item-rune-air": "Runa de Aire",
+    "itemdesc-rune-air": "Ligera como una pluma.",
+    "item-rune-fire": "Runa de Fuego",
+    "itemdesc-rune-fire": "Se siente cálida.",
+    "item-rune-earth": "Runa de Tierra",
+    "itemdesc-rune-earth": "Más pesada de lo que parece...",
+    "item-rune-soul": "Runa de Alma",
+    "itemdesc-rune-soul": "Sientes una conexión lejana con algo...",
+    "item-rune-self": "Runa del Ser",
+    "itemdesc-rune-self": "Reflejo similar a un espejo.",
+    "item-rune-balance": "Runa de Balance",
+    "itemdesc-rune-balance": "Como todas las cosas deberían ser.",
+    "item-rune-rust": "Runa de Óxido",
+    "itemdesc-rune-rust": "Huele a sangre.",
+    "item-rune-alpha": "Runa Tenue",
+    "itemdesc-rune-alpha": "Contiene débiles energías mágicas.",
+    "item-rune-beta": "Runa Brillante",
+    "itemdesc-rune-beta": "Contiene una pequeña cantidad de magia.",
+    "item-rune-gamma": "Runa Resplandeciente",
+    "itemdesc-rune-gamma": "Puedes sentir la magia, es débil, pero está ahí.",
+    "item-rune-delta": "Runa Radiante",
+    "itemdesc-rune-delta": "El aura que irradia esta runa es palpable.",
+    "item-rune-epsilon": "Runa Cegadora",
+    "itemdesc-rune-epsilon": "La runa pulsa al compás de tus pensamientos.",
+    "item-runelamp": "Runa de Luz",
+
+    "item-runewand-primitive": "Varita de Runas Primitiva",
+    "itemdesc-runewand-primitive": "Bueno, funciona supongo. Aumento minúsculo a las estadísticas mágicas en la mano secundaria.",
+    "item-runewand-basic": "Varita de Runas Básica",
+    "itemdesc-runewand-basic": "Pequeño aumento a las estadísticas mágicas en la mano secundaria.",
+    "item-runewand-standard": "Varita de Runas Estándar",
+    "itemdesc-runewand-standard": "Aumento moderado a las estadísticas mágicas en la mano secundaria.",
+    "item-runewand-scholar": "Varita de Runas del Erudito",
+    "itemdesc-runewand-scholar": "Buen aumento a las estadísticas mágicas en la mano secundaria.",
+    "item-runewand-master": "Varita de Runas del Maestro",
+    "itemdesc-runewand-master": "Gran aumento a las estadísticas mágicas en la mano secundaria.",
+
+    "item-runebag-primitive": "Bolsa de Runas Tosca",
+    "item-runebag-linen": "Bolsa de Runas",
+    "item-runebag-leather": "Bolsa de Runas de Cuero",
+    "item-runicpickaxe-copper": "Pico Rúnico de Cobre",
+    "item-runicpickaxe-gold": "Pico Rúnico de Oro",
+    "item-runicpickaxe-silver": "Pico Rúnico de Plata",
+    "item-runicpickaxe-blackbronze": "Pico Rúnico de Bronce Negro",
+    "item-runicpickaxe-iron": "Pico Rúnico de Hierro",
+    "itemdesc-runicpickaxe-*": "Solo puede romper roca, pero puede dejar caer una runa aleatoria al hacerlo.",
+    "item-runicchisel": "Cincel Rúnico",
+    "itemdesc-runicchisel": "Pule roca en bruto en el mundo. Muy útil. Aún necesita un martillo.",
+    "item-goodberryitem": "Baya Bendita",
+    "itemdesc-goodberryitem": "Una sola baya es todo lo que necesitas para luchar otro día...",
+
+    "item-runemagicresearch-*": "Notas de Investigación Rúnica",
+    "runicresearch": "Un pergamino que contiene la receta e instrucciones para un Hechizo Rúnico. Se puede usar para aprender el hechizo {0} de nivel {1}.",
+
+    "block-runealtar": "Altar de Runas",
+
+    "hbrunes-title": "(RuneStory) Magia 101:",
+    "hbrunes-text": "<strong>Lanzar y Seleccionar Hechizos</strong><br>Lanzar y seleccionar hechizos se hace con las teclas de acceso rápido. Por defecto, ALT + F abrirá tu menú de hechizos, y X lanzará el hechizo, o lo intentará. Para seleccionar un hechizo, simplemente haz clic en él y el menú se cerrará automáticamente para lanzar rápidamente. El Menú de Hechizos contiene 2 filtros opcionales, uno por Nivel y otro por Categoría.<br><strong>Los hechizos de Daño</strong> están principalmente orientados al combate.<br><strong>Los hechizos de Apoyo</strong> ayudan en una tarea, ya sea de combate o recolección.<br><strong>Los hechizos de Utilidad</strong> realizan trucos simples, como calentar un lingote o hacer crecer un árbol.",
+
+    "game:hbrunesbag-title": "(RuneStory) Bolsas de Runas:",
+    "game:hbrunesbag-text": "(RuneStory) Las bolsas de runas tienen menos espacios que una mochila normal y solo pueden contener runas. Sin embargo, en una bolsa de runas, el límite de apilamiento de runas se duplica.",
+
+    "hbrunespells-title": "(RuneStory) Hechizos:",
+    "hbrunespells-text": "Los hechizos son trucos que consumen runas para realizar una acción. Puedes mantener MAYÚS en tu menú de hechizos sobre un hechizo para obtener una descripción rápida de su uso. Lanzar un hechizo activa un tiempo de reutilización basado en cuántas runas contenía el hechizo. Más runas implican un tiempo de reutilización más largo.<br><br><strong>Tipos Elementales:</strong><br>Hay cuatro tipos de elementos para un hechizo de daño. Al infligir daño, ten en cuenta lo siguiente:<br><strong>Fuego</strong> Los hechizos de fuego incendian al objetivo inmediato, causando daño con el tiempo.<br><strong>Tierra</strong> Los hechizos de tierra causan el mayor daño bruto.<br><strong>Agua</strong> Los hechizos de agua reducen ligeramente la tasa de hambre por un momento después del impacto.<br><strong>Aire</strong> Los hechizos de aire generan mucho más retroceso.<br><br>Los hechizos tienen un nivel, que es simplemente un indicador de qué tan poderoso es un hechizo dado.",
+
+    "game:hbmakingrunes-title": "(RuneStory) Fabricar Runas:",
+    "game:hbmakingrunes-text": "Para fabricar una runa, simplemente lanza los objetos relevantes cerca del altar y HAZ AGACHADO + Clic derecho mientras sostienes cualquier Varita de Runas. El Altar de Runas debe llenarse con Runas en Blanco haciendo clic derecho para cada fabricación, y consume tantas Runas en Blanco como objetos de salida. Las Runas en Blanco se pueden recuperar agachándose mientras haces clic derecho con la mano vacía. El bloque puede hacerse clic derecho con cualquier bloque cincelado para camuflarlo como ese bloque cincelado; similar a los bloques 'Decorativos' de QPChiselTools. El bloque cincelado se puede recuperar rompiendo el altar.",
+
+    "hbrunemagicstats-title": "(RuneStory) Estadísticas Mágicas:",
+    "hbrunemagicstats-text": "Hay dos estadísticas mágicas relacionadas con la runecraftía: tu Daño Mágico y tu Oportunidad de Lanzamiento Gratuito. Ambas pueden verse en tu menú de selección de hechizos. El daño se explica por sí mismo. Tu oportunidad de lanzamiento gratuito aumenta las probabilidades de que un hechizo no consuma runas al lanzarlo. Los hechizos que devuelven runas en lanzamientos exitosos no activan tiradas de oportunidad de lanzamiento gratuito.",
+
+    "hblearningspells-title": "(RuneStory) Aprender Hechizos",
+    "hblearningspells-text": "Los hechizos se pueden aprender con objetos de Investigación de Hechizos. Por defecto, sin embargo, ya conoces de forma innata todos los hechizos de Nivel 1. Al usar un objeto de Investigación de Hechizos, siempre aprenderás un hechizo aleatorio que no conoces, y serás informado cuando hayas aprendido todos los hechizos de un nivel."
+}

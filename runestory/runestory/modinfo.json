@@ -1,14 +1,14 @@
 {
-    "type": "code",
-    "modid": "runestory",
-    "name": "Rune-Story",
-    "authors": [
-        "Len Kagamine"
-    ],
-    "description": "Runes to cast magic spells.",
-    "version": "0.9.0",
-    "dependencies": {
-        "game": "1.22.0",
-        "vsimgui": ""
-    }
+  "type": "code",
+  "modid": "runestory",
+  "name": "Rune-Story",
+  "authors": [
+    "Len Kagamine"
+  ],
+  "description": "Runes to cast magic spells.Beta, Expect bugs and crashes.",
+  "version": "0.9.3",
+  "dependencies": {
+    "game": "1.22.0",
+    "vsimgui": ""
+  }
 }

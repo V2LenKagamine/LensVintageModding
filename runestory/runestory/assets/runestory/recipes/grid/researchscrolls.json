@@ -14,27 +14,27 @@
             "S": {
                 "type": "item",
                 "code": "runestory:rune-beta",
-                "quantity": 32
+                "quantity": 16
             },
             "W": {
                 "type": "item",
                 "code": "runestory:rune-water",
-                "quantity": 16
+                "quantity": 8
             },
             "E": {
                 "type": "item",
                 "code": "runestory:rune-earth",
-                "quantity": 16
+                "quantity": 8
             },
             "F": {
                 "type": "item",
                 "code": "runestory:rune-fire",
-                "quantity": 16
+                "quantity": 8
             },
             "A": {
                 "type": "item",
                 "code": "runestory:rune-air",
-                "quantity": 16
+                "quantity": 8
             },
             "I": {
                 "type": "item",
@@ -65,27 +65,27 @@
             "S": {
                 "type": "item",
                 "code": "runestory:rune-gamma",
-                "quantity": 32
+                "quantity": 16
             },
             "W": {
                 "type": "item",
                 "code": "runestory:rune-water",
-                "quantity": 24
+                "quantity": 12
             },
             "E": {
                 "type": "item",
                 "code": "runestory:rune-earth",
-                "quantity": 24
+                "quantity": 12
             },
             "F": {
                 "type": "item",
                 "code": "runestory:rune-fire",
-                "quantity": 24
+                "quantity": 12
             },
             "A": {
                 "type": "item",
                 "code": "runestory:rune-air",
-                "quantity": 24
+                "quantity": 12
             },
             "I": {
                 "type": "item",
@@ -116,27 +116,27 @@
             "S": {
                 "type": "item",
                 "code": "runestory:rune-delta",
-                "quantity": 48
+                "quantity": 24
             },
             "W": {
                 "type": "item",
                 "code": "runestory:rune-water",
-                "quantity": 32
+                "quantity": 16
             },
             "E": {
                 "type": "item",
                 "code": "runestory:rune-earth",
-                "quantity": 32
+                "quantity": 16
             },
             "F": {
                 "type": "item",
                 "code": "runestory:rune-fire",
-                "quantity": 32
+                "quantity": 16
             },
             "A": {
                 "type": "item",
                 "code": "runestory:rune-air",
-                "quantity": 32
+                "quantity": 16
             },
             "I": {
                 "type": "item",
@@ -168,27 +168,27 @@
             "S": {
                 "type": "item",
                 "code": "runestory:rune-epsilon",
-                "quantity": 64
+                "quantity": 32
             },
             "W": {
                 "type": "item",
                 "code": "runestory:rune-water",
-                "quantity": 48
+                "quantity": 24
             },
             "E": {
                 "type": "item",
                 "code": "runestory:rune-earth",
-                "quantity": 48
+                "quantity": 24
             },
             "F": {
                 "type": "item",
                 "code": "runestory:rune-fire",
-                "quantity": 48
+                "quantity": 24
             },
             "A": {
                 "type": "item",
                 "code": "runestory:rune-air",
-                "quantity": 48
+                "quantity": 24
             },
             "I": {
                 "type": "item",

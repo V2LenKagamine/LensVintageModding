@@ -43,7 +43,7 @@ namespace runestory
 
         public bool SatisfiesAsIngredient(int index, ItemStack inputStack)
         {
-            if (inputStack.Collectible.Code.ToString().Contains('*'))
+            if (Reagents.ElementAt(index).ToString().Contains('*'))
             {
                 return WildcardUtil.Match(new AssetLocation(Reagents.ElementAt(index).Key), inputStack.Collectible.Code);
             }

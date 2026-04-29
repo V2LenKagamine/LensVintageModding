@@ -8,23 +8,23 @@
 
   <ItemGroup>
     <Reference Include="ImGui.NET">
-      <HintPath>..\depends\ImGui.NET.dll</HintPath>
+      <HintPath>..\MiscLibsorStoreage\ImGui.NET.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ImGuiController_OpenTK">
-      <HintPath>..\depends\ImGuiController_OpenTK.dll</HintPath>
+      <HintPath>..\MiscLibsorStoreage\ImGuiController_OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ImGuizmo.NET">
-      <HintPath>..\depends\ImGuizmo.NET.dll</HintPath>
+      <HintPath>..\MiscLibsorStoreage\ImGuizmo.NET.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ImNodes.NET">
-      <HintPath>..\depends\ImNodes.NET.dll</HintPath>
+      <HintPath>..\MiscLibsorStoreage\ImNodes.NET.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ImPlot.NET">
-      <HintPath>..\depends\ImPlot.NET.dll</HintPath>
+      <HintPath>..\MiscLibsorStoreage\ImPlot.NET.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SkiaSharp">
@@ -36,11 +36,11 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSImGui">
-      <HintPath>..\depends\VSImGui.dll</HintPath>
+      <HintPath>..\MiscLibsorStoreage\VSImGui.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSImGui_DebugTools">
-      <HintPath>..\depends\VSImGui_DebugTools.dll</HintPath>
+      <HintPath>..\MiscLibsorStoreage\VSImGui_DebugTools.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">

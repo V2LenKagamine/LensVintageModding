@@ -29,18 +29,21 @@ namespace runestory.src.MiscHarmony
         {
             float magicdmg = 0f;
             float runechance = 0f;
+            bool wandequipped = false;
             foreach (var slot in inv)
             {
-                if (slot.Empty || slot.Itemstack != player.InventoryManager.OffhandHotbarSlot.Itemstack || slot.Itemstack.Attributes["magicAttributes"] is not null) continue;
+                if (slot.Empty || slot.Itemstack?.ItemAttributes is null) { continue; }
+                if (slot.Itemstack != player.InventoryManager.OffhandHotbarSlot.Itemstack || slot.Itemstack.ItemAttributes["magicAttributes"] is null) { continue; }
 
-                magicdmg += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_MagicDamage].AsFloat();
-                runechance += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_RuneChance].AsFloat();
+                magicdmg += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_MagicDamage]?.AsFloat() ?? 0;
+                runechance += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_RuneChance]?.AsFloat() ?? 0;
+                wandequipped = true;
 
             }
             EntityPlayer plyent = player.Entity;
-            plyent.Stats.Set(RunestoryMS.RMS_Stat_MagicDamage, "hotbarmod", magicdmg, true)
-                .Set(RunestoryMS.RMS_Stat_RuneChance, "hotbarmod", runechance, true)
-                .Set("hungerrate", "hotbarmod", -0.2f, true);
+            plyent.Stats.Set(RunestoryMS.RMS_Stat_MagicDamage, "hotbarmod", magicdmg, true);
+            plyent.Stats.Set(RunestoryMS.RMS_Stat_RuneChance, "hotbarmod", runechance, true);
+            plyent.Stats.Set("hungerrate", "hotbarmod", wandequipped? -0.2f : 0f, true);
         }
     }
 }
