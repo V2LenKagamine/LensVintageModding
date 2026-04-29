@@ -1,118 +1,53 @@
 {
-    "code": "runewand",
-    "class": "Item",
-    "maxstacksize": 1,
-    "attributesByType": {
-        "*-primitive": {
-            "magicAttributes": {
-                "freeCastChance": 0,
-                "magicWeaponsDamage": 0.05
-            }
-        },
-        "*-basic": {
-            "magicAttributes": {
-                "freeCastChance": 0.05,
-                "magicWeaponsDamage": 0.075
-            }
-        },
-        "*-standard": {
-            "magicAttributes": {
-                "freeCastChance": 0.075,
-                "magicWeaponsDamage": 0.1
-            }
-        },
-        "*-scholar": {
-            "magicAttributes": {
-                "freeCastChance": 0.1,
-                "magicWeaponsDamage": 0.125
-            }
-        },
-        "*-master": {
-            "magicAttributes": {
-                "freeCastChance": 0.125,
-                "magicWeaponsDamage": 0.15
-            }
-        }
+  "code": "runewand",
+  "class": "Item",
+  "maxstacksize": 1,
+  "attributesByType": {
+    "*-primitive": { "magicAttributes": { "freeCastChance": 0, "magicWeaponsDamage": 0.05 } },
+    "*-basic": { "magicAttributes": { "freeCastChance": 0.05, "magicWeaponsDamage": 0.075 } },
+    "*-standard": { "magicAttributes": { "freeCastChance": 0.075, "magicWeaponsDamage": 0.1 } },
+    "*-scholar": { "magicAttributes": { "freeCastChance": 0.1, "magicWeaponsDamage": 0.125 } },
+    "*-master": { "magicAttributes": { "freeCastChance": 0.125, "magicWeaponsDamage": 0.15 } }
+  },
+  "variantgroups": [
+    { "code": "type", "states": [ "primitive", "basic", "standard", "scholar", "master" ] }
+  ],
+  "shape": {
+    "base": "items/runewand"
+  },
+  "texturesByType": {
+    "*-primitive": {
+      "wandbase": { "base": "game:block/wood/debarked/veryrotten" },
+      "wandtip": { "base": "game:block/stone/rock/basalt1" }
     },
-    "variantgroups": [
-        {
-            "code": "type",
-            "states": [ "primitive", "basic", "standard", "scholar", "master" ]
-        }
-    ],
-    "shape": { "base": "items/runewand" },
-    "texturesByType": {
-        "*-primitive": {
-            "wandbase": { "base": "game:block/wood/debarked/veryrotten" },
-            "wandtip": { "base": "game:block/stone/rock/basalt1" }
-        },
-        "*-basic": {
-            "wandbase": { "base": "game:block/wood/debarked/oak" },
-            "wandtip": { "base": "game:block/metal/ingot/copper" }
-        },
-        "*-standard": {
-            "wandbase": { "base": "game:block/wood/debarked/ebony" },
-            "wandtip": { "base": "game:block/metal/ingot/blackbronze" }
-        },
-        "*-scholar": {
-            "wandbase": { "base": "game:block/metal/ingot/brass" },
-            "wandtip": { "base": "game:block/metal/ingot/silver" }
-        },
-        "*-master": {
-            "wandbase": { "base": "game::block/metal/ingot/blackbronze" },
-            "wandtip": { "base": "game:block/metal/ingot/gold" }
-        }
-
+    "*-basic": { "wandbase": { "base": "game:block/wood/debarked/oak" }, "wandtip": { "base": "game:block/metal/ingot/copper" } },
+    "*-standard": {
+      "wandbase": { "base": "game:block/wood/debarked/ebony" },
+      "wandtip": { "base": "game:block/metal/ingot/blackbronze" }
     },
-
-    "creativeinventory": {
-        "general": [ "*" ],
-        "items": [ "*" ],
-        "runestorytab": [ "*" ]
-    },
-    "storageFlags": 257,
-    "guiTransform": {
-        "translation": {
-            "x": 11,
-            "y": -8,
-            "z": 0
-        },
-        "rotation": {
-            "x": 180,
-            "y": 35,
-            "z": -45
-        },
-        "scale": 3
-    },
-    "tpHandTransform": {
-        "translation": {
-            "x": -1,
-            "y": -0.6,
-            "z": -0.63
-        },
-        "rotation": {
-            "x": 45,
-            "y": 0,
-            "z": -90
-        },
-        "scale": 0.8
-    },
-    "groundTransform": {
-        "translation": {
-            "x": 0.3,
-            "y": 0,
-            "z": -0.3
-        },
-        "rotation": {
-            "x": 90,
-            "y": 0,
-            "z": 0
-        },
-        "origin": {
-            "x": 0.5,
-            "y": 0.5,
-            "z": 0.5299
-        },
-        "scale": 6
-    }
+    "*-scholar": { "wandbase": { "base": "game:block/metal/ingot/brass" }, "wandtip": { "base": "game:block/metal/ingot/silver" } },
+    "*-master": { "wandbase": { "base": "game:block/metal/ingot/blackbronze" }, "wandtip": { "base": "game:block/metal/ingot/gold" } }
+  },
+  "creativeinventory": {
+    "general": [ "*" ],
+    "items": [ "*" ],
+    "runestorytab": [ "*" ]
+  },
+  "storageFlags": 257,
+  "guiTransform": {
+    "translation": { "x": 11, "y": -8, "z": 0 },
+    "rotation": { "x": 180, "y": 35, "z": -45 },
+    "scale": 3
+  },
+  "tpHandTransform": {
+    "translation": { "x": -1, "y": -0.6, "z": -0.63 },
+    "rotation": { "x": 45, "y": 0, "z": -90 },
+    "scale": 0.8
+  },
+  "groundTransform": {
+    "translation": { "x": 0.3, "y": 0, "z": -0.3 },
+    "rotation": { "x": 90, "y": 0, "z": 0 },
+    "origin": { "x": 0.5, "y": 0.5, "z": 0.5299 },
+    "scale": 6
+  }
 }

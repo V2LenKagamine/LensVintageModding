@@ -7,7 +7,7 @@
                 "game:metalbit-electrum": 1
             },
             "outputs": {
-                "runestory:rune-delta": 4
+                "runestory:rune-epsilon": 4
             }
         }
     },
@@ -19,7 +19,7 @@
                 "game:nugget-nativegold": 1
             },
             "outputs": {
-                "runestory:rune-delta": 4
+                "runestory:rune-epsilon": 4
             }
         }
     },
@@ -31,7 +31,7 @@
                 "game:nugget-nativesilver": 1
             },
             "outputs": {
-                "runestory:rune-delta": 4
+                "runestory:rune-epsilon": 4
             }
         }
     }

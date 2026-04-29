@@ -168,7 +168,7 @@ namespace runestory
         {
             if(ply.Entity.Controls.ShiftKey)
             {
-                if(Contents is not null && ply.InventoryManager.ActiveHotbarSlot?.Itemstack?.Collectible?.Code?.ToString() == "game:stick")
+                if(Contents is not null && WildcardUtil.Match("runestory:runewand-*",ply.InventoryManager.ActiveHotbarSlot?.Itemstack?.Collectible?.Code?.ToString()))
                 {
                     if(Api.Side == EnumAppSide.Server) 
                     { DoRuneCraft(world, ply); }

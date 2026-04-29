@@ -6,9 +6,9 @@
         "Len Kagamine"
     ],
     "description": "Runes to cast magic spells.",
-    "version": "1.0.0",
+    "version": "0.9.0",
     "dependencies": {
-        "game": "",
+        "game": "1.22.0",
         "vsimgui": ""
     }
 }

@@ -79,8 +79,8 @@ namespace runestory
             if (validspells is null) { return CallbackGUIStatus.Closed; }
             int spellcount = validspells.Count();
             ElementBounds window = RunestoryMS.runeCApi.Gui.WindowBounds;
-            ImGui.SetNextWindowSize(new Vector2(500f, 100f + (56f * (float)Math.Ceiling(spellcount / 8d))));
-            ImGui.Begin("Spell Select Window");
+            ImGui.SetNextWindowSize(new Vector2(500f, 100f + (57f * (float)Math.Ceiling(spellcount / 8d))));
+            ImGui.Begin("Spell Select Window", ImGuiWindowFlags.AlwaysAutoResize);
             try
             {
                 Vector2 buttsize = new Vector2(45, 45);

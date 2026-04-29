@@ -2,10 +2,17 @@
     "code": "runicpickaxe",
     "class": "runicpickaxeitem",
     "tags": [ "tool", "tool-pickaxe" ],
+    "variantgroups": [
+        {
+            "code": "metal",
+            "states": [ "copper", "blackbronze", "gold", "silver", "iron" ]
+        }
+    ],
     "storageFlags": 5,
     "shape": { "base": "game:item/tool/pickaxe" },
     "textures": {
-        "metal": { "base": "game:block/stone/rock/basalt1" }
+        "handle": { "base": "game:block/stone/rock/basalt1" },
+        "metal": { "base": "game:block/metal/ingot/{metal}" }
     },
     "attributes": {
         "heldItemPitchFollow": 0.9,
@@ -63,19 +70,35 @@
         }
     ],
     "tool": "pickaxe",
-    "damagedby": [ "blockbreaking"],
+    "damagedby": [ "blockbreaking" ],
     "heldTpHitAnimation": "pickaxe",
-    "tooltier":3,
-    "miningspeed": {
-            "stone": 10
+    "tooltierByType": {
+        "*-copper": 2,
+        "*-gold": 3,
+        "*-silver": 3,
+        "*-iron": 4,
+        "*-blackbronze": 3
+    },
+    "miningspeedByType": {
+        "*-copper": { "stone": 8 },
+        "*-gold": { "stone": 16 },
+        "*-silver": { "stone": 14 },
+        "*-iron": { "stone": 10 },
+        "*-blackbronze": { "stone": 12 }
     },
     "attackpower": 1.5,
-    "durability": 300,
+    "durabilityByType": {
+        "*-copper": 300,
+        "*-gold": 1200,
+        "*-silver": 1100,
+        "*-iron": 1500,
+        "*-blackbronze": 1600
+    },
     "creativeinventory": {
         "general": [ "*" ],
         "items": [ "*" ],
         "tools": [ "*" ],
-        "runestorytab" :  ["*"]
+        "runestorytab": [ "*" ]
     },
     "guiTransform": {
         "rotation": {

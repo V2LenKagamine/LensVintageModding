@@ -1,13 +1,66 @@
-
+[
     {
-        "code": "makeruncpick",
+        "code": "makeruncpickcopp",
         "enabled": true,
         "attributes": {
             "reagents": {
                 "game:pickaxe-copper": 1
             },
             "outputs": {
-                "runestory:runicpickaxe": 1
+                "runestory:runicpickaxe-copper": 1
+            }
+        }
+    },
+
+    {
+        "code": "makeruncpickblack",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:pickaxe-blackbronze": 1
+            },
+            "outputs": {
+                "runestory:runicpickaxe-blackbronze": 1
+            }
+        }
+    },
+
+    {
+        "code": "makeruncpickgold",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:pickaxe-gold": 1
+            },
+            "outputs": {
+                "runestory:runicpickaxe-gold": 1
+            }
+        }
+    },
+
+    {
+        "code": "makeruncpicksilv",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:pickaxe-silver": 1
+            },
+            "outputs": {
+                "runestory:runicpickaxe-silver": 1
+            }
+        }
+    },
+
+    {
+        "code": "makeruncpickiron",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "game:pickaxe-iron": 1
+            },
+            "outputs": {
+                "runestory:runicpickaxe-iron": 1
             }
         }
     }
+]
