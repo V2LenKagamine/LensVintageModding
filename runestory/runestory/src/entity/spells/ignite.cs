@@ -19,7 +19,6 @@ namespace runestory.src.entity.spells
 
         public override void OnCollided()
         {
-            if ((spawnedBy as EntityPlayer)?.BlockSelection?.HitPosition is null) { return; }
             FireB();
             Die();
         }

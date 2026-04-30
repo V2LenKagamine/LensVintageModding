@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using HarmonyLib;
 using Newtonsoft.Json.Linq;
+using runestory.src.block.pylons;
 using runestory.src.entity.spells;
 using runestory.src.gui;
 using runestory.src.items;
@@ -62,7 +63,7 @@ namespace runestory
             
             runeCApi = capi;
             capi.Input.RegisterHotKey("runestorytogglespell", Lang.Get("runestory:toggle-spell"), GlKeys.F, HotkeyType.GUIOrOtherControls, true);
-            capi.Input.RegisterHotKey("runestorycastspell", Lang.Get("runestory:cast-spell"), GlKeys.X, HotkeyType.CharacterControls);
+            capi.Input.RegisterHotKey("runestorycastspell", Lang.Get("runestory:cast-spell"), GlKeys.R, HotkeyType.CharacterControls);
 
             if (SpellWindowGui == null)
             {
@@ -140,6 +141,8 @@ namespace runestory
             api.RegisterBlockEntityClass("runealtar-be", typeof(RuneAltarBe));
             api.RegisterBlockEntityBehaviorClass("runealtar-chiselsteal-bhv", typeof(BEBChiseledCover));
             api.RegisterBlockBehaviorClass("runealtar-chiselsteal-bb", typeof(BBChiseledCover));
+
+            api.RegisterBlockEntityClass("runepylonfertilebe", typeof(FertilePylonBe));
 
             api.RegisterCollectibleBehaviorClass("runepouchbag", typeof(CollectibleRuneBag));
             api.RegisterItemClass("runicpickaxeitem", typeof(RunePickaxe));

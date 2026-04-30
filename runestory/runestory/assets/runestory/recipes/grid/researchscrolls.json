@@ -5,7 +5,109 @@
             "H": {
                 "type": "item",
                 "code": "game:inkandquill",
-                "isTool": true
+                "consume": false
+            },
+            "C": {
+                "type": "item",
+                "code": "game:paper-parchment"
+            },
+            "S": {
+                "type": "item",
+                "code": "runestory:rune-alpha",
+                "quantity": 8
+            },
+            "W": {
+                "type": "item",
+                "code": "runestory:rune-water",
+                "quantity": 4
+            },
+            "E": {
+                "type": "item",
+                "code": "runestory:rune-earth",
+                "quantity": 4
+            },
+            "F": {
+                "type": "item",
+                "code": "runestory:rune-fire",
+                "quantity": 4
+            },
+            "A": {
+                "type": "item",
+                "code": "runestory:rune-air",
+                "quantity": 4
+            },
+            "I": {
+                "type": "item",
+                "code": "runestory:rune-blank",
+                "quantity": 8
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier1-single",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "WHE,ICI,FSA",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:inkandquill",
+                "consume": false
+            },
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier1-single"
+            },
+            "S": {
+                "type": "item",
+                "code": "runestory:rune-beta",
+                "quantity": 16
+            },
+            "W": {
+                "type": "item",
+                "code": "runestory:rune-water",
+                "quantity": 8
+            },
+            "E": {
+                "type": "item",
+                "code": "runestory:rune-earth",
+                "quantity": 8
+            },
+            "F": {
+                "type": "item",
+                "code": "runestory:rune-fire",
+                "quantity": 8
+            },
+            "A": {
+                "type": "item",
+                "code": "runestory:rune-air",
+                "quantity": 8
+            },
+            "I": {
+                "type": "item",
+                "code": "runestory:rune-blank",
+                "quantity": 16
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier2-single",
+            "quantity": 1
+        }
+    },
+    {
+        "ingredientPattern": "WHE,ICI,FSA",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:inkandquill",
+                "consume": false
             },
             "C": {
                 "type": "item",
@@ -56,7 +158,7 @@
             "H": {
                 "type": "item",
                 "code": "game:inkandquill",
-                "isTool": true
+                "consume": false
             },
             "C": {
                 "type": "item",
@@ -107,7 +209,7 @@
             "H": {
                 "type": "item",
                 "code": "game:inkandquill",
-                "isTool": true
+                "consume": false
             },
             "C": {
                 "type": "item",
@@ -159,7 +261,7 @@
             "H": {
                 "type": "item",
                 "code": "game:inkandquill",
-                "isTool": true
+                "consume": false
             },
             "C": {
                 "type": "item",

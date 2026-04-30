@@ -8,7 +8,7 @@
     "variantgroups": [
         {
             "code": "type",
-            "states": [ "primitive", "linen", "leather" ]
+            "states": [ "primitive", "linen", "leather", "multiprimitive", "multilinen", "multileather" ]
         }
     ],
     "texturesByType": {
@@ -21,6 +21,18 @@
             "top": { "base": "items/runebag/top-linen" }
         },
         "*-leather": {
+            "linen": { "base": "items/runebag/leather" },
+            "top": { "base": "items/runebag/top-leather" }
+        },
+        "*-multiprimitive": {
+            "linen": { "base": "items/runebag/reed" },
+            "top": { "base": "items/runebag/top-reed" }
+        },
+        "*-multilinen": {
+            "linen": { "base": "items/runebag/linen" },
+            "top": { "base": "items/runebag/top-linen" }
+        },
+        "*-multileather": {
             "linen": { "base": "items/runebag/leather" },
             "top": { "base": "items/runebag/top-leather" }
         }
@@ -59,6 +71,51 @@
         "*-leather": {
             "backpack": {
                 "quantitySlots": 5,
+                "slotBgColor": "#b99bba"
+            },
+            "handbook": {
+                "extraSections": [
+                    {
+                        "title": "hbrunebag-title",
+                        "text": "hbrunebag-text"
+                    }
+                ],
+                "include": true
+            }
+        },
+        "*-multiprimitive": {
+            "backpack": {
+                "quantitySlots": 5,
+                "slotBgColor": "#b99bba"
+            },
+            "handbook": {
+                "extraSections": [
+                    {
+                        "title": "hbrunebag-title",
+                        "text": "hbrunebag-text"
+                    }
+                ],
+                "include": true
+            }
+        },
+        "*-multilinen": {
+            "backpack": {
+                "quantitySlots": 6,
+                "slotBgColor": "#b99bba"
+            },
+            "handbook": {
+                "extraSections": [
+                    {
+                        "title": "hbrunebag-title",
+                        "text": "hbrunebag-text"
+                    }
+                ],
+                "include": true
+            }
+        },
+        "*-multileather": {
+            "backpack": {
+                "quantitySlots": 8,
                 "slotBgColor": "#b99bba"
             },
             "handbook": {

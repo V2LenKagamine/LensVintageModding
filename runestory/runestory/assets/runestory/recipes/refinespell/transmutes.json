@@ -96,5 +96,57 @@
                 "game:gear-rusty": 8
             }
         }
+    },
+    {
+        "code": "betafromalpha",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-alpha": 4
+            },
+            "outputs": {
+                "runestory:rune-beta": 1,
+                "runestory:rune-blank": 3
+            }
+        }
+    },
+    {
+        "code": "gammafrombeta",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-beta": 4
+            },
+            "outputs": {
+                "runestory:rune-gamma": 1,
+                "runestory:rune-blank": 3
+            }
+        }
+    },
+    {
+        "code": "deltafromgamma",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-gamma": 4
+            },
+            "outputs": {
+                "runestory:rune-delta": 1,
+                "runestory:rune-blank": 3
+            }
+        }
+    },
+    {
+        "code": "epsilonfromdelta",
+        "enabled": true,
+        "attributes": {
+            "reagents": {
+                "runestory:rune-delta": 4
+            },
+            "outputs": {
+                "runestory:rune-epsilon": 1,
+                "runestory:rune-blank": 3
+            }
+        }
     }
 ]

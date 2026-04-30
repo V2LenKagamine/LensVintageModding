@@ -47,8 +47,13 @@
     },
     "resistance": 2,
     "requiredminingtier": 1,
+    "sideOpaque": {
+        "all": false
+    },
+    "sideSolid": {
+        "all": false
+    },
     "materialDensity": 700,
-    "facecullmode": "NeverCull",
     "creativeinventory": {
         "general": [ "*" ],
         "runestorytab": [ "*" ]

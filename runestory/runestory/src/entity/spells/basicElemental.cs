@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
@@ -22,13 +23,13 @@ namespace runestory.src.entity.spells
 
         public override void OnCollided()
         {
-            HitEntity(null);
+            HitEntity(World.GetEntitiesAround(Pos.XYZ.ToVec3f().ToVec3d(),0.1f,0.1f).First());
             Die();
         }
 
         public void HitEntity(Entity entity)
         {
-            if (Api.Side == EnumAppSide.Client) { return; }
+            if (Api.Side == EnumAppSide.Client || entity is null) { return; }
             int tier = ourSpell.spellTier;
             Vec2f aoe = new(0f, 0f);
             if (tier == 0) { return; }
@@ -79,7 +80,7 @@ namespace runestory.src.entity.spells
 
             if (ourSpell.ElementalType.Contains("water"))
             {
-                (spawnedBy as EntityPlayer).GetBehavior<PlayerTempBuffer>()?.AddTempBuff(spawnedBy as EntityPlayer, RunestoryMS.RMS_Stat_MagicDamage, -0.05f * tier, (30 * 1000) * tier, "waterbuff");
+                (spawnedBy as EntityPlayer).GetBehavior<PlayerTempBuffer>()?.AddTempBuff(spawnedBy as EntityPlayer, RunestoryMS.RMS_Stat_MagicDamage, 0.05f * tier, (30 * 1000) * tier, "waterbuff");
             }
             if (ourSpell.ElementalType.Contains("earth"))
             {
@@ -95,7 +96,7 @@ namespace runestory.src.entity.spells
             }
 
             Damage = dam;
-            SimpleHitEntity(entity ?? null, hitdmg, aoe, ignition);
+            SimpleHitEntity(entity, hitdmg, aoe, ignition);
             Die();
         }
     }

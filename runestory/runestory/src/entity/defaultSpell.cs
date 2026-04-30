@@ -49,7 +49,7 @@ namespace runestory
                         goodspell.Pos.Motion.Set(velo);
                         goodspell.World = spawnedBy.World;
                         goodspell.SetRotation();
-                        World.PlaySoundAt(new AssetLocation("runestory:sounds/spellcast"),this,null,20f);
+                        World.PlaySoundAt(new AssetLocation("runestory:sounds/spellcast"),this,null,8f);
                         Api.World.SpawnPriorityEntity(goodspell);
                     }
                 }

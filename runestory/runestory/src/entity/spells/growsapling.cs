@@ -33,7 +33,7 @@ namespace runestory
                     {
                         //I hate this too.
                         double hors = (double)HarmonyLib.AccessTools.Field(typeof(BlockEntitySapling), "totalHoursTillGrowth").GetValue(sap);
-                        HarmonyLib.AccessTools.Field(typeof(BlockEntitySapling), "totalHoursTillGrowth").SetValue(sap,hors - 72f);
+                        HarmonyLib.AccessTools.Field(typeof(BlockEntitySapling), "totalHoursTillGrowth").SetValue(sap,hors - 168f);
                         sap.MarkDirty();
                         done = true;
                         

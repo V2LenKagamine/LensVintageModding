@@ -1,0 +1,44 @@
+{
+    "code": "runepylon",
+    "entityclassByType": {
+        "*-fertile": "runepylonfertilebe"
+    },
+    "attributes": {
+    },
+    "variantgroups": [
+        {
+            "code": "type",
+            "states": [ "fertile" ]
+        }
+    ],
+    "textures": {
+        "runepylon": { "base": "blocks/runepylon" },
+        "runepylonem": { "base": "blocks/runepylonem" }
+    },
+    "blockmaterial": "Stone",
+    "shape": { "base": "blocks/runepylon" },
+    "resistance": 2.5,
+    "requiredminingtier": 0,
+    "materialDensity": 700,
+    "renderPass": "OpaqueNoCull",
+    "sideOpaque": {
+        "all": false
+    },
+    "sideSolid": {
+        "all": false
+    },
+    "collisionSelectionBoxes": [
+        {
+            "x1": 0.2,
+            "y1": 0,
+            "z1": 0.2,
+            "x2": 0.8,
+            "y2": 1,
+            "z2": 0.8
+        }
+    ],
+    "creativeinventory": {
+        "general": [ "*" ],
+        "runestorytab": [ "*" ]
+    }
+}

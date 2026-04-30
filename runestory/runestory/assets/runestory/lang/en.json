@@ -40,6 +40,7 @@
     "magicdamagestat": "Magic Damage: ",
     "runeconsumechance": "Free Cast Chance: ",
 
+    "block-runepylon-fertile": "Fartile Pylon",
 
     "nodsc": "This spell has no lang describing it! Is the Attribute 'langCode' set?",
 
@@ -80,7 +81,7 @@
     "bonestopeachesdsc": "Turns up to 8 bones in your inventory into peaches.",
 
     "fertilizespell": "Restore Nutrients",
-    "fertilizespelldsc": "Tries to give 5 percent N,K,or P to the farmland you are targeting, or the farmland under the crop you are targeting. Ignores NKP cap.",
+    "fertilizespelldsc": "Tries to give 5 percent N,K,and P to the farmland you are targeting, or the farmland under the crop you are targeting. Ignores NKP cap.",
 
     "rockblast": "Boulder-Bust Blast",
     "rockblastdsc": "Summons a projectile that creates a rock-blasting explosion 5 blocks wide on landing. Capable of Self Damage!",
@@ -230,6 +231,9 @@
     "item-runebag-primitive": "Crude Rune Pouch",
     "item-runebag-linen": "Rune Pouch",
     "item-runebag-leather": "Leather Rune Pouch",
+    "item-runebag-multiprimitive": "Crude Multi-Rune Pouch",
+    "item-runebag-multilinen": "Multi-Rune Pouch",
+    "item-runebag-multileather": "Leather Multi-Rune Pouch",
     "item-runicpickaxe-copper": "Copper Rune Infused Pickaxe",
     "item-runicpickaxe-gold": "Gold Rune Infused Pickaxe",
     "item-runicpickaxe-silver": "Silver Rune Infused Pickaxe",
@@ -250,7 +254,7 @@
     "hbrunes-text": "<strong>Casting And Selecting Spells</strong><br>Casting and selecting spells are done with the keybind. By default, ALT + F will bring up your spell menu, and X will cast the spell, or try to. To select a spell, simply click on it, and the menu will close automatically for quick casting. The Spell Menu contains 2 optional filters, one for Tier, and one for Category.<br><strong>Damage</strong> spells are primarily combat focused.<br><strong>Support</strong> Spells aid in a task, be it combat or gathering.<br><strong>Utility</strong> Spells perform simple tricks,like heating an ingot,or making a sapling grow.",
 
     "game:hbrunesbag-title": "(RuneStory) Rune Bags:",
-    "game:hbrunesbag-text": "(RuneStory) Rune bags contain less slots than a normal backpack item, and are only capable of holding runes. However, in a rune pouch, the stacksize limit for runes is doubled.",
+    "game:hbrunesbag-text": "(RuneStory) Rune Bags come in two varieties, Multi and regular. Regulars contain 1 less slots than their normal counterparts; but their stack size max is doubled.<br>Multi rune bags have 1 more slot than a normal inventory.<br> Both can only contain runes. Both can be upgraded with their relevant material when empty.",
 
     "hbrunespells-title": "(RuneStory) Spells:",
     "hbrunespells-text": "Spells are tricks that consume runes to perform an action, you can hold SHIFT in your spell menu over a spell for a quick description of its use. Casting a spell invokes a cooldown based on how many runes the spell contained. More runes infers a longer cooldown.<br><br><strong>Elemental Types:</strong><br>There are four types of elements for a damage spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target,dealing DoT<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly reduce hunger rate for a bit after hit.<br><strong>Air</strong> spells deal much more knockback.<br><br>Spells have a tier, this is merely an indicator of how powerful a given spell is.",

@@ -82,7 +82,6 @@ namespace runestory
             foreach (TempBuff t in TempBuffList)
             {
                 t.Dissapate();
-                TempBuffList.Remove(t);
             }
             TempBuffList = null;
 

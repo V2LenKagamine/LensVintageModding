@@ -8,7 +8,7 @@
     "variantgroups": [
         {
             "code": "type",
-            "states": [ "blank", "water", "earth", "fire", "air", "soul", "self", "balance", "rust", "alpha","beta","gamma","delta","epsilon"]
+            "states": [ "blank", "water", "earth", "fire", "air", "soul", "self", "balance", "rust", "alpha", "beta", "gamma", "delta", "epsilon" ]
         }
     ],
     "texturesByType": {
@@ -97,7 +97,7 @@
         "translation": {
             "x": 6,
             "y": 7,
-            "z": -1
+            "z": -30
         },
         "rotation": {
             "x": 120,

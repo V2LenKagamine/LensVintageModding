@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using HarmonyLib;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
@@ -14,6 +15,9 @@ namespace runestory
 
     public class RuneItemSlot : ItemSlotBagContent
     {
+
+        public int stacksizeMulti = 1;
+
         public RuneItemSlot(InventoryBase inventory, int BagIndex, int SlotIndex, EnumItemStorageFlags storageType) : base(inventory, BagIndex, SlotIndex, storageType)
         {
         }
@@ -43,7 +47,7 @@ namespace runestory
             }
              
             // 3. Both slots not empty, and they are stackable: Fill slot
-            int maxq = (itemstack.Collectible.MaxStackSize*2) - itemstack.StackSize;
+            int maxq = (itemstack.Collectible.MaxStackSize*stacksizeMulti) - itemstack.StackSize;
             if (maxq > 0 && itemstack.Collectible.Code == sourceSlot?.Itemstack?.Collectible?.Code) 
             {
                 int tomove = Math.Min(maxq,GetRemainingSlotSpace(sourceSlot.Itemstack));
@@ -78,14 +82,13 @@ namespace runestory
                     sourceSlot.TakeOutWhole();
                 }
             }
-            
         }
 
         public override int GetRemainingSlotSpace(ItemStack forItemstack)
         {
             if (WildcardUtil.Match("runestory:rune-*", forItemstack.Collectible.Code.ToString()))
             {
-                return forItemstack.Collectible.MaxStackSize * 2;
+                return forItemstack.Collectible.MaxStackSize * stacksizeMulti;
             }
             return 0;
         }
@@ -199,7 +202,8 @@ namespace runestory
 
                 for (int slotIndex = 0; slotIndex < quantitySlots; slotIndex++)
                 {
-                    ItemSlotBagContent slot = new RuneItemSlot(parentinv, bagIndex, slotIndex, flags);
+                    RuneItemSlot slot = new RuneItemSlot(parentinv, bagIndex, slotIndex, flags);
+                    slot.stacksizeMulti = bagstack.Collectible.Code.ToString().Contains("multi") ? 1 : 2;
                     slot.HexBackgroundColor = bgcolhex;
                     slot.CanStoreTags = storageTags;
                     bagContents.Add(slot);
@@ -216,7 +220,8 @@ namespace runestory
                 foreach (var val in slotsTree)
                 {
                     int slotIndex = val.Key.Split("-")[1].ToInt();
-                    ItemSlotBagContent slot = new RuneItemSlot(parentinv, bagIndex, slotIndex, flags);
+                    RuneItemSlot slot = new RuneItemSlot(parentinv, bagIndex, slotIndex, flags);
+                    slot.stacksizeMulti = bagstack.Collectible.Code.ToString().Contains("multi") ? 1 : 2;
                     slot.HexBackgroundColor = bgcolhex;
                     slot.CanStoreTags = storageTags;
 
