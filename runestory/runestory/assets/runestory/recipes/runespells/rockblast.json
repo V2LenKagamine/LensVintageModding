@@ -3,10 +3,10 @@
     "enabled": true,
     "attributes": {
         "reagents": {
-            "runestory:rune-earth": 2,
-            "runestory:rune-fire": 2,
-            "runestory:rune-rust": 2,
-            "runestory:rune-gamma": 1
+            "runestory:rune-earth": 8,
+            "runestory:rune-fire": 8,
+            "runestory:rune-rust": 4,
+            "runestory:rune-gamma": 2
         },
         "reagentnames": [
             "runestory:item-rune-earth",

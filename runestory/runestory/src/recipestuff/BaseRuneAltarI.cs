@@ -14,6 +14,7 @@ namespace runestory
         public string Code { get; set; }
         public bool Enabled { get; set; }
         public JsonObject Attributes { get; set; }
+        public string Catalyst { get; set;  }
         Dictionary<string, int> Reagents { get; }
         Dictionary<string, int> OutputItems { get; }
 

@@ -35,12 +35,12 @@ namespace runestory.src.entity.spells
                         Type = EnumDamageType.Heal,
                         TicksPerDuration = 20,
                         Duration = TimeSpan.FromSeconds(10)
-                    }, 7.5f);
+                    }, 3f);
                     entity.ReceiveDamage(new DamageSource()
                     {
                         Source = EnumDamageSource.Unknown,
                         Type = EnumDamageType.Heal,
-                    }, 2.5f);
+                    }, 3f);
                 }
                 catch (Exception e)
                 {

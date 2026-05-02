@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Reflection;
+using System.Text.Json;
+using System.Text.Json.Serialization.Metadata;
 using HarmonyLib;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using runestory.src.block.pylons;
 using runestory.src.entity.spells;
@@ -21,6 +26,7 @@ using Vintagestory.API.Server;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 using VSImGui;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace runestory
 {
@@ -38,6 +44,7 @@ namespace runestory
         public IClientNetworkChannel capi_Runechannel;
         public IServerNetworkChannel sapi_Runechannel;
 
+        public static string RMS_UUIDSpellTable => "RMSUUIDSPELLTABLE";
         public static string RMS_SpellKnowledge => "RMSKnownSpells";
         public static string RMS_Stat_RuneChance => "freeCastChance";
         public static string RMS_Stat_MagicDamage => "magicWeaponsDamage";
@@ -77,7 +84,7 @@ namespace runestory
             capi.Input.SetHotKeyHandler("runestorytogglespell", delegate { SpellWindowGui.ToggleOpen(); return true; } );
             capi.Input.SetHotKeyHandler("runestorycastspell", delegate { OnCastRequest(capi); return true; });
         }
-
+        
         public override void Start(ICoreAPI api)
         {
             Runelogger = api.Logger;
@@ -94,7 +101,10 @@ namespace runestory
                     .RegisterMessageType(typeof(CTS_SpellPacket))
                     .RegisterMessageType(typeof(CTS_SelectPacket))
                     .RegisterMessageType(typeof(STC_BuffSync))
-                    .SetMessageHandler<STC_BuffSync>(OnReceiveBuffSync);
+                    .SetMessageHandler<STC_BuffSync>(OnReceiveBuffSync)
+                    .RegisterMessageType(typeof(CTS_SpellsPls))
+                    .RegisterMessageType(typeof(STC_SpellsPls))
+                    .SetMessageHandler<STC_SpellsPls>(COnSpellsPls);
             }
             else
             {
@@ -104,7 +114,10 @@ namespace runestory
                     .SetMessageHandler<CTS_SpellPacket>(OnRecCastRequest)
                     .RegisterMessageType(typeof(CTS_SelectPacket))
                     .SetMessageHandler<CTS_SelectPacket>(OnRecSpellSelect)
-                    .RegisterMessageType(typeof(STC_BuffSync));
+                    .RegisterMessageType(typeof(STC_BuffSync))
+                    .RegisterMessageType(typeof(CTS_SpellsPls))
+                    .SetMessageHandler<CTS_SpellsPls>(OnSpellsPls)
+                    .RegisterMessageType(typeof(STC_SpellsPls));
             }
 
             api.RegisterEntity("basesummonrunespell", typeof(defaultSpell));
@@ -136,13 +149,17 @@ namespace runestory
             api.RegisterEntity("predatoryauraspellent", typeof(PredAura));
             api.RegisterEntity("growsaplingspellent", typeof(GrowSapling));
             api.RegisterEntity("invoketrustspellent", typeof(EnforceTrust));
+            api.RegisterEntity("wormspellspellent", typeof(WormSpell));
+            api.RegisterEntity("menditemspellent", typeof(MendItems));
 
             api.RegisterBlockClass("runealtar-b", typeof(RuneAltarBlock));
             api.RegisterBlockEntityClass("runealtar-be", typeof(RuneAltarBe));
             api.RegisterBlockEntityBehaviorClass("runealtar-chiselsteal-bhv", typeof(BEBChiseledCover));
             api.RegisterBlockBehaviorClass("runealtar-chiselsteal-bb", typeof(BBChiseledCover));
 
+            api.RegisterBlockEntityBehaviorClass("runepylonrenderer", typeof(BEBhvPylon));
             api.RegisterBlockEntityClass("runepylonfertilebe", typeof(FertilePylonBe));
+            api.RegisterBlockEntityClass("runepylontemporalbe", typeof(TemporalPylonBe));
 
             api.RegisterCollectibleBehaviorClass("runepouchbag", typeof(CollectibleRuneBag));
             api.RegisterItemClass("runicpickaxeitem", typeof(RunePickaxe));
@@ -195,16 +212,35 @@ namespace runestory
                 {
                     Entity e = player.Entity;
                     e.AddBehavior(new PlayerTempBuffer(e));
-                    e.Attributes.TryGetAttribute(RMS_SpellKnowledge, out IAttribute spellsmaybe);
-                    if (spellsmaybe is null)
+                    IAttribute spellsmaybe = new StringArrayAttribute();
+                    if (player.GetModdata(RMS_SpellKnowledge) is not null)
                     {
-                        string[] defspells = [];
-                        foreach (var spll in AllSpells.Where(spell => spell.spellTier == 1))
+                        spellsmaybe = new StringArrayAttribute(SerializerUtil.Deserialize<string[]>(player.GetModdata(RMS_SpellKnowledge)));
+                    }
+                    List<string> defspells = [];
+                    List<string> known = (spellsmaybe?.GetValue() as string[]).ToList() ?? [];
+                    foreach (var spll in AllSpells.Where(spell => spell.spellTier == 1))
+                    {
+                        defspells.Add(spll.Code);
+                    }
+                    if (known is null || known?.Count < defspells.Count)
+                    {
+                        foreach (var sphe in defspells)
                         {
-                            defspells = defspells.AddToArray(spll.Code);
+                            if ((known?.Contains(sphe) == false))
+                            {
+                                known.Add(sphe);
+                            }
                         }
-
-                        e.WatchedAttributes.SetAttribute(RMS_SpellKnowledge, new StringArrayAttribute(defspells));
+                        player.SetModdata(RMS_SpellKnowledge, SerializerUtil.Serialize(known.ToArray()));
+                        e.WatchedAttributes.SetAttribute(RMS_SpellKnowledge, new StringArrayAttribute(known?.ToArray()));
+                        e.WatchedAttributes.MarkPathDirty(RMS_SpellKnowledge);
+                    }
+                    else
+                    {
+                        player.SetModdata(RMS_SpellKnowledge, SerializerUtil.Serialize(known.ToArray()));
+                        e.WatchedAttributes.SetAttribute(RMS_SpellKnowledge, new StringArrayAttribute(defspells.ToArray()));
+                        e.WatchedAttributes.MarkPathDirty(RMS_SpellKnowledge);
                     }
                     if (!(e.Stats.Where(stat => stat.Key == RMS_Stat_MagicDamage).Any()))
                     {
@@ -220,13 +256,22 @@ namespace runestory
             };
             api.Logger.Notification("[RuneStory] Welcome to ScapeRune!");
         }
-
         public void OnCastRequest(ICoreClientAPI capi)
         {
             capi.Network.GetChannel(RMS_Net_Channel).SendPacket(new CTS_SpellPacket
             {
                 byPlayerID = capi.World.Player.Entity.EntityId,
             });
+        }
+        private void OnSpellsPls(IServerPlayer fromPlayer, CTS_SpellsPls packet)
+        {
+            sapi_Runechannel.SendPacket(new STC_SpellsPls{spells = SerializerUtil.Deserialize<string[]>(fromPlayer.GetModdata(RMS_SpellKnowledge)) },fromPlayer);
+        }
+
+        private void COnSpellsPls(STC_SpellsPls packt)
+        {
+
+            runeCApi.World.Player.Entity.WatchedAttributes.SetStringArray(RMS_SpellKnowledge,packt.spells);
         }
         private void OnRecSpellSelect(IServerPlayer fromPlayer, CTS_SelectPacket pack)
         {
@@ -263,7 +308,7 @@ namespace runestory
         public void SetCastDelay(Entity ent, BaseRuneSpell spell)
         {
             //Todo: Config?
-            long percastMS = 800 - (int)Math.Min(400,spell.Reagents.Count * 100);
+            long percastMS = 600 - (int)Math.Min(400,spell.Reagents.Count * 100);
             int TotalReag = 0;
             if (spell is not null)
             {

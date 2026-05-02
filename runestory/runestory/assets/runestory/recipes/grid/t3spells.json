@@ -1,0 +1,219 @@
+[
+    {
+        "ingredientPattern": "_R_,RCR,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier3-single"
+            },
+            "R": {
+                "type": "item",
+                "code": "runestory:rune-air",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier3-single"
+        },
+        "attributes": {
+            "spelltounlock": "airblast"
+        }
+    },
+    {
+        "ingredientPattern": "_R_,RCR,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier3-single"
+            },
+            "R": {
+                "type": "item",
+                "code": "runestory:rune-water",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier3-single"
+        },
+        "attributes": {
+            "spelltounlock": "waterblast"
+        }
+    },
+    {
+        "ingredientPattern": "_R_,RCR,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier3-single"
+            },
+            "R": {
+                "type": "item",
+                "code": "runestory:rune-fire",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier3-single"
+        },
+        "attributes": {
+            "spelltounlock": "fireblast"
+        }
+    },
+    {
+        "ingredientPattern": "_R_,RCR,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier3-single"
+            },
+            "R": {
+                "type": "item",
+                "code": "runestory:rune-earth",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier3-single"
+        },
+        "attributes": {
+            "spelltounlock": "earthblast"
+        }
+    },
+    {
+        "ingredientPattern": "_R_,HCH,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier3-single"
+            },
+            "R": {
+                "type": "item",
+                "code": "runestory:rune-earth",
+                "quantity": 4
+            },
+            "H": {
+                "type": "item",
+                "code": "game:treeseed-*",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier3-single"
+        },
+        "attributes": {
+            "spelltounlock": "growsapling"
+        }
+    },
+    {
+        "ingredientPattern": "_H_,HCH,_H_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier3-single"
+            },
+            "H": {
+                "type": "block",
+                "code": "game:bomb-stone",
+                "quantity": 2
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier3-single"
+        },
+        "attributes": {
+            "spelltounlock": "rockblast"
+        }
+    },
+    {
+        "ingredientPattern": "_H_,HCH,_H_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier3-single"
+            },
+            "H": {
+                "type": "block",
+                "code": "game:flower-horsetail-free",
+                "quantity": 16
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier3-single"
+        },
+        "attributes": {
+            "spelltounlock": "saveself"
+        }
+    },
+    {
+        "ingredientPattern": "F,C",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier3-single"
+            },
+            "F": {
+                "type": "item",
+                "code": "game:blade-falx-*",
+                "quantity": 1
+            }
+        },
+        "width": 1,
+        "height": 2,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier3-single"
+        },
+        "attributes": {
+            "spelltounlock": "warcry"
+        }
+    },
+    {
+        "ingredientPattern": "_H_,WCW,_H_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier3-single"
+            },
+            "H": {
+                "type": "block",
+                "code": "game:flower-horsetail-free",
+                "quantity": 8
+            },
+            "W": {
+                "type": "item",
+                "code": "runestory:rune-water",
+                    "quantity": 8
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier3-single"
+        },
+        "attributes": {
+            "spelltounlock": "watercloak"
+        }
+    }
+]

@@ -101,7 +101,7 @@ namespace runestory
 
             Entity[] nearAltar = Api.World.GetEntitiesInsideCuboid(Pos.AddCopy(-1, -1, -1), Pos.AddCopy(1, 1, 1), ent => ent.OnGround && ent is EntityItem);
 
-            for (int i = 0; i < Api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes.Count; i++)
+            for (int i = 0; i < Api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes.Where(rec => rec.SatisfiesAsIngredient(null,Contents)).Count(); i++)
             {
                 BaseRuneAltar recipe = Api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes[i];
                 List<Entity> toEat = [];
@@ -190,7 +190,7 @@ namespace runestory
                     }
                 }
                 //Todo: Unhardcode
-                Contents?.StackSize -= MaxCanMake * recipe.OutputItems.First().Value;
+                Contents.StackSize -= MaxCanMake * recipe.OutputItems.First().Value;
                 if(Contents.StackSize<=0) { Contents = null; }
                 MarkDirty();
                 for (int i3 = 0; i3 < recipe.OutputItems.Count; i3++)
@@ -223,8 +223,7 @@ namespace runestory
             var slot = ply.InventoryManager.ActiveHotbarSlot;
             if(slot.Itemstack is not null)
             {
-                //Yes this is hardcoded for now. Deal with it.
-                if (slot.Itemstack.Collectible.Code.ToString() == "runestory:rune-blank" && Contents is null)
+                if (Contents is null)
                 {
                     Contents = slot.Itemstack.Clone();
                     slot.TakeOutWhole();

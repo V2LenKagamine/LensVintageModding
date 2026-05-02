@@ -28,6 +28,8 @@ namespace runestory
         public Dictionary<string, int> Reagents;
 
         public Dictionary<string, int> OutputItems;
+
+        public string Catalyst{ get; set; }
         Dictionary<string, int> BaseRuneAltarI<BaseRuneAltar>.Reagents => Reagents;
         Dictionary<string, int> BaseRuneAltarI<BaseRuneAltar>.OutputItems => OutputItems;
 
@@ -38,19 +40,24 @@ namespace runestory
 
             for (int i = 0; i < Reagents.Count; i++) { reagClone.Add(Reagents.ElementAt(i).Key, Reagents.ElementAt(i).Value); }
             for (int i = 0; i < OutputItems.Count; i++) { outclone.Add(OutputItems.ElementAt(i).Key, OutputItems.ElementAt(i).Value); }
-            return new BaseRuneAltar { Code = this.Code, Attributes = this.Attributes, Reagents = reagClone ,OutputItems = outclone};
+            return new BaseRuneAltar { Code = this.Code, Attributes = this.Attributes, Reagents = reagClone ,OutputItems = outclone, Catalyst = this.Catalyst};
         }
 
-        public bool SatisfiesAsIngredient(int index, ItemStack inputStack)
+        public bool SatisfiesAsIngredient(int? index, ItemStack inputStack)
         {
-            if (Reagents.ElementAt(index).ToString().Contains('*'))
+            if (index is null)
             {
-                return WildcardUtil.Match(new AssetLocation(Reagents.ElementAt(index).Key), inputStack.Collectible.Code);
+                if (Catalyst == inputStack.Collectible.Code.ToString()) { return true; }
+                if (WildcardUtil.Match(new AssetLocation(Catalyst), inputStack.Collectible.Code)) { return true; }
+                return false;
             }
-            else
+            else if (index is int good)
             {
-                return Reagents.ElementAt(index).Key == inputStack.Collectible.Code.ToString();
+                if (Reagents.ElementAt(good).Key == inputStack.Collectible.Code.ToString()) { return true; }
+                if (WildcardUtil.Match(new AssetLocation(Reagents.ElementAt(good).Key), inputStack.Collectible.Code)) { return true; }
+                return false;
             }
+            return false;
         }
 
         public bool Resolve(IWorldAccessor world,string errSrc)
@@ -65,8 +72,13 @@ namespace runestory
                 {
                     OutputItems = Attributes["outputs"].AsObject<Dictionary<string, int>>();
                 }
+                if (Attributes["catalyst"].Exists)
+                {
+                    Catalyst = Attributes["catalyst"].AsString();
+                }
+                if(Catalyst is not null && OutputItems is not null && Reagents is not null) { return true; }
             }
-            return true;
+            return false;
         }
 
         public void ToBytes(BinaryWriter writer)
@@ -90,6 +102,7 @@ namespace runestory
                 writer.Write(OutputItems.ElementAt(i).Key);
                 writer.Write(OutputItems.ElementAt(i).Value);
             }
+            writer.Write(Catalyst);
         }
         public void FromBytes(BinaryReader reader, IWorldAccessor resolver)
         {
@@ -107,6 +120,7 @@ namespace runestory
             {
                 OutputItems.Add(reader.ReadString(), reader.ReadInt32());
             }
+            Catalyst = reader.ReadString();
         }
     }
 }

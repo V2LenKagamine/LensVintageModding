@@ -7,116 +7,128 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textureSizes": {
+		"runepylon.png": [32, 32],
+		"runepylonem.png": [32, 32]
 	},
 	"textures": {
-		"runepylon": "textures/blocks/runepylon",
-		"runepylonem": "textures/blocks/runepylonem"
+		"runepylon.png": "game:block/stone/rock/basalt1",
+		"runepylonem.png": "blocks/runepylonem"
 	},
 	"elements": [
 		{
-			"name": "Cube3",
-			"from": [ 7.5, 7.5, 7.5 ],
-			"to": [ 8.5, 8.5, 8.5 ],
-			"rotationOrigin": [ 7.5, 7.5, 7.5 ],
-			"faces": {
-				"north": {
-					"texture": "#runepylon",
-					"uv": [ 0.0, 0.0, 1.0, 1.0 ]
-				},
-				"east": {
-					"texture": "#runepylon",
-					"uv": [ 0.0, 0.0, 1.0, 1.0 ]
-				},
-				"south": {
-					"texture": "#runepylon",
-					"uv": [ 0.0, 0.0, 1.0, 1.0 ]
-				},
-				"west": {
-					"texture": "#runepylon",
-					"uv": [ 0.0, 0.0, 1.0, 1.0 ]
-				},
-				"up": {
-					"texture": "#runepylon",
-					"uv": [ 0.0, 0.0, 1.0, 1.0 ]
-				},
-				"down": {
-					"texture": "#runepylon",
-					"uv": [ 0.0, 0.0, 1.0, 1.0 ]
-				}
-			},
+			"name": "top",
+			"from": [8, 10.75, 8],
+			"to": [8, 10.75, 8],
+			"rotationOrigin": [8, 10.75, 8],
 			"children": [
 				{
-					"name": "Cube5",
-					"from": [ 0.5, -7.5, 0.5 ],
-					"to": [ 6.5, -1.5, 6.5 ],
-					"rotationOrigin": [ 0.5, -7.5, 0.5 ],
-					"rotationX": -85.0,
-					"rotationY": -55.0,
-					"rotationZ": -40.0,
+					"name": "top",
+					"from": [-3, -3, -3],
+					"to": [3, 3, 3],
+					"rotationOrigin": [0, 0, 0],
+					"uv": [0, 0],
+					"shade": true,
 					"faces": {
-						"north": { "texture": "#runepylon", "uv": [ 0.0, 8.0, 8.0, 16.0 ], "autoUv": false },
-						"east": { "texture": "#runepylon", "uv": [ 0.0, 0.0, 7.5, 7.5 ], "autoUv": false },
-						"south": { "texture": "#runepylon", "uv": [ 0.0, 8.0, 8.0, 16.0 ], "autoUv": false },
-						"west": { "texture": "#runepylon", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "autoUv": false },
-						"up": { "texture": "#runepylon", "uv": [ 8.0, 0.0, 16.0, 8.0 ], "autoUv": false },
-						"down": { "texture": "#runepylon", "uv": [ 8.0, 0.0, 16.0, 8.0 ], "autoUv": false }
+						"north": {"texture": "#runepylon.png", "uv": [0, 16, 16, 32], "autoUv": false, "snapUv": false},
+						"east": {"texture": "#runepylon.png", "uv": [16, 0, 32, 16], "autoUv": false, "snapUv": false},
+						"south": {"texture": "#runepylon.png", "uv": [0, 0, 16, 16], "autoUv": false, "snapUv": false},
+						"west": {"texture": "#runepylon.png", "uv": [16, 0, 32, 16], "autoUv": false, "snapUv": false},
+						"up": {"texture": "#runepylon.png", "uv": [0, 0, 16, 16], "autoUv": false, "snapUv": false},
+						"down": {"texture": "#runepylon.png", "uv": [0, 0, 16, 16], "autoUv": false, "snapUv": false}
 					},
-					"children": [
-						{
-							"name": "Cube4",
-							"from": [ -2.8, -2.8, -2.8 ],
-							"to": [ 3.2, 3.2, 3.2 ],
-							"rotationOrigin": [ 3.2, 3.2, 3.2 ],
-							"rotationX": 90.0,
-							"rotationY": -90.0,
-							"rotationZ": -90.0,
-							"faces": {
-								"north": { "texture": "#runepylon", "uv": [ 0.0, 8.0, 8.0, 16.0 ], "autoUv": false },
-								"east": { "texture": "#runepylon", "uv": [ 8.0, 0.0, 16.0, 8.0 ], "autoUv": false },
-								"south": { "texture": "#runepylon", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "autoUv": false },
-								"west": { "texture": "#runepylon", "uv": [ 8.0, 0.0, 16.0, 8.0 ], "autoUv": false },
-								"up": { "texture": "#runepylon", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "autoUv": false },
-								"down": { "texture": "#runepylon", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "autoUv": false }
-							}
-						}
-					]
+					"rotationX": 45,
+					"rotationY": 35.26,
+					"rotationZ": 15,
+					"stepParentName": "",
+					"climateColorMap": "",
+					"gradientShade": false,
+					"renderPass": 0,
+					"seasonColorMap": ""
 				},
 				{
-					"name": "Cube7",
-					"from": [ 0.5, -7.7, 0.5 ],
-					"to": [ 6.7, -1.5, 6.7 ],
-					"rotationOrigin": [ 0.5, -7.7, 0.5 ],
-					"rotationX": -85.0,
-					"rotationY": -55.0,
-					"rotationZ": -40.0,
+					"name": "topem",
+					"from": [-3.1, -3.1, -3.1],
+					"to": [3.1, 3.1, 3.1],
+					"rotationOrigin": [0.1, 0.1, 0.1],
+					"uv": [0, 0],
+					"shade": true,
 					"faces": {
-						"north": { "texture": "#runepylonem", "uv": [ 0.0, 8.0, 8.0, 16.0 ], "glow": 255, "autoUv": false },
-						"east": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 7.5, 7.5 ], "glow": 255, "autoUv": false },
-						"south": { "texture": "#runepylonem", "uv": [ 0.0, 8.0, 8.0, 16.0 ], "glow": 255, "autoUv": false },
-						"west": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "glow": 255, "autoUv": false },
-						"up": { "texture": "#runepylonem", "uv": [ 8.0, 0.0, 16.0, 8.0 ], "glow": 255, "autoUv": false },
-						"down": { "texture": "#runepylonem", "uv": [ 8.0, 0.0, 16.0, 8.0 ], "glow": 255, "autoUv": false }
+						"north": {"texture": "#runepylonem.png", "uv": [0, 16, 16, 32], "autoUv": false, "snapUv": false, "glow": 255},
+						"east": {"texture": "#runepylonem.png", "uv": [16, 0, 32, 16], "autoUv": false, "snapUv": false, "glow": 255},
+						"south": {"texture": "#runepylonem.png", "uv": [0, 16, 16, 32], "autoUv": false, "snapUv": false, "glow": 255},
+						"west": {"texture": "#runepylonem.png", "uv": [16, 0, 32, 16], "autoUv": false, "snapUv": false, "glow": 255},
+						"up": {"texture": "#runepylonem.png", "uv": [0, 0, 16, 16], "autoUv": false, "snapUv": false, "glow": 255},
+						"down": {"texture": "#runepylonem.png", "uv": [0, 0, 16, 16], "autoUv": false, "snapUv": false, "glow": 255}
 					},
-					"children": [
-						{
-							"name": "Cube8",
-							"from": [ -2.6, -2.6, -2.6 ],
-							"to": [ 3.6, 3.6, 3.6 ],
-							"rotationOrigin": [ 3.4, 3.4, 3.4 ],
-							"rotationX": 90.0,
-							"rotationY": -90.0,
-							"rotationZ": -90.0,
-							"faces": {
-								"north": { "texture": "#runepylonem", "uv": [ 0.0, 8.0, 8.0, 16.0 ], "glow": 255, "autoUv": false },
-								"east": { "texture": "#runepylonem", "uv": [ 8.0, 0.0, 16.0, 8.0 ], "glow": 255, "autoUv": false },
-								"south": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "glow": 255, "autoUv": false },
-								"west": { "texture": "#runepylonem", "uv": [ 8.0, 0.0, 16.0, 8.0 ], "glow": 255, "autoUv": false },
-								"up": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "glow": 255, "autoUv": false },
-								"down": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "glow": 255, "autoUv": false }
-							}
-						}
-					]
+					"rotationX": 45,
+					"rotationY": 35.26,
+					"rotationZ": 15,
+					"stepParentName": "",
+					"climateColorMap": "",
+					"gradientShade": false,
+					"renderPass": 0,
+					"seasonColorMap": ""
 				}
-			]
+			],
+			"stepParentName": ""
+		},
+		{
+			"name": "bottomem",
+			"from": [0, 0, 0],
+			"to": [0, 0, 0],
+			"rotationOrigin": [0, 0, 0],
+			"children": [
+				{
+					"name": "bottom",
+					"from": [5, 2.25, 5],
+					"to": [11, 8.25, 11],
+					"rotationOrigin": [8, 5.25, 8],
+					"uv": [0, 0],
+					"shade": true,
+					"faces": {
+						"north": {"texture": "#runepylon.png", "uv": [0, 16, 16, 32], "autoUv": false, "snapUv": false},
+						"east": {"texture": "#runepylon.png", "uv": [16, 0, 32, 16], "autoUv": false, "snapUv": false},
+						"south": {"texture": "#runepylon.png", "uv": [0, 0, 16, 16], "autoUv": false, "snapUv": false},
+						"west": {"texture": "#runepylon.png", "uv": [16, 0, 32, 16], "autoUv": false, "snapUv": false},
+						"up": {"texture": "#runepylon.png", "uv": [0, 0, 16, 16], "autoUv": false, "snapUv": false},
+						"down": {"texture": "#runepylon.png", "uv": [0, 0, 16, 16], "autoUv": false, "snapUv": false}
+					},
+					"rotationX": 45,
+					"rotationY": 35.26,
+					"rotationZ": 15,
+					"stepParentName": "",
+					"climateColorMap": "",
+					"gradientShade": false,
+					"renderPass": 0,
+					"seasonColorMap": ""
+				},
+				{
+					"name": "bottomem",
+					"from": [4.8, 2.1, 4.9],
+					"to": [11, 8.3, 11.1],
+					"rotationOrigin": [8.1, 5.35, 8.1],
+					"uv": [0, 0],
+					"shade": true,
+					"faces": {
+						"north": {"texture": "#runepylonem.png", "uv": [16, 0, 32, 16], "autoUv": false, "snapUv": false, "glow": 255},
+						"east": {"texture": "#runepylonem.png", "uv": [0, 16, 16, 32], "autoUv": false, "snapUv": false, "glow": 255},
+						"south": {"texture": "#runepylonem.png", "uv": [16, 0, 32, 16], "autoUv": false, "snapUv": false, "glow": 255},
+						"west": {"texture": "#runepylonem.png", "uv": [0, 16, 16, 32], "autoUv": false, "snapUv": false, "glow": 255},
+						"up": {"texture": "#runepylonem.png", "uv": [16, 16, 32, 32], "autoUv": false, "snapUv": false, "glow": 255},
+						"down": {"texture": "#runepylonem.png", "uv": [16, 16, 32, 32], "autoUv": false, "snapUv": false, "glow": 255}
+					},
+					"rotationX": 45,
+					"rotationY": 35.26,
+					"rotationZ": 15,
+					"stepParentName": "",
+					"climateColorMap": "",
+					"gradientShade": false,
+					"renderPass": 0,
+					"seasonColorMap": ""
+				}
+			],
+			"stepParentName": ""
 		}
-	]}
+	],
+	"animations": []
+}

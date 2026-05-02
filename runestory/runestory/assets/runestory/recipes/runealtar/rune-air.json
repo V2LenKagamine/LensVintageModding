@@ -3,6 +3,7 @@
         "code": "makeairrune-flour",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:flour-*": 1
             },
@@ -15,6 +16,7 @@
         "code": "makeairrune-pap",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:papyrustops": 1
             },

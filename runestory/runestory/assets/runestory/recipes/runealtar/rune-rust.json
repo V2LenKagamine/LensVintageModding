@@ -2,6 +2,7 @@
     "code": "makerustrune-gear",
     "enabled": true,
     "attributes": {
+        "catalyst": "runestory:rune-blank",
         "reagents": {
             "game:gear-rusty": 1
         },

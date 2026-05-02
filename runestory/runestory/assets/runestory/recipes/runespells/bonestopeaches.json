@@ -3,7 +3,7 @@
     "enabled": true,
     "attributes": {
         "reagents": {
-            "runestory:rune-earth": 4,
+            "runestory:rune-earth": 16,
             "runestory:rune-balance": 4,
             "runestory:rune-delta": 1
         },

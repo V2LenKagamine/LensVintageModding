@@ -1,26 +1,33 @@
 {
     "code": "runepylon",
     "entityclassByType": {
-        "*-fertile": "runepylonfertilebe"
+        "*-fertile": "runepylonfertilebe",
+        "*-temporal": "runepylontemporalbe"
     },
+    "entitybehaviors": [
+        { "name": "runepylonrenderer" }
+    ],
     "attributes": {
     },
     "variantgroups": [
         {
             "code": "type",
-            "states": [ "fertile" ]
+            "states": [ "inactive", "fertile", "temporal" ]
         }
     ],
     "textures": {
-        "runepylon": { "base": "blocks/runepylon" },
-        "runepylonem": { "base": "blocks/runepylonem" }
+        "runepylon.png": { "base": "game:block/stone/rock/basalt1" },
+        "runepylonem.png": { "base": "blocks/runepylonem" }
     },
     "blockmaterial": "Stone",
     "shape": { "base": "blocks/runepylon" },
     "resistance": 2.5,
     "requiredminingtier": 0,
     "materialDensity": 700,
-    "renderPass": "OpaqueNoCull",
+    "drawType": "Empty",
+    "renderpass": "Transparent",
+    "lightHSV": [32,6,4],
+    "lightAbsorption": 0,
     "sideOpaque": {
         "all": false
     },
@@ -40,5 +47,21 @@
     "creativeinventory": {
         "general": [ "*" ],
         "runestorytab": [ "*" ]
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -1.3,
+            "y": -1,
+            "z": -0.9
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -50
+        },
+        "scale": 0.55
+    },
+    "guiTransform": {
+        "scale": 2
     }
 }

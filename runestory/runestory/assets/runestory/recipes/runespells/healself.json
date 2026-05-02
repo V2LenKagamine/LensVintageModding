@@ -4,7 +4,7 @@
     "attributes": {
         "reagents": {
             "runestory:rune-self": 1,
-            "runestory:rune-water": 1,
+            "runestory:rune-water": 4,
             "runestory:rune-alpha": 1
         },
         "reagentnames": [

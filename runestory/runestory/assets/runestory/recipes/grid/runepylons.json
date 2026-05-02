@@ -1,0 +1,62 @@
+[
+    {
+        "ingredientPattern": "H,C,H",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:stone-*",
+                "quantity": 8
+            },
+            "C": {
+                "type": "item",
+                "code": "rune-blank",
+                "quantity": 4
+            }
+        },
+        "width": 1,
+        "height": 3,
+        "output": {
+            "type": "block",
+            "code": "runestory:runepylon-inactive"
+        }
+    },
+    {
+        "ingredientPattern": "HHH,HCH,HHH",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:compost",
+                "quantity": 4
+            },
+            "C": {
+                "type": "block",
+                "code": "runestory:runepylon-inactive"
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "block",
+            "code": "runestory:runepylon-fertile"
+        }
+    },
+    {
+        "ingredientPattern": "H,C,H",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:gear-temporal"
+            },
+            "C": {
+                "type": "block",
+                "code": "runestory:runepylon-inactive"
+            }
+        },
+        "width": 1,
+        "height": 3,
+        "output": {
+            "type": "block",
+            "code": "runestory:runepylon-temporal"
+        }
+    }
+]

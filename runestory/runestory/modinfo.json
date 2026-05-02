@@ -6,7 +6,7 @@
     "Len Kagamine"
   ],
   "description": "Runes to cast magic spells.Beta, Expect bugs and crashes.",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "dependencies": {
     "game": "1.22.0",
     "vsimgui": ""

@@ -34,7 +34,7 @@ namespace runestory.src.entity.spells
                 BlockPos curr = new BlockPos(x, y, z);
                 if (World.BlockAccessor.GetBlock(curr).Id == 0 || World.BlockAccessor.GetBlock(curr).Replaceable >=6000)
                 {
-                    if (World.Rand.NextDouble() > 0.35f && World.BlockAccessor.GetBlock(curr.DownCopy()).SideSolid.OnSide(BlockFacing.UP))
+                    if (World.Rand.NextDouble() < 0.30f && World.BlockAccessor.GetBlock(curr.DownCopy()).SideSolid.OnSide(BlockFacing.UP))
                     {
                         World.BlockAccessor.SetBlock(decidedflower.Id,curr);
                     }

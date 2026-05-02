@@ -25,7 +25,7 @@ namespace runestory.src.entity.spells
         {
             if(Api.Side == EnumAppSide.Client) { return; }
             IHarvestable harvestable = entity?.GetInterface<IHarvestable>();
-            if (harvestable != null)
+            if (harvestable != null && !entity.Alive)
             {
                 try
                 {

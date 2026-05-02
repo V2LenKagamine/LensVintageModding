@@ -3,6 +3,7 @@
         "code": "makerunechisel",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:chisel-copper": 1
             },

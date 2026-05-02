@@ -10,6 +10,7 @@ using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.Server;
+using Vintagestory.API.Util;
 
 namespace runestory
 {
@@ -20,6 +21,15 @@ namespace runestory
         public int tierUnlocked = 0;
         public bool onlyOneSpell = true;
 
+
+        public override void OnCreatedByCrafting(ItemSlot[] allInputSlots, ItemSlot outputSlot, IRecipeBase byRecipe)
+        {
+            if((byRecipe as RecipeBase)?.Attributes?["spelltounlock"]?.Exists == true)
+            {
+                outputSlot.Itemstack.Attributes.SetString("spelltounlock",(byRecipe as RecipeBase).Attributes["spelltounlock"].AsString());
+            }
+            base.OnCreatedByCrafting(allInputSlots, outputSlot, byRecipe);
+        }
         public override void OnLoaded(ICoreAPI api)
         {
             base.OnLoaded(api);
@@ -72,12 +82,18 @@ namespace runestory
         {
             if (byEntity.World.Side == EnumAppSide.Server && secondsUsed >= 1.5f)
             {
-
                 IEnumerable<BaseRuneSpell> validOptions = api.ModLoader.GetModSystem<RunestoryMS>().AllSpells.Where(spell => spell.Code == spellUnlocked || spell.spellTier == tierUnlocked);
+                if(slot.Itemstack?.Attributes?.GetString("spelltounlock") is not null)
+                {
+                    validOptions = validOptions.Where(spll=>spll.Code == slot.Itemstack?.Attributes?.GetString("spelltounlock"));
+                }
                 if (byEntity is EntityPlayer ply)
                 {
-
-                    string[] knownspells = (string[])ply.WatchedAttributes.GetAttribute(RunestoryMS.RMS_SpellKnowledge).GetValue();
+                    string[] knownspells = [];
+                    if ((ply.Player as IServerPlayer).GetModdata(RunestoryMS.RMS_SpellKnowledge) is not null)
+                    {
+                        knownspells = SerializerUtil.Deserialize<string[]>((ply.Player as IServerPlayer).GetModdata(RunestoryMS.RMS_SpellKnowledge));
+                    }
                     if (validOptions.Count() == 1)
                     {
                         if (knownspells.Contains(validOptions.First().Code))
@@ -86,28 +102,32 @@ namespace runestory
                             (ply.Player as IServerPlayer).SendMessage(GlobalConstants.InfoLogChatGroup, Lang.Get("runestory:nowallknown"), EnumChatType.Notification);
                             return;
                         }
+                        (ply.Player as IServerPlayer).SendMessage(GlobalConstants.InfoLogChatGroup, Lang.Get("runestory:mindexpand") + Lang.Get("runestory:" + validOptions.First().Code), EnumChatType.Notification);
                         knownspells = knownspells.AddToArray(validOptions.First().Code);
                         ply.WatchedAttributes.SetAttribute(RunestoryMS.RMS_SpellKnowledge, new StringArrayAttribute(knownspells));
+                        (ply.Player as IServerPlayer).SetModdata(RunestoryMS.RMS_SpellKnowledge, SerializerUtil.Serialize(knownspells.ToArray()));
                     }
                     else
                     {
                         int failcount = 0;
-                        for (int i = 0; i < validOptions.Count(); i++)
+                        int origCount = validOptions.Count();
+                        while (validOptions.Count() > 0 && validOptions.Count() <= origCount)
                         {
-
-                            BaseRuneSpell target = validOptions.ElementAt(i);
+                            BaseRuneSpell target = validOptions.ElementAt(api.World.Rand.Next(0,validOptions.Count()));
                             if (!knownspells.Contains(target.Code))
                             {
                                 knownspells = knownspells.AddToArray(target.Code);
 
                                 (ply.Player as IServerPlayer).SendMessage(GlobalConstants.InfoLogChatGroup, Lang.Get("runestory:mindexpand") + Lang.Get("runestory:"+target.Code), EnumChatType.Notification);
                                 ply.WatchedAttributes.SetAttribute(RunestoryMS.RMS_SpellKnowledge, new StringArrayAttribute(knownspells));
+                                (ply.Player as IServerPlayer).SetModdata(RunestoryMS.RMS_SpellKnowledge, SerializerUtil.Serialize(knownspells.ToArray()));
                                 if (onlyOneSpell)
                                 {
                                     break;
                                 }
                                 continue;
                             }
+                            validOptions = validOptions.ToArray().Remove(target);
                             failcount++;
                         }
 
@@ -126,6 +146,10 @@ namespace runestory
         public override void GetHeldItemInfo(ItemSlot inSlot, StringBuilder dsc, IWorldAccessor world, bool withDebugInfo)
         {
             dsc.Append(Lang.Get("runestory:runicresearch", onlyOneSpell ? 1 : "every", tierUnlocked));
+            if(inSlot.Itemstack?.Attributes?["spelltounlock"] is not null)
+            {
+                dsc.Append("\nSpell: " + Lang.Get("runestory:" + inSlot.Itemstack.Attributes.GetString("spelltounlock")));
+            }
             base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
         }
     }

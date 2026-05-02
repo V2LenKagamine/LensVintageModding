@@ -3,6 +3,7 @@
         "code": "makebetarune-firew",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:firewood": 1
             },

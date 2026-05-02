@@ -1,20 +1,18 @@
 {
-    "code": "healother",
+    "code": "wormspell",
     "enabled": true,
     "attributes": {
         "reagents": {
-            "runestory:rune-air": 1,
-            "runestory:rune-water": 4,
+            "runestory:rune-earth": 2,
             "runestory:rune-alpha": 1
         },
         "reagentnames": [
-            "runestory:item-rune-air",
-            "runestory:item-rune-water",
+            "runestory:item-rune-earth",
             "runestory:item-rune-alpha"
         ],
-        "langCode": "healotherdsc",
+        "langCode": "wormspelldsc",
         "spelltype": "supp",
         "spelltier": 1
     },
-    "imgpath": "healother"
+    "imgpath": "wormspell"
 }

@@ -3,6 +3,7 @@
         "code": "makegammarune-native",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:nugget-nativecopper": 1
             },
@@ -15,6 +16,7 @@
         "code": "makegammarune-mal",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:nugget-malachite": 1
             },
@@ -27,6 +29,7 @@
         "code": "makegammarune-cop",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:metalbit-copper": 1
             },

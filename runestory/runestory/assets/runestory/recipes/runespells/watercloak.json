@@ -3,7 +3,7 @@
     "enabled": true,
     "attributes": {
         "reagents": {
-            "runestory:rune-water": 4,
+            "runestory:rune-water": 8,
             "runestory:rune-beta": 1
         },
         "reagentnames": [

@@ -24,7 +24,7 @@ namespace runestory.src.entity.spells
 
             Item[] seeds = Api.World.SearchItems("game:seeds-*");
             Api.World.SpawnItemEntity(new(seeds.ElementAt(World.Rand.Next(0, seeds.Length)), World.Rand.Next(1, 3)), Pos.AsBlockPos);
-            if(World.Rand.NextDouble() >0.9f)
+            if(World.Rand.NextDouble() >0.975f)
             {
                 Item[] nice = Api.World.SearchItems("game:fruit-*");
                 Api.World.SpawnItemEntity(new(nice.ElementAt(World.Rand.Next(0, nice.Length)), World.Rand.Next(1, 3)), Pos.AsBlockPos);

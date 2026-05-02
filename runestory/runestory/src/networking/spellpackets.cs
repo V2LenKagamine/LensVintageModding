@@ -25,4 +25,14 @@ namespace runestory
         [ProtoMember(2)]
         public float duration;
     }
+    [ProtoContract]
+    public class CTS_SpellsPls
+    {
+    }
+    [ProtoContract]
+    public class STC_SpellsPls
+    {
+        [ProtoMember(1)]
+        public string[] spells;
+    }
 }

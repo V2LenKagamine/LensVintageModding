@@ -3,6 +3,7 @@
         "code": "makealpharune-stick",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:stick": 1
             },

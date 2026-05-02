@@ -3,6 +3,7 @@
         "code": "makeruncpickcopp",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:pickaxe-copper": 1
             },
@@ -16,6 +17,7 @@
         "code": "makeruncpickblack",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:pickaxe-blackbronze": 1
             },
@@ -29,6 +31,7 @@
         "code": "makeruncpickgold",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:pickaxe-gold": 1
             },
@@ -42,6 +45,7 @@
         "code": "makeruncpicksilv",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:pickaxe-silver": 1
             },
@@ -55,6 +59,7 @@
         "code": "makeruncpickiron",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:pickaxe-iron": 1
             },

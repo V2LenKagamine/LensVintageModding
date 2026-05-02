@@ -74,7 +74,7 @@
         "items": [ "*" ],
         "runestorytab": [ "*" ]
     },
-    "maxstacksize": 64,
+    "maxstacksizeByType": { "@*-(alpha|beta|gamma|delta|epsilon)": 16, "*": 64 },
     "shape": { "base": "items/rune" },
     "tpHandTransform": {
         "translation": {

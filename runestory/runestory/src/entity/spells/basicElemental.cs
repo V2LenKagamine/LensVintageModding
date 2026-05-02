@@ -39,31 +39,31 @@ namespace runestory.src.entity.spells
                 case 1:
                     {
                         aoe = new(0f, 0f);
-                        dam = 3.5f;
+                        dam = 4.5f;
                         break;
                     }
                 case 2:
                     {
                         aoe = new(0f, 0f);
-                        dam = 4.5f;
+                        dam = 6f;
                         break;
                     }
                 case 3:
                     {
                         aoe = new(3f, 3f);
-                        dam = 4.5f;
+                        dam = 7.5f;
                         break;
                     }
                 case 4:
                     {
-                        aoe = new(3f, 3f);
-                        dam = 6.5f;
+                        aoe = new(4f, 4f);
+                        dam = 10f;
                         break;
                     }
                 case 5:
                     {
-                        aoe = new(3f, 3f);
-                        dam = 8f;
+                        aoe = new(5f, 5f);
+                        dam = 12.5f;
                         break;
                     }
             }

@@ -3,23 +3,25 @@
         "code": "makebalancerune-quartz",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:clearquartz": 1
             },
             "outputs": {
-                "runestory:rune-balance": 1
+                "runestory:rune-balance": 2
             }
         }
     },
     {
-        "code": "makebalancerune-orequartz",
+        "code": "makebalancerune-glass",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
-                "game:ore-quartz": 1
+                "game:glass-plain": 1
             },
             "outputs": {
-                "runestory:rune-balance": 1
+                "runestory:rune-balance": 4
             }
         }
     },
@@ -27,6 +29,7 @@
         "code": "makebalancerune-crushed",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:crushed-quartz": 1
             },

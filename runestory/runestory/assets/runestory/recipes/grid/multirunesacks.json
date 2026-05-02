@@ -1,6 +1,6 @@
-[
+﻿[
     {
-        "ingredientPattern": "H,C",
+        "ingredientPattern": "H,C,H",
         "ingredients": {
             "C": {
                 "type": "item",
@@ -12,87 +12,87 @@
             }
         },
         "width": 1,
-        "height": 2,
+        "height": 3,
         "output": {
-            "type": "item",
-            "code": "runebag-primitive"
+    "type": "item",
+            "code": "runebag-multiprimitive"
         }
     },
     {
-        "ingredientPattern": "H,C",
+    "ingredientPattern": "H,C",
         "ingredients": {
-            "C": {
-                "type": "item",
-                "code": "runebag-primitive"
+        "C": {
+            "type": "item",
+                "code": "runebag-multiprimitive"
             },
             "H": {
-                "type": "block",
+            "type": "block",
                 "code": "game:linen-*-down"
             }
-        },
+    },
         "width": 1,
         "height": 2,
         "output": {
-            "type": "item",
-            "code": "runebag-linen"
+        "type": "item",
+            "code": "runebag-multilinen"
         }
-    },
+},
     {
-        "ingredientPattern": "H,C",
+    "ingredientPattern": "H,C,H",
         "ingredients": {
-            "C": {
-                "type": "item",
+        "C": {
+            "type": "item",
                 "code": "game:linensack"
             },
             "H": {
-                "type": "item",
+            "type": "item",
                 "code": "rune-blank"
             }
-        },
-        "width": 1,
-        "height": 2,
-        "output": {
-            "type": "item",
-            "code": "runebag-linen"
-        }
     },
+        "width": 1,
+        "height": 3,
+        "output": {
+        "type": "item",
+            "code": "runebag-multilinen"
+        }
+},
     {
-        "ingredientPattern": "H_,CH,H_",
+    "ingredientPattern": "H_,CH,H_",
         "ingredients": {
-            "C": {
-                "type": "item",
-                "code": "runebag-linen"
+        "C": {
+            "type": "item",
+                "code": "runebag-multilinen"
             },
             "H": {
-                "type": "item",
+            "type": "item",
                 "code": "game:leather-normal-plain",
                 "quantity": 2
             }
-        },
+    },
         "width": 2,
         "height": 3,
         "output": {
-            "type": "item",
-            "code": "runebag-leather"
+        "type": "item",
+            "code": "runebag-multileather"
         }
-    },
+},
     {
-        "ingredientPattern": "H,C",
+    "ingredientPattern": "H,C,H",
         "ingredients": {
-            "C": {
-                "type": "item",
+        "C": {
+            "type": "item",
                 "code": "game:backpack-normal"
             },
             "H": {
-                "type": "item",
+            "type": "item",
                 "code": "rune-blank"
             }
-        },
+    },
         "width": 1,
-        "height": 2,
+        "height": 3,
         "output": {
-            "type": "item",
-            "code": "runebag-leather"
+        "type": "item",
+            "code": "runebag-multileather"
         }
-    }
+}
 ]

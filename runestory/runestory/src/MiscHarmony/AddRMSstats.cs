@@ -13,6 +13,7 @@ namespace runestory.src.MiscHarmony
         {
             float magicdmg = 0f;
             float runechance = 0f;
+            if (player is null || inv is null) { return; }
             foreach (var slot in inv)
             {
                 if (slot.Empty || !slot.Itemstack.ItemAttributes["magicAttributes"].Exists) continue;
@@ -30,6 +31,7 @@ namespace runestory.src.MiscHarmony
             float magicdmg = 0f;
             float runechance = 0f;
             bool wandequipped = false;
+            if(player is null || inv is null){ return; }
             foreach (var slot in inv)
             {
                 if (slot.Empty || slot.Itemstack?.ItemAttributes is null) { continue; }

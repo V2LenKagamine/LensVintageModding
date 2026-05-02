@@ -35,6 +35,7 @@ namespace runestory
             }
             else
             {
+                RMS.capi_Runechannel.SendPacket(new CTS_SpellsPls());
                 Open();
             }
         }
@@ -61,7 +62,8 @@ namespace runestory
                 Close();
             }
             Entity us = RunestoryMS.runeCApi.World.Player.Entity;
-            us.WatchedAttributes.TryGetAttribute("RMSKnownSpells", out IAttribute playerSpells);
+
+            us.WatchedAttributes.TryGetAttribute(RunestoryMS.RMS_SpellKnowledge, out IAttribute playerSpells);
             IEnumerable<BaseRuneSpell> validspells = RMS.AllSpells.Where(poss => (playerSpells.GetValue() as string[])?.Contains(poss.Code) ?? false);
 
             if ((us as EntityPlayer).Player.WorldData.CurrentGameMode == EnumGameMode.Creative) { validspells = RMS.AllSpells; }
@@ -79,32 +81,34 @@ namespace runestory
             if (validspells is null) { return CallbackGUIStatus.Closed; }
             int spellcount = validspells.Count();
             ElementBounds window = RunestoryMS.runeCApi.Gui.WindowBounds;
-            ImGui.SetNextWindowSize(new Vector2(500f, 100f + (57f * (float)Math.Ceiling(spellcount / 8d))));
             ImGui.Begin("Spell Select Window", ImGuiWindowFlags.AlwaysAutoResize);
             try
             {
+
                 Vector2 buttsize = new Vector2(45, 45);
-
-                if(ImGui.SmallButton("All Spells")){SetTab("all");}
+                Vector2 smolsize = new Vector2(100, 25);
+                ImGui.BeginChild("Buttons",new Vector2(210,220));
+                if (ImGui.Button("All Tiers",smolsize)) { SetTier("all"); }
                 ImGui.SameLine();
-                if(ImGui.SmallButton("Damage Spells")){SetTab("dmg");}
+                if (ImGui.Button("All Spells",smolsize)) { SetTab("all"); }
+                if (ImGui.Button("Tier 1", smolsize)) { SetTier("t1"); }
                 ImGui.SameLine();
-                if(ImGui.SmallButton("Utility Spells")){SetTab("util"); }
+                if (ImGui.Button("Damage", smolsize)) { SetTab("dmg"); }
+                if (ImGui.Button("Tier 2", smolsize)) { SetTier("t2"); }
                 ImGui.SameLine();
-                if (ImGui.SmallButton("Support Spells")) {SetTab("supp"); }
-
-                if (ImGui.SmallButton("All Tiers")) { SetTier("all"); }
+                if (ImGui.Button("Utility", smolsize)) { SetTab("util"); }
+                if (ImGui.Button("Tier 3", smolsize)) { SetTier("t3"); }
                 ImGui.SameLine();
-                if (ImGui.SmallButton("Tier 1")) { SetTier("t1"); }
+                if (ImGui.Button("Support", smolsize)) { SetTab("supp"); }
+                if (ImGui.Button("Tier 4", smolsize)) { SetTier("t4"); }
+                if (ImGui.Button("Tier 5", smolsize)) { SetTier("t5"); }
+                ImGui.BeginChild("stats", new Vector2(220, 40));
+                ImGui.BulletText(Lang.Get("runestory:magicdamagestat") + (int)(us.Stats.GetBlended(RunestoryMS.RMS_Stat_MagicDamage) * 100f) + "%%");
+                ImGui.BulletText(Lang.Get("runestory:runeconsumechance") + (int)Math.Max(((us.Stats.GetBlended(RunestoryMS.RMS_Stat_RuneChance) * 100f) - 100), 0) + "%%");
+                ImGui.EndChild();
+                ImGui.EndChild();
                 ImGui.SameLine();
-                if (ImGui.SmallButton("Tier 2")) { SetTier("t2"); }
-                ImGui.SameLine();
-                if (ImGui.SmallButton("Tier 3")) { SetTier("t3"); }
-                ImGui.SameLine();
-                if (ImGui.SmallButton("Tier 4")) { SetTier("t4"); }
-                ImGui.SameLine();
-                if (ImGui.SmallButton("Tier 5")) { SetTier("t5"); }
-
+                ImGui.BeginChild("Spells", new Vector2(480f,(57f * (float)Math.Ceiling(spellcount / 8d))));
                 for (int i = 0; i < spellcount; i++)
                 {
                     BaseRuneSpell spell = validspells.ElementAt(i);
@@ -124,7 +128,7 @@ namespace runestory
                     }
                     if (!ImGui.IsKeyDown(ImGuiKey.LeftShift))
                     {
-                        ImGui.SetItemTooltip(Lang.Get("runestory:" + spell.Code) + "\n" + req + $"\nTier: {spell.spellTier}"+  "\nHold LEFT SHIFT for info.");
+                        ImGui.SetItemTooltip(Lang.Get("runestory:" + spell.Code) + "\n" + req + $"\nTier: {spell.spellTier}" + "\nHold LEFT SHIFT for info.");
                     }
                     else
                     {
@@ -136,10 +140,7 @@ namespace runestory
                         onButtonClick(spell.Code);
                     }
                 }
-                ImGui.BulletText(Lang.Get("runestory:magicdamagestat") + (int)(us.Stats.GetBlended(RunestoryMS.RMS_Stat_MagicDamage) * 100f) + "%%");
-                ImGui.SameLine();
-                ImGui.BulletText(Lang.Get("runestory:runeconsumechance") + (int)Math.Max(((us.Stats.GetBlended(RunestoryMS.RMS_Stat_RuneChance) * 100f) - 100),0) + "%%");
-
+                ImGui.EndChild();
             }
             catch (Exception e) { RunestoryMS.Runelogger.LogException(EnumLogType.Error, e); }
             finally { ImGui.End(); }

@@ -3,6 +3,7 @@
         "code": "makebodyrune-bone",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:bone": 1
             },
@@ -15,6 +16,7 @@
         "code": "makebodyrune-bonemeal",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:bonemeal": 1
             },

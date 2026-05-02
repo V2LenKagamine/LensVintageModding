@@ -41,7 +41,7 @@ namespace runestory
             // 2. Current slot non empty, source slot empty: Put items
             if (sourceSlot?.Empty ?? true)
             {
-                op.RequestedQuantity = 64;
+                op.RequestedQuantity = itemstack.Collectible.MaxStackSize;
                 TryPutInto(sourceSlot, ref op);
                 return;
             }

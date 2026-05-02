@@ -1,0 +1,248 @@
+[
+    {
+        "ingredientPattern": "H,C,E",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:pickaxe-*"
+            },
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier2-single"
+            },
+            "E": {
+                "type": "item",
+                "code": "runestory:rune-earth",
+                "quantity": 4
+            }
+        },
+        "width": 1,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier2-single"
+        },
+        "attributes": {
+            "spelltounlock": "dwarfbless"
+        }
+    },
+    {
+        "ingredientPattern": "H,C,E",
+        "ingredients": {
+            "H": {
+                "type": "item",
+                "code": "game:redmeat-raw"
+            },
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier2-single"
+            },
+            "E": {
+                "type": "item",
+                "code": "game:bushmeat-raw"
+            }
+        },
+        "width": 1,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier2-single"
+        },
+        "attributes": {
+            "spelltounlock": "desecrate"
+        }
+    },
+    {
+        "ingredientPattern": "_R_,RCR,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier2-single"
+            },
+            "R": {
+                "type": "item",
+                "code": "runestory:rune-air",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier2-single"
+        },
+        "attributes": {
+            "spelltounlock": "airsurge"
+        }
+    },
+    {
+        "ingredientPattern": "_R_,RCR,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier2-single"
+            },
+            "R": {
+                "type": "item",
+                "code": "runestory:rune-water",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier2-single"
+        },
+        "attributes": {
+            "spelltounlock": "watersurge"
+        }
+    },
+    {
+        "ingredientPattern": "_R_,RCR,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier2-single"
+            },
+            "R": {
+                "type": "item",
+                "code": "runestory:rune-earth",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier2-single"
+        },
+        "attributes": {
+            "spelltounlock": "earthsurge"
+        }
+    },
+    {
+        "ingredientPattern": "_R_,RCR,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier2-single"
+            },
+            "R": {
+                "type": "item",
+                "code": "runestory:rune-fire",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier2-single"
+        },
+        "attributes": {
+            "spelltounlock": "firesurge"
+        }
+    },
+    {
+        "ingredientPattern": "_R_,RCR,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier2-single"
+            },
+            "R": {
+                "type": "block",
+                "code": "game:flower-*-free",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier2-single"
+        },
+        "attributes": {
+            "spelltounlock": "flowerfield"
+        }
+    },
+    {
+        "ingredientPattern": "_R_,RCR,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier2-single"
+            },
+            "R": {
+                "type": "item",
+                "code": "game:compost",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier2-single"
+        },
+        "attributes": {
+            "spelltounlock": "fertilize"
+        }
+    },
+    {
+        "ingredientPattern": "_R_,HCH,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier2-single"
+            },
+            "R": {
+                "type": "block",
+                "code": "game:flower-horsetail-free",
+                "quantity": 4
+            },
+            "H": {
+                "type": "item",
+                "code": "runestory:rune-air",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 3,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier2-single"
+        },
+        "attributes": {
+            "spelltounlock": "groupheal"
+        }
+    },
+    {
+        "ingredientPattern": "HCH,_R_",
+        "ingredients": {
+            "C": {
+                "type": "item",
+                "code": "runestory:runemagicresearch-tier2-single"
+            },
+            "R": {
+                "type": "item",
+                "code": "game:clothes-foot-*"
+            },
+            "H": {
+                "type": "item",
+                "code": "runestory:rune-air",
+                "quantity": 4
+            }
+        },
+        "width": 3,
+        "height": 2,
+        "output": {
+            "type": "item",
+            "code": "runestory:runemagicresearch-tier2-single"
+        },
+        "attributes": {
+            "spelltounlock": "windfeet"
+        }
+    }
+]

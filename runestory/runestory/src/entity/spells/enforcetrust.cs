@@ -24,21 +24,18 @@ namespace runestory.src.entity.spells
         }
         public void YoureMyFriendNow()
         {
-            if (Api.Side == EnumAppSide.Client) { return; }
             Entity[] friends = World.GetEntitiesAround(Pos.AsBlockPos.ToVec3d(), 1f, 1f, ent => ent.WatchedAttributes.GetInt("generation", -1) < 3);
             for(int i=0; i<friends.Length;i++)
             {
                 Entity Frien = friends.ElementAt(World.Rand.Next(0,friends.Length));
-                if(Frien.WatchedAttributes.GetInt("generation") < 3)
+                if(Frien?.WatchedAttributes.GetInt("generation") < 3)
                 {
-
                     Frien.Attributes.SetString("origin", "reproduction");
+
+                    if (Api.Side == EnumAppSide.Client) { break; }
                     Frien.WatchedAttributes.SetInt("generation", 3);
-                    Frien.WatchedAttributes.MarkPathDirty("generation");
+                    Frien.MarkTagsDirty();
                     break;
-                } else
-                {
-                    friends.Remove(Frien);
                 }
             }
         }

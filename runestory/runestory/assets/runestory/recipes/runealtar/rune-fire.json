@@ -3,6 +3,7 @@
         "code": "makefirerune-peat",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:peatbrick": 1
             },
@@ -15,6 +16,7 @@
         "code": "makefirerune-char",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:powder-charcoal": 1
             },
@@ -27,6 +29,7 @@
         "code": "makefirerune-brown",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:ore-lignite": 1
             },
@@ -39,6 +42,7 @@
         "code": "makefirerune-black",
         "enabled": true,
         "attributes": {
+            "catalyst": "runestory:rune-blank",
             "reagents": {
                 "game:ore-bituminouscoal": 1
             },
