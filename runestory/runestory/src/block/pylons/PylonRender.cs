@@ -16,15 +16,18 @@ namespace runestory
         private ICoreClientAPI api;
         private BlockPos blockPos;
         MeshRef meshRef;
+        MeshRef meshRefRunes;
         public Matrixf ModelMat = new();
         public float AngleRad;
+        public float runeRad;
         public float whyPos;
 
-        public PylonRenderer(ICoreClientAPI coreAPI, BlockPos pos, MeshData mesh)
+        public PylonRenderer(ICoreClientAPI coreAPI, BlockPos pos, MeshData mesh,MeshData runes)
         {
             api = coreAPI;
             blockPos = pos;
             meshRef = coreAPI.Render.UploadMesh(mesh);
+            meshRefRunes = coreAPI.Render.UploadMesh(runes);
         }
 
         public void Dispose()
@@ -50,13 +53,27 @@ namespace runestory
                 .Translate(-0.5, -0.5f + (Math.Sin(whyPos)*0.08f), -0.5f)
                 .Values
             ;
-
             prog.ViewMatrix = rpi.CameraMatrixOriginf;
             prog.ProjectionMatrix = rpi.CurrentProjectionMatrix;
             rpi.RenderMesh(meshRef);
+            //runes
+            prog.Tex2D = api.BlockTextureAtlas.AtlasTextures[0].TextureId;
+            prog.ModelMatrix = ModelMat
+            .Identity()
+            .Translate(blockPos.X - camPos.X, blockPos.Y - camPos.Y, blockPos.Z - camPos.Z)
+            .Translate(0.5f, 0.5f, 0.5f)
+            .RotateY(runeRad)
+                .Translate(-0.5, -0.5f + (Math.Sin(whyPos) * 0.08f), -0.5f)
+                .Values
+            ;
+            prog.ViewMatrix = rpi.CameraMatrixOriginf;
+            prog.ProjectionMatrix = rpi.CurrentProjectionMatrix;
+            rpi.RenderMesh(meshRefRunes);
+
             prog.Stop();
 
             AngleRad = (AngleRad + 0.005f)%360f;
+            runeRad = (runeRad - 0.005f) % 360f;
             whyPos += deltaTime * 0.5f;
         }
     }

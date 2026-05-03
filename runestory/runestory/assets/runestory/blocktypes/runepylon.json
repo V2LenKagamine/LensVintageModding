@@ -11,7 +11,8 @@
         "shape": {
             "format": "obj",
             "base": "blocks/runepylon"
-        }
+        },
+        "shapepath": "runestory:shapes/blocks/runepylon.obj"
     },
     "variantgroups": [
         {
@@ -23,8 +24,7 @@
     "shape": { "base": "blocks/runepylon" },
     "textures": {
         "obj": { "base": "game:block/stone/rock/basalt1" },
-        "runepylon.png": { "base": "game:block/stone/rock/basalt1" },
-        "runepylonem.png": { "base": "blocks/runepylonem" }
+        "runepylonem": { "base": "blocks/runepylonem" }
     },
     "resistance": 2.5,
     "requiredminingtier": 0,

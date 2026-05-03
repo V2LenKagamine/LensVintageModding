@@ -22,6 +22,7 @@ namespace runestory.src.block.pylons
             if (blockMeshes.TryGetValue("runepylonmeshcode", out var mesh)) return mesh;
             return blockMeshes["runepylonmeshcode"] = GenMesh((Api as ICoreClientAPI).BlockTextureAtlas);
         }
+        private MeshData meshrunes;
         public ITextureAtlasAPI targetAtlas;
         public Size2i AtlasSize => targetAtlas.Size;
 
@@ -52,6 +53,7 @@ namespace runestory.src.block.pylons
             Block block = Api.World.BlockAccessor.GetBlock(Pos);
             if (block.Id == 0) return null;
             MeshData mesh;
+            MeshData mesh2;
             ITesselatorAPI mesman = ((ICoreClientAPI)Api).Tesselator;
 
             targetAtlas = tart;
@@ -62,8 +64,19 @@ namespace runestory.src.block.pylons
             }
 
             CompositeShape shape = block.Attributes["shape"].AsObject<CompositeShape>();
-            LenUtil.TessellateObj(mesman as ShapeTesselator, shape, out mesh, this["obj"],Api as ICoreClientAPI,"runestory:shapes/blocks/runepylon.obj");
-            //mesman.TesselateShape(block, Api.Assets.TryGet("runestory:shapes/blocks/runepylon.json").ToObject<Shape>(), out mesh);
+            LenUtil.TessellateObj(mesman as ShapeTesselator, shape, out mesh, this["obj"],Api as ICoreClientAPI, block.Attributes["shapepath"].ToString());
+            mesman.TesselateShape(block, Api.Assets.TryGet("runestory:shapes/blocks/runepylonrunes.json").ToObject<Shape>(), out mesh2);
+
+            return mesh;
+        }
+        internal MeshData GenMeshRunes()
+        {
+            Block block = Api.World.BlockAccessor.GetBlock(Pos);
+            if (block.Id == 0) return null;
+            MeshData mesh;
+            ITesselatorAPI mesman = ((ICoreClientAPI)Api).Tesselator;
+
+            mesman.TesselateShape(block, Api.Assets.TryGet("runestory:shapes/blocks/runepylonrunes.json").ToObject<Shape>(), out mesh);
 
             return mesh;
         }
@@ -77,7 +90,7 @@ namespace runestory.src.block.pylons
             base.Initialize(api, properties);
 
             if(api.Side != EnumAppSide.Client) { return; }
-            render = new PylonRenderer(api as ICoreClientAPI,Pos,GenMesh((api as ICoreClientAPI).BlockTextureAtlas));
+            render = new PylonRenderer(api as ICoreClientAPI,Pos,GenMesh((api as ICoreClientAPI).BlockTextureAtlas),GenMeshRunes());
 
             (api as ICoreClientAPI).Event.RegisterRenderer(render, EnumRenderStage.Opaque, "RunePylon");
         }
@@ -93,7 +106,8 @@ namespace runestory.src.block.pylons
         {
             if (Api.Side == EnumAppSide.Client)
             {
-                mesh((Api as ICoreClientAPI).Tesselator).Dispose();
+                mesh((Api as ICoreClientAPI).Tesselator)?.Dispose();
+                meshrunes?.Dispose();
                 render.Dispose();
             }
             base.OnBlockRemoved();

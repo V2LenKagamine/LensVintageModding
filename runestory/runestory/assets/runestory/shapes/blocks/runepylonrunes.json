@@ -1,0 +1,42 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"runepylonem": "runestory:blocks/runepylonem"
+	},
+	"elements": [
+		{
+			"name": "Cube2",
+			"from": [ 5.0, 5.0, 2.0 ],
+			"to": [ 11.0, 11.0, 14.0 ],
+			"rotationOrigin": [ 5.0, 5.0, 2.0 ],
+			"faces": {
+				"north": { "texture": "#runepylonem", "uv": [ 8.0, 8.0, 16.0, 16.0 ], "glow": 255, "autoUv": false },
+				"east": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 12.0, 6.0 ], "enabled": false },
+				"south": { "texture": "#runepylonem", "uv": [ 8.0, 0.0, 16.0, 8.0 ], "glow": 255, "autoUv": false },
+				"west": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 6.0, 6.0 ], "autoUv": false, "enabled": false },
+				"up": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 6.0, 12.0 ], "enabled": false },
+				"down": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 6.0, 12.0 ], "enabled": false }
+			}
+		},
+		{
+			"name": "Cube3",
+			"from": [ 2.0, 5.0, 5.0 ],
+			"to": [ 14.0, 11.0, 11.0 ],
+			"rotationOrigin": [ 2.0, 5.0, 5.0 ],
+			"faces": {
+				"north": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 12.0, 6.0 ], "enabled": false },
+				"east": { "texture": "#runepylonem", "uv": [ 0.0, 8.0, 8.0, 16.0 ], "glow": 255, "autoUv": false },
+				"south": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 13.0, 6.0 ], "autoUv": false, "enabled": false },
+				"west": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "glow": 255, "autoUv": false },
+				"up": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 12.0, 6.0 ], "enabled": false },
+				"down": { "texture": "#runepylonem", "uv": [ 0.0, 0.0, 12.0, 6.0 ], "enabled": false }
+			}
+		}
+	]}
