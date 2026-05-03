@@ -8,6 +8,10 @@
         { "name": "runepylonrenderer" }
     ],
     "attributes": {
+        "shape": {
+            "format": "obj",
+            "base": "blocks/runepylon"
+        }
     },
     "variantgroups": [
         {
@@ -15,18 +19,19 @@
             "states": [ "inactive", "fertile", "temporal" ]
         }
     ],
+    "blockmaterial": "Stone",
+    "shape": { "base": "blocks/runepylon" },
     "textures": {
+        "obj": { "base": "game:block/stone/rock/basalt1" },
         "runepylon.png": { "base": "game:block/stone/rock/basalt1" },
         "runepylonem.png": { "base": "blocks/runepylonem" }
     },
-    "blockmaterial": "Stone",
-    "shape": { "base": "blocks/runepylon" },
     "resistance": 2.5,
     "requiredminingtier": 0,
     "materialDensity": 700,
     "drawType": "Empty",
     "renderpass": "Transparent",
-    "lightHSV": [32,6,4],
+    "lightHSV": [ 32, 6, 4 ],
     "lightAbsorption": 0,
     "sideOpaque": {
         "all": false
