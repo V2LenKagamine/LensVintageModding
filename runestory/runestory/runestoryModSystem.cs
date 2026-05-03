@@ -218,7 +218,7 @@ namespace runestory
                         spellsmaybe = new StringArrayAttribute(SerializerUtil.Deserialize<string[]>(player.GetModdata(RMS_SpellKnowledge)));
                     }
                     List<string> defspells = [];
-                    List<string> known = (spellsmaybe?.GetValue() as string[]).ToList() ?? [];
+                    List<string> known = (spellsmaybe?.GetValue() as string[])?.ToList() ?? [];
                     foreach (var spll in AllSpells.Where(spell => spell.spellTier == 1))
                     {
                         defspells.Add(spll.Code);
