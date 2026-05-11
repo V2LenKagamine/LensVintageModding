@@ -5,7 +5,7 @@
         "attributes": {
             "catalyst": "runestory:rune-blank",
             "reagents": {
-                "game:stone-*": 4
+                "game:stone-*": 1
             },
             "outputs": {
                 "runestory:rune-earth": 1
@@ -21,7 +21,7 @@
                 "game:rock-*": 1
             },
             "outputs": {
-                "runestory:rune-earth": 4
+                "runestory:rune-earth": 16
             }
         }
     }

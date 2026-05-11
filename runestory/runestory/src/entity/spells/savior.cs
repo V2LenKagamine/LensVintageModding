@@ -40,7 +40,7 @@ namespace runestory.src.entity.spells
                     {
                         Source = EnumDamageSource.Unknown,
                         Type = EnumDamageType.Heal,
-                    }, 3f);
+                    }, 5f);
                 }
                 catch (Exception e)
                 {

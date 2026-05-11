@@ -65,32 +65,32 @@
             "S": {
                 "type": "item",
                 "code": "runestory:rune-beta",
-                "quantity": 16
+                "quantity": 8
             },
             "W": {
                 "type": "item",
                 "code": "runestory:rune-water",
-                "quantity": 8
+                "quantity": 4
             },
             "E": {
                 "type": "item",
                 "code": "runestory:rune-earth",
-                "quantity": 8
+                "quantity": 4
             },
             "F": {
                 "type": "item",
                 "code": "runestory:rune-fire",
-                "quantity": 8
+                "quantity": 4
             },
             "A": {
                 "type": "item",
                 "code": "runestory:rune-air",
-                "quantity": 8
+                "quantity": 4
             },
             "I": {
                 "type": "item",
                 "code": "runestory:rune-blank",
-                "quantity": 16
+                "quantity": 8
             }
         },
         "width": 3,

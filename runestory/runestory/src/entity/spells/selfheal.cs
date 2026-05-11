@@ -30,7 +30,7 @@ namespace runestory.src.entity.spells
                         Type = EnumDamageType.Heal,
                         TicksPerDuration = 10,
                         Duration = TimeSpan.FromSeconds(5)
-                    }, 1f);
+                    }, 2.5f);
                 }
                 catch (Exception e)
                 {

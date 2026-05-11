@@ -157,9 +157,8 @@ namespace runestory
                 RunestoryMS.runeSApi.Network.GetChannel(RunestoryMS.RMS_Net_Channel).SendPacket(new STC_BuffSync
                 {
                     effect = EffPowDurList.ElementAt(i).Effect,
-                    duration = RunestoryMS.runeCApi.ElapsedMilliseconds + EffPowDurList.ElementAt(i).Duration,
+                    duration = EffPowDurList.ElementAt(i).Duration,
                 }, affected.Player as IServerPlayer);
-
             }
         }
 

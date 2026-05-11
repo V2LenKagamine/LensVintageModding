@@ -281,7 +281,7 @@ namespace runestory
         private void OnReceiveBuffSync(STC_BuffSync packet)
         {
             EntityPlayer us = runeCApi.World.Player.Entity;
-            us.Attributes.SetFloat(packet.effect,packet.duration);
+            us.Attributes.SetFloat(packet.effect,packet.duration + runeCApi.InWorldEllapsedMilliseconds);
         }
 
         private void OnRecCastRequest(IPlayer from,CTS_SpellPacket pack)

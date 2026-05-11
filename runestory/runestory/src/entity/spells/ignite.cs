@@ -48,7 +48,7 @@ namespace runestory.src.entity.spells
                 }
                 if (Api.World.BlockAccessor.GetBlockEntity(bloc) is BlockEntityFirepit firep)
                 {
-                    if (!firep.IsBurning)
+                    if (!firep.IsBurning && firep.fuelStack is not null)
                     {
                         firep.igniteFuel();
                         firep.setBlockState("lit");

@@ -8,7 +8,7 @@
                 "game:cattailtops": 1
             },
             "outputs": {
-                "runestory:rune-water": 1
+                "runestory:rune-water": 4
             }
         }
     },
@@ -21,7 +21,7 @@
                 "game:fish-raw": 1
             },
             "outputs": {
-                "runestory:rune-water": 2
+                "runestory:rune-water": 8
             }
         }
     },
@@ -34,7 +34,7 @@
                 "game:bone-fish": 1
             },
             "outputs": {
-                "runestory:rune-water": 1
+                "runestory:rune-water": 4
             }
         }
     },
@@ -44,7 +44,7 @@
         "attributes": {
             "catalyst": "runestory:rune-blank",
             "reagents": {
-                "game:lakeice": 4
+                "game:lakeice": 1
             },
             "outputs": {
                 "runestory:rune-water": 1
@@ -57,10 +57,10 @@
         "attributes": {
             "catalyst": "runestory:rune-blank",
             "reagents": {
-                "game:glacierice": 2
+                "game:glacierice": 1
             },
             "outputs": {
-                "runestory:rune-water": 1
+                "runestory:rune-water": 2
             }
         }
     },
@@ -73,7 +73,7 @@
                 "game:packedglacierice": 1
             },
             "outputs": {
-                "runestory:rune-water": 1
+                "runestory:rune-water": 4
             }
         }
     }

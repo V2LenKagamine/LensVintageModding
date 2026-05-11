@@ -106,7 +106,7 @@ namespace runestory
                 BaseRuneAltar recipe = Api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes[i];
                 List<Entity> toEat = [];
                 bool valid = false;
-                int MaxCanMake = Contents.StackSize;
+                int MaxCanMake = (Contents.StackSize / recipe.OutputItems.First().Value);
                 for (int j = 0; j < recipe.Reagents.Count; j++)
                 {
                     bool found = false;

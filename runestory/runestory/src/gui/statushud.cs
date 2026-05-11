@@ -66,7 +66,7 @@ namespace runestory.src.gui
                         float val = entry.Value.ValuesByKey[PlayerTempBuffer.RunetempBuffKey].Value;
                         ImGui.Text(string.Format("{0}%%", (int)Math.Floor(val * 100)));
                         ImGui.SameLine();
-                        int timeSec = (int)Math.Floor((us.Attributes.GetFloat(entry.Key) - RunestoryMS.runeCApi.World.ElapsedMilliseconds) / 1000);
+                        int timeSec = (int)Math.Floor((us.Attributes.GetFloat(entry.Key) - RunestoryMS.runeCApi.InWorldEllapsedMilliseconds) / 1000);
                         string formatted = $"{(timeSec%60<=1 ? 0 : (int)Math.Floor(timeSec / 60f))}:{(timeSec % 60 < 10 ? $"0{timeSec % 60}" : timeSec % 60)}";
                         ImGui.Text("for " + (timeSec < 0 ? "??:??" : formatted));
                     }

@@ -8,7 +8,20 @@
                 "game:flour-*": 1
             },
             "outputs": {
-                "runestory:rune-air": 4
+                "runestory:rune-air": 8
+            }
+        }
+    },
+    {
+        "code": "makeairrune-feather",
+        "enabled": true,
+        "attributes": {
+            "catalyst": "runestory:rune-blank",
+            "reagents": {
+                "game:feather": 1
+            },
+            "outputs": {
+                "runestory:rune-air": 16
             }
         }
     },
@@ -21,7 +34,7 @@
                 "game:papyrustops": 1
             },
             "outputs": {
-                "runestory:rune-air": 1
+                "runestory:rune-air": 4
             }
         }
     }

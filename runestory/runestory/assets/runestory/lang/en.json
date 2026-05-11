@@ -54,10 +54,10 @@
     "makestickdsc": "Casts a projectile that turns Leaves into Sticks in a 3x3x3 area where it lands.",
 
     "healother": "Mend Bolt",
-    "healotherdsc": "Casts a projectile that heals the target, or the nearest to its landing point, 1.5 HP over 5 seconds.",
+    "healotherdsc": "Casts a projectile that heals the target, or the nearest to its landing point, 3 HP over 5 seconds.",
 
     "healself": "Mend Self",
-    "healselfdsc": "Heals the caster 1 HP over 5 seconds.",
+    "healselfdsc": "Heals the caster 2.5 HP over 5 seconds.",
 
     "groupheal": "Mend Group",
     "grouphealdsc": "Heal yourself, and any nearby players, for 2.5 + 0.5 HP per extra target, over 5 seconds.",
@@ -117,16 +117,16 @@
     "growsaplingdsc": "Casts a projectile that tries to remove 3 days from the [already sprouted] tree sapling nearest to its landing point.",
 
     "invoketrust": "Domesticate",
-    "invoketrustdsc": "Casts a projectile that raises the generation of a random animal near its landing point to 3, if it is lower. Will always raise the generation of an animal in range, if able.",
+    "invoketrustdsc": "Casts a projectile that raises the generation of a random nearby animal under generation 3 by one.",
 
     "refinespell": "Refine",
-    "refinespelldsc": "Refines, or exchanges, many items into many other items.",
+    "refinespelldsc": "Refines, or exchanges, many items into many other items, your Handbook should tell you more.",
 
     "saveself": "Panic Heal",
-    "saveselfdsc": "Heals 2.5 HP instantly, then 3 more over 10 seconds.",
+    "saveselfdsc": "Heals 3 HP instantly, then 5 more over 10 seconds.",
 
     "saveother": "Panic Heal Other",
-    "saveotherdsc": "Casts a projectile that Heals 3 HP instantly, then 3 more over 10 seconds.",
+    "saveotherdsc": "Casts a projectile that Heals 3 HP instantly, then 5 more over 10 seconds.",
 
     "sproutcutspell": "Sprout Cutting",
     "sproutcutspelldsc": "Casts a projectile that coerces a berry bush nearby to release a single traitless sprout.",

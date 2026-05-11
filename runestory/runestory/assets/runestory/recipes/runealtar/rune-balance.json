@@ -37,5 +37,18 @@
                 "runestory:rune-balance": 2
             }
         }
+    },
+    {
+        "code": "makebalancerune-beeswax",
+        "enabled": true,
+        "attributes": {
+            "catalyst": "runestory:rune-blank",
+            "reagents": {
+                "game:beeswax": 1
+            },
+            "outputs": {
+                "runestory:rune-balance": 8
+            }
+        }
     }
 ]
