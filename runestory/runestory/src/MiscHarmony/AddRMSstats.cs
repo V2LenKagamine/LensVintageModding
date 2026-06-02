@@ -16,11 +16,10 @@ namespace runestory.src.MiscHarmony
             if (player is null || inv is null) { return; }
             foreach (var slot in inv)
             {
-                if (slot.Empty || !slot.Itemstack.ItemAttributes["magicAttributes"].Exists) continue;
-
-                magicdmg += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_MagicDamage].AsFloat();
-                runechance += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_RuneChance].AsFloat();
-
+                if (slot.Empty || slot.Itemstack?.ItemAttributes is null) { continue; }
+                if (slot.Itemstack.ItemAttributes["magicAttributes"] is null) { continue; }
+                magicdmg += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_MagicDamage]?.AsFloat() ?? 0f;
+                runechance += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_RuneChance]?.AsFloat() ?? 0f;
             }
             EntityPlayer plyent = player.Entity;
             plyent.Stats.Set(RunestoryMS.RMS_Stat_MagicDamage, "wearablemod",magicdmg, true)

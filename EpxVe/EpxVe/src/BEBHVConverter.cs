@@ -107,6 +107,16 @@ namespace EpxVe.src
         {
         }
 
+        public ulong StoragePower(ulong power, float dt, bool simulate, bool isInsert)
+        {
+            if(simulate) { return RatedPower(dt,isInsert); }
+            if(isInsert) { return ReceivePower(power, dt, simulate); } else { return ExtractPower(power, dt, simulate); }
+        }
+
+        public void SetMaxPPS(ulong _maxPPS, bool _addtobase)
+        {
+            MaxPowPerSec = _addtobase ? _maxPPS : MaxPowPerSec + _maxPPS;
+        }
         public ulong RatedPower(float dt, bool isInsert = false)
         {
             ulong rate = (ulong)Math.Round(MaxPowPerSec * dt);
@@ -156,6 +166,7 @@ namespace EpxVe.src
         {
             if (!CanExtract) return powerWanted;
             if (RealPow == 0) return powerWanted;
+            if (simulate) return RatedPower(dt);
             ulong pps = (ulong)Math.Round(MaxPowPerSec * dt);
             if (pps == 0) pps = ulong.MaxValue;
             pps = (ulong)((pps > RealPow) ? RealPow : pps);
@@ -164,7 +175,7 @@ namespace EpxVe.src
             {
                 if (!simulate) RealPow -= powerWanted;
                 Blockentity.MarkDirty(true);
-                return 0;
+                return 0uL;
             }
             else
             {

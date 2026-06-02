@@ -26,7 +26,6 @@ using Vintagestory.API.Server;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 using VSImGui;
-using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace runestory
 {
@@ -233,12 +232,14 @@ namespace runestory
                             }
                         }
                         player.SetModdata(RMS_SpellKnowledge, SerializerUtil.Serialize(known.ToArray()));
+                        e.Attributes.SetString("runespellselected", null);
                         e.WatchedAttributes.SetAttribute(RMS_SpellKnowledge, new StringArrayAttribute(known?.ToArray()));
                         e.WatchedAttributes.MarkPathDirty(RMS_SpellKnowledge);
                     }
                     else
                     {
                         player.SetModdata(RMS_SpellKnowledge, SerializerUtil.Serialize(known.ToArray()));
+                        e.Attributes.SetString("runespellselected", null);
                         e.WatchedAttributes.SetAttribute(RMS_SpellKnowledge, new StringArrayAttribute(defspells.ToArray()));
                         e.WatchedAttributes.MarkPathDirty(RMS_SpellKnowledge);
                     }
@@ -270,7 +271,6 @@ namespace runestory
 
         private void COnSpellsPls(STC_SpellsPls packt)
         {
-
             runeCApi.World.Player.Entity.WatchedAttributes.SetStringArray(RMS_SpellKnowledge,packt.spells);
         }
         private void OnRecSpellSelect(IServerPlayer fromPlayer, CTS_SelectPacket pack)
@@ -286,15 +286,15 @@ namespace runestory
 
         private void OnRecCastRequest(IPlayer from,CTS_SpellPacket pack)
         {
-            //Todo: spawn and register ents
-            string spell = from.Entity.Attributes.GetString("runespellselected", "ERROR");
+  
+            string spell = from.Entity.Attributes.GetString("runespellselected", null);
             long timenext = from.Entity.Attributes.GetLong("runespellnextcasttime");
             if (timenext > runeSApi.World.ElapsedMilliseconds)
             {
                 ((runeSApi.World.PlayerByUid(from.Entity.PlayerUID))as IServerPlayer).SendLocalisedMessage(GlobalConstants.GeneralChatGroup, "runestory:cast-fail-toosoon");
                 return;
             }
-            if ( spell != "ERROR") {
+            if ( spell is not null) {
                 defaultSpell boi = runeSApi.World.ClassRegistry.CreateEntity(runeSApi.World.GetEntityType(new("runestory:basestartrunespell"))) as defaultSpell;
                 boi.spawnedBy = from.Entity;
                 boi.spellCode = spell;
@@ -308,7 +308,7 @@ namespace runestory
         public void SetCastDelay(Entity ent, BaseRuneSpell spell)
         {
             //Todo: Config?
-            long percastMS = 600 - (int)Math.Min(400,spell.Reagents.Count * 100);
+            long percastMS = 600 - (int)Math.Min(400,spell?.Reagents?.Count ?? 4 * 100);
             int TotalReag = 0;
             if (spell is not null)
             {

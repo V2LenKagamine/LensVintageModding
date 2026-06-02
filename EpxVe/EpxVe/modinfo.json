@@ -6,11 +6,11 @@
     "LenKagamine"
   ],
   "description": "Adds a converter between Electrical Progressive Systems and Vintage Engineering Systems",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "dependencies": {
     "game": "1.22.0",
-    "vintageengineering": "0.5.4",
-    "electricalprogressivecore": "3.0.0",
-    "electricalprogressivebasics": "3.0.0"
+    "vintageengineering": "0.5.5",
+    "electricalprogressivecore": "3.2.0",
+    "electricalprogressivebasics": "3.2.0"
   }
 }

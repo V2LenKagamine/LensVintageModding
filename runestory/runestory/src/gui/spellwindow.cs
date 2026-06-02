@@ -35,7 +35,7 @@ namespace runestory
             }
             else
             {
-                RMS.capi_Runechannel.SendPacket(new CTS_SpellsPls());
+                RMS.capi_Runechannel?.SendPacket(new CTS_SpellsPls());
                 Open();
             }
         }

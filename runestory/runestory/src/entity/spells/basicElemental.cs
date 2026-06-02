@@ -23,7 +23,11 @@ namespace runestory.src.entity.spells
 
         public override void OnCollided()
         {
-            HitEntity(World.GetEntitiesAround(Pos.XYZ.ToVec3f().ToVec3d(),0.1f,0.1f).First());
+            Entity[] around = World.GetEntitiesAround(Pos.XYZ.ToVec3f().ToVec3d(), 0.1f, 0.1f);
+            if(around.Length > 0)
+            {
+                HitEntity(around.First());
+            }
             Die();
         }
 
