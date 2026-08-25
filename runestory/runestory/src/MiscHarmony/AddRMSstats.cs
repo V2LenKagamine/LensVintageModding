@@ -19,11 +19,11 @@ namespace runestory.src.MiscHarmony
                 if (slot.Empty || slot.Itemstack?.ItemAttributes is null) { continue; }
                 if (slot.Itemstack.ItemAttributes["magicAttributes"] is null) { continue; }
                 magicdmg += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_MagicDamage]?.AsFloat() ?? 0f;
-                runechance += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_RuneChance]?.AsFloat() ?? 0f;
+                runechance += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_CDTime]?.AsFloat() ?? 0f;
             }
             EntityPlayer plyent = player.Entity;
             plyent.Stats.Set(RunestoryMS.RMS_Stat_MagicDamage, "wearablemod",magicdmg, true)
-                .Set(RunestoryMS.RMS_Stat_RuneChance,"wearablemod",runechance,true);
+                .Set(RunestoryMS.RMS_Stat_CDTime,"wearablemod",runechance,true);
         }
         public static void UpdateHotbarEquips(IInventory inv, IServerPlayer player)
         {
@@ -37,13 +37,13 @@ namespace runestory.src.MiscHarmony
                 if (slot.Itemstack != player.InventoryManager.OffhandHotbarSlot.Itemstack || slot.Itemstack.ItemAttributes["magicAttributes"] is null) { continue; }
 
                 magicdmg += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_MagicDamage]?.AsFloat() ?? 0;
-                runechance += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_RuneChance]?.AsFloat() ?? 0;
+                runechance += slot.Itemstack.ItemAttributes["magicAttributes"][RunestoryMS.RMS_Stat_CDTime]?.AsFloat() ?? 0;
                 wandequipped = true;
 
             }
             EntityPlayer plyent = player.Entity;
             plyent.Stats.Set(RunestoryMS.RMS_Stat_MagicDamage, "hotbarmod", magicdmg, true);
-            plyent.Stats.Set(RunestoryMS.RMS_Stat_RuneChance, "hotbarmod", runechance, true);
+            plyent.Stats.Set(RunestoryMS.RMS_Stat_CDTime, "hotbarmod", runechance, true);
             plyent.Stats.Set("hungerrate", "hotbarmod", wandequipped? -0.2f : 0f, true);
         }
     }

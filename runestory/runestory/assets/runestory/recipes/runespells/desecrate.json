@@ -1,18 +1,19 @@
 {
     "code": "desecrate",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-rust": 2,
-            "runestory:rune-beta": 2
-        },
-        "reagentnames": [
-            "runestory:item-rune-rust",
-            "runestory:item-rune-beta"
-        ],
-        "langCode": "desecratedsc",
-        "spelltype": "util",
-        "spelltier": 2
+  "attributes": {
+    "reagents": {
+      "runestory:rune-rust": 4,
+      "runestory:rune-beta": 4
     },
+    "reagentnames": [
+      "runestory:item-rune-rust",
+      "runestory:item-rune-beta"
+    ],
+    "langCode": "desecratedsc",
+    "spelltype": "util",
+    "spelltier": 2,
+    "cooldownms": 45000
+  },
     "imgpath": "desecrate"
 }

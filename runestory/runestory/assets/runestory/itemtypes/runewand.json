@@ -3,11 +3,11 @@
   "class": "Item",
   "maxstacksize": 1,
   "attributesByType": {
-    "*-primitive": { "magicAttributes": { "freeCastChance": 0, "magicWeaponsDamage": 0.05 } },
-    "*-basic": { "magicAttributes": { "freeCastChance": 0.05, "magicWeaponsDamage": 0.075 } },
-    "*-standard": { "magicAttributes": { "freeCastChance": 0.075, "magicWeaponsDamage": 0.1 } },
-    "*-scholar": { "magicAttributes": { "freeCastChance": 0.1, "magicWeaponsDamage": 0.125 } },
-    "*-master": { "magicAttributes": { "freeCastChance": 0.125, "magicWeaponsDamage": 0.15 } }
+    "*-primitive": { "magicAttributes": { "magicCDTime": -0.025, "magicWeaponsDamage": 0.05 } },
+    "*-basic": { "magicAttributes": { "magicCDTime": -0.05, "magicWeaponsDamage": 0.075 } },
+    "*-standard": { "magicAttributes": { "magicCDTime": -0.075, "magicWeaponsDamage": 0.1 } },
+    "*-scholar": { "magicAttributes": { "magicCDTime": -0.1, "magicWeaponsDamage": 0.125 } },
+    "*-master": { "magicAttributes": { "magicCDTime": -0.125, "magicWeaponsDamage": 0.15 } }
   },
   "variantgroups": [
     { "code": "type", "states": [ "primitive", "basic", "standard", "scholar", "master" ] }

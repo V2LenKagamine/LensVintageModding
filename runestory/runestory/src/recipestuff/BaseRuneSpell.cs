@@ -37,6 +37,8 @@ namespace runestory
         public int spellTier { get; set; }
         public string imgPath { get; set; }
 
+        public int CooldownMS { get; set; }
+
         public BaseRuneI<BaseRuneSpell> Clone() 
         {
             Dictionary<string, int> reagClone = new(Reagents.Count);
@@ -44,7 +46,7 @@ namespace runestory
 
             for (int i = 0; i < Reagents.Count; i++) { reagClone.Add(Reagents.ElementAt(i).Key, Reagents.ElementAt(i).Value); }
             for (int i = 0; i < ReagNames.Length; i++) { namesclone[i] = ReagNames[i]; }
-            return new BaseRuneSpell { Code = this.Code, Attributes = this.Attributes, Reagents = reagClone ,ReagNames = namesclone,langCode= langCode,ElementalType = ElementalType ?? "none",spellType = spellType ?? "util",spellTier = spellTier};
+            return new BaseRuneSpell { Code = this.Code, Attributes = this.Attributes, Reagents = reagClone ,ReagNames = namesclone,langCode= langCode,CooldownMS = this.CooldownMS,ElementalType = ElementalType ?? "none",spellType = spellType ?? "util",spellTier = spellTier};
         }
 
         public bool SatisfiesAsIngredient(int index, ItemStack inputStack)
@@ -94,6 +96,16 @@ namespace runestory
                 {
                     langCode = "nodsc";
                 }
+
+                if (Attributes["cooldownms"].Exists)
+                {
+                    CooldownMS = Attributes["cooldownms"].AsObject<int>();
+                }
+                else
+                {
+                    CooldownMS = 1000;
+                }
+
                 if (Attributes["spelltype"].Exists)
                 {
                     spellType = Attributes["spelltype"].AsObject<string>();
@@ -131,6 +143,7 @@ namespace runestory
             writer.Write(ElementalType ?? "none");
             writer.Write(spellType ?? "util");
             writer.Write(spellTier);
+            writer.Write(CooldownMS);
         }
         public void FromBytes(BinaryReader reader, IWorldAccessor resolver)
         {
@@ -153,6 +166,7 @@ namespace runestory
             ElementalType = reader.ReadString();
             spellType = reader.ReadString();
             spellTier = reader.ReadInt32();
+            CooldownMS = reader.ReadInt32();
         }
     }
 }

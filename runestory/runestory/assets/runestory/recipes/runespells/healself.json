@@ -1,20 +1,21 @@
 {
     "code": "healself",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-self": 1,
-            "runestory:rune-water": 4,
-            "runestory:rune-alpha": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-self",
-            "runestory:item-rune-water",
-            "runestory:item-rune-alpha"
-        ],
-        "langCode": "healselfdsc",
-        "spelltype": "supp",
-        "spelltier": 1
+  "attributes": {
+    "reagents": {
+      "runestory:rune-self": 1,
+      "runestory:rune-water": 6,
+      "runestory:rune-alpha": 1
     },
+    "reagentnames": [
+      "runestory:item-rune-self",
+      "runestory:item-rune-water",
+      "runestory:item-rune-alpha"
+    ],
+    "langCode": "healselfdsc",
+    "spelltype": "supp",
+    "spelltier": 1,
+    "cooldownms": 30000
+  },
     "imgpath": "selfheal"
 }

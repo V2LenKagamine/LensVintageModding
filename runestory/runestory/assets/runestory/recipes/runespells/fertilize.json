@@ -1,20 +1,21 @@
 {
     "code": "fertilizespell",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-earth": 2,
-            "runestory:rune-balance": 2,
-            "runestory:rune-beta": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-earth",
-            "runestory:item-rune-balance",
-            "runestory:item-rune-beta"
-        ],
-        "langCode": "fertilizespelldsc",
-        "spelltype": "util",
-        "spelltier":2
+  "attributes": {
+    "reagents": {
+      "runestory:rune-earth": 4,
+      "runestory:rune-balance": 4,
+      "runestory:rune-beta": 2
     },
+    "reagentnames": [
+      "runestory:item-rune-earth",
+      "runestory:item-rune-balance",
+      "runestory:item-rune-beta"
+    ],
+    "langCode": "fertilizespelldsc",
+    "spelltype": "util",
+    "spelltier": 2,
+    "cooldownms": 10000
+  },
     "imgpath": "genericearth"
 }

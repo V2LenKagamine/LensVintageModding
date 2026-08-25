@@ -45,7 +45,7 @@
             "C": {
                 "type": "item",
                 "code": "runestory:rune-gamma",
-                "quantity": 32
+                "quantity": 16
             },
             "S": {
                 "type": "item",
@@ -60,12 +60,12 @@
         }
     },
     {
-        "ingredientPattern": "C,S",
+        "ingredientPattern": "C,S,C",
         "ingredients": {
             "C": {
                 "type": "item",
                 "code": "runestory:rune-delta",
-                "quantity": 32
+                "quantity": 16
             },
             "S": {
                 "type": "item",
@@ -73,19 +73,19 @@
             }
         },
         "width": 1,
-        "height": 2,
+        "height": 3,
         "output": {
             "type": "item",
             "code": "runestory:runewand-scholar"
         }
     },
     {
-        "ingredientPattern": "C,S",
+        "ingredientPattern": "C,S,C",
         "ingredients": {
             "C": {
                 "type": "item",
                 "code": "runestory:rune-epsilon",
-                "quantity": 32
+                "quantity": 16
             },
             "S": {
                 "type": "item",
@@ -93,7 +93,7 @@
             }
         },
         "width": 1,
-        "height": 2,
+        "height": 3,
         "output": {
             "type": "item",
             "code": "runestory:runewand-master"

@@ -19,6 +19,8 @@ namespace runestory
         Dictionary<string, int> Reagents { get; }
         string[] ReagNames { get; }
 
+        int CooldownMS { get; }
+
         public string langCode { get; set; }
         public string spellType { get; set; }
         public int spellTier { get; set; }

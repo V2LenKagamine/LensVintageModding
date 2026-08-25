@@ -45,7 +45,7 @@ namespace runestory
 
         public static string RMS_UUIDSpellTable => "RMSUUIDSPELLTABLE";
         public static string RMS_SpellKnowledge => "RMSKnownSpells";
-        public static string RMS_Stat_RuneChance => "freeCastChance";
+        public static string RMS_Stat_CDTime => "magicCDTime";
         public static string RMS_Stat_MagicDamage => "magicWeaponsDamage";
         public static string RMS_Net_Channel => "runespellchannel";
 
@@ -248,10 +248,10 @@ namespace runestory
                         //e.Stats.Register(RMS_Stat_MagicDamage);
                         e.Stats.Set(RMS_Stat_MagicDamage, "base", 1f, true);
                     }
-                    if (!(e.Stats.Where(stat => stat.Key == RMS_Stat_RuneChance).Any()))
+                    if (!(e.Stats.Where(stat => stat.Key == RMS_Stat_CDTime).Any()))
                     {
                         //e.Stats.Register(RMS_Stat_RuneChance);
-                        e.Stats.Set(RMS_Stat_RuneChance, "base", 1f, true);
+                        e.Stats.Set(RMS_Stat_CDTime, "base", 1f, true);
                     }
                 }
             };
@@ -291,7 +291,10 @@ namespace runestory
             long timenext = from.Entity.Attributes.GetLong("runespellnextcasttime");
             if (timenext > runeSApi.World.ElapsedMilliseconds)
             {
-                ((runeSApi.World.PlayerByUid(from.Entity.PlayerUID))as IServerPlayer).SendLocalisedMessage(GlobalConstants.GeneralChatGroup, "runestory:cast-fail-toosoon");
+                ((runeSApi.World.PlayerByUid(from.Entity.PlayerUID)) as IServerPlayer).SendLocalisedMessage(GlobalConstants.GeneralChatGroup, "runestory:cast-fail-toosoon");
+                long nexttime = timenext - runeSApi.World.ElapsedMilliseconds;
+                
+                ((runeSApi.World.PlayerByUid(from.Entity.PlayerUID)) as IServerPlayer).SendMessage(GlobalConstants.GeneralChatGroup, string.Format("{0} seconds left",nexttime / 1000),EnumChatType.OwnMessage);
                 return;
             }
             if ( spell is not null) {
@@ -308,16 +311,13 @@ namespace runestory
         public void SetCastDelay(Entity ent, BaseRuneSpell spell)
         {
             //Todo: Config?
-            long percastMS = 600 - (int)Math.Min(400,spell?.Reagents?.Count ?? 4 * 100);
-            int TotalReag = 0;
+            long percastMS = 1000;
+            float cdtime = ent?.Stats?.GetBlended(RMS_Stat_CDTime) ?? 1f;
             if (spell is not null)
             {
-                for (int i = 0; i < spell.Reagents.Count; i++)
-                {
-                    TotalReag += spell.Reagents.ElementAt(i).Value;
-                }
+                percastMS = spell.CooldownMS;
             }
-            long toset = (percastMS * (TotalReag == 0 ? 1 : TotalReag)) + runeSApi.World.ElapsedMilliseconds;
+            long toset = (long)(percastMS * cdtime) + runeSApi.World.ElapsedMilliseconds;
             ent.Attributes.SetLong("runespellnextcasttime", toset);
             ent.Attributes.MarkPathDirty("runespellnextcasttime");
         }

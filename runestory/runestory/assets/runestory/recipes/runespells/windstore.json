@@ -1,20 +1,21 @@
 {
     "code": "windstore",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-air": 4,
-            "runestory:rune-soul": 2,
-            "runestory:rune-delta": 2
-        },
-        "reagentnames": [
-            "runestory:item-rune-air",
-            "runestory:item-rune-soul",
-            "runestory:item-rune-delta"
-        ],
-        "langCode": "windstoredsc",
-        "spelltype": "util",
-        "spelltier": 4
+  "attributes": {
+    "reagents": {
+      "runestory:rune-air": 8,
+      "runestory:rune-soul": 2,
+      "runestory:rune-delta": 4
     },
+    "reagentnames": [
+      "runestory:item-rune-air",
+      "runestory:item-rune-soul",
+      "runestory:item-rune-delta"
+    ],
+    "langCode": "windstoredsc",
+    "spelltype": "util",
+    "spelltier": 4,
+    "cooldownms": 300000
+  },
     "imgpath": "windstore"
 }

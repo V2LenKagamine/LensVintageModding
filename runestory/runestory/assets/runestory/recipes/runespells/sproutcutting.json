@@ -1,20 +1,21 @@
 {
     "code": "sproutcutspell",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-earth": 8,
-            "runestory:rune-water": 8,
-            "runestory:rune-delta": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-earth",
-            "runestory:item-rune-water",
-            "runestory:item-rune-delta"
-        ],
-        "langCode": "sproutcutspelldsc",
-        "spelltype": "util",
-        "spelltier": 4
+  "attributes": {
+    "reagents": {
+      "runestory:rune-earth": 12,
+      "runestory:rune-water": 12,
+      "runestory:rune-delta": 2
     },
+    "reagentnames": [
+      "runestory:item-rune-earth",
+      "runestory:item-rune-water",
+      "runestory:item-rune-delta"
+    ],
+    "langCode": "sproutcutspelldsc",
+    "spelltype": "util",
+    "spelltier": 4,
+    "cooldownms": 20000
+  },
     "imgpath": "sproutcut"
 }

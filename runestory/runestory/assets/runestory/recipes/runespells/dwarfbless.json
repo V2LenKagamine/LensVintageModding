@@ -1,18 +1,19 @@
 {
     "code": "dwarfbless",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-earth": 4,
-            "runestory:rune-beta": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-earth",
-            "runestory:item-rune-beta"
-        ],
-        "langCode": "dwarfblessdsc",
-        "spelltype": "supp",
-        "spelltier": 2
+  "attributes": {
+    "reagents": {
+      "runestory:rune-earth": 8,
+      "runestory:rune-beta": 4
     },
+    "reagentnames": [
+      "runestory:item-rune-earth",
+      "runestory:item-rune-beta"
+    ],
+    "langCode": "dwarfblessdsc",
+    "spelltype": "supp",
+    "spelltier": 2,
+    "cooldownms": 45000
+  },
     "imgpath": "dwarfbless"
 }

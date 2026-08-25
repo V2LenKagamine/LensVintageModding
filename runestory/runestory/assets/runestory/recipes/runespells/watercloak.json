@@ -1,18 +1,19 @@
 {
     "code": "watercloak",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-water": 8,
-            "runestory:rune-beta": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-water",
-            "runestory:item-rune-gamma"
-        ],
-        "langCode": "watercloakdsc",
-        "spelltype": "supp",
-        "spelltier": 3
+  "attributes": {
+    "reagents": {
+      "runestory:rune-water": 12,
+      "runestory:rune-beta": 2
     },
+    "reagentnames": [
+      "runestory:item-rune-water",
+      "runestory:item-rune-gamma"
+    ],
+    "langCode": "watercloakdsc",
+    "spelltype": "supp",
+    "spelltier": 3,
+    "cooldownms": 60000
+  },
     "imgpath": "genericwater"
 }

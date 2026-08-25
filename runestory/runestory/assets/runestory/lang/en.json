@@ -38,7 +38,7 @@
     "crumbletodust": "Its knowledge absorbed, the item crumbles to dust!",
     "game:tabname-runestorytab": "RuneStory Items",
     "magicdamagestat": "Magic Damage: ",
-    "runeconsumechance": "Free Cast Chance: ",
+    "magiccdreduction": "Cooldown Duration: ",
 
     "block-runepylon-inactive": "Runic Pylon",
     "blockdesc-runepylon-inactive": "Sits still, Looks pretty.",
@@ -54,13 +54,13 @@
     "makestickdsc": "Casts a projectile that turns Leaves into Sticks in a 3x3x3 area where it lands.",
 
     "healother": "Mend Bolt",
-    "healotherdsc": "Casts a projectile that heals the target, or the nearest to its landing point, 3 HP over 5 seconds.",
+    "healotherdsc": "Casts a projectile that heals the target, or the nearest to its landing point, 9 HP over 15 seconds.",
 
     "healself": "Mend Self",
-    "healselfdsc": "Heals the caster 2.5 HP over 5 seconds.",
+    "healselfdsc": "Heals the caster 8 HP over 15 seconds.",
 
     "groupheal": "Mend Group",
-    "grouphealdsc": "Heal yourself, and any nearby players, for 2.5 + 0.5 HP per extra target, over 5 seconds.",
+    "grouphealdsc": "Heal yourself, and any nearby players, for 6 + 1.5 HP per target, over 15 seconds.",
 
     "windstore": "Wind-Store",
     "windstoredsc": "When activated while sneaking: The projectile will mark your currently selected block on landing and refund runes. Otherwise: Send all items in a 2 block radius from landing point to location, or the inventory there, if possible.",
@@ -102,7 +102,7 @@
     "windfeetdsc": "Grants you and any nearby players 25 percent walkspeed for 5 minutes.",
 
     "watercloak": "Mending Mist Cloak",
-    "watercloakdsc": "Grants you and any nearby players 25 health over 5 minutes",
+    "watercloakdsc": "Grants you and any nearby players 40 health over 5 minutes",
 
     "flowerfield": "Spring's Blossom",
     "flowerfielddsc": "Grows a random vanilla flower type in a 4 block radius around you.",
@@ -123,10 +123,10 @@
     "refinespelldsc": "Refines, or exchanges, many items into many other items, your Handbook should tell you more.",
 
     "saveself": "Panic Heal",
-    "saveselfdsc": "Heals 3 HP instantly, then 5 more over 10 seconds.",
+    "saveselfdsc": "Heals 5 HP instantly, then 9 more over 20 seconds.",
 
     "saveother": "Panic Heal Other",
-    "saveotherdsc": "Casts a projectile that Heals 3 HP instantly, then 5 more over 10 seconds.",
+    "saveotherdsc": "Casts a projectile that Heals 5 HP instantly, then 9 more over 20 seconds.",
 
     "sproutcutspell": "Sprout Cutting",
     "sproutcutspelldsc": "Casts a projectile that coerces a berry bush nearby to release a single traitless sprout.",
@@ -272,7 +272,7 @@
     "hbrunespells-text": "Spells are tricks that consume runes to perform an action, you can hold SHIFT in your spell menu over a spell for a quick description of its use. Casting a spell invokes a cooldown based on how many runes the spell contained. More runes infers a longer cooldown.<br><br><strong>Elemental Types:</strong><br>There are four types of elements for a damage spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target,dealing DoT<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly reduce hunger rate for a bit after hit.<br><strong>Air</strong> spells deal much more knockback.<br><br>Spells have a tier, this is merely an indicator of how powerful a given spell is.",
 
     "game:hbmakingrunes-title": "(RuneStory) Making Runes:",
-    "game:hbmakingrunes-text": "To craft a rune, simply throw relevant items near the altar, and SNEAK + Rightclick while holding any Rune Wand. The Rune Altar must be filled with Blank Runes with right click for every craft, and consumes as many Blank Runes as output items. The Blank Runes may be retreived by sneaking while right-clicking with an empty hand. The Block may be Right-Clicked with any chiseled block to camoflage it as the chisled block; similar to QPChiselTools 'Decorative' blocks. The chiseled block can be retreived by breaking the altar.",
+    "game:hbmakingrunes-text": "To craft a rune, simply throw relevant items on top of the altar, and SNEAK + Rightclick while holding any Rune Wand. The Rune Altar must be filled with Blank Runes with right click for every craft, and consumes as many Blank Runes as output items. The Blank Runes may be retreived by sneaking while right-clicking with an empty hand. The Block may be Right-Clicked with any chiseled block to camoflage it as the chisled block; similar to QPChiselTools 'Decorative' blocks. The chiseled block can be retreived by breaking the altar.",
 
     "hbrunemagicstats-title": "(RuneStory) Magical Stats:",
     "hbrunemagicstats-text": "There are two magic stats related to runecraft, your Magic Damage and your Free Cast Chance,Both can be viewed in your spell select menu. Damage is self explanatory. Your Free Cast chance increases the odds that a spell will consume no runes on cast. Spells that return runes on successful casts do not trigger Free Cast chance rolls.",

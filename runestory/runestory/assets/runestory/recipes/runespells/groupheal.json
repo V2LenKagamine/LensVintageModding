@@ -1,22 +1,23 @@
 ﻿{
     "code": "groupheal",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-self": 2,
-            "runestory:rune-earth": 2,
-            "runestory:rune-water": 4,
-            "runestory:rune-beta": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-self",
-            "runestory:item-rune-earth",
-            "runestory:item-rune-water",
-            "runestory:item-rune-beta"
-        ],
-        "langCode": "groupheal",
-        "spelltype": "supp",
-        "spelltier": 2
+  "attributes": {
+    "reagents": {
+      "runestory:rune-self": 4,
+      "runestory:rune-earth": 4,
+      "runestory:rune-water": 8,
+      "runestory:rune-beta": 2
     },
+    "reagentnames": [
+      "runestory:item-rune-self",
+      "runestory:item-rune-earth",
+      "runestory:item-rune-water",
+      "runestory:item-rune-beta"
+    ],
+    "langCode": "grouphealdsc",
+    "spelltype": "supp",
+    "spelltier": 2,
+    "cooldownms": 30000
+  },
     "imgpath": "groupheal"
 }

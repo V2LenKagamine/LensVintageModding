@@ -2,86 +2,91 @@
     {
         "code": "earthbolt",
         "enabled": true,
-        "attributes": {
-            "reagents": {
-                "runestory:rune-earth": 1
-            },
-            "reagentnames": [
-                "runestory:item-rune-earth"
-            ],
-            "langCode": "earthboltdsc",
-            "elementType": "earth",
-            "spelltype": "dmg",
-            "spelltier": 1
+      "attributes": {
+        "reagents": {
+          "runestory:rune-earth": 1
         },
+        "reagentnames": [
+          "runestory:item-rune-earth"
+        ],
+        "langCode": "earthboltdsc",
+        "elementType": "earth",
+        "spelltype": "dmg",
+        "spelltier": 1,
+        "cooldownms": 250
+      },
         "imgpath": "eartht1"
     },
     {
         "code": "earthsurge",
         "enabled": true,
-        "attributes": {
-            "reagents": {
-                "runestory:rune-earth": 3
-            },
-            "reagentnames": [
-                "runestory:item-rune-earth"
-            ],
-            "langCode": "earthsurgedsc",
-            "elementType": "earth",
-            "spelltype": "dmg",
-            "spelltier": 2
+      "attributes": {
+        "reagents": {
+          "runestory:rune-earth": 3
         },
+        "reagentnames": [
+          "runestory:item-rune-earth"
+        ],
+        "langCode": "earthsurgedsc",
+        "elementType": "earth",
+        "spelltype": "dmg",
+        "spelltier": 2,
+        "cooldownms": 750
+      },
         "imgpath": "eartht2"
     },
     {
         "code": "earthblast",
         "enabled": true,
-        "attributes": {
-            "reagents": {
-                "runestory:rune-earth": 6
-            },
-            "reagentnames": [
-                "runestory:item-rune-earth"
-            ],
-            "langCode": "earthblastdsc",
-            "elementType": "earth",
-            "spelltype": "dmg",
-            "spelltier": 3
+      "attributes": {
+        "reagents": {
+          "runestory:rune-earth": 6
         },
+        "reagentnames": [
+          "runestory:item-rune-earth"
+        ],
+        "langCode": "earthblastdsc",
+        "elementType": "earth",
+        "spelltype": "dmg",
+        "spelltier": 3,
+        "cooldownms": 3000
+      },
         "imgpath": "eartht3"
     },
     {
         "code": "earthexplosion",
         "enabled": true,
-        "attributes": {
-            "reagents": {
-                "runestory:rune-earth": 9
-            },
-            "reagentnames": [
-                "runestory:item-rune-earth"
-            ],
-            "langCode": "earthexplosiondsc",
-            "elementType": "earth",
-            "spelltype": "dmg",
-            "spelltier": 4
+      "attributes": {
+        "reagents": {
+          "runestory:rune-earth": 9
         },
+        "reagentnames": [
+          "runestory:item-rune-earth"
+        ],
+        "langCode": "earthexplosiondsc",
+        "elementType": "earth",
+        "spelltype": "dmg",
+        "spelltier": 4,
+        "cooldownms": 8000
+      },
         "imgpath": "eartht4"
     },
     {
         "code": "earthdoom",
         "enabled": true,
-        "attributes": {
-            "reagents": {
-                "runestory:rune-earth": 12
-            },
-            "reagentnames": [
-                "runestory:item-rune-earth"
-            ],
-            "langCode": "earthdoomdsc",
-            "elementType": "earth",
-            "spelltype": "dmg",
-            "spelltier": 5
+      "attributes": {
+        "reagents": {
+          "runestory:rune-earth": 12
         },
+        "reagentnames": [
+          "runestory:item-rune-earth"
+        ],
+        "langCode": "earthdoomdsc",
+        "elementType": "earth",
+        "spelltype": "dmg",
+        "spelltier": 5,
+        "cooldownms": 15000
+      },
         "imgpath": "eartht5"
     }
 ]

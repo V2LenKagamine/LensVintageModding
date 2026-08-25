@@ -1,20 +1,21 @@
 {
     "code": "invoketrust",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-fire": 8,
-            "runestory:rune-air": 8,
-            "runestory:rune-delta": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-fire",
-            "runestory:item-rune-air",
-            "runestory:item-rune-delta"
-        ],
-        "langCode": "invoketrustdsc",
-        "spelltype": "util",
-        "spelltier": 4
+  "attributes": {
+    "reagents": {
+      "runestory:rune-fire": 12,
+      "runestory:rune-air": 12,
+      "runestory:rune-delta": 1
     },
+    "reagentnames": [
+      "runestory:item-rune-fire",
+      "runestory:item-rune-air",
+      "runestory:item-rune-delta"
+    ],
+    "langCode": "invoketrustdsc",
+    "spelltype": "util",
+    "spelltier": 4,
+    "cooldownms": 45000
+  },
     "imgpath": "invoketrust"
 }

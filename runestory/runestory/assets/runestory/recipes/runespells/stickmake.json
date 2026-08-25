@@ -1,16 +1,17 @@
 {
     "code": "makestick",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-air": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-air"
-        ],
-        "langCode": "makestickdsc",
-        "spelltype": "util",
-        "spelltier": 1
+  "attributes": {
+    "reagents": {
+      "runestory:rune-air": 1
     },
+    "reagentnames": [
+      "runestory:item-rune-air"
+    ],
+    "langCode": "makestickdsc",
+    "spelltype": "util",
+    "spelltier": 1,
+    "cooldownms": 1500
+  },
     "imgpath": "genericair"
 }

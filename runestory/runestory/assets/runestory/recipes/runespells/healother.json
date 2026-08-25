@@ -1,20 +1,21 @@
 {
     "code": "healother",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-air": 1,
-            "runestory:rune-water": 4,
-            "runestory:rune-alpha": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-air",
-            "runestory:item-rune-water",
-            "runestory:item-rune-alpha"
-        ],
-        "langCode": "healotherdsc",
-        "spelltype": "supp",
-        "spelltier": 1
+  "attributes": {
+    "reagents": {
+      "runestory:rune-air": 2,
+      "runestory:rune-water": 6,
+      "runestory:rune-alpha": 1
     },
+    "reagentnames": [
+      "runestory:item-rune-air",
+      "runestory:item-rune-water",
+      "runestory:item-rune-alpha"
+    ],
+    "langCode": "healotherdsc",
+    "spelltype": "supp",
+    "spelltier": 1,
+    "cooldownms": 20000
+  },
     "imgpath": "healother"
 }

@@ -1,16 +1,17 @@
 {
     "code": "ignitespell",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-fire": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-fire"
-        ],
-        "langCode": "ignitespelldsc",
-        "spelltype": "util",
-        "spelltier": 1
+  "attributes": {
+    "reagents": {
+      "runestory:rune-fire": 2
     },
+    "reagentnames": [
+      "runestory:item-rune-fire"
+    ],
+    "langCode": "ignitespelldsc",
+    "spelltype": "util",
+    "spelltier": 1,
+    "cooldownms": 5000
+  },
     "imgpath": "genericfire"
 }

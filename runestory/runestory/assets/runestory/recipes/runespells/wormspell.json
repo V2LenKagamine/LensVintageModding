@@ -1,18 +1,19 @@
 {
     "code": "wormspell",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-earth": 2,
-            "runestory:rune-alpha": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-earth",
-            "runestory:item-rune-alpha"
-        ],
-        "langCode": "wormspelldsc",
-        "spelltype": "supp",
-        "spelltier": 1
+  "attributes": {
+    "reagents": {
+      "runestory:rune-earth": 4,
+      "runestory:rune-alpha": 1
     },
+    "reagentnames": [
+      "runestory:item-rune-earth",
+      "runestory:item-rune-alpha"
+    ],
+    "langCode": "wormspelldsc",
+    "spelltype": "supp",
+    "spelltier": 1,
+    "cooldownms": 15000
+  },
     "imgpath": "wormspell"
 }

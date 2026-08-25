@@ -1,20 +1,21 @@
 ﻿{
     "code": "flowerfield",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-earth": 3,
-            "runestory:rune-water": 3,
-            "runestory:rune-beta": 2
-        },
-        "reagentnames": [
-            "runestory:item-rune-earth",
-            "runestory:item-rune-water",
-            "runestory:item-rune-beta"
-        ],
-        "langCode": "flowerfielddsc",
-        "spelltype": "util",
-        "spelltier": 2
+  "attributes": {
+    "reagents": {
+      "runestory:rune-earth": 3,
+      "runestory:rune-water": 3,
+      "runestory:rune-beta": 2
     },
+    "reagentnames": [
+      "runestory:item-rune-earth",
+      "runestory:item-rune-water",
+      "runestory:item-rune-beta"
+    ],
+    "langCode": "flowerfielddsc",
+    "spelltype": "util",
+    "spelltier": 2,
+    "cooldownms": 15000
+  },
     "imgpath": "flowerfield"
 }

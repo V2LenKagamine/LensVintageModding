@@ -42,13 +42,11 @@ namespace runestory.src.entity.spells
             {
                 case 1:
                     {
-                        aoe = new(0f, 0f);
                         dam = 4.5f;
                         break;
                     }
                 case 2:
                     {
-                        aoe = new(0f, 0f);
                         dam = 6f;
                         break;
                     }

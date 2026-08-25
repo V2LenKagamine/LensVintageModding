@@ -1,20 +1,21 @@
 {
     "code": "growsapling",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-water": 4,
-            "runestory:rune-earth": 4,
-            "runestory:rune-gamma": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-water",
-            "runestory:item-rune-earth",
-            "runestory:item-rune-gamma"
-        ],
-        "langCode": "growsaplingdsc",
-        "spelltype": "util",
-        "spelltier": 3
+  "attributes": {
+    "reagents": {
+      "runestory:rune-water": 8,
+      "runestory:rune-earth": 8,
+      "runestory:rune-gamma": 2
     },
+    "reagentnames": [
+      "runestory:item-rune-water",
+      "runestory:item-rune-earth",
+      "runestory:item-rune-gamma"
+    ],
+    "langCode": "growsaplingdsc",
+    "spelltype": "util",
+    "spelltier": 3,
+    "cooldownms": 60000
+  },
     "imgpath": "growsapling"
 }

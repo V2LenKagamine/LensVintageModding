@@ -1,20 +1,21 @@
 {
     "code": "menditem",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-fire": 16,
-            "runestory:rune-balance": 8,
-            "runestory:rune-epsilon": 4
-        },
-        "reagentnames": [
-            "runestory:item-rune-fire",
-            "runestory:item-rune-balance",
-            "runestory:item-rune-epsilon"
-        ],
-        "langCode": "menditemdsc",
-        "spelltype": "util",
-        "spelltier": 5
+  "attributes": {
+    "reagents": {
+      "runestory:rune-fire": 24,
+      "runestory:rune-balance": 12,
+      "runestory:rune-epsilon": 4
     },
+    "reagentnames": [
+      "runestory:item-rune-fire",
+      "runestory:item-rune-balance",
+      "runestory:item-rune-epsilon"
+    ],
+    "langCode": "menditemdsc",
+    "spelltype": "util",
+    "spelltier": 5,
+    "cooldownms": 300000
+  },
     "imgpath": "menditem"
 }

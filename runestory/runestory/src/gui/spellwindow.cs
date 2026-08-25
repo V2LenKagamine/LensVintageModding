@@ -104,7 +104,7 @@ namespace runestory
                 if (ImGui.Button("Tier 5", smolsize)) { SetTier("t5"); }
                 ImGui.BeginChild("stats", new Vector2(220, 40));
                 ImGui.BulletText(Lang.Get("runestory:magicdamagestat") + (int)(us.Stats.GetBlended(RunestoryMS.RMS_Stat_MagicDamage) * 100f) + "%%");
-                ImGui.BulletText(Lang.Get("runestory:runeconsumechance") + (int)Math.Max(((us.Stats.GetBlended(RunestoryMS.RMS_Stat_RuneChance) * 100f) - 100), 0) + "%%");
+                ImGui.BulletText(Lang.Get("runestory:magiccdreduction") + (int)(us.Stats.GetBlended(RunestoryMS.RMS_Stat_CDTime) * 100f) + "%%");
                 ImGui.EndChild();
                 ImGui.EndChild();
                 ImGui.SameLine();
@@ -132,7 +132,8 @@ namespace runestory
                     }
                     else
                     {
-                        ImGui.SetItemTooltip(Lang.Get("runestory:" + spell.langCode));
+                        string toldCd = spell.CooldownMS < 1000 ? "Less than 1" : string.Format("{0}",spell.CooldownMS / 1000);
+                        ImGui.SetItemTooltip(Lang.Get("runestory:" + spell.langCode) + "\n" + $"CD: {toldCd} Second(s)");
                     }
 
                     if (pressed)

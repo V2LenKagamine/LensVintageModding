@@ -23,8 +23,6 @@ namespace runestory
 
         public BaseRuneSpell ourSpell;
 
-        public bool freeCasted = false;
-
         long msLaunch;
 
         protected bool beforeCollided;

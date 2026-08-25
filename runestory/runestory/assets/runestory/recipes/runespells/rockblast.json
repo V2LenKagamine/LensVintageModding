@@ -1,22 +1,23 @@
 {
     "code": "rockblast",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-earth": 8,
-            "runestory:rune-fire": 8,
-            "runestory:rune-rust": 4,
-            "runestory:rune-gamma": 2
-        },
-        "reagentnames": [
-            "runestory:item-rune-earth",
-            "runestory:item-rune-fire",
-            "runestory:item-rune-rust",
-            "runestory:item-rune-gamma"
-        ],
-        "langCode": "rockblastdsc",
-        "spelltype": "util",
-        "spelltier": 3
+  "attributes": {
+    "reagents": {
+      "runestory:rune-earth": 16,
+      "runestory:rune-fire": 16,
+      "runestory:rune-rust": 8,
+      "runestory:rune-gamma": 4
     },
+    "reagentnames": [
+      "runestory:item-rune-earth",
+      "runestory:item-rune-fire",
+      "runestory:item-rune-rust",
+      "runestory:item-rune-gamma"
+    ],
+    "langCode": "rockblastdsc",
+    "spelltype": "util",
+    "spelltier": 3,
+    "cooldownms": 60000
+  },
     "imgpath": "rockblast"
 }

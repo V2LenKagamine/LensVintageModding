@@ -1,22 +1,23 @@
 {
     "code": "enticebees",
     "enabled": true,
-    "attributes": {
-        "reagents": {
-            "runestory:rune-air": 4,
-            "runestory:rune-earth": 4,
-            "runestory:rune-fire": 4,
-            "runestory:rune-delta": 1
-        },
-        "reagentnames": [
-            "runestory:item-rune-air",
-            "runestory:item-rune-earth",
-            "runestory:item-rune-fire",
-            "runestory:item-rune-delta"
-        ],
-        "langCode": "enticebeesdsc",
-        "spelltype": "util",
-        "spelltier": 4
+  "attributes": {
+    "reagents": {
+      "runestory:rune-air": 6,
+      "runestory:rune-earth": 6,
+      "runestory:rune-fire": 6,
+      "runestory:rune-delta": 3
     },
+    "reagentnames": [
+      "runestory:item-rune-air",
+      "runestory:item-rune-earth",
+      "runestory:item-rune-fire",
+      "runestory:item-rune-delta"
+    ],
+    "langCode": "enticebeesdsc",
+    "spelltype": "util",
+    "spelltier": 4,
+    "cooldownms": 120000
+  },
     "imgpath": "bees"
 }
