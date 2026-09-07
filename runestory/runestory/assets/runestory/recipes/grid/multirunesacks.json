@@ -14,7 +14,7 @@
         "width": 1,
         "height": 3,
         "output": {
-    "type": "item",
+            "type": "item",
             "code": "runebag-multiprimitive"
         }
     },
@@ -33,10 +33,10 @@
         "width": 1,
         "height": 2,
         "output": {
-        "type": "item",
+            "type": "item",
             "code": "runebag-multilinen"
         }
-},
+    },
     {
     "ingredientPattern": "H,C,H",
         "ingredients": {
@@ -45,7 +45,7 @@
                 "code": "game:linensack"
             },
             "H": {
-            "type": "item",
+                "type": "item",
                 "code": "rune-blank"
             }
     },
@@ -55,7 +55,7 @@
         "type": "item",
             "code": "runebag-multilinen"
         }
-},
+    },
     {
     "ingredientPattern": "H_,CH,H_",
         "ingredients": {
@@ -68,14 +68,14 @@
                 "code": "game:leather-normal-plain",
                 "quantity": 2
             }
-    },
+      },
         "width": 2,
         "height": 3,
         "output": {
-        "type": "item",
+            "type": "item",
             "code": "runebag-multileather"
         }
-},
+    },
     {
     "ingredientPattern": "H,C,H",
         "ingredients": {

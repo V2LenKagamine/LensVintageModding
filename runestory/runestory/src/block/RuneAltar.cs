@@ -212,13 +212,28 @@ namespace runestory
                     return true;
                 }
                 if(Contents is null) { return false; }
-                if (!ply.InventoryManager.TryGiveItemstack(Contents))
+                if (Contents.StackSize <= Contents.Collectible.MaxStackSize)
                 {
-                    world.SpawnItemEntity(Contents, Pos.ToVec3d().Add(0.5, 0.5, 0.5));
+                    if (!ply.InventoryManager.TryGiveItemstack(Contents))
+                    {
+                        world.SpawnItemEntity(Contents, Pos.ToVec3d().Add(0.5, 0.5, 0.5));
+                    }
+                    Contents = null;
+                    MarkDirty();
+                    return true;
                 }
-                Contents = null;
-                MarkDirty();
-                return true;
+                else
+                {
+                    Contents.StackSize -= Contents.Collectible.MaxStackSize;
+                    ItemStack giving = Contents.Clone();
+                    giving.StackSize = Contents.Collectible.MaxStackSize;
+                    if (!ply.InventoryManager.TryGiveItemstack(giving))
+                    {
+                        world.SpawnItemEntity(giving, Pos.ToVec3d().Add(0.5, 0.5, 0.5));
+                    }
+                    MarkDirty();
+                    return true;
+                }
             }
             var slot = ply.InventoryManager.ActiveHotbarSlot;
             if(slot.Itemstack is not null)
@@ -231,17 +246,40 @@ namespace runestory
                     MarkDirty();
                     return true;
                 }
+                if (Contents?.Item == slot.Itemstack?.Item)
+                {
+                    Contents.StackSize += slot.Itemstack?.StackSize ?? 1;
+                    slot.TakeOutWhole();
+                    slot.MarkDirty();
+                    MarkDirty();
+                    return true;
+                }
             }
             return false;
         }
 
         public override void OnBlockBroken(IPlayer byPlayer = null)
         {
-            if(Api.World.Side == EnumAppSide.Server)
+            if (Api.World.Side == EnumAppSide.Server)
             {
                 if (Contents != null)
                 {
-                    Api.World.SpawnItemEntity(Contents, Pos.ToVec3d().Add(0.5, 0.5, 0.5));
+                    ItemStack tmp = Contents.Clone();
+                    tmp.StackSize = Contents.Collectible.MaxStackSize;
+                    //Scary while loop
+                    while (Contents.StackSize > 0)
+                    {
+                        if (Contents.StackSize <= Contents.Collectible.MaxStackSize)
+                        {
+                            Api.World.SpawnItemEntity(Contents, Pos.ToVec3d().Add(0.5, 0.5, 0.5));
+                            break;
+                        }
+                        else
+                        {
+                            Api.World.SpawnItemEntity(tmp.Clone(), Pos.ToVec3d().Add(0.5, 0.5, 0.5));
+                            Contents.StackSize -= Contents.Collectible.MaxStackSize;
+                        }
+                    }
                 }
             }
             base.OnBlockBroken(byPlayer);

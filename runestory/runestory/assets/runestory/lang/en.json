@@ -18,7 +18,11 @@
     "rangedWeaponsDamage": "Ranged Weapon Damage",
     "rangedWeaponsSpeed": "Ranged Weapon Draw Time",
     "magicWeaponsDamage": "Magic Spell Damage",
-    "runeConsumeChance": "Free Cast Chance",
+  "runeConsumeChance": "Free Cast Chance",
+
+  "supp": "Support",
+  "dmg": "Damage",
+  "util": "Utility",
 
     "windbuffon": "You feel lighter on your feet.",
     "mendingmist": "You feel a soft cloak of water surround you.",
@@ -272,7 +276,7 @@
     "hbrunespells-text": "Spells are tricks that consume runes to perform an action, you can hold SHIFT in your spell menu over a spell for a quick description of its use. Casting a spell invokes a cooldown based on how many runes the spell contained. More runes infers a longer cooldown.<br><br><strong>Elemental Types:</strong><br>There are four types of elements for a damage spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target,dealing DoT<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly reduce hunger rate for a bit after hit.<br><strong>Air</strong> spells deal much more knockback.<br><br>Spells have a tier, this is merely an indicator of how powerful a given spell is.",
 
     "game:hbmakingrunes-title": "(RuneStory) Making Runes:",
-    "game:hbmakingrunes-text": "To craft a rune, simply throw relevant items on top of the altar, and SNEAK + Rightclick while holding any Rune Wand. The Rune Altar must be filled with Blank Runes with right click for every craft, and consumes as many Blank Runes as output items. The Blank Runes may be retreived by sneaking while right-clicking with an empty hand. The Block may be Right-Clicked with any chiseled block to camoflage it as the chisled block; similar to QPChiselTools 'Decorative' blocks. The chiseled block can be retreived by breaking the altar.",
+    "game:hbmakingrunes-text": "To craft a rune, simply throw relevant items on top or near the altar, and SNEAK + Rightclick while holding any Rune Wand. The Rune Altar must be filled with Blank Runes with right click for every craft, and consumes as many Blank Runes as output items. The Blank Runes may be retreived by sneaking while right-clicking with an empty hand. The Block may be Right-Clicked with any chiseled block to camoflage it as the chisled block; similar to QPChiselTools 'Decorative' blocks. The chiseled block can be retreived by breaking the altar.",
 
     "hbrunemagicstats-title": "(RuneStory) Magical Stats:",
     "hbrunemagicstats-text": "There are two magic stats related to runecraft, your Magic Damage and your Free Cast Chance,Both can be viewed in your spell select menu. Damage is self explanatory. Your Free Cast chance increases the odds that a spell will consume no runes on cast. Spells that return runes on successful casts do not trigger Free Cast chance rolls.",

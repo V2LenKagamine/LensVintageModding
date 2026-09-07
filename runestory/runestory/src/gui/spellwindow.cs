@@ -93,13 +93,13 @@ namespace runestory
                 if (ImGui.Button("All Spells",smolsize)) { SetTab("all"); }
                 if (ImGui.Button("Tier 1", smolsize)) { SetTier("t1"); }
                 ImGui.SameLine();
-                if (ImGui.Button("Damage", smolsize)) { SetTab("dmg"); }
+                if (ImGui.Button(Lang.Get("runestory:dmg"), smolsize)) { SetTab("dmg"); }
                 if (ImGui.Button("Tier 2", smolsize)) { SetTier("t2"); }
                 ImGui.SameLine();
-                if (ImGui.Button("Utility", smolsize)) { SetTab("util"); }
+                if (ImGui.Button(Lang.Get("runestory:util"), smolsize)) { SetTab("util"); }
                 if (ImGui.Button("Tier 3", smolsize)) { SetTier("t3"); }
                 ImGui.SameLine();
-                if (ImGui.Button("Support", smolsize)) { SetTab("supp"); }
+                if (ImGui.Button(Lang.Get("runestory:supp"), smolsize)) { SetTab("supp"); }
                 if (ImGui.Button("Tier 4", smolsize)) { SetTier("t4"); }
                 if (ImGui.Button("Tier 5", smolsize)) { SetTier("t5"); }
                 ImGui.BeginChild("stats", new Vector2(220, 40));
