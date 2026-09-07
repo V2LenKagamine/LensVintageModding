@@ -37,7 +37,7 @@
     "runedissipatebuff": "You feel a subtle change as a temporary effect dissipates.",
     "mindexpand": "You feel your mind expand to the spell: ",
     "knownspell": "You already know this spell.",
-    "allknown": "You already know all you can learn from these.",
+    "allknown": "You already know all you can learn from this scroll.",
     "nowallknown": "You feel you have learned all you can for this level.",
     "crumbletodust": "Its knowledge absorbed, the item crumbles to dust!",
     "game:tabname-runestorytab": "RuneStory Items",
@@ -273,7 +273,7 @@
     "game:hbrunebag-text": "Rune Bags come in two varieties, Multi and regular. Regulars contain 1 less slots than their normal counterparts; but their stack size max is doubled.<br>Multi rune bags have 1 more slot than a normal inventory.<br> Both can only contain runes. Both can be upgraded with a relevant material when empty.",
 
     "hbrunespells-title": "(RuneStory) Spells:",
-    "hbrunespells-text": "Spells are tricks that consume runes to perform an action, you can hold SHIFT in your spell menu over a spell for a quick description of its use. Casting a spell invokes a cooldown based on how many runes the spell contained. More runes infers a longer cooldown.<br><br><strong>Elemental Types:</strong><br>There are four types of elements for a damage spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target,dealing DoT<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly reduce hunger rate for a bit after hit.<br><strong>Air</strong> spells deal much more knockback.<br><br>Spells have a tier, this is merely an indicator of how powerful a given spell is.",
+    "hbrunespells-text": "Spells are tricks that consume runes to perform an action, you can hold SHIFT in your spell menu over a spell for a quick description of its use. Casting a spell invokes a cooldown unique per spell. More Difficult tasks often require a long break from spellcasting afterwards.<br><br><strong>Elemental Types:</strong><br>There are four types of elements for a damage spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target,dealing DoT<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly heal the caster.<br><strong>Air</strong> spells deal much more knockback.<br><br>Spells have a tier, this is merely an indicator of how powerful a given spell is.",
 
     "game:hbmakingrunes-title": "(RuneStory) Making Runes:",
     "game:hbmakingrunes-text": "To craft a rune, simply throw relevant items on top or near the altar, and SNEAK + Rightclick while holding any Rune Wand. The Rune Altar must be filled with Blank Runes with right click for every craft, and consumes as many Blank Runes as output items. The Blank Runes may be retreived by sneaking while right-clicking with an empty hand. The Block may be Right-Clicked with any chiseled block to camoflage it as the chisled block; similar to QPChiselTools 'Decorative' blocks. The chiseled block can be retreived by breaking the altar.",
