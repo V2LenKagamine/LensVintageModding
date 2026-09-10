@@ -281,13 +281,13 @@
   "hbrunespells-title": "(RuneStory) Spells:",
   "hbrunespells-text": "Spells are tricks that consume runes to perform an action, you can hold SHIFT in your spell menu over a spell for a quick description of its use. Casting a spell invokes a cooldown unique per spell. More Difficult tasks often require a long break from spellcasting afterwards.<br><br><strong>Elemental Types:</strong><br>There are four types of elements for a damage spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target,dealing DoT<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly heal the caster.<br><strong>Air</strong> spells deal much more knockback.<br><br>Spells have a tier, this is merely an indicator of how powerful a given spell is.",
 
-  "game:hbmakingrunes-title": "(RuneStory) Making Runes:",
+  "game:hbmakingrunes-title": "(RuneStory) Making Runes OR Using the Rune Altar:",
   "game:hbmakingrunes-text": "To craft a rune, simply throw relevant items on top or near the altar, and SNEAK + Rightclick while holding any Rune Wand. The Rune Altar must be filled with the correct item with right click for every craft,and may require all items flickering in the handbook, or just one,but never only a few. The Block may be Right-Clicked with any chiseled block to camoflage it as the chisled block; similar to QPChiselTools 'Decorative' blocks. The chiseled block can be retreived by breaking the altar.<br><br><br>In example, the recipe showing 4 blank runes into water runes shows 3 possible inputs, but only one is needed per-craft. On the other side, the Water Paxel needs both pick and shovel head to make, not one or the other.",
 
   "hbrunemagicstats-title": "(RuneStory) Magical Stats:",
   "hbrunemagicstats-text": "There are two magic stats related to runecraft, your Magic Damage and your Free Cast Chance,Both can be viewed in your spell select menu. Damage is self explanatory. Your Free Cast chance increases the odds that a spell will consume no runes on cast. Spells that return runes on successful casts do not trigger Free Cast chance rolls.",
 
   "hblearningspells-title": "(RuneStory) Learning Spells",
-  "hblearningspells-text": "Spells can be learned with Spell Research items. By Default, however, you innately know all Tier 1 spells. When using a Spell Research item, you will always gain a random spell you do not know, and will be informed when you have learned every spell from a tier."
+  "hblearningspells-text": "Spells can be learned with Spell Research items. By Default, however, you innately know all Tier 1 spells. When using a Spell Research item, they can be filtered to hone on a specific type of spell, or simply left to chance.<br><br>You will be informed when you have learned all you can from a scroll tier, and also if a scroll is unable to teach you more based on its filters."
 
 }

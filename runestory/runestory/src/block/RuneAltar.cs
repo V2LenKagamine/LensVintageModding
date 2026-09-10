@@ -8,6 +8,7 @@ using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.Server;
 using Vintagestory.API.Util;
+using Vintagestory.Common;
 
 namespace runestory
 {
@@ -101,12 +102,13 @@ namespace runestory
 
             Entity[] nearAltar = Api.World.GetEntitiesInsideCuboid(Pos.AddCopy(-1, -1, -1), Pos.AddCopy(1, 1, 1), ent => ent.OnGround && ent is EntityItem);
 
-            for (int i = 0; i < Api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes.Where(rec => rec.SatisfiesAsIngredient(null,Contents)).Count(); i++)
+            var recipes = Api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes.Where(rec => rec.SatisfiesAsIngredient(null, Contents));
+            for (int i = 0; i < recipes.Count(); i++)
             {
-                BaseRuneAltar recipe = Api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes[i];
+                BaseRuneAltar recipe = recipes.ElementAt(i);
                 List<Entity> toEat = [];
                 bool valid = false;
-                int MaxCanMake = (Contents.StackSize / recipe.OutputItems.First().Value);
+                int MaxCanMake = (Contents.StackSize / recipe.CatalystAmt);
                 for (int j = 0; j < recipe.Reagents.Count; j++)
                 {
                     bool found = false;
@@ -120,7 +122,10 @@ namespace runestory
                                 EntityItem tmp = null;
                                 if (toEat.Count > 0)
                                 {
-                                    tmp = toEat.Where(boi => (boi as EntityItem).Itemstack.Collectible.Code == (ent as EntityItem).Itemstack.Collectible.Code)?.First() as EntityItem;
+                                    if (toEat.Any(boi => (boi as EntityItem).Itemstack.Collectible.Code == (ent as EntityItem).Itemstack.Collectible.Code))
+                                    {
+                                        tmp = toEat.Where(boi => (boi as EntityItem).Itemstack.Collectible.Code == (ent as EntityItem).Itemstack.Collectible.Code)?.First() as EntityItem;
+                                    }
                                 }
                                 if (tmp is not null)
                                 {
@@ -145,7 +150,10 @@ namespace runestory
                                 EntityItem tmp = null;
                                 if (toEat.Count > 0)
                                 {
-                                    tmp = toEat.Where(boi => (boi as EntityItem).Itemstack.Collectible.Code == (ent as EntityItem).Itemstack.Collectible.Code)?.First() as EntityItem;
+                                    if (toEat.Any(boi => (boi as EntityItem).Itemstack.Collectible.Code == (ent as EntityItem).Itemstack.Collectible.Code))
+                                    {
+                                        tmp = toEat.Where(boi => (boi as EntityItem).Itemstack.Collectible.Code == (ent as EntityItem).Itemstack.Collectible.Code)?.First() as EntityItem;
+                                    }
                                 }
                                 if (tmp is not null)
                                 {
@@ -189,8 +197,7 @@ namespace runestory
                         }
                     }
                 }
-                //Todo: Unhardcode
-                Contents.StackSize -= MaxCanMake * recipe.OutputItems.First().Value;
+                Contents.StackSize -= MaxCanMake * recipe.CatalystAmt;
                 if(Contents.StackSize<=0) { Contents = null; }
                 MarkDirty();
                 for (int i3 = 0; i3 < recipe.OutputItems.Count; i3++)
