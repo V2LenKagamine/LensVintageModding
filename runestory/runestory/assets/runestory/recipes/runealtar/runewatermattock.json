@@ -1,0 +1,76 @@
+[
+  {
+    "code": "makerunemattockcopp",
+    "enabled": true,
+    "attributes": {
+      "catalyst": { "runestory:rune-water": 4 },
+      "reagents": {
+        "game:pickaxehead-copper": 1,
+        "game:shovelhead-copper": 1
+      },
+      "outputs": {
+        "runestory:runicmattock-copper": 1
+      }
+    }
+  },
+
+  {
+    "code": "makerunemattockblack",
+    "enabled": true,
+    "attributes": {
+      "catalyst": { "runestory:rune-water": 4 },
+      "reagents": {
+        "game:pickaxehead-blackbronze": 1,
+        "game:shovelhead-blackbronze": 1
+      },
+      "outputs": {
+        "runestory:runicmattock-blackbronze": 1
+      }
+    }
+  },
+
+  {
+    "code": "makerunemattockgold",
+    "enabled": true,
+    "attributes": {
+      "catalyst": { "runestory:rune-water": 4 },
+      "reagents": {
+        "game:pickaxehead-gold": 1,
+        "game:shovelhead-gold": 1
+      },
+      "outputs": {
+        "runestory:runicmattock-gold": 1
+      }
+    }
+  },
+
+  {
+    "code": "makerunemattocksilv",
+    "enabled": true,
+    "attributes": {
+      "catalyst": { "runestory:rune-water": 4 },
+      "reagents": {
+        "game:pickaxehead-silver": 1,
+        "game:shovelhead-silver": 1
+      },
+      "outputs": {
+        "runestory:runicmattock-silver": 1
+      }
+    }
+  },
+
+  {
+    "code": "makerunemattockiron",
+    "enabled": true,
+    "attributes": {
+      "catalyst": { "runestory:rune-water": 4 },
+      "reagents": {
+        "game:pickaxehead-iron": 1,
+        "game:shovelhead-iron": 1
+      },
+      "outputs": {
+        "runestory:runicmattock-iron": 1
+      }
+    }
+  }
+]

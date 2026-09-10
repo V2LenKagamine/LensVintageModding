@@ -162,6 +162,7 @@ namespace runestory
 
             api.RegisterCollectibleBehaviorClass("runepouchbag", typeof(CollectibleRuneBag));
             api.RegisterItemClass("runicpickaxeitem", typeof(RunePickaxe));
+            api.RegisterItemClass("runicmattockitem", typeof(RuneWaterMattock));
             api.RegisterItemClass("runicchiselitem", typeof(RuneChisel));
             api.RegisterItemClass("runemagicresearchclass", typeof(RunicResearch));
             api.RegisterItemClass("goodberryitemclass", typeof(GoodBerryItem));

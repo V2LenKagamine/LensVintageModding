@@ -49,12 +49,13 @@ namespace runestory.src.recipestuff
 
     public static class HandbookExtensions
     {
-        public static List<ItemStack> GetRuneFrom(CollectibleObject collectible, ICoreAPI api)
+        public static Dictionary<ItemStack,List<ItemStack>> GetRuneFrom(CollectibleObject collectible, ICoreAPI api)
         {
-            List<ItemStack> Output = [];
+            Dictionary<ItemStack, List<ItemStack>> Output = [];
             foreach (BaseRuneAltar rec in api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes.Where(pos =>
             {
                 bool found = false;
+                found = collectible.Code.ToString() == pos.Catalyst;
                 for (int i = 0; i < pos.Reagents.Count(); i++)
                 {
                     if (pos.Reagents.ElementAt(i).Key.Contains('*'))
@@ -70,16 +71,40 @@ namespace runestory.src.recipestuff
                 return found;
             }))
             {
+                ItemStack alpha = null;
+                if (api.World.GetItem(rec.Catalyst) is not null)
+                {
+                    alpha = new(api.World.GetItem(rec.Catalyst), rec.CatalystAmt);
+                }
+                else if (api.World.GetBlock(rec.Catalyst) is not null)
+                {
+                    alpha = new(api.World.GetBlock(rec.Catalyst), rec.CatalystAmt);
+                }
+                List<ItemStack> beta = [];
                 for (int i2 = 0; i2 < rec.OutputItems.Count(); i2++)
                 {
                     KeyValuePair<string, int> targ = rec.OutputItems.ElementAt(i2);
                     if (api.World.GetItem(targ.Key) is not null)
                     {
-                        Output.Add(new(api.World.GetItem(targ.Key), targ.Value));
+                        beta.Add(new(api.World.GetItem(targ.Key), targ.Value));
                     }
                     else if (api.World.GetBlock(targ.Key) is not null)
                     {
-                        Output.Add(new(api.World.GetBlock(targ.Key), targ.Value));
+                        beta.Add(new(api.World.GetBlock(targ.Key), targ.Value));
+                    }
+                }
+                if (!Output.Any(kvp => kvp.Key.StackSize == alpha.StackSize && kvp.Key.Collectible == alpha.Collectible))
+                {
+                    Output.Add(alpha, beta);
+                }
+                else
+                {
+                    foreach (ItemStack stacc in beta)
+                    {
+                        if (!Output.First(kvp => kvp.Key.StackSize == alpha.StackSize && kvp.Key.Collectible == alpha.Collectible).Value.Any(ksp => ksp.Collectible == stacc.Collectible && ksp.StackSize == ksp.StackSize))
+                        {
+                            Output.First(kvp => kvp.Key.StackSize == alpha.StackSize && kvp.Key.Collectible == alpha.Collectible).Value.Add(stacc);
+                        }
                     }
                 }
             }
@@ -87,27 +112,31 @@ namespace runestory.src.recipestuff
         }
 
 
-        public static List<ItemStack> GetRuneInto(CollectibleObject collectible, ICoreAPI api)
+        public static Dictionary<ItemStack, List<ItemStack>> GetRuneInto(CollectibleObject collectible, ICoreAPI api)
         {
-            List<ItemStack> Output = [];
+            Dictionary<ItemStack, List<ItemStack>> Output = [];
             foreach (BaseRuneAltar rec in api.ModLoader.GetModSystem<RunestoryMS>().AltarRecipes.Where(pos =>
             {
                 bool found = false;
+                found = collectible.Code.ToString() == pos.Catalyst;
                 for (int i = 0; i < pos.OutputItems.Count(); i++)
                 {
-                    if (pos.OutputItems.ElementAt(i).Key.Contains('*'))
-                    {
-                        found = WildcardUtil.Match(pos.OutputItems.ElementAt(i).Key, collectible.Code.ToString());
-                    }
-                    else
-                    {
-                        found = collectible.Code.ToString() == pos.OutputItems.ElementAt(i).Key;
-                    }
+                    found = collectible.Code.ToString() == pos.OutputItems.ElementAt(i).Key;
                     if (found) { break; }
                 }
                 return found;
             }))
             {
+                ItemStack alpha = null;
+                if (api.World.GetItem(rec.Catalyst) is not null)
+                {
+                    alpha = new(api.World.GetItem(rec.Catalyst), rec.CatalystAmt);
+                }
+                else if (api.World.GetBlock(rec.Catalyst) is not null)
+                {
+                    alpha = new(api.World.GetBlock(rec.Catalyst), rec.CatalystAmt);
+                }
+                List<ItemStack> beta = [];
                 for (int i2 = 0; i2 < rec.Reagents.Count(); i2++)
                 {
                     KeyValuePair<string, int> targ = rec.Reagents.ElementAt(i2);
@@ -118,22 +147,36 @@ namespace runestory.src.recipestuff
                         {
                             if (api.World.GetItem(obj.Code) is not null)
                             {
-                                Output.Add(new(api.World.GetItem(obj.Code), targ.Value));
+                                beta.Add(new(api.World.GetItem(obj.Code), targ.Value));
                             }
-                            else if (api.World.GetBlock(targ.Key) is not null)
+                            else if (api.World.GetBlock(obj.Code) is not null)
                             {
-                                Output.Add(new(api.World.GetBlock(obj.Code), targ.Value));
+                                beta.Add(new(api.World.GetBlock(obj.Code), targ.Value));
                             }
                         }
                     } else
                     {
                         if (api.World.GetItem(targ.Key) is not null)
                         {
-                            Output.Add(new(api.World.GetItem(targ.Key), targ.Value));
+                            beta.Add(new(api.World.GetItem(targ.Key), targ.Value));
                         }
                         else if (api.World.GetBlock(targ.Key) is not null)
                         {
-                            Output.Add(new(api.World.GetBlock(targ.Key), targ.Value));
+                            beta.Add(new(api.World.GetBlock(targ.Key), targ.Value));
+                        }
+                    }
+                }
+                if (!Output.Any(kvp => kvp.Key.StackSize == alpha.StackSize && kvp.Key.Collectible == alpha.Collectible)) 
+                { 
+                    Output.Add(alpha, beta); 
+                } 
+                else
+                {
+                    foreach (ItemStack stacc in beta)
+                    {
+                        if (!Output.First(kvp => kvp.Key.StackSize == alpha.StackSize && kvp.Key.Collectible == alpha.Collectible).Value.Any(ksp => ksp.Collectible == stacc.Collectible && ksp.StackSize == ksp.StackSize))
+                        {
+                            Output.First(kvp => kvp.Key.StackSize == alpha.StackSize && kvp.Key.Collectible == alpha.Collectible).Value.Add(stacc);
                         }
                     }
                 }
@@ -240,7 +283,7 @@ namespace runestory.src.recipestuff
             ActionConsumable<string> openDetailPageFor,
             bool haveText)
         {
-            List<ItemStack> itemStackList1 = GetRuneFrom(itemStack.Collectible,capi);
+            Dictionary<ItemStack, List<ItemStack>> itemStackList1 = GetRuneFrom(itemStack.Collectible,capi);
             if (itemStackList1.Count() == 0) return haveText;
             ClearFloatTextComponent floatTextComponent1 = new ClearFloatTextComponent(capi, 7f);
             bool haveHeading =
@@ -248,21 +291,29 @@ namespace runestory.src.recipestuff
             if (!haveHeading)
                 AddHeadingComponent(components, capi, Lang.Get("runestory:runecraftsinto"), ref haveText);
             components.Add(floatTextComponent1);
-            AddSubHeadingComponent(components, capi, openDetailPageFor, Lang.Get("runestory:atrunealtar"), null);
             while (itemStackList1.Count() > 0)
             {
-                ItemStack itemstackgroup = itemStackList1.ElementAt(0);
-                itemStackList1.RemoveAt(0);
-                if (itemstackgroup != null)
+                RichTextComponent richTextComponent = new RichTextComponent(capi, "• " + Lang.Get("runestory:atrunealtar"), CairoFont.WhiteSmallText());
+                richTextComponent.PaddingLeft = 2.0;
+                components.Add(richTextComponent);
+                ItemStack itemstackgroup = itemStackList1.ElementAt(0).Key;
+                int wawa;
+                ItemstackTextComponent group = new(capi,itemstackgroup,30.0,0,EnumFloat.Inline, cs => wawa = openDetailPageFor(GuiHandbookItemStackPage.PageCodeForStack(cs)) ? 1 : 0);
+                group.ShowStacksize = true;
+                group.PaddingLeft = 2;
+                components.Add(group);
+                components.Add(new RichTextComponent(capi, "\n", CairoFont.WhiteSmallText()));
+                if (itemStackList1.ElementAt(0).Value?.ElementAt(0) != null)
                 {
                     int num2;
-                    SlideshowItemstackTextComponent itemstackTextComponent = new SlideshowItemstackTextComponent(capi, itemstackgroup, itemStackList1, 40.0, EnumFloat.Inline, cs => num2 = openDetailPageFor(GuiHandbookItemStackPage.PageCodeForStack(cs)) ? 1 : 0);
+                    SlideshowItemstackTextComponent itemstackTextComponent = new SlideshowItemstackTextComponent(capi, itemStackList1.ElementAt(0).Value.ToArray(), 40.0, EnumFloat.Inline, cs => num2 = openDetailPageFor(GuiHandbookItemStackPage.PageCodeForStack(cs)) ? 1 : 0);
                     itemstackTextComponent.ShowStackSize = true;
                     itemstackTextComponent.PaddingLeft = 2;
                     components.Add(itemstackTextComponent);
                 }
+                itemStackList1.Remove(itemStackList1.ElementAt(0).Key);
+                components.Add(new RichTextComponent(capi, "\n", CairoFont.WhiteSmallText()));
             }
-            components.Add(new RichTextComponent(capi, "\n", CairoFont.WhiteSmallText()));
             return true;
         }
 
@@ -274,7 +325,7 @@ namespace runestory.src.recipestuff
           ActionConsumable<string> openDetailPageFor,
           bool haveText)
         {
-            List<ItemStack> recipeOutstacks = GetRuneInto(itemStack.Collectible,capi);
+            Dictionary<ItemStack, List<ItemStack>> recipeOutstacks = GetRuneInto(itemStack.Collectible,capi);
             if (recipeOutstacks.Count() <=0) return haveText;
             ClearFloatTextComponent floatTextComponent1 = new ClearFloatTextComponent(capi, 7f);
             bool haveHeading =
@@ -282,21 +333,29 @@ namespace runestory.src.recipestuff
             if (!haveHeading)
                 AddHeadingComponent(components, capi, Lang.Get("runestory:createdbyrunealtar"), ref haveText);
             components.Add(floatTextComponent1);
-            AddSubHeadingComponent(components, capi, openDetailPageFor, Lang.Get("runestory:atrunealtar"), null);
             while (recipeOutstacks.Count() > 0)
             {
-                ItemStack itemstackgroup = recipeOutstacks.ElementAt(0);
-                recipeOutstacks.RemoveAt(0);
-                if (itemstackgroup != null)
+                RichTextComponent richTextComponent = new RichTextComponent(capi, "• " + Lang.Get("runestory:atrunealtar"), CairoFont.WhiteSmallText());
+                richTextComponent.PaddingLeft = 2.0;
+                components.Add(richTextComponent);
+                ItemStack itemstackgroup = recipeOutstacks.ElementAt(0).Key;
+                int wawa;
+                ItemstackTextComponent group = new(capi, itemstackgroup, 30.0, 0, EnumFloat.Inline, cs => wawa = openDetailPageFor(GuiHandbookItemStackPage.PageCodeForStack(cs)) ? 1 : 0);
+                group.ShowStacksize = true;
+                group.PaddingLeft = 2;
+                components.Add(group);
+                components.Add(new RichTextComponent(capi, "\n", CairoFont.WhiteSmallText()));
+                if (recipeOutstacks.ElementAt(0).Value?.ElementAt(0) != null)
                 {
                     int num2;
-                    SlideshowItemstackTextComponent itemstackTextComponent = new SlideshowItemstackTextComponent(capi, itemstackgroup, recipeOutstacks, 40.0, EnumFloat.Inline, cs => num2 = openDetailPageFor(GuiHandbookItemStackPage.PageCodeForStack(cs)) ? 1 : 0);
+                    SlideshowItemstackTextComponent itemstackTextComponent = new SlideshowItemstackTextComponent(capi, recipeOutstacks.ElementAt(0).Value.ToArray(), 40.0, EnumFloat.Inline, cs => num2 = openDetailPageFor(GuiHandbookItemStackPage.PageCodeForStack(cs)) ? 1 : 0);
                     itemstackTextComponent.ShowStackSize = true;
                     itemstackTextComponent.PaddingLeft = 2;
                     components.Add(itemstackTextComponent);
                 }
+                recipeOutstacks.Remove(recipeOutstacks.ElementAt(0).Key);
+                components.Add(new RichTextComponent(capi, "\n", CairoFont.WhiteSmallText()));
             }
-            components.Add(new RichTextComponent(capi, "\n", CairoFont.WhiteSmallText()));
             return true;
         }
 

@@ -30,6 +30,7 @@ namespace runestory
         public Dictionary<string, int> OutputItems;
 
         public string Catalyst{ get; set; }
+        public int CatalystAmt { get; set; }
         Dictionary<string, int> BaseRuneAltarI<BaseRuneAltar>.Reagents => Reagents;
         Dictionary<string, int> BaseRuneAltarI<BaseRuneAltar>.OutputItems => OutputItems;
 
@@ -40,14 +41,14 @@ namespace runestory
 
             for (int i = 0; i < Reagents.Count; i++) { reagClone.Add(Reagents.ElementAt(i).Key, Reagents.ElementAt(i).Value); }
             for (int i = 0; i < OutputItems.Count; i++) { outclone.Add(OutputItems.ElementAt(i).Key, OutputItems.ElementAt(i).Value); }
-            return new BaseRuneAltar { Code = this.Code, Attributes = this.Attributes, Reagents = reagClone ,OutputItems = outclone, Catalyst = this.Catalyst};
+            return new BaseRuneAltar { Code = this.Code, Attributes = this.Attributes, Reagents = reagClone ,OutputItems = outclone, Catalyst = this.Catalyst, CatalystAmt = this.CatalystAmt};
         }
 
         public bool SatisfiesAsIngredient(int? index, ItemStack inputStack)
         {
             if (index is null)
             {
-                if (Catalyst == inputStack.Collectible.Code.ToString()) { return true; }
+                if (Catalyst == inputStack.Collectible.Code.ToString() && CatalystAmt <= inputStack.StackSize) { return true; }
                 if (WildcardUtil.Match(new AssetLocation(Catalyst), inputStack.Collectible.Code)) { return true; }
                 return false;
             }
@@ -74,9 +75,11 @@ namespace runestory
                 }
                 if (Attributes["catalyst"].Exists)
                 {
-                    Catalyst = Attributes["catalyst"].AsString();
+                    Dictionary<string, int>? tmp = Attributes["catalyst"].AsObject<Dictionary<string, int>>();
+                    Catalyst = tmp.Keys.First();
+                    CatalystAmt = tmp.Values.FirstOrDefault(int.MinValue);
                 }
-                if(Catalyst is not null && OutputItems is not null && Reagents is not null) { return true; }
+                if (Catalyst is not null && CatalystAmt > int.MinValue && OutputItems is not null && Reagents is not null) { return true; }
             }
             return false;
         }
@@ -103,6 +106,7 @@ namespace runestory
                 writer.Write(OutputItems.ElementAt(i).Value);
             }
             writer.Write(Catalyst);
+            writer.Write(CatalystAmt);
         }
         public void FromBytes(BinaryReader reader, IWorldAccessor resolver)
         {
@@ -121,6 +125,7 @@ namespace runestory
                 OutputItems.Add(reader.ReadString(), reader.ReadInt32());
             }
             Catalyst = reader.ReadString();
+            CatalystAmt = reader.ReadInt32();
         }
     }
 }

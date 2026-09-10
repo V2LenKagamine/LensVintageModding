@@ -5,10 +5,10 @@
   "authors": [
     "Len Kagamine"
   ],
-  "description": "Runes to cast magic spells.Beta, Expect bugs and crashes.",
-  "version": "0.9.12",
+  "description": "Runes for spells, magic pillars and magic-themed QoL/Building tools.",
+  "version": "1.0.0",
   "dependencies": {
-    "game": "1.22.0",
+    "game": "1.22.7",
     "vsimgui": ""
   }
 }

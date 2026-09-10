@@ -2,7 +2,7 @@
     "code": "makesoulrune-tempgear",
     "enabled": true,
     "attributes": {
-        "catalyst": "runestory:rune-blank",
+      "catalyst": { "runestory:rune-blank": 16 },
         "reagents": {
             "game:gear-temporal": 1
         },

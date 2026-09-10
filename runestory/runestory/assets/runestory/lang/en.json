@@ -1,287 +1,293 @@
 {
-    "whyamihere": "justtosuffer",
-    "createdbyrunealtar": "Runecrafted from",
-    "runecraftsinto": "Runecrafts into",
-    "atrunealtar": "Rune Altar With Blank Runes",
+  "whyamihere": "justtosuffer",
+  "createdbyrunealtar": "Runecrafted from",
+  "runecraftsinto": "Runecrafts into",
+  "atrunealtar": "Rune Altar With Catalyst: ",
 
-    "createdbyrefine": "Refined from",
-    "refinesinto": "Refines into",
-    "atrefine": "Refine Spell",
+  "createdbyrefine": "Refined from",
+  "refinesinto": "Refines into",
+  "atrefine": "Refine Spell",
 
-    "walkspeed": "Walkspeed",
-    "oreDropRate": "Bonus Ore",
-    "miningSpeedMul": "Mining Speed",
-    "hungerrate": "Hunger Rate",
-    "meleeWeaponsDamage": "Melee Damage",
-    "armorDurabilityLoss": "Armor Durability Loss",
-    "rangedWeaponsAcc": "Ranged Weapon Accuracy",
-    "rangedWeaponsDamage": "Ranged Weapon Damage",
-    "rangedWeaponsSpeed": "Ranged Weapon Draw Time",
-    "magicWeaponsDamage": "Magic Spell Damage",
+  "walkspeed": "Walkspeed",
+  "oreDropRate": "Bonus Ore",
+  "miningSpeedMul": "Mining Speed",
+  "hungerrate": "Hunger Rate",
+  "meleeWeaponsDamage": "Melee Damage",
+  "armorDurabilityLoss": "Armor Durability Loss",
+  "rangedWeaponsAcc": "Ranged Weapon Accuracy",
+  "rangedWeaponsDamage": "Ranged Weapon Damage",
+  "rangedWeaponsSpeed": "Ranged Weapon Draw Time",
+  "magicWeaponsDamage": "Magic Spell Damage",
   "runeConsumeChance": "Free Cast Chance",
 
   "supp": "Support",
   "dmg": "Damage",
   "util": "Utility",
 
-    "windbuffon": "You feel lighter on your feet.",
-    "mendingmist": "You feel a soft cloak of water surround you.",
-    "dwarfbuffon": "You feel in tune with the soil and stone.",
-    "warcryon": "You feel ready to slay an army!",
-    "predauraon": "You feel the call of the hunt.",
+  "windbuffon": "You feel lighter on your feet.",
+  "mendingmist": "You feel a soft cloak of water surround you.",
+  "dwarfbuffon": "You feel in tune with the soil and stone.",
+  "warcryon": "You feel ready to slay an army!",
+  "predauraon": "You feel the call of the hunt.",
 
-    "toggle-spell": "(RuneStory) Toggle Spell Select Menu",
-    "cast-spell": "(RuneStory) Cast Currently Selected Spell",
-    "cast-fail": "You are missing something to cast that...",
-    "cast-fail-toosoon": "You are still tired from the last spell, slow down!",
-    "runedissipatebuff": "You feel a subtle change as a temporary effect dissipates.",
-    "mindexpand": "You feel your mind expand to the spell: ",
-    "knownspell": "You already know this spell.",
-    "allknown": "You already know all you can learn from this scroll.",
-    "nowallknown": "You feel you have learned all you can for this level.",
-    "crumbletodust": "Its knowledge absorbed, the item crumbles to dust!",
-    "game:tabname-runestorytab": "RuneStory Items",
-    "magicdamagestat": "Magic Damage: ",
-    "magiccdreduction": "Cooldown Duration: ",
+  "toggle-spell": "(RuneStory) Toggle Spell Select Menu",
+  "cast-spell": "(RuneStory) Cast Currently Selected Spell",
+  "cast-fail": "You are missing something to cast that...",
+  "cast-fail-toosoon": "You are still tired from the last spell, slow down!",
+  "runedissipatebuff": "You feel a subtle change as a temporary effect dissipates.",
+  "mindexpand": "You feel your mind expand to the spell: ",
+  "knownspell": "You already know this spell.",
+  "allknown": "You already know all you can learn from this scroll.",
+  "nowallknown": "You feel you have learned all you can for this level.",
+  "crumbletodust": "Its knowledge absorbed, the item crumbles to dust!",
+  "game:tabname-runestorytab": "RuneStory Items",
+  "magicdamagestat": "Magic Damage: ",
+  "magiccdreduction": "Cooldown Duration: ",
 
-    "block-runepylon-inactive": "Runic Pylon",
-    "blockdesc-runepylon-inactive": "Sits still, Looks pretty.",
-    "block-runepylon-fertile": "Fertile Runic Pylon",
-    "blockdesc-runepylon-fertile": "Restores 1 percent of N,P, or K to soil within a 4 horizontal blocks radius and up to 5 blocks below it occasionally.",
-    "block-runepylon-temporal": "Temporally Stable Runic Pylon",
-    "blockdesc-runepylon-temporal": "Restores the Temporal Stability of any players within a 14 block radius every 15 seconds.",
+  "block-runepylon-inactive": "Runic Pylon",
+  "blockdesc-runepylon-inactive": "Sits still, Looks pretty.",
+  "block-runepylon-fertile": "Fertile Runic Pylon",
+  "blockdesc-runepylon-fertile": "Restores 1 percent of N,P, or K to soil within a 4 horizontal blocks radius and up to 5 blocks below it occasionally.",
+  "block-runepylon-temporal": "Temporally Stable Runic Pylon",
+  "blockdesc-runepylon-temporal": "Restores the Temporal Stability of any players within a 14 block radius every 15 seconds.",
 
 
-    "nodsc": "This spell has no lang describing it! Is the Attribute 'langCode' set?",
+  "nodsc": "This spell has no lang describing it! Is the Attribute 'langCode' set?",
 
-    "makestick": "Wind Shears",
-    "makestickdsc": "Casts a projectile that turns Leaves into Sticks in a 3x3x3 area where it lands.",
+  "makestick": "Wind Shears",
+  "makestickdsc": "Casts a projectile that turns Leaves into Sticks in a 3x3x3 area where it lands.",
 
-    "healother": "Mend Bolt",
-    "healotherdsc": "Casts a projectile that heals the target, or the nearest to its landing point, 9 HP over 15 seconds.",
+  "healother": "Mend Bolt",
+  "healotherdsc": "Casts a projectile that heals the target, or the nearest to its landing point, 9 HP over 15 seconds.",
 
-    "healself": "Mend Self",
-    "healselfdsc": "Heals the caster 8 HP over 15 seconds.",
+  "healself": "Mend Self",
+  "healselfdsc": "Heals the caster 8 HP over 15 seconds.",
 
-    "groupheal": "Mend Group",
-    "grouphealdsc": "Heal yourself, and any nearby players, for 6 + 1.5 HP per target, over 15 seconds.",
+  "groupheal": "Mend Group",
+  "grouphealdsc": "Heal yourself, and any nearby players, for 6 + 1.5 HP per target, over 15 seconds.",
 
-    "windstore": "Wind-Store",
-    "windstoredsc": "When activated while sneaking: The projectile will mark your currently selected block on landing and refund runes. Otherwise: Send all items in a 2 block radius from landing point to location, or the inventory there, if possible.",
+  "windstore": "Wind-Store",
+  "windstoredsc": "When activated while sneaking: The projectile will mark your currently selected block on landing and refund runes. Otherwise: Send all items in a 2 block radius from landing point to location, or the inventory there, if possible.",
 
-    "ignitespell": "Ignite",
-    "ignitespelldsc": "Casts a projectile that ignites what it hits. Charcoal pits, pitkilns, or unfortunate creatures. Does no direct damage.",
+  "ignitespell": "Ignite",
+  "ignitespelldsc": "Casts a projectile that ignites what it hits. Charcoal pits, pitkilns, or unfortunate creatures. Does no direct damage.",
 
-    "superheat": "Superheat",
-    "superheatdsc": "Increases the temperature of your mainhand item to 1300C,bigger itemstacks will have their temperature increased less.",
+  "superheat": "Superheat",
+  "superheatdsc": "Increases the temperature of your mainhand item to 1300C,bigger itemstacks will have their temperature increased less.",
 
-    "foragespell": "Summon Forage",
-    "foragespelldsc": "Summons a random seed, and if you're lucky, a random fruit.",
+  "foragespell": "Summon Forage",
+  "foragespelldsc": "Summons a random seed, and if you're lucky, a random fruit.",
 
-    "magelight": "Rune of Light",
-    "magelightdsc": "Summons a rune that provides a temporary light source before decaying back into a Blank Rune",
+  "magelight": "Rune of Light",
+  "magelightdsc": "Summons a rune that provides a temporary light source before decaying back into a Blank Rune",
 
-    "desecrate": "Desecrate Corpse",
-    "desecratedsc": "Casts a projectile that harvests the nearest corpse with 20 percent bonus efficiency.",
+  "desecrate": "Desecrate Corpse",
+  "desecratedsc": "Casts a projectile that harvests the nearest corpse with 20 percent bonus efficiency.",
 
-    "goodberry": "Good Berry",
-    "goodberrydsc": "Summons a magical berry that fully satiates you.",
+  "goodberry": "Good Berry",
+  "goodberrydsc": "Summons a magical berry that fully satiates you.",
 
-    "bonestopeaches": "Bones to Peaches",
-    "bonestopeachesdsc": "Turns up to 8 bones in your inventory into peaches.",
+  "bonestopeaches": "Bones to Peaches",
+  "bonestopeachesdsc": "Turns up to 8 bones in your inventory into peaches.",
 
-    "fertilizespell": "Restore Nutrients",
-    "fertilizespelldsc": "Tries to give 5 percent N,K,and P to the farmland you are targeting, or the farmland under the crop you are targeting. Ignores NKP cap.",
+  "fertilizespell": "Restore Nutrients",
+  "fertilizespelldsc": "Tries to give 5 percent N,K,and P to the farmland you are targeting, or the farmland under the crop you are targeting. Ignores NKP cap.",
 
-    "rockblast": "Boulder-Bust Blast",
-    "rockblastdsc": "Summons a projectile that creates a rock-blasting explosion 5 blocks wide on landing. Capable of Self Damage!",
+  "rockblast": "Boulder-Bust Blast",
+  "rockblastdsc": "Summons a projectile that creates a rock-blasting explosion 5 blocks wide on landing. Capable of Self Damage!",
 
-    "dwarfbless": "Dwarven Blessing",
-    "dwarfblessdsc": "Grants you and any nearby players 20 percent mining speed and 5 percent ore drop rate for 2 minutes, 30 seconds.",
+  "dwarfbless": "Dwarven Blessing",
+  "dwarfblessdsc": "Grants you and any nearby players 20 percent mining speed and 5 percent ore drop rate for 2 minutes, 30 seconds.",
 
-    "warcry": "War Cry",
-    "warcrydsc": "Grants you and nearby players 20 percent melee damage and reduces armor damage by 20 percent for 2 minutes, 30 seconds.",
+  "warcry": "War Cry",
+  "warcrydsc": "Grants you and nearby players 20 percent melee damage and reduces armor damage by 20 percent for 2 minutes, 30 seconds.",
 
-    "windfeet": "Wind Feet",
-    "windfeetdsc": "Grants you and any nearby players 25 percent walkspeed for 5 minutes.",
+  "windfeet": "Wind Feet",
+  "windfeetdsc": "Grants you and any nearby players 25 percent walkspeed for 5 minutes.",
 
-    "watercloak": "Mending Mist Cloak",
-    "watercloakdsc": "Grants you and any nearby players 40 health over 5 minutes",
+  "watercloak": "Mending Mist Cloak",
+  "watercloakdsc": "Grants you and any nearby players 40 health over 5 minutes",
 
-    "flowerfield": "Spring's Blossom",
-    "flowerfielddsc": "Grows a random vanilla flower type in a 4 block radius around you.",
+  "flowerfield": "Spring's Blossom",
+  "flowerfielddsc": "Grows a random vanilla flower type in a 4 block radius around you.",
 
-    "enticebees": "Entice Bees",
-    "enticebeesdsc": "Casts a projectile that tries to fill a nearby bee-skep with a roaming colony of bees.",
+  "enticebees": "Entice Bees",
+  "enticebeesdsc": "Casts a projectile that tries to fill a nearby bee-skep with a roaming colony of bees.",
 
-    "predatoryaura": "Predatory Instincts",
-    "predatoryauradsc": "Grants you and any nearby players 30 percent walkspeed and 10 percent to ranged damage, accuracy, and use speed for 2 minutes, 30 seconds.",
+  "predatoryaura": "Predatory Instincts",
+  "predatoryauradsc": "Grants you and any nearby players 30 percent walkspeed and 10 percent to ranged damage, accuracy, and use speed for 2 minutes, 30 seconds.",
 
-    "growsapling": "Sapling Skip",
-    "growsaplingdsc": "Casts a projectile that tries to remove 3 days from the [already sprouted] tree sapling nearest to its landing point.",
+  "growsapling": "Sapling Skip",
+  "growsaplingdsc": "Casts a projectile that tries to remove 3 days from the [already sprouted] tree sapling nearest to its landing point.",
 
-    "invoketrust": "Domesticate",
-    "invoketrustdsc": "Casts a projectile that raises the generation of a random nearby animal under generation 3 by one.",
+  "invoketrust": "Domesticate",
+  "invoketrustdsc": "Casts a projectile that raises the generation of a random nearby animal under generation 3 by one.",
 
-    "refinespell": "Refine",
-    "refinespelldsc": "Refines, or exchanges, many items into many other items, your Handbook should tell you more.",
+  "refinespell": "Refine",
+  "refinespelldsc": "Refines, or exchanges, many items into many other items, your Handbook should tell you more.",
 
-    "saveself": "Panic Heal",
-    "saveselfdsc": "Heals 5 HP instantly, then 9 more over 20 seconds.",
+  "saveself": "Panic Heal",
+  "saveselfdsc": "Heals 5 HP instantly, then 9 more over 20 seconds.",
 
-    "saveother": "Panic Heal Other",
-    "saveotherdsc": "Casts a projectile that Heals 5 HP instantly, then 9 more over 20 seconds.",
+  "saveother": "Panic Heal Other",
+  "saveotherdsc": "Casts a projectile that Heals 5 HP instantly, then 9 more over 20 seconds.",
 
-    "sproutcutspell": "Sprout Cutting",
-    "sproutcutspelldsc": "Casts a projectile that coerces a berry bush nearby to release a single traitless sprout.",
+  "sproutcutspell": "Sprout Cutting",
+  "sproutcutspelldsc": "Casts a projectile that coerces a berry bush nearby to release a single traitless sprout.",
 
-    "wormspell": "Fisher's Friend",
-    "wormspelldsc": "Casts a projectile that occasionally summons worms from fertile soil.",
+  "wormspell": "Fisher's Friend",
+  "wormspelldsc": "Casts a projectile that occasionally summons worms from fertile soil.",
 
-    "menditem": "Mend Item",
-    "menditemdsc": "Repairs the item in your hand by 10 percent of its max durability.",
+  "menditem": "Mend Item",
+  "menditemdsc": "Repairs the item in your hand by 10 percent of its max durability.",
 
-    "airbolt": "Air Bolt",
-    "airboltdsc": "A simple Projectile spell. Acceptable damage.",
-
-    "airsurge": "Air Surge",
-    "airsurgedsc": "A simple Projectile spell. Decent damage.",
-
-    "airblast": "Air Blast",
-    "airblastdsc": "A simple Projectile spell. Has a small AOE. Good damage.",
-
-    "airexplosion": "Air Explosion",
-    "airexplosiondsc": "A simple Projectile spell. Has a moderate AOE. Great damage.",
-
-    "airdoom": "Air Destruction",
-    "airdoomdsc": "A simple Projectile spell. Has a large AOE. Excellent damage.",
-
-    "earthbolt": "Earthen Bolt",
-    "earthboltdsc": "A simple Projectile spell. Acceptable damage.",
-
-    "earthsurge": "Earthen Surge",
-    "earthsurgedsc": "A simple Projectile spell. Decent damage.",
-
-    "earthblast": "Earthen Blast",
-    "earthblastdsc": "A simple Projectile spell. Has a small AOE. Good damage.",
-
-    "earthexplosion": "Earthen Explosion",
-    "earthexplosiondsc": "A simple Projectile spell. Has a moderate AOE. Great damage.",
-
-    "earthdoom": "Earthen Destruction",
-    "earthdoomdsc": "A simple Projectile spell. Has a large AOE. Excellent damage.",
-
-    "firebolt": "Firey Bolt",
-    "fireboltdsc": "A simple Projectile spell. Acceptable damage.",
-
-    "firesurge": "Firey Surge",
-    "firesurgedsc": "A simple Projectile spell. Decent damage.",
-
-    "fireblast": "Firey Blast",
-    "fireblastdsc": "A simple Projectile spell. Has a small AOE. Good damage.",
-
-    "fireexplosion": "Firey Explosion",
-    "fireexplosiondsc": "A simple Projectile spell. Has a moderate AOE. Great damage.",
-
-    "firedoom": "Firey Destruction",
-    "firedoomdsc": "A simple Projectile spell. Has a large AOE. Excellent damage.",
-
-    "waterbolt": "Water Bolt",
-    "waterboltdsc": "A simple Projectile spell. Acceptable damage.",
-
-    "watersurge": "Water Surge",
-    "watersurgedsc": "A simple Projectile spell. Decent damage.",
-
-    "waterblast": "Water Blast",
-    "waterblastdsc": "A simple Projectile spell. Has a small AOE. Good damage.",
-
-    "waterexplosion": "Water Explosion",
-    "waterexplosiondsc": "A simple Projectile spell. Has a moderate AOE. Great damage.",
-
-    "waterdoom": "Water Destruction",
-    "waterdoomdsc": "A simple Projectile spell. Has a large AOE. Excellent damage.",
-
-
-
-    "item-rune-blank": "Blank Rune",
-    "itemdesc-rune-blank": "Can be used to make other runes when in a Rune Altar. Search 'Rune' in the handbook!",
-    "item-rune-water": "Water Rune",
-    "itemdesc-rune-water": "Smooth to the touch.",
-    "item-rune-air": "Air Rune",
-    "itemdesc-rune-air": "Light as a feather.",
-    "item-rune-fire": "Fire Rune",
-    "itemdesc-rune-fire": "Feels warm.",
-    "item-rune-earth": "Earth Rune",
-    "itemdesc-rune-earth": "Heavier than it looks...",
-    "item-rune-soul": "Soul Rune",
-    "itemdesc-rune-soul": "You feel a distant connection to something...",
-    "item-rune-self": "Self Rune",
-    "itemdesc-rune-self": "Mirror Like reflection.",
-    "item-rune-balance": "Balance Rune",
-    "itemdesc-rune-balance": "As all things should be.",
-    "item-rune-rust": "Rust Rune",
-    "itemdesc-rune-rust": "Smells of blood.",
-    "item-rune-alpha": "Dim Rune",
-    "itemdesc-rune-alpha": "Contains faint magical energies.",
-    "item-rune-beta": "Bright Rune",
-    "itemdesc-rune-beta": "Contains a small amount of magic.",
-    "item-rune-gamma": "Shining Rune",
-    "itemdesc-rune-gamma": "You can feel the magic, its faint, but there.",
-    "item-rune-delta": "Radiant Rune",
-    "itemdesc-rune-delta": "The aura radiating from this rune is palpible",
-    "item-rune-epsilon": "Blinding Rune",
-    "itemdesc-rune-epsilon": "The rune pulses in tune to your thoughts.",
-    "item-runelamp": "Rune of Light",
-
-    "item-runewand-primitive": "Primitive Rune Wand",
-    "itemdesc-runewand-primitive": "I mean, it works I guess. Miniscule increase to magic stats when in offhand.",
-    "item-runewand-basic": "Basic Rune Wand",
-    "itemdesc-runewand-basic": "Small increase to magic stats when in offhand.",
-    "item-runewand-standard": "Standard Rune Wand",
-    "itemdesc-runewand-standard": "Moderate increase to magic stats when in offhand.",
-    "item-runewand-scholar": "Scholar's Rune Wand",
-    "itemdesc-runewand-scholar": "Good increase to magic stats when in offhand.",
-    "item-runewand-master": "Master's Rune Wand",
-    "itemdesc-runewand-master": "Great increase to magic stats when in offhand.",
-
-    "item-runebag-primitive": "Crude Rune Pouch",
-    "item-runebag-linen": "Rune Pouch",
-    "item-runebag-leather": "Leather Rune Pouch",
-    "item-runebag-multiprimitive": "Crude Multi-Rune Pouch",
-    "item-runebag-multilinen": "Multi-Rune Pouch",
-    "item-runebag-multileather": "Leather Multi-Rune Pouch",
-    "item-runicpickaxe-copper": "Copper Rune Infused Pickaxe",
-    "item-runicpickaxe-gold": "Gold Rune Infused Pickaxe",
-    "item-runicpickaxe-silver": "Silver Rune Infused Pickaxe",
-    "item-runicpickaxe-blackbronze": "Black Bronze Rune Infused Pickaxe",
-    "item-runicpickaxe-iron": "Iron Rune Infused Pickaxe",
-    "itemdesc-runicpickaxe-*": "Can only break rock, but may drop a random rune while doing so.",
-    "item-runicchisel": "Rune Infused Chisel",
-    "itemdesc-runicchisel": "Polishes raw rock in world. Handy that. Still needs a hammer.",
-    "item-goodberryitem": "Good Berry",
-    "itemdesc-goodberryitem": "But one berry is all you need to fight another day...",
-
-    "item-runemagicresearch-*": "Runic Research Notes",
-    "runicresearch": "A scroll containing the recipe and instructions for a Runic Spell. Can be used to gain knowledge of {0} spell for tier {1}.",
-
-    "block-runealtar": "Rune Altar",
-
-    "hbrunes-title": "(RuneStory) Wizardry 101:",
-    "hbrunes-text": "<strong>Casting And Selecting Spells</strong><br>Casting and selecting spells are done with the keybind. By default, ALT + F will bring up your spell menu, and X will cast the spell, or try to. To select a spell, simply click on it, and the menu will close automatically for quick casting. The Spell Menu contains 2 optional filters, one for Tier, and one for Category.<br><strong>Damage</strong> spells are primarily combat focused.<br><strong>Support</strong> Spells aid in a task, be it combat or gathering.<br><strong>Utility</strong> Spells perform simple tricks,like heating an ingot,or making a sapling grow.",
-
-    "game:hbrunebag-title": "(RuneStory) Rune Bags:",
-    "game:hbrunebag-text": "Rune Bags come in two varieties, Multi and regular. Regulars contain 1 less slots than their normal counterparts; but their stack size max is doubled.<br>Multi rune bags have 1 more slot than a normal inventory.<br> Both can only contain runes. Both can be upgraded with a relevant material when empty.",
-
-    "hbrunespells-title": "(RuneStory) Spells:",
-    "hbrunespells-text": "Spells are tricks that consume runes to perform an action, you can hold SHIFT in your spell menu over a spell for a quick description of its use. Casting a spell invokes a cooldown unique per spell. More Difficult tasks often require a long break from spellcasting afterwards.<br><br><strong>Elemental Types:</strong><br>There are four types of elements for a damage spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target,dealing DoT<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly heal the caster.<br><strong>Air</strong> spells deal much more knockback.<br><br>Spells have a tier, this is merely an indicator of how powerful a given spell is.",
-
-    "game:hbmakingrunes-title": "(RuneStory) Making Runes:",
-    "game:hbmakingrunes-text": "To craft a rune, simply throw relevant items on top or near the altar, and SNEAK + Rightclick while holding any Rune Wand. The Rune Altar must be filled with Blank Runes with right click for every craft, and consumes as many Blank Runes as output items. The Blank Runes may be retreived by sneaking while right-clicking with an empty hand. The Block may be Right-Clicked with any chiseled block to camoflage it as the chisled block; similar to QPChiselTools 'Decorative' blocks. The chiseled block can be retreived by breaking the altar.",
-
-    "hbrunemagicstats-title": "(RuneStory) Magical Stats:",
-    "hbrunemagicstats-text": "There are two magic stats related to runecraft, your Magic Damage and your Free Cast Chance,Both can be viewed in your spell select menu. Damage is self explanatory. Your Free Cast chance increases the odds that a spell will consume no runes on cast. Spells that return runes on successful casts do not trigger Free Cast chance rolls.",
-
-    "hblearningspells-title": "(RuneStory) Learning Spells",
-    "hblearningspells-text": "Spells can be learned with Spell Research items. By Default, however, you innately know all Tier 1 spells. When using a Spell Research item, you will always gain a random spell you do not know, and will be informed when you have learned every spell from a tier."
+  "airbolt": "Air Bolt",
+  "airboltdsc": "A simple Projectile spell. Acceptable damage.",
+
+  "airsurge": "Air Surge",
+  "airsurgedsc": "A simple Projectile spell. Decent damage.",
+
+  "airblast": "Air Blast",
+  "airblastdsc": "A simple Projectile spell. Has a small AOE. Good damage.",
+
+  "airexplosion": "Air Explosion",
+  "airexplosiondsc": "A simple Projectile spell. Has a moderate AOE. Great damage.",
+
+  "airdoom": "Air Destruction",
+  "airdoomdsc": "A simple Projectile spell. Has a large AOE. Excellent damage.",
+
+  "earthbolt": "Earthen Bolt",
+  "earthboltdsc": "A simple Projectile spell. Acceptable damage.",
+
+  "earthsurge": "Earthen Surge",
+  "earthsurgedsc": "A simple Projectile spell. Decent damage.",
+
+  "earthblast": "Earthen Blast",
+  "earthblastdsc": "A simple Projectile spell. Has a small AOE. Good damage.",
+
+  "earthexplosion": "Earthen Explosion",
+  "earthexplosiondsc": "A simple Projectile spell. Has a moderate AOE. Great damage.",
+
+  "earthdoom": "Earthen Destruction",
+  "earthdoomdsc": "A simple Projectile spell. Has a large AOE. Excellent damage.",
+
+  "firebolt": "Firey Bolt",
+  "fireboltdsc": "A simple Projectile spell. Acceptable damage.",
+
+  "firesurge": "Firey Surge",
+  "firesurgedsc": "A simple Projectile spell. Decent damage.",
+
+  "fireblast": "Firey Blast",
+  "fireblastdsc": "A simple Projectile spell. Has a small AOE. Good damage.",
+
+  "fireexplosion": "Firey Explosion",
+  "fireexplosiondsc": "A simple Projectile spell. Has a moderate AOE. Great damage.",
+
+  "firedoom": "Firey Destruction",
+  "firedoomdsc": "A simple Projectile spell. Has a large AOE. Excellent damage.",
+
+  "waterbolt": "Water Bolt",
+  "waterboltdsc": "A simple Projectile spell. Acceptable damage.",
+
+  "watersurge": "Water Surge",
+  "watersurgedsc": "A simple Projectile spell. Decent damage.",
+
+  "waterblast": "Water Blast",
+  "waterblastdsc": "A simple Projectile spell. Has a small AOE. Good damage.",
+
+  "waterexplosion": "Water Explosion",
+  "waterexplosiondsc": "A simple Projectile spell. Has a moderate AOE. Great damage.",
+
+  "waterdoom": "Water Destruction",
+  "waterdoomdsc": "A simple Projectile spell. Has a large AOE. Excellent damage.",
+
+
+
+  "item-rune-blank": "Blank Rune",
+  "itemdesc-rune-blank": "Can be used to make other runes when in a Rune Altar. Search 'Rune' in the handbook!",
+  "item-rune-water": "Water Rune",
+  "itemdesc-rune-water": "Smooth to the touch.",
+  "item-rune-air": "Air Rune",
+  "itemdesc-rune-air": "Light as a feather.",
+  "item-rune-fire": "Fire Rune",
+  "itemdesc-rune-fire": "Feels warm.",
+  "item-rune-earth": "Earth Rune",
+  "itemdesc-rune-earth": "Heavier than it looks...",
+  "item-rune-soul": "Soul Rune",
+  "itemdesc-rune-soul": "You feel a distant connection to something...",
+  "item-rune-self": "Self Rune",
+  "itemdesc-rune-self": "Mirror Like reflection.",
+  "item-rune-balance": "Balance Rune",
+  "itemdesc-rune-balance": "As all things should be.",
+  "item-rune-rust": "Rust Rune",
+  "itemdesc-rune-rust": "Smells of blood.",
+  "item-rune-alpha": "Dim Rune",
+  "itemdesc-rune-alpha": "Contains faint magical energies.",
+  "item-rune-beta": "Bright Rune",
+  "itemdesc-rune-beta": "Contains a small amount of magic.",
+  "item-rune-gamma": "Shining Rune",
+  "itemdesc-rune-gamma": "You can feel the magic, its faint, but there.",
+  "item-rune-delta": "Radiant Rune",
+  "itemdesc-rune-delta": "The aura radiating from this rune is palpible",
+  "item-rune-epsilon": "Blinding Rune",
+  "itemdesc-rune-epsilon": "The rune pulses in tune to your thoughts.",
+  "item-runelamp": "Rune of Light",
+
+  "item-runewand-primitive": "Primitive Rune Wand",
+  "itemdesc-runewand-primitive": "I mean, it works I guess. Miniscule increase to magic stats when in offhand.",
+  "item-runewand-basic": "Basic Rune Wand",
+  "itemdesc-runewand-basic": "Small increase to magic stats when in offhand.",
+  "item-runewand-standard": "Standard Rune Wand",
+  "itemdesc-runewand-standard": "Moderate increase to magic stats when in offhand.",
+  "item-runewand-scholar": "Scholar's Rune Wand",
+  "itemdesc-runewand-scholar": "Good increase to magic stats when in offhand.",
+  "item-runewand-master": "Master's Rune Wand",
+  "itemdesc-runewand-master": "Great increase to magic stats when in offhand.",
+
+  "item-runebag-primitive": "Crude Rune Pouch",
+  "item-runebag-linen": "Rune Pouch",
+  "item-runebag-leather": "Leather Rune Pouch",
+  "item-runebag-multiprimitive": "Crude Multi-Rune Pouch",
+  "item-runebag-multilinen": "Multi-Rune Pouch",
+  "item-runebag-multileather": "Leather Multi-Rune Pouch",
+  "item-runicpickaxe-copper": "Copper Rune Infused Pickaxe",
+  "item-runicpickaxe-gold": "Gold Rune Infused Pickaxe",
+  "item-runicpickaxe-silver": "Silver Rune Infused Pickaxe",
+  "item-runicpickaxe-blackbronze": "Black Bronze Rune Infused Pickaxe",
+  "item-runicpickaxe-iron": "Iron Rune Infused Pickaxe",
+  "itemdesc-runicpickaxe-*": "Can only break rock, but may drop a random rune while doing so.",
+  "item-runicmattock-copper": "Copper Water Infused Mattock",
+  "item-runicmattock-gold": "Gold Water Infused Mattock",
+  "item-runicmattock-silver": "Silver Water Infused Mattock",
+  "item-runicmattock-blackbronze": "Black Bronze Water Infused Mattock",
+  "item-runicmattock-iron": "Iron Water Infused Mattock",
+  "itemdesc-runicmattock-*": "Stone and Dirt-like blocks will be replaced with water,if at or under sea level.",
+  "item-runicchisel": "Rune Infused Chisel",
+  "itemdesc-runicchisel": "Polishes raw rock in world. Handy that. Still needs a hammer.",
+  "item-goodberryitem": "Good Berry",
+  "itemdesc-goodberryitem": "But one berry is all you need to fight another day...",
+
+  "item-runemagicresearch-*": "Runic Research Notes",
+  "runicresearch": "A scroll containing the recipe and instructions for a Runic Spell. Can be used to gain knowledge of {0} spell for tier {1}.",
+
+  "block-runealtar": "Rune Altar",
+
+  "hbrunes-title": "(RuneStory) Wizardry 101:",
+  "hbrunes-text": "<strong>Casting And Selecting Spells</strong><br>Casting and selecting spells are done with the keybind. By default, ALT + F will bring up your spell menu, and X will cast the spell, or try to. To select a spell, simply click on it, and the menu will close automatically for quick casting. The Spell Menu contains 2 optional filters, one for Tier, and one for Category.<br><strong>Damage</strong> spells are primarily combat focused.<br><strong>Support</strong> Spells aid in a task, be it combat or gathering.<br><strong>Utility</strong> Spells perform simple tricks,like heating an ingot,or making a sapling grow.",
+
+  "game:hbrunebag-title": "(RuneStory) Rune Bags:",
+  "game:hbrunebag-text": "Rune Bags come in two varieties, Multi and regular. Regulars contain 1 less slots than their normal counterparts; but their stack size max is doubled.<br>Multi rune bags have 1 more slot than a normal inventory.<br> Both can only contain runes. Both can be upgraded with a relevant material when empty.",
+
+  "hbrunespells-title": "(RuneStory) Spells:",
+  "hbrunespells-text": "Spells are tricks that consume runes to perform an action, you can hold SHIFT in your spell menu over a spell for a quick description of its use. Casting a spell invokes a cooldown unique per spell. More Difficult tasks often require a long break from spellcasting afterwards.<br><br><strong>Elemental Types:</strong><br>There are four types of elements for a damage spell. When dealing damage, keep the following in mind:<br><strong>Fire</strong> spells will ignite their immediate target,dealing DoT<br><strong>Earth</strong> spells deal the most raw damage.<br><strong>Water</strong> spells slightly heal the caster.<br><strong>Air</strong> spells deal much more knockback.<br><br>Spells have a tier, this is merely an indicator of how powerful a given spell is.",
+
+  "game:hbmakingrunes-title": "(RuneStory) Making Runes:",
+  "game:hbmakingrunes-text": "To craft a rune, simply throw relevant items on top or near the altar, and SNEAK + Rightclick while holding any Rune Wand. The Rune Altar must be filled with the correct item with right click for every craft,and may require all items flickering in the handbook, or just one,but never only a few. The Block may be Right-Clicked with any chiseled block to camoflage it as the chisled block; similar to QPChiselTools 'Decorative' blocks. The chiseled block can be retreived by breaking the altar.<br><br><br>In example, the recipe showing 4 blank runes into water runes shows 3 possible inputs, but only one is needed per-craft. On the other side, the Water Paxel needs both pick and shovel head to make, not one or the other.",
+
+  "hbrunemagicstats-title": "(RuneStory) Magical Stats:",
+  "hbrunemagicstats-text": "There are two magic stats related to runecraft, your Magic Damage and your Free Cast Chance,Both can be viewed in your spell select menu. Damage is self explanatory. Your Free Cast chance increases the odds that a spell will consume no runes on cast. Spells that return runes on successful casts do not trigger Free Cast chance rolls.",
+
+  "hblearningspells-title": "(RuneStory) Learning Spells",
+  "hblearningspells-text": "Spells can be learned with Spell Research items. By Default, however, you innately know all Tier 1 spells. When using a Spell Research item, you will always gain a random spell you do not know, and will be informed when you have learned every spell from a tier."
 
 }
