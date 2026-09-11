@@ -58,5 +58,28 @@
             "type": "block",
             "code": "runestory:runepylon-temporal"
         }
+    },
+  {
+    "ingredientPattern": "WFW,WCW,WFW",
+    "ingredients": {
+      "W": {
+        "type": "item",
+        "code": "runestory:rune-water"
+      },
+      "F": {
+        "type": "item",
+        "code": "runestory:rune-fire"
+      },
+      "C": {
+        "type": "block",
+        "code": "runestory:runepylon-inactive"
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "runestory:runepylon-rushing"
     }
+  }
 ]

@@ -159,6 +159,7 @@ namespace runestory
             api.RegisterBlockEntityBehaviorClass("runepylonrenderer", typeof(BEBhvPylon));
             api.RegisterBlockEntityClass("runepylonfertilebe", typeof(FertilePylonBe));
             api.RegisterBlockEntityClass("runepylontemporalbe", typeof(TemporalPylonBe));
+            api.RegisterBlockEntityClass("runepylonrushingbe", typeof(RushingPylonBe));
 
             api.RegisterCollectibleBehaviorClass("runepouchbag", typeof(CollectibleRuneBag));
             api.RegisterItemClass("runicpickaxeitem", typeof(RunePickaxe));

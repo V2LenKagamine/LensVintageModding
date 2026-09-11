@@ -50,6 +50,8 @@
   "blockdesc-runepylon-fertile": "Restores 1 percent of N,P, or K to soil within a 4 horizontal blocks radius and up to 5 blocks below it occasionally.",
   "block-runepylon-temporal": "Temporally Stable Runic Pylon",
   "blockdesc-runepylon-temporal": "Restores the Temporal Stability of any players within a 14 block radius every 15 seconds.",
+  "block-runepylon-rushing": "Rushing Runic Pylon",
+  "blockdesc-runepylon-rushing": "Place above water to make rushing water, for as long as the pylon stands above.",
 
 
   "nodsc": "This spell has no lang describing it! Is the Attribute 'langCode' set?",
