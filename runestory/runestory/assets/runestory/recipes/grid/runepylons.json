@@ -64,11 +64,13 @@
     "ingredients": {
       "W": {
         "type": "item",
-        "code": "runestory:rune-water"
+        "code": "runestory:rune-water",
+        "quantity": 16
       },
       "F": {
         "type": "item",
-        "code": "runestory:rune-fire"
+        "code": "runestory:rune-fire",
+        "quantity": 16
       },
       "C": {
         "type": "block",
