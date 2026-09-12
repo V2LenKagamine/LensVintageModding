@@ -16,6 +16,7 @@ using runestory.src.gui;
 using runestory.src.items;
 using runestory.src.MiscHarmony;
 using runestory.src.recipestuff;
+using runestory.src.util;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
@@ -49,6 +50,11 @@ namespace runestory
         public static string RMS_Stat_MagicDamage => "magicWeaponsDamage";
         public static string RMS_Net_Channel => "runespellchannel";
 
+
+        public static string RMS_ConfigName => "runestory_common.json";
+
+        public runestoryConfig RMS_LoadedConfig;
+
         public Harmony RMSHarmony;
 
         public List<BaseRuneSpell> AllSpells = [];
@@ -64,6 +70,11 @@ namespace runestory
         public override void StartPre(ICoreAPI api)
         {
             RMSHarmony = new Harmony("runestory");
+
+            if(api is ICoreServerAPI)
+            {
+                RMS_LoadedConfig = GetConfig(api);
+            }
 
             if (api is not ICoreClientAPI capi) return;
             
@@ -220,7 +231,7 @@ namespace runestory
                     }
                     List<string> defspells = [];
                     List<string> known = (spellsmaybe?.GetValue() as string[])?.ToList() ?? [];
-                    foreach (var spll in AllSpells.Where(spell => spell.spellTier == 1))
+                    foreach (var spll in AllSpells.Where(spell => spell.spellTier <= RMS_LoadedConfig.LevelUnlockedByDefault))
                     {
                         defspells.Add(spll.Code);
                     }
@@ -259,6 +270,34 @@ namespace runestory
             };
             api.Logger.Notification("[RuneStory] Welcome to ScapeRune!");
         }
+
+        public static runestoryConfig GetConfig(ICoreAPI api)
+        {
+            runestoryConfig tmp;
+
+            try
+            {
+                tmp = api.LoadModConfig<runestoryConfig>(RMS_ConfigName);
+                if(tmp is null)
+                {
+                    tmp = new runestoryConfig();
+                    api.StoreModConfig<runestoryConfig>(tmp, RMS_ConfigName);
+                }
+                else
+                {
+                    api.StoreModConfig<runestoryConfig>(new runestoryConfig(tmp), RMS_ConfigName);
+                    tmp = api.LoadModConfig<runestoryConfig>(RMS_ConfigName);
+                }
+            } catch ( Exception e)
+            {
+                api.Logger.Error("RuneStory: SOMEONE SCREWED UP THE CONFIG, REBUILDING FROM SCRATCH. Exception: " + e);
+                tmp = new runestoryConfig();
+                api.StoreModConfig<runestoryConfig>(tmp, RMS_ConfigName);
+            }
+            return tmp;
+        }
+
+
         public void OnCastRequest(ICoreClientAPI capi)
         {
             capi.Network.GetChannel(RMS_Net_Channel).SendPacket(new CTS_SpellPacket
@@ -312,12 +351,11 @@ namespace runestory
         }
         public void SetCastDelay(Entity ent, BaseRuneSpell spell)
         {
-            //Todo: Config?
             long percastMS = 1000;
-            float cdtime = ent?.Stats?.GetBlended(RMS_Stat_CDTime) ?? 1f;
+            float cdtime = (ent?.Stats?.GetBlended(RMS_Stat_CDTime) ?? 1f);
             if (spell is not null)
             {
-                percastMS = spell.CooldownMS;
+                percastMS = spell.CooldownMS * (long)RMS_LoadedConfig.GlobalMagicCoolDownMultiplier; 
             }
             long toset = (long)(percastMS * cdtime) + runeSApi.World.ElapsedMilliseconds;
             ent.Attributes.SetLong("runespellnextcasttime", toset);

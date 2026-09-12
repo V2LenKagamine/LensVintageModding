@@ -104,7 +104,7 @@ namespace runestory.src.entity.spells
                 ignition = true;
             }
 
-            Damage = dam;
+            Damage = dam * Api.ModLoader.GetModSystem<RunestoryMS>().RMS_LoadedConfig?.GlobalMagicDamageMultiplier ?? 1f;
             SimpleHitEntity(entity, hitdmg, aoe, ignition);
             Die();
         }
