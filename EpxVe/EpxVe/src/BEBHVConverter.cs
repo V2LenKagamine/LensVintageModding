@@ -248,7 +248,7 @@ namespace EpxVe.src
                 return;
             }
             OrderedPower = amount;
-            RealPow = Math.Max(RealPow - amount,0);
+            RealPow = Math.Max(RealPow - (amount * Api.ModLoader.GetModSystem<EpxVeModSystem>().LoadedConfig.EPPowerPerOneVEPower),0);
         }
 
         public float Produce_give()
@@ -289,7 +289,7 @@ namespace EpxVe.src
         public void Consume_receive(float amount)
         {
             powerReceive = amount;
-            RealPow += amount;
+            RealPow += (amount * (Api.ModLoader.GetModSystem<EpxVeModSystem>().LoadedConfig.PowerInMultiplier));
             Blockentity.MarkDirty();
         }
         public float getPowerReceive()
