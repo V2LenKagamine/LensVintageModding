@@ -247,13 +247,14 @@ namespace EpxVe.src
                 OrderedPower = 0;
                 return;
             }
-            OrderedPower = amount;
-            RealPow = Math.Max(RealPow - (amount * Api.ModLoader.GetModSystem<EpxVeModSystem>().LoadedConfig.EPPowerPerOneVEPower),0);
+            float wawa = amount * Api.ModLoader.GetModSystem<EpxVeModSystem>().LoadedConfig.EPPowerPerOneVEPower;
+			OrderedPower = wawa;
+            RealPow = Math.Max(RealPow - wawa,0);
         }
 
         public float Produce_give()
         {
-            float amnt = Math.Max(RealPow,0);
+            float amnt = Math.Max(RealPow * Api.ModLoader.GetModSystem<EpxVeModSystem>().LoadedConfig.EPPowerPerOneVEPower, 0);
             GivingPower = amnt;
             return amnt;
         }
@@ -281,7 +282,7 @@ namespace EpxVe.src
 
         public float Consume_request()
        {
-           float powNeeded = Math.Max(Math.Min(MaxPower - RealPow, MaxPowPerSec), 0);
+           float powNeeded = Math.Max(Math.Min(MaxPower - RealPow, MaxPowPerSec) * Api.ModLoader.GetModSystem<EpxVeModSystem>().LoadedConfig.VEPowerPerOneEPPower, 0);
            powGetNeed = powNeeded;
            return powNeeded;
        }
@@ -289,7 +290,7 @@ namespace EpxVe.src
         public void Consume_receive(float amount)
         {
             powerReceive = amount;
-            RealPow += (amount * (Api.ModLoader.GetModSystem<EpxVeModSystem>().LoadedConfig.PowerInMultiplier));
+            RealPow += amount * Api.ModLoader.GetModSystem<EpxVeModSystem>().LoadedConfig.VEPowerPerOneEPPower;
             Blockentity.MarkDirty();
         }
         public float getPowerReceive()
