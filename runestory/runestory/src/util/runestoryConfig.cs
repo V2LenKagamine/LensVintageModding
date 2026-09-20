@@ -18,6 +18,8 @@ namespace runestory.src.util
         public runestoryConfig(runestoryConfig old)
         {
             GlobalMagicDamageMultiplier = old.GlobalMagicDamageMultiplier;
+            GlobalMagicCoolDownMultiplier = old.GlobalMagicCoolDownMultiplier;
+            LevelUnlockedByDefault = old.LevelUnlockedByDefault;
         }
     }
 }
