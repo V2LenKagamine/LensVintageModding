@@ -1,0 +1,178 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\LensVintageModding\\thequenchiest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|f:\\lensvintagemodding\\thequenchiest\\thequenchiest\\thequenchiest\\assets\\game\\lang\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|solutionrelative:thequenchiest\\thequenchiest\\assets\\game\\lang\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|f:\\lensvintagemodding\\thequenchiest\\thequenchiest\\thequenchiest\\modinfo.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|solutionrelative:thequenchiest\\thequenchiest\\modinfo.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|f:\\lensvintagemodding\\thequenchiest\\thequenchiest\\thequenchiest\\src\\quenchiestconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|solutionrelative:thequenchiest\\thequenchiest\\src\\quenchiestconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|f:\\lensvintagemodding\\thequenchiest\\thequenchiest\\thequenchiest\\src\\quenchierquenchbhv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|solutionrelative:thequenchiest\\thequenchiest\\src\\quenchierquenchbhv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|f:\\lensvintagemodding\\thequenchiest\\thequenchiest\\thequenchiest\\assets\\thequenchiest\\lang\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|solutionrelative:thequenchiest\\thequenchiest\\assets\\thequenchiest\\lang\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|f:\\lensvintagemodding\\thequenchiest\\thequenchiest\\thequenchiest\\thequenchiestmodsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|solutionrelative:thequenchiest\\thequenchiest\\thequenchiestmodsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|f:\\lensvintagemodding\\thequenchiest\\thequenchiest\\thequenchiest\\src\\stolenringsounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|solutionrelative:thequenchiest\\thequenchiest\\src\\stolenringsounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|f:\\lensvintagemodding\\thequenchiest\\thequenchiest\\thequenchiest\\src\\quenchiestharmony.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9C0A2A4-DCA5-81C3-8615-AEA036BF69D1}|thequenchiest\\thequenchiest\\thequenchiest.csproj|solutionrelative:thequenchiest\\thequenchiest\\src\\quenchiestharmony.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "en.json",
+              "DocumentMoniker": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\assets\\thequenchiest\\lang\\en.json",
+              "RelativeDocumentMoniker": "thequenchiest\\thequenchiest\\assets\\thequenchiest\\lang\\en.json",
+              "ToolTip": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\assets\\thequenchiest\\lang\\en.json",
+              "RelativeToolTip": "thequenchiest\\thequenchiest\\assets\\thequenchiest\\lang\\en.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-21T03:37:13.575Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "thequenchiestModSystem.cs",
+              "DocumentMoniker": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\thequenchiestModSystem.cs",
+              "RelativeDocumentMoniker": "thequenchiest\\thequenchiest\\thequenchiestModSystem.cs",
+              "ToolTip": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\thequenchiestModSystem.cs",
+              "RelativeToolTip": "thequenchiest\\thequenchiest\\thequenchiestModSystem.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T03:43:51.827Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "en.json",
+              "DocumentMoniker": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\assets\\game\\lang\\en.json",
+              "RelativeDocumentMoniker": "thequenchiest\\thequenchiest\\assets\\game\\lang\\en.json",
+              "ToolTip": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\assets\\game\\lang\\en.json",
+              "RelativeToolTip": "thequenchiest\\thequenchiest\\assets\\game\\lang\\en.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-21T10:32:41.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuenchierQuenchBHV.cs",
+              "DocumentMoniker": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\src\\QuenchierQuenchBHV.cs",
+              "RelativeDocumentMoniker": "thequenchiest\\thequenchiest\\src\\QuenchierQuenchBHV.cs",
+              "ToolTip": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\src\\QuenchierQuenchBHV.cs",
+              "RelativeToolTip": "thequenchiest\\thequenchiest\\src\\QuenchierQuenchBHV.cs",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAkwNsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T08:38:48.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "quenchiestConfig.cs",
+              "DocumentMoniker": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\src\\quenchiestConfig.cs",
+              "RelativeDocumentMoniker": "thequenchiest\\thequenchiest\\src\\quenchiestConfig.cs",
+              "ToolTip": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\src\\quenchiestConfig.cs",
+              "RelativeToolTip": "thequenchiest\\thequenchiest\\src\\quenchiestConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T08:18:22.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "modinfo.json",
+              "DocumentMoniker": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\modinfo.json",
+              "RelativeDocumentMoniker": "thequenchiest\\thequenchiest\\modinfo.json",
+              "ToolTip": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\modinfo.json",
+              "RelativeToolTip": "thequenchiest\\thequenchiest\\modinfo.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-21T07:34:04.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StolenRingSounds.cs",
+              "DocumentMoniker": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\src\\StolenRingSounds.cs",
+              "RelativeDocumentMoniker": "thequenchiest\\thequenchiest\\src\\StolenRingSounds.cs",
+              "ToolTip": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\src\\StolenRingSounds.cs",
+              "RelativeToolTip": "thequenchiest\\thequenchiest\\src\\StolenRingSounds.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA7wBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T07:01:16.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QuenchiestHarmony.cs",
+              "DocumentMoniker": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\src\\QuenchiestHarmony.cs",
+              "RelativeDocumentMoniker": "thequenchiest\\thequenchiest\\src\\QuenchiestHarmony.cs",
+              "ToolTip": "F:\\LensVintageModding\\thequenchiest\\thequenchiest\\thequenchiest\\src\\QuenchiestHarmony.cs",
+              "RelativeToolTip": "thequenchiest\\thequenchiest\\src\\QuenchiestHarmony.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAwCwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T03:50:53.228Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
