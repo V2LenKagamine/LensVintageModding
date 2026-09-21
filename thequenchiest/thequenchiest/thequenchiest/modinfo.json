@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "thequenchiest",
+    "name": "The Quenchiest:One Last Quench",
+    "authors": [
+        "Len Kagamine"
+    ],
+    "description": "Quench gambling with less disasterous results.",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "1.22.0"
+    }
+}

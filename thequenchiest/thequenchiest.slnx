@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="thequenchiest/CakeBuild/CakeBuild.csproj" />
+  <Project Path="thequenchiest/thequenchiest/thequenchiest.csproj" />
+</Solution>
