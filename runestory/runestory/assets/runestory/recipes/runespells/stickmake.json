@@ -11,7 +11,7 @@
     "langCode": "makestickdsc",
     "spelltype": "util",
     "spelltier": 1,
-    "cooldownms": 1500
+    "cooldownms": 3000
   },
     "imgpath": "genericair"
 }

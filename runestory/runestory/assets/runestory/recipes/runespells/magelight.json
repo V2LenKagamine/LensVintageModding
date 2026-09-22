@@ -15,7 +15,7 @@
     "langCode": "magelightdsc",
     "spelltype": "util",
     "spelltier": 1,
-    "cooldownms": 10000
+    "cooldownms": 20000
   },
     "imgpath": "magelight"
 }

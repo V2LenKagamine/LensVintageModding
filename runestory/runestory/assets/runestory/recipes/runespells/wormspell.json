@@ -13,7 +13,7 @@
     "langCode": "wormspelldsc",
     "spelltype": "supp",
     "spelltier": 1,
-    "cooldownms": 15000
+    "cooldownms": 30000
   },
     "imgpath": "wormspell"
 }

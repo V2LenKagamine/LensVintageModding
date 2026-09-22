@@ -15,7 +15,7 @@
     "langCode": "menditemdsc",
     "spelltype": "util",
     "spelltier": 5,
-    "cooldownms": 300000
+    "cooldownms": 600000
   },
     "imgpath": "menditem"
 }

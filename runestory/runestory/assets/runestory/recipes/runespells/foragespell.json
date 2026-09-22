@@ -13,7 +13,7 @@
     "langCode": "foragespelldsc",
     "spelltype": "util",
     "spelltier": 1,
-    "cooldownms": 15000
+    "cooldownms": 30000
   },
     "imgpath": "forage"
 }

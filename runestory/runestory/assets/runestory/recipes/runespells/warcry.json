@@ -15,7 +15,7 @@
     "langCode": "warcrydsc",
     "spelltype": "supp",
     "spelltier": 3,
-    "cooldownms": 30000
+    "cooldownms": 60000
   },
     "imgpath": "warcry"
 }

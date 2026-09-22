@@ -13,7 +13,7 @@
     "langCode": "refinespelldsc",
     "spelltype": "util",
     "spelltier": 1,
-    "cooldownms": 5000
+    "cooldownms": 10000
   },
     "imgpath": "refinespell"
 }

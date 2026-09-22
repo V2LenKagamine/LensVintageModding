@@ -15,7 +15,7 @@
     "langCode": "healselfdsc",
     "spelltype": "supp",
     "spelltier": 1,
-    "cooldownms": 30000
+    "cooldownms": 60000
   },
     "imgpath": "selfheal"
 }

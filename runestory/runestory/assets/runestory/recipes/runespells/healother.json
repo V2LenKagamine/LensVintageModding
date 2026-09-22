@@ -15,7 +15,7 @@
     "langCode": "healotherdsc",
     "spelltype": "supp",
     "spelltier": 1,
-    "cooldownms": 20000
+    "cooldownms": 40000
   },
     "imgpath": "healother"
 }

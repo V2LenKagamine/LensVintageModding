@@ -13,7 +13,7 @@
     "langCode": "dwarfblessdsc",
     "spelltype": "supp",
     "spelltier": 2,
-    "cooldownms": 45000
+    "cooldownms": 90000
   },
     "imgpath": "dwarfbless"
 }

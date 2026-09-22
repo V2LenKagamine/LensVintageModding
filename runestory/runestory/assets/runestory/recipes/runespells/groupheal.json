@@ -17,7 +17,7 @@
     "langCode": "grouphealdsc",
     "spelltype": "supp",
     "spelltier": 2,
-    "cooldownms": 30000
+    "cooldownms": 60000
   },
     "imgpath": "groupheal"
 }

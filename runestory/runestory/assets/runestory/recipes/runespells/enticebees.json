@@ -17,7 +17,7 @@
     "langCode": "enticebeesdsc",
     "spelltype": "util",
     "spelltier": 4,
-    "cooldownms": 120000
+    "cooldownms": 240000
   },
     "imgpath": "bees"
 }

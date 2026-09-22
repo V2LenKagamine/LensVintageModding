@@ -15,7 +15,7 @@
     "langCode": "sproutcutspelldsc",
     "spelltype": "util",
     "spelltier": 4,
-    "cooldownms": 20000
+    "cooldownms": 40000
   },
     "imgpath": "sproutcut"
 }

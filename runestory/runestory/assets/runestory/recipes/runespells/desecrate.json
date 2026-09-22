@@ -13,7 +13,7 @@
     "langCode": "desecratedsc",
     "spelltype": "util",
     "spelltier": 2,
-    "cooldownms": 45000
+    "cooldownms": 90000
   },
     "imgpath": "desecrate"
 }

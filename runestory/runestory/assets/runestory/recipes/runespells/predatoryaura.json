@@ -15,7 +15,7 @@
     "langCode": "predatoryauradsc",
     "spelltype": "supp",
     "spelltier": 4,
-    "cooldownms": 45000
+    "cooldownms": 90000
   },
     "imgpath": "predatoryaura"
 }

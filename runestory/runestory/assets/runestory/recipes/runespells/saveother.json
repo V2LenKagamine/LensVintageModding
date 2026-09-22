@@ -15,7 +15,7 @@
     "langCode": "saveotherdsc",
     "spelltype": "supp",
     "spelltier": 3,
-    "cooldownms": 40000
+    "cooldownms": 80000
   },
     "imgpath": "saveother"
 }

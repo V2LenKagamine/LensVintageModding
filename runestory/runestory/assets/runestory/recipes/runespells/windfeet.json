@@ -13,7 +13,7 @@
     "langCode": "windfeetdsc",
     "spelltype": "supp",
     "spelltier": 2,
-    "cooldownms": 25000
+    "cooldownms": 50000
   },
     "imgpath": "windfeet"
 }

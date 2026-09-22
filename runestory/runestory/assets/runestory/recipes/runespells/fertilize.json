@@ -15,7 +15,7 @@
     "langCode": "fertilizespelldsc",
     "spelltype": "util",
     "spelltier": 2,
-    "cooldownms": 10000
+    "cooldownms": 20000
   },
     "imgpath": "genericearth"
 }

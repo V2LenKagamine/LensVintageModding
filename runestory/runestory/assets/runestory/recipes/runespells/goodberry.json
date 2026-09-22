@@ -15,7 +15,7 @@
     "langCode": "goodberrydsc",
     "spelltype": "util",
     "spelltier": 5,
-    "cooldownms": 240000
+    "cooldownms": 480000
   },
     "imgpath": "goodberry"
 }

@@ -15,7 +15,7 @@
     "langCode": "flowerfielddsc",
     "spelltype": "util",
     "spelltier": 2,
-    "cooldownms": 15000
+    "cooldownms": 30000
   },
     "imgpath": "flowerfield"
 }

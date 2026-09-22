@@ -15,7 +15,7 @@
         "langCode": "bonestopeachesdsc",
         "spelltype": "util",
       "spelltier": 4,
-      "cooldownms": 60000
+      "cooldownms": 120000
     },
     "imgpath": "bonepeach"
 }

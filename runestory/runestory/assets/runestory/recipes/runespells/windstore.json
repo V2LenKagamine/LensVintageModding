@@ -15,7 +15,7 @@
     "langCode": "windstoredsc",
     "spelltype": "util",
     "spelltier": 4,
-    "cooldownms": 300000
+    "cooldownms": 600000
   },
     "imgpath": "windstore"
 }

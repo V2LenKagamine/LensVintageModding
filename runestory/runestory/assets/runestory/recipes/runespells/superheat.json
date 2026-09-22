@@ -13,7 +13,7 @@
     "langCode": "superheatdsc",
     "spelltype": "util",
     "spelltier": 1,
-    "cooldownms": 7500
+    "cooldownms": 15000
   },
     "imgpath": "superheat"
 }

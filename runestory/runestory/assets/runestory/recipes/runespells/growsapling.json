@@ -15,7 +15,7 @@
     "langCode": "growsaplingdsc",
     "spelltype": "util",
     "spelltier": 3,
-    "cooldownms": 60000
+    "cooldownms": 120000
   },
     "imgpath": "growsapling"
 }

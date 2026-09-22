@@ -13,7 +13,7 @@
         "elementType": "earth",
         "spelltype": "dmg",
         "spelltier": 1,
-        "cooldownms": 250
+        "cooldownms": 750
       },
         "imgpath": "eartht1"
     },
@@ -31,7 +31,7 @@
         "elementType": "earth",
         "spelltype": "dmg",
         "spelltier": 2,
-        "cooldownms": 750
+        "cooldownms": 2150
       },
         "imgpath": "eartht2"
     },
@@ -49,7 +49,7 @@
         "elementType": "earth",
         "spelltype": "dmg",
         "spelltier": 3,
-        "cooldownms": 3000
+        "cooldownms": 9000
       },
         "imgpath": "eartht3"
     },
@@ -67,7 +67,7 @@
         "elementType": "earth",
         "spelltype": "dmg",
         "spelltier": 4,
-        "cooldownms": 8000
+        "cooldownms": 24000
       },
         "imgpath": "eartht4"
     },
@@ -85,7 +85,7 @@
         "elementType": "earth",
         "spelltype": "dmg",
         "spelltier": 5,
-        "cooldownms": 15000
+        "cooldownms": 45000
       },
         "imgpath": "eartht5"
     }
