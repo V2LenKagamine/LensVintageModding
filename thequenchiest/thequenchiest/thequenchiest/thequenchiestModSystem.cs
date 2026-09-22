@@ -3,6 +3,7 @@ using System;
 using thequenchiest.src;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
+using Vintagestory.GameContent;
 
 namespace thequenchiest
 {
@@ -22,6 +23,8 @@ namespace thequenchiest
         public override void Start(ICoreAPI api)
         {
             api.RegisterCollectibleBehaviorClass("Quenchable", typeof(QuenchierQuenchBHV));
+            api.RegisterCollectibleBehaviorClass("thequenchiest:VanillaQuenchable", typeof(CollectibleBehaviorQuenchable));
+            api.RegisterCollectibleBehaviorClass("thequenchiest:Quenchable", typeof(QuenchierQuenchBHV));
             api.Logger.Notification("Nothing Quenchier, it\'s the Quenchiest!");
         }
 
