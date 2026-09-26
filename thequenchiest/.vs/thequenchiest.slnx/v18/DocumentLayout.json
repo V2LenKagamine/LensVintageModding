@@ -54,7 +54,7 @@
               "RelativeToolTip": "thequenchiest\\thequenchiest\\assets\\thequenchiest\\lang\\en.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-21T03:37:13.575Z",
+              "WhenOpened": "2026-09-26T13:24:00.816Z",
               "IsPinned": true
             },
             {
@@ -67,7 +67,7 @@
               "RelativeToolTip": "thequenchiest\\thequenchiest\\thequenchiestModSystem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T03:43:51.827Z",
+              "WhenOpened": "2026-09-26T13:24:00.853Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -105,8 +105,7 @@
               "RelativeToolTip": "thequenchiest\\thequenchiest\\src\\QuenchierQuenchBHV.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAA8wCIAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T19:57:00.704Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T13:24:00.86Z"
             },
             {
               "$type": "Document",
@@ -118,7 +117,7 @@
               "RelativeToolTip": "thequenchiest\\thequenchiest\\assets\\game\\lang\\en.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-21T10:32:41.249Z"
+              "WhenOpened": "2026-09-26T13:24:00.862Z"
             },
             {
               "$type": "Document",
@@ -130,7 +129,7 @@
               "RelativeToolTip": "thequenchiest\\thequenchiest\\src\\quenchiestConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T08:18:22.805Z"
+              "WhenOpened": "2026-09-26T13:24:00.863Z"
             },
             {
               "$type": "Document",
@@ -142,8 +141,7 @@
               "RelativeToolTip": "thequenchiest\\thequenchiest\\modinfo.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-21T07:34:04.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T13:24:00.864Z"
             },
             {
               "$type": "Document",
@@ -155,7 +153,7 @@
               "RelativeToolTip": "thequenchiest\\thequenchiest\\src\\StolenRingSounds.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAA7wBgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T07:01:16.135Z"
+              "WhenOpened": "2026-09-26T13:24:00.865Z"
             },
             {
               "$type": "Document",
@@ -167,7 +165,7 @@
               "RelativeToolTip": "thequenchiest\\thequenchiest\\src\\QuenchiestHarmony.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T03:50:53.228Z"
+              "WhenOpened": "2026-09-26T13:24:00.866Z"
             }
           ]
         }

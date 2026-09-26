@@ -119,6 +119,7 @@
 			"M": {
 				"type": "item",
 				"code": "game:*",
+				"name": "bababoi",
 				"allowedVariants": ["clearquartz", "ore-quartz"],
 				"quantity": 1
 			}
