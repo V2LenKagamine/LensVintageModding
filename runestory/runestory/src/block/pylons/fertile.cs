@@ -9,11 +9,12 @@ namespace runestory.src.block.pylons
 {
     public class FertilePylonBe : BlockEntity
     {
+        private long ticklist;
         public override void Initialize(ICoreAPI api)
         {
             base.Initialize(api);
 
-            api.World.RegisterGameTickListener(PylonTick, 300000);
+            ticklist = api.World.RegisterGameTickListener(PylonTick, 300000);
         }
 
         public void PylonTick(float dt)
@@ -76,6 +77,11 @@ namespace runestory.src.block.pylons
                 }
 
             });
+        }
+        public override void OnBlockRemoved()
+        {
+            Api.World.UnregisterGameTickListener(ticklist);
+            base.OnBlockRemoved();
         }
     }
 }

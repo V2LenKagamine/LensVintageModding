@@ -48,6 +48,7 @@ namespace runestory
         public static string RMS_SpellKnowledge => "RMSKnownSpells";
         public static string RMS_Stat_CDTime => "magicCDTime";
         public static string RMS_Stat_MagicDamage => "magicWeaponsDamage";
+        public static string RMS_Stat_RuneChance => "freeCastChance";
         public static string RMS_Net_Channel => "runespellchannel";
 
 
@@ -171,6 +172,7 @@ namespace runestory
             api.RegisterBlockEntityClass("runepylonfertilebe", typeof(FertilePylonBe));
             api.RegisterBlockEntityClass("runepylontemporalbe", typeof(TemporalPylonBe));
             api.RegisterBlockEntityClass("runepylonrushingbe", typeof(RushingPylonBe));
+            api.RegisterBlockEntityClass("runepylonregenbe", typeof(RegenerativePylonBe));
 
             api.RegisterCollectibleBehaviorClass("runepouchbag", typeof(CollectibleRuneBag));
             api.RegisterItemClass("runicpickaxeitem", typeof(RunePickaxe));

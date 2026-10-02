@@ -16,6 +16,7 @@ namespace runestory
 {
     public class defaultSpell : Entity
     {
+        public bool freeCast = false;
         public string spellCode;
         public Entity spawnedBy;
         public override void Initialize(EntityProperties properties, ICoreAPI api, long InChunkIndex3d)
@@ -38,6 +39,7 @@ namespace runestory
 
                         goodspell.spawnedBy = spawnedBy;
                         goodspell.ourSpell = spell;
+                        goodspell.freeCasted = freeCast;
 
                         Vec3d pos = spawnedBy.Pos.XYZ.AddCopy(0, spawnedBy.LocalEyePos.Y, 0);
                         Vec3d ahead = pos.AheadCopy(1, spawnedBy.Pos.Pitch, spawnedBy.Pos.Yaw);
@@ -72,6 +74,35 @@ namespace runestory
                         if (slot.Itemstack?.Collectible?.Code is null) { return true; }
                         bool returner = false;
                         int amtTake = spell.Reagents.ElementAt(i).Value;
+                        if (slot == ply.Player.InventoryManager.OffhandHotbarSlot || slot == ply.Player.InventoryManager.ActiveHotbarSlot)
+                        {
+                            if (slot.Itemstack?.ItemAttributes["magicAttributes"] is not null && slot.Itemstack?.ItemAttributes["magicAttributes"]["endless"] is not null)
+                            {
+                                string[] Endless = slot.Itemstack.ItemAttributes["magicAttributes"]["endless"].AsArray<string>();
+                                if (lookingfor.Contains('*'))
+                                {
+                                    for (int i = 0; i < Endless.Length; i++)
+                                    {
+                                        if (WildcardUtil.Match(lookingfor, Endless[i]))
+                                        {
+                                            good = true;
+                                            return false;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    for (int i = 0; i < Endless.Length; i++)
+                                    {
+                                        if (lookingfor == Endless[i])
+                                        {
+                                            good = true;
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         if (lookingfor.Contains('*'))
                         {
                             returner = WildcardUtil.Match(lookingfor, slot.Itemstack.Collectible.Code.ToString()) && slot.Itemstack.StackSize >= amtTake;
@@ -94,14 +125,19 @@ namespace runestory
                         return false;
                     }
                 }
-                foreach (var pair in takeamnts)
-                { 
-                    pair.Key.TakeOut(pair.Value);
-                    if (pair.Key.Itemstack?.StackSize <= 0)
+                float nocon = ply.Stats.GetBlended(RunestoryMS.RMS_Stat_RuneChance);
+                if (World.Rand.NextDouble() < nocon)
+                {
+                    freeCast = true;
+                    foreach (var pair in takeamnts)
                     {
-                        pair.Key.TakeOutWhole();
+                        pair.Key.TakeOut(pair.Value);
+                        if (pair.Key.Itemstack?.StackSize <= 0)
+                        {
+                            pair.Key.TakeOutWhole();
+                        }
+                        pair.Key.MarkDirty();
                     }
-                    pair.Key.MarkDirty();
                 }
                 return true;
             }

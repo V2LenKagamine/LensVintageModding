@@ -3,7 +3,8 @@
   "entityclassByType": {
     "*-fertile": "runepylonfertilebe",
     "*-temporal": "runepylontemporalbe",
-    "*-rushing": "runepylonrushingbe"
+    "*-rushing": "runepylonrushingbe",
+    "*-regen": "runepylonregenbe"
   },
     "entitybehaviors": [
         { "name": "runepylonrenderer" }
@@ -18,7 +19,7 @@
     "variantgroups": [
         {
             "code": "type",
-            "states": [ "inactive", "fertile", "temporal", "rushing" ]
+            "states": [ "inactive", "fertile", "temporal", "rushing", "regen" ]
         }
     ],
     "blockmaterial": "Stone",

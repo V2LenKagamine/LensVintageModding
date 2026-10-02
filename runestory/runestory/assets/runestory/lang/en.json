@@ -43,6 +43,7 @@
   "game:tabname-runestorytab": "RuneStory Items",
   "magicdamagestat": "Magic Damage: ",
   "magiccdreduction": "Cooldown Duration: ",
+  "freecastchance": "Freecast Chance: ",
 
   "block-runepylon-inactive": "Runic Pylon",
   "blockdesc-runepylon-inactive": "Sits still, Looks pretty.",
@@ -52,6 +53,8 @@
   "blockdesc-runepylon-temporal": "Restores the Temporal Stability of any players within a 14 block radius every 15 seconds.",
   "block-runepylon-rushing": "Rushing Runic Pylon",
   "blockdesc-runepylon-rushing": "Place above water to make rushing water, for as long as the pylon stands above.",
+  "block-runepylon-regen": "Regenerative Runic Pylon",
+  "blockdesc-runepylon-regen": "Slowly heals all nearby beings.",
 
 
   "nodsc": "This spell has no lang describing it! Is the Attribute 'langCode' set?",
@@ -245,6 +248,14 @@
   "itemdesc-runewand-scholar": "Good increase to magic stats when in offhand.",
   "item-runewand-master": "Master's Rune Wand",
   "itemdesc-runewand-master": "Great increase to magic stats when in offhand.",
+  "item-runewand-air": "Air Rune Wand",
+  "itemdesc-runewand-air": "Good increase to magic stats when in offhand.\nProvides unlimited air runes while wielded.",
+  "item-runewand-water": "Water Rune Wand",
+  "itemdesc-runewand-water": "Good increase to magic stats when in offhand.\nProvides unlimited water runes while wielded.",
+  "item-runewand-fire": "Fire Rune Wand",
+  "itemdesc-runewand-fire": "Good increase to magic stats when in offhand.\nProvides unlimited fire runes while wielded.",
+  "item-runewand-earth": "Earth Rune Wand",
+  "itemdesc-runewand-earth": "Good increase to magic stats when in offhand.\nProvides unlimited earth runes while wielded.",
 
   "item-runebag-primitive": "Crude Rune Pouch",
   "item-runebag-linen": "Rune Pouch",

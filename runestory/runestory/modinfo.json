@@ -6,7 +6,7 @@
     "Len Kagamine"
   ],
   "description": "Runes for spells, magic pillars and magic-themed QoL/Building tools.",
-  "version": "1.0.0",
+  "version": "1.0.0-rc-1",
   "dependencies": {
     "game": "1.22.7",
     "vsimgui": ""
