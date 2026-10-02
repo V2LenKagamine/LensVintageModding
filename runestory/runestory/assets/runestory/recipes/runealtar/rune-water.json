@@ -3,7 +3,7 @@
         "code": "makewaterrune-reed",
         "enabled": true,
         "attributes": {
-            "catalyst": "runestory:rune-blank",
+          "catalyst": { "runestory:rune-blank": 4 },
             "reagents": {
                 "game:cattailtops": 1
             },
@@ -16,7 +16,7 @@
         "code": "makewaterrune-fish",
         "enabled": true,
         "attributes": {
-            "catalyst": "runestory:rune-blank",
+          "catalyst": { "runestory:rune-blank": 8 },
             "reagents": {
                 "game:fish-raw": 1
             },
@@ -29,7 +29,7 @@
         "code": "makewaterrune-fishbones",
         "enabled": true,
         "attributes": {
-            "catalyst": "runestory:rune-blank",
+          "catalyst": { "runestory:rune-blank": 4 },
             "reagents": {
                 "game:bone-fish": 1
             },
@@ -42,7 +42,7 @@
         "code": "makewaterrune-ice",
         "enabled": true,
         "attributes": {
-            "catalyst": "runestory:rune-blank",
+          "catalyst": { "runestory:rune-blank": 1 },
             "reagents": {
                 "game:lakeice": 1
             },
@@ -55,7 +55,7 @@
         "code": "makewaterrune-gice",
         "enabled": true,
         "attributes": {
-            "catalyst": "runestory:rune-blank",
+          "catalyst": { "runestory:rune-blank": 2 },
             "reagents": {
                 "game:glacierice": 1
             },
@@ -68,7 +68,7 @@
         "code": "makewaterrune-pgice",
         "enabled": true,
         "attributes": {
-            "catalyst": "runestory:rune-blank",
+          "catalyst": { "runestory:rune-blank": 4 },
             "reagents": {
                 "game:packedglacierice": 1
             },

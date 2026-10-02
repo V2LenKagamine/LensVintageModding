@@ -3,14 +3,76 @@
   "class": "Item",
   "maxstacksize": 1,
   "attributesByType": {
-    "*-primitive": { "magicAttributes": { "freeCastChance": 0, "magicWeaponsDamage": 0.05 } },
-    "*-basic": { "magicAttributes": { "freeCastChance": 0.05, "magicWeaponsDamage": 0.075 } },
-    "*-standard": { "magicAttributes": { "freeCastChance": 0.075, "magicWeaponsDamage": 0.1 } },
-    "*-scholar": { "magicAttributes": { "freeCastChance": 0.1, "magicWeaponsDamage": 0.125 } },
-    "*-master": { "magicAttributes": { "freeCastChance": 0.125, "magicWeaponsDamage": 0.15 } }
+    "*-primitive": {
+      "magicAttributes": {
+        "magicCDTime": -0.025,
+        "magicWeaponsDamage": 0.05
+      }
+    },
+    "*-basic": {
+      "magicAttributes": {
+        "magicCDTime": -0.05,
+        "magicWeaponsDamage": 0.075,
+        "freeCastChance": 0.01
+      }
+    },
+    "*-standard": {
+      "magicAttributes": {
+        "magicCDTime": -0.075,
+        "magicWeaponsDamage": 0.1,
+        "freeCastChance": 0.025
+      }
+    },
+    "*-scholar": {
+      "magicAttributes": {
+        "magicCDTime": -0.1,
+        "magicWeaponsDamage": 0.125,
+        "freeCastChance": 0.05
+      }
+    },
+    "*-master": {
+      "magicAttributes": {
+        "magicCDTime": -0.125,
+        "magicWeaponsDamage": 0.15,
+        "freeCastChance": 0.1
+      }
+    },
+    "*-water": {
+      "magicAttributes": {
+        "magicCDTime": -0.1,
+        "magicWeaponsDamage": 0.125,
+        "endless": [ "runestory:rune-water" ],
+        "freeCastChance": 0.05
+      }
+    },
+    "*-earth": {
+      "magicAttributes": {
+        "magicCDTime": -0.1,
+        "magicWeaponsDamage": 0.125,
+        "endless": [ "runestory:rune-earth" ],
+        "freeCastChance": 0.05
+      }
+    },
+    "*-air": {
+      "magicAttributes": {
+        "magicCDTime": -0.1,
+        "magicWeaponsDamage": 0.125,
+        "endless": [ "runestory:rune-air" ],
+        "freeCastChance": 0.05
+      }
+    },
+    "*-fire": {
+      "magicAttributes": {
+        "magicCDTime": -0.1,
+        "magicWeaponsDamage": 0.125,
+        "endless": [ "runestory:rune-fire" ],
+        "freeCastChance": 0.05
+      }
+    }
+
   },
   "variantgroups": [
-    { "code": "type", "states": [ "primitive", "basic", "standard", "scholar", "master" ] }
+    { "code": "type", "states": [ "primitive", "basic", "standard", "scholar", "master","water","earth","air","fire" ] }
   ],
   "shape": {
     "base": "items/runewand"
@@ -20,13 +82,38 @@
       "wandbase": { "base": "game:block/wood/debarked/veryrotten" },
       "wandtip": { "base": "game:block/stone/rock/basalt1" }
     },
-    "*-basic": { "wandbase": { "base": "game:block/wood/debarked/oak" }, "wandtip": { "base": "game:block/metal/ingot/copper" } },
+    "*-basic": {
+      "wandbase": { "base": "game:block/wood/debarked/oak" },
+      "wandtip": { "base": "game:block/metal/ingot/copper" }
+    },
     "*-standard": {
       "wandbase": { "base": "game:block/wood/debarked/ebony" },
       "wandtip": { "base": "game:block/metal/ingot/blackbronze" }
     },
-    "*-scholar": { "wandbase": { "base": "game:block/metal/ingot/brass" }, "wandtip": { "base": "game:block/metal/ingot/silver" } },
-    "*-master": { "wandbase": { "base": "game:block/metal/ingot/blackbronze" }, "wandtip": { "base": "game:block/metal/ingot/gold" } }
+    "*-scholar": {
+      "wandbase": { "base": "game:block/metal/ingot/brass" },
+      "wandtip": { "base": "game:block/metal/ingot/silver" }
+    },
+    "*-master": {
+      "wandbase": { "base": "game:block/metal/ingot/blackbronze" },
+      "wandtip": { "base": "game:block/metal/ingot/gold" }
+    },
+    "*-water": {
+      "wandbase": { "base": "game:block/stone/rock/basalt1" },
+      "wandtip": { "base": "game:block/creative/col53" }
+    },
+    "*-earth": {
+      "wandbase": { "base": "game:block/stone/rock/basalt1" },
+      "wandtip": { "base": "game:block/creative/col8" }
+    },
+    "*-air": {
+      "wandbase": { "base": "game:block/stone/rock/basalt1" },
+      "wandtip": { "base": "game:block/creative/col79" }
+    },
+    "*-fire": {
+      "wandbase": { "base": "game:block/stone/rock/basalt1" },
+      "wandtip": { "base": "game:block/creative/col32" }
+    }
   },
   "creativeinventory": {
     "general": [ "*" ],

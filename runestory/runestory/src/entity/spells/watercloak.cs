@@ -37,7 +37,7 @@ namespace runestory.src.entity.spells
                             Type = EnumDamageType.Heal,
                             TicksPerDuration = 600,
                             Duration = TimeSpan.FromMinutes(5)
-                        }, 25f);
+                        }, 40f);
                         ((target as EntityPlayer).Player as IServerPlayer).SendMessage(
                             GlobalConstants.InfoLogChatGroup,
                             Lang.Get("runestory:mendingmist"),

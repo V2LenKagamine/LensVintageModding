@@ -8,7 +8,7 @@ using Vintagestory.GameContent;
 
 namespace runestory.src.block.pylons
 {
-    public class TemporalPylonBe : BlockEntity
+    public class RegenerativePylonBe : BlockEntity
     {
         private long ticklist;
         public override void Initialize(ICoreAPI api)
@@ -22,13 +22,19 @@ namespace runestory.src.block.pylons
         {
             if (Api.Side == EnumAppSide.Client) { return; }
 
-            Entity[] near = Api.World.GetEntitiesAround(Pos.ToVec3d(),14,14,(ent) => (ent as EntityPlayer)?.Player is not null);
+            Entity[] near = Api.World.GetEntitiesAround(Pos.ToVec3d(), 14, 14, (ent) => ent.GetBehavior<EntityBehaviorHealth>() is not null);
 
-            for (int i = 0; i < near.Length; i++) {
-                EntityPlayer ply = (EntityPlayer)near[i];
-                if (ply.GetBehavior<EntityBehaviorTemporalStabilityAffected>() is EntityBehaviorTemporalStabilityAffected beh)
+            for (int i = 0; i < near.Length; i++)
+            {
+                DamageSource heal = new() {
+                    Source = EnumDamageSource.Unknown,
+                    Type = EnumDamageType.Heal,
+                    TicksPerDuration = 10,
+                    Duration = TimeSpan.FromSeconds(15)
+                };
+                if (near[i].ShouldReceiveDamage(heal, 0.3f)) 
                 {
-                    beh.OwnStability += 0.005f*dt;
+                    near[i].ReceiveDamage(heal, 0.3f);
                 }
             }
         }

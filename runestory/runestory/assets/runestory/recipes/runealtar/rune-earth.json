@@ -3,7 +3,7 @@
         "code": "makeearthrune-stone",
         "enabled": true,
         "attributes": {
-            "catalyst": "runestory:rune-blank",
+          "catalyst": { "runestory:rune-blank": 1},
             "reagents": {
                 "game:stone-*": 1
             },
@@ -16,7 +16,7 @@
         "code": "makeearthrune-rock",
         "enabled": true,
         "attributes": {
-            "catalyst": "runestory:rune-blank",
+          "catalyst": { "runestory:rune-blank": 16 },
             "reagents": {
                 "game:rock-*": 1
             },

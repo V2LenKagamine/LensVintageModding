@@ -4,7 +4,7 @@
         "ingredients": {
             "H": {
                 "type": "item",
-                "code": "game:stone-*",
+                "code": "game:rock-*",
                 "quantity": 8
             },
             "C": {
@@ -58,5 +58,55 @@
             "type": "block",
             "code": "runestory:runepylon-temporal"
         }
+    },
+  {
+    "ingredientPattern": "WFW,WCW,WFW",
+    "ingredients": {
+      "W": {
+        "type": "item",
+        "code": "runestory:rune-water",
+        "quantity": 16
+      },
+      "F": {
+        "type": "item",
+        "code": "runestory:rune-fire",
+        "quantity": 16
+      },
+      "C": {
+        "type": "block",
+        "code": "runestory:runepylon-inactive"
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "runestory:runepylon-rushing"
     }
+  },
+  {
+    "ingredientPattern": "WFW,WCW,WFW",
+    "ingredients": {
+      "W": {
+        "type": "item",
+        "code": "runestory:rune-water",
+        "quantity": 16
+      },
+      "F": {
+        "type": "item",
+        "code": "runestory:rune-earth",
+        "quantity": 16
+      },
+      "C": {
+        "type": "block",
+        "code": "runestory:runepylon-inactive"
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "runestory:runepylon-regen"
+    }
+  }
 ]

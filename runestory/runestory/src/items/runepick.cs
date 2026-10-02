@@ -12,37 +12,9 @@ namespace runestory.src.items
     {
         public override bool OnBlockBrokenWith(IWorldAccessor world, Entity byEntity, ItemSlot itemslot, BlockSelection blockSel, float dropQuantityMultiplier = 1)
         {
-            if (WildcardUtil.Match("rock-*", blockSel?.Block?.Code?.Path?.ToString()))
+            if (blockSel?.Block?.GetBlockMaterial(world.BlockAccessor,blockSel?.Position) == EnumBlockMaterial.Stone)
             {
-                float chance = 0.025f;
-                switch(Code.EndVariant())
-                {
-                    case "iron":
-                        {
-                            chance = 0.05f;
-                            break;
-                        }
-                    case "gold":
-                        {
-                            chance = 0.075f;
-                            break;
-                        }
-                    case "silver":
-                        {
-                            chance = 0.07f;
-                            break;
-                        }
-                    case "blackbronze":
-                        {
-                            chance = 0.06f;
-                            break;
-                        }
-                    case "copper":
-                        {
-                            chance = 0.0025f;
-                            break;
-                        }
-                }
+                float chance = Attributes["runeChance"]?.AsFloat() ?? 0.025f;
                 if (world.Rand.NextDouble() < chance)
                 {
                     Item[] nice = world.SearchItems("runestory:rune-*");

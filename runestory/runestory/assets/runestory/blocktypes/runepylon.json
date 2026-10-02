@@ -1,9 +1,11 @@
 {
     "code": "runepylon",
-    "entityclassByType": {
-        "*-fertile": "runepylonfertilebe",
-        "*-temporal": "runepylontemporalbe"
-    },
+  "entityclassByType": {
+    "*-fertile": "runepylonfertilebe",
+    "*-temporal": "runepylontemporalbe",
+    "*-rushing": "runepylonrushingbe",
+    "*-regen": "runepylonregenbe"
+  },
     "entitybehaviors": [
         { "name": "runepylonrenderer" }
     ],
@@ -17,7 +19,7 @@
     "variantgroups": [
         {
             "code": "type",
-            "states": [ "inactive", "fertile", "temporal" ]
+            "states": [ "inactive", "fertile", "temporal", "rushing", "regen" ]
         }
     ],
     "blockmaterial": "Stone",

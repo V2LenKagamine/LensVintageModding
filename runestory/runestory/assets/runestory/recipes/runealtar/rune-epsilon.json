@@ -3,7 +3,7 @@
         "code": "makeepsilonrune-electrum",
         "enabled": true,
         "attributes": {
-            "catalyst": "runestory:rune-blank",
+          "catalyst": { "runestory:rune-blank": 4},
             "reagents": {
                 "game:metalbit-electrum": 1
             },
@@ -16,7 +16,7 @@
         "code": "makeepsilonrune-gold",
         "enabled": true,
         "attributes": {
-            "catalyst": "runestory:rune-blank",
+          "catalyst": { "runestory:rune-blank": 4 },
             "reagents": {
                 "game:nugget-nativegold": 1
             },
@@ -29,7 +29,7 @@
         "code": "makeepsilonrune-silver",
         "enabled": true,
         "attributes": {
-            "catalyst": "runestory:rune-blank",
+          "catalyst": { "runestory:rune-blank": 4 },
             "reagents": {
                 "game:nugget-nativesilver": 1
             },

@@ -1,0 +1,54 @@
+[
+  {
+    "code": "makewaterwand",
+    "enabled": true,
+    "attributes": {
+      "catalyst": { "runestory:rune-water": 256 },
+      "reagents": {
+        "runestory:runewand-scholar": 1
+      },
+      "outputs": {
+        "runestory:runewand-water": 1
+      }
+    }
+  },
+  {
+    "code": "makefirewand",
+    "enabled": true,
+    "attributes": {
+      "catalyst": { "runestory:rune-fire": 256 },
+      "reagents": {
+        "runestory:runewand-scholar": 1
+      },
+      "outputs": {
+        "runestory:runewand-fire": 1
+      }
+    }
+  },
+  {
+    "code": "makeairwand",
+    "enabled": true,
+    "attributes": {
+      "catalyst": { "runestory:rune-air": 256 },
+      "reagents": {
+        "runestory:runewand-scholar": 1
+      },
+      "outputs": {
+        "runestory:runewand-air": 1
+      }
+    }
+  },
+  {
+    "code": "makeearthwand",
+    "enabled": true,
+    "attributes": {
+      "catalyst": { "runestory:rune-earth": 256 },
+      "reagents": {
+        "runestory:runewand-scholar": 1
+      },
+      "outputs": {
+        "runestory:runewand-earth": 1
+      }
+    }
+  }
+]

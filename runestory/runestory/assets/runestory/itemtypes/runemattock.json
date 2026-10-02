@@ -1,7 +1,7 @@
 {
-    "code": "runicpickaxe",
-    "class": "runicpickaxeitem",
-    "tags": [ "tool", "tool-pickaxe" ],
+    "code": "runicmattock",
+    "class": "runicmattockitem",
+    "tags": [ "tool", "tool-pickaxe","tool-shovel" ],
     "variantgroups": [
         {
             "code": "metal",
@@ -9,48 +9,39 @@
         }
     ],
     "storageFlags": 5,
-    "shape": { "base": "game:item/tool/pickaxe" },
+    "shape": { "base": "items/runemattock" },
     "textures": {
-        "handle": { "base": "game:block/stone/rock/basalt1" },
         "metal": { "base": "game:block/metal/ingot/{metal}" }
     },
-  "attributes": {
-    "runeChanceByType": {
-      "*-copper": 0.025,
-      "*-blackbronze": 0.06,
-      "*-iron":  0.05,
-      "*-silver":  0.07,
-      "*-gold": 0.075,
-      "*": 0.0025
+    "attributes": {
+        "heldItemPitchFollow": 0.9,
+        "attachableToEntity": { "categoryCode": "toolholding" },
+        "toolrackTransform": {
+            "rotation": {
+                "y": 2.5,
+                "z": -1
+            },
+            "translation": {
+                "x": -0.1,
+                "y": 0.59
+            },
+            "scale": 1.25
+        },
+        "groundStorageTransform": {
+            "translation": {
+                "x": 0,
+                "y": 0.1,
+                "z": -0.105
+            },
+            "rotation": {
+                "x": 20,
+                "y": 88,
+                "z": -87
+            },
+            "scale": 0.88
+        },
+        "slotRefillIdentifier": "pickaxe"
     },
-    "heldItemPitchFollow": 0.9,
-    "attachableToEntity": { "categoryCode": "toolholding" },
-    "toolrackTransform": {
-      "rotation": {
-        "y": 2.5,
-        "z": -1
-      },
-      "translation": {
-        "x": -0.1,
-        "y": 0.59
-      },
-      "scale": 1.25
-    },
-    "groundStorageTransform": {
-      "translation": {
-        "x": 0,
-        "y": 0.1,
-        "z": -0.105
-      },
-      "rotation": {
-        "x": 20,
-        "y": 88,
-        "z": -87
-      },
-      "scale": 0.88
-    },
-    "slotRefillIdentifier": "pickaxe"
-  },
     "behaviors": [
         {
             "name": "GroundStorable",
@@ -88,19 +79,49 @@
         "*-blackbronze": 3
     },
     "miningspeedByType": {
-        "*-copper": { "stone": 8 },
-        "*-gold": { "stone": 16 },
-        "*-silver": { "stone": 14 },
-        "*-iron": { "stone": 10 },
-        "*-blackbronze": { "stone": 12 }
+      "*-copper": {
+        "soil": 4,
+        "sand": 4,
+        "gravel": 4,
+        "stone": 4,
+        "ore": 2
+      },
+      "*-gold": {
+        "soil": 8,
+        "sand": 8,
+        "gravel": 8,
+        "stone": 8,
+        "ore": 4
+      },
+      "*-silver": {
+        "soil": 7,
+        "sand": 7,
+        "gravel": 7,
+        "stone": 7,
+        "ore": 3.5
+      },
+      "*-iron": {
+        "soil": 5,
+        "sand": 5,
+        "gravel": 5,
+        "stone": 5,
+        "ore": 2.5
+      },
+      "*-blackbronze": {
+        "soil": 6,
+        "sand": 6,
+        "gravel": 6,
+        "stone": 6,
+        "ore": 3
+      }
     },
     "attackpower": 1.5,
     "durabilityByType": {
-        "*-copper": 300,
-        "*-gold": 1200,
-        "*-silver": 1100,
-        "*-iron": 1500,
-        "*-blackbronze": 1600
+        "*-copper": 600,
+        "*-gold": 2400,
+        "*-silver": 2200,
+        "*-iron": 3000,
+        "*-blackbronze": 3200
     },
     "creativeinventory": {
         "general": [ "*" ],

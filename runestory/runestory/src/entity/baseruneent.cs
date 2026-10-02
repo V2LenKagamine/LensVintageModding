@@ -21,9 +21,9 @@ namespace runestory
         public override bool ApplyGravity => false;
         public override bool IsInteractable => false;
 
-        public BaseRuneSpell ourSpell;
-
         public bool freeCasted = false;
+
+        public BaseRuneSpell ourSpell;
 
         long msLaunch;
 

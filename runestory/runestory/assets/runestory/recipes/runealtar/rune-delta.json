@@ -3,7 +3,7 @@
         "code": "makedeltarune-copnick",
         "enabled": true,
         "attributes": {
-            "catalyst": "runestory:rune-blank",
+          "catalyst": { "runestory:rune-blank": 4 },
             "reagents": {
                 "game:metalbit-cupronickel": 1
             },

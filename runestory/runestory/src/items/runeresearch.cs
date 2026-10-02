@@ -28,6 +28,10 @@ namespace runestory
             {
                 outputSlot.Itemstack.Attributes.SetString("spelltounlock",(byRecipe as RecipeBase).Attributes["spelltounlock"].AsString());
             }
+            if ((byRecipe as RecipeBase)?.Attributes?["spellfilter"]?.Exists == true)
+            {
+                outputSlot.Itemstack.Attributes.SetString("spellfilter", (byRecipe as RecipeBase).Attributes["spellfilter"].AsString());
+            }
             base.OnCreatedByCrafting(allInputSlots, outputSlot, byRecipe);
         }
         public override void OnLoaded(ICoreAPI api)
@@ -83,6 +87,10 @@ namespace runestory
             if (byEntity.World.Side == EnumAppSide.Server && secondsUsed >= 1.5f)
             {
                 IEnumerable<BaseRuneSpell> validOptions = api.ModLoader.GetModSystem<RunestoryMS>().AllSpells.Where(spell => spell.Code == spellUnlocked || spell.spellTier == tierUnlocked);
+                if (slot.Itemstack?.Attributes?.GetString("spellfilter") is not null)
+                {
+                    validOptions = validOptions.Where(spall => spall.spellType == slot.Itemstack?.Attributes?.GetString("spellfilter"));
+                }
                 if(slot.Itemstack?.Attributes?.GetString("spelltounlock") is not null)
                 {
                     validOptions = validOptions.Where(spll=>spll.Code == slot.Itemstack?.Attributes?.GetString("spelltounlock"));
@@ -148,7 +156,11 @@ namespace runestory
             dsc.Append(Lang.Get("runestory:runicresearch", onlyOneSpell ? 1 : "every", tierUnlocked));
             if(inSlot.Itemstack?.Attributes?["spelltounlock"] is not null)
             {
-                dsc.Append("\nSpell: " + Lang.Get("runestory:" + inSlot.Itemstack.Attributes.GetString("spelltounlock")));
+                dsc.Append("\nSpell: " + Lang.Get("runestory:" + inSlot.Itemstack.Attributes.GetString("spelltounlock")) + "\n");
+            }
+            if (inSlot.Itemstack?.Attributes?["spellfilter"] is not null)
+            {
+                dsc.Append("\nSpell Type: " + Lang.Get("runestory:" + inSlot.Itemstack?.Attributes?.GetString("spellfilter")) + "\n");
             }
             base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
         }

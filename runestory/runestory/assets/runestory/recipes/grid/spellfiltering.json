@@ -1,0 +1,89 @@
+[
+  {
+    "ingredientPattern": "H,C,E",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:stick",
+        "quantity": 2
+      },
+      "C": {
+        "type": "item",
+        "code": "runestory:runemagicresearch-*-single",
+        "name": "tier"
+      },
+      "E": {
+        "type": "item",
+        "code": "game:stone-*",
+        "quantity": 2
+      }
+    },
+    "width": 1,
+    "height": 3,
+    "output": {
+      "type": "item",
+      "code": "runestory:runemagicresearch-{tier}-single"
+    },
+    "attributes": {
+      "spellfilter": "dmg"
+    }
+  },
+  {
+    "ingredientPattern": "H,C,E",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:flaxtwine",
+        "quantity": 2
+      },
+      "C": {
+        "type": "item",
+        "code": "runestory:runemagicresearch-*-single",
+        "name": "tier"
+      },
+      "E": {
+        "type": "block",
+        "code": "game:flower-horsetail-free",
+        "quantity": 2
+      }
+    },
+    "width": 1,
+    "height": 3,
+    "output": {
+      "type": "item",
+      "code": "runestory:runemagicresearch-{tier}-single"
+    },
+    "attributes": {
+      "spellfilter": "supp"
+    }
+  },
+  {
+    "ingredientPattern": "H,C,E",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:stone-*",
+        "quantity": 2
+      },
+      "C": {
+        "type": "item",
+        "code": "runestory:runemagicresearch-*-single",
+        "name": "tier"
+      },
+      "E": {
+        "type": "item",
+        "code": "game:resin",
+        "quantity": 2
+      }
+    },
+    "width": 1,
+    "height": 3,
+    "output": {
+      "type": "item",
+      "code": "runestory:runemagicresearch-{tier}-single"
+    },
+    "attributes": {
+      "spellfilter": "util"
+    }
+  }
+]

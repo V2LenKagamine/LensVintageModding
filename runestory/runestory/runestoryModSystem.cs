@@ -16,6 +16,7 @@ using runestory.src.gui;
 using runestory.src.items;
 using runestory.src.MiscHarmony;
 using runestory.src.recipestuff;
+using runestory.src.util;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
@@ -45,9 +46,15 @@ namespace runestory
 
         public static string RMS_UUIDSpellTable => "RMSUUIDSPELLTABLE";
         public static string RMS_SpellKnowledge => "RMSKnownSpells";
-        public static string RMS_Stat_RuneChance => "freeCastChance";
+        public static string RMS_Stat_CDTime => "magicCDTime";
         public static string RMS_Stat_MagicDamage => "magicWeaponsDamage";
+        public static string RMS_Stat_RuneChance => "freeCastChance";
         public static string RMS_Net_Channel => "runespellchannel";
+
+
+        public static string RMS_ConfigName => "runestory_common.json";
+
+        public runestoryConfig RMS_LoadedConfig;
 
         public Harmony RMSHarmony;
 
@@ -64,6 +71,11 @@ namespace runestory
         public override void StartPre(ICoreAPI api)
         {
             RMSHarmony = new Harmony("runestory");
+
+            if(api is ICoreServerAPI)
+            {
+                RMS_LoadedConfig = GetConfig(api);
+            }
 
             if (api is not ICoreClientAPI capi) return;
             
@@ -159,9 +171,12 @@ namespace runestory
             api.RegisterBlockEntityBehaviorClass("runepylonrenderer", typeof(BEBhvPylon));
             api.RegisterBlockEntityClass("runepylonfertilebe", typeof(FertilePylonBe));
             api.RegisterBlockEntityClass("runepylontemporalbe", typeof(TemporalPylonBe));
+            api.RegisterBlockEntityClass("runepylonrushingbe", typeof(RushingPylonBe));
+            api.RegisterBlockEntityClass("runepylonregenbe", typeof(RegenerativePylonBe));
 
             api.RegisterCollectibleBehaviorClass("runepouchbag", typeof(CollectibleRuneBag));
             api.RegisterItemClass("runicpickaxeitem", typeof(RunePickaxe));
+            api.RegisterItemClass("runicmattockitem", typeof(RuneWaterMattock));
             api.RegisterItemClass("runicchiselitem", typeof(RuneChisel));
             api.RegisterItemClass("runemagicresearchclass", typeof(RunicResearch));
             api.RegisterItemClass("goodberryitemclass", typeof(GoodBerryItem));
@@ -218,7 +233,7 @@ namespace runestory
                     }
                     List<string> defspells = [];
                     List<string> known = (spellsmaybe?.GetValue() as string[])?.ToList() ?? [];
-                    foreach (var spll in AllSpells.Where(spell => spell.spellTier == 1))
+                    foreach (var spll in AllSpells.Where(spell => spell.spellTier <= RMS_LoadedConfig.LevelUnlockedByDefault))
                     {
                         defspells.Add(spll.Code);
                     }
@@ -248,15 +263,43 @@ namespace runestory
                         //e.Stats.Register(RMS_Stat_MagicDamage);
                         e.Stats.Set(RMS_Stat_MagicDamage, "base", 1f, true);
                     }
-                    if (!(e.Stats.Where(stat => stat.Key == RMS_Stat_RuneChance).Any()))
+                    if (!(e.Stats.Where(stat => stat.Key == RMS_Stat_CDTime).Any()))
                     {
                         //e.Stats.Register(RMS_Stat_RuneChance);
-                        e.Stats.Set(RMS_Stat_RuneChance, "base", 1f, true);
+                        e.Stats.Set(RMS_Stat_CDTime, "base", 1f, true);
                     }
                 }
             };
             api.Logger.Notification("[RuneStory] Welcome to ScapeRune!");
         }
+
+        public static runestoryConfig GetConfig(ICoreAPI api)
+        {
+            runestoryConfig tmp;
+
+            try
+            {
+                tmp = api.LoadModConfig<runestoryConfig>(RMS_ConfigName);
+                if(tmp is null)
+                {
+                    tmp = new runestoryConfig();
+                    api.StoreModConfig<runestoryConfig>(tmp, RMS_ConfigName);
+                }
+                else
+                {
+                    api.StoreModConfig<runestoryConfig>(new runestoryConfig(tmp), RMS_ConfigName);
+                    tmp = api.LoadModConfig<runestoryConfig>(RMS_ConfigName);
+                }
+            } catch ( Exception e)
+            {
+                api.Logger.Error("RuneStory: SOMEONE SCREWED UP THE CONFIG, REBUILDING FROM SCRATCH. Exception: " + e);
+                tmp = new runestoryConfig();
+                api.StoreModConfig<runestoryConfig>(tmp, RMS_ConfigName);
+            }
+            return tmp;
+        }
+
+
         public void OnCastRequest(ICoreClientAPI capi)
         {
             capi.Network.GetChannel(RMS_Net_Channel).SendPacket(new CTS_SpellPacket
@@ -291,7 +334,10 @@ namespace runestory
             long timenext = from.Entity.Attributes.GetLong("runespellnextcasttime");
             if (timenext > runeSApi.World.ElapsedMilliseconds)
             {
-                ((runeSApi.World.PlayerByUid(from.Entity.PlayerUID))as IServerPlayer).SendLocalisedMessage(GlobalConstants.GeneralChatGroup, "runestory:cast-fail-toosoon");
+                ((runeSApi.World.PlayerByUid(from.Entity.PlayerUID)) as IServerPlayer).SendLocalisedMessage(GlobalConstants.GeneralChatGroup, "runestory:cast-fail-toosoon");
+                long nexttime = timenext - runeSApi.World.ElapsedMilliseconds;
+                
+                ((runeSApi.World.PlayerByUid(from.Entity.PlayerUID)) as IServerPlayer).SendMessage(GlobalConstants.GeneralChatGroup, string.Format("{0} seconds left",nexttime / 1000),EnumChatType.OwnMessage);
                 return;
             }
             if ( spell is not null) {
@@ -307,17 +353,13 @@ namespace runestory
         }
         public void SetCastDelay(Entity ent, BaseRuneSpell spell)
         {
-            //Todo: Config?
-            long percastMS = 600 - (int)Math.Min(400,spell?.Reagents?.Count ?? 4 * 100);
-            int TotalReag = 0;
+            long percastMS = 1000;
+            float cdtime = (ent?.Stats?.GetBlended(RMS_Stat_CDTime) ?? 1f);
             if (spell is not null)
             {
-                for (int i = 0; i < spell.Reagents.Count; i++)
-                {
-                    TotalReag += spell.Reagents.ElementAt(i).Value;
-                }
+                percastMS = spell.CooldownMS * (long)RMS_LoadedConfig.GlobalMagicCoolDownMultiplier; 
             }
-            long toset = (percastMS * (TotalReag == 0 ? 1 : TotalReag)) + runeSApi.World.ElapsedMilliseconds;
+            long toset = (long)(percastMS * cdtime) + runeSApi.World.ElapsedMilliseconds;
             ent.Attributes.SetLong("runespellnextcasttime", toset);
             ent.Attributes.MarkPathDirty("runespellnextcasttime");
         }
